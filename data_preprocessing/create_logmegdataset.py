@@ -11,9 +11,9 @@ def get_directories(path='.'):
     return [entry.name for entry in os.scandir(path) if entry.is_dir()]
 
 #channel="aligned_channel2.wav"
-signals_path='C:/Users/Esteban/python_code/Recordings/WW27_Rec/Test_sessions'
-audio_directory="audioch4_dataset"
-image_directory="audio2imagech4_dataset"
+signals_path='C:/Users/Esteban/TesisCode/Recordings/WW27_Rec/'
+audio_directory="audiobfmXposch3Ch1_dataset"
+image_directory="audio2imagebfmXposch3ch1_dataset"
 
 os.chdir(signals_path)
 os.makedirs(image_directory, exist_ok=True)

@@ -36,12 +36,26 @@ def spectral_analysis(file_path):
         # Convert magnitude to decibels
         magnitude_db = 20 * np.log10(magnitude + 1e-10)  # Avoid log(0)
 
+        # Find top 10 frequencies with highest magnitude_db values
+        top_10_indices = np.argsort(magnitude_db)[-20:][::-1]
+        top_10_freqs = positive_freqs[top_10_indices]
+        top_10_magnitudes = magnitude_db[top_10_indices]
+
+        print("\nTop 20 Frequencies with Highest Magnitude (dB):")
+        print("-" * 50)
+        for i, (freq, mag) in enumerate(zip(top_10_freqs, top_10_magnitudes), 1):
+            print(f"{i:2d}. Frequency: {freq:10.2f} Hz | Magnitude: {mag:10.2f} dB")
+        print("-" * 50)
+
         # Plot spectrum
         plt.figure(figsize=(10, 6))
         plt.plot(positive_freqs, magnitude_db, color='blue')
+        # Mark the top 10 frequencies
+        plt.plot(top_10_freqs, top_10_magnitudes, 'ro', markersize=8, label='Top 20 Frequencies')
         plt.title("Spectral Analysis of Audio Signal")
         plt.xlabel("Frequency (Hz)")
         plt.ylabel("Magnitude (dB)")
+        plt.legend()
         plt.grid(True)
         plt.tight_layout()
         plt.show()
@@ -59,4 +73,5 @@ if __name__ == "__main__":
     #    print("Usage: python script.py <audio_file.wav>")
     #    sys.exit(1)
 
-    spectral_analysis("C:/Users/Esteban/python_code/sound3.wav")
+    #spectral_analysis("C:/Users/Esteban/TesisCode/Recordings/WW27_Rec/S1/Position__Ubicacion_-227.6674018_-9.784665521_-94.42936183_Orientacion_50/aligned_channel1.wav")
+    spectral_analysis("C:/Users/Esteban/TesisCode/sound3.wav")
