@@ -1,6 +1,6 @@
-PWD c:\Users\Esteban\python_code\Paper\_TesisII__Paper_TII
+PWD c:\Users\Esteban\TesisAcouML\Paper\_TesisII__Paper_TII
 INPUT C:\Users\Esteban\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Esteban\python_code\Paper\_TesisII__Paper_TII\Paper_investigacion.tex
+INPUT c:\Users\Esteban\TesisAcouML\Paper\_TesisII__Paper_TII\Paper_investigacion.tex
 OUTPUT Paper_investigacion.log
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex\latex\ieeetran\IEEEtran.cls
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex\latex\ieeetran\IEEEtran.cls
