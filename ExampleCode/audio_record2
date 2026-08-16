@@ -1,0 +1,267 @@
+import pyaudio
+import os
+import time
+from playsound import playsound
+from multiprocessing import Process
+import wave
+from pathlib import Path
+import shutil
+
+
+
+def soundtrigger():
+    #audio = Path().cwd() / "sound2.wav"
+    audio = "C:/Users/Esteban/python_code/sound3.wav"
+    playsound(audio)
+
+def recordsound1():
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    RATE = 44100
+    CHUNK = 1024
+    RECORD_SECONDS = 5
+    OUTPUT_FILES = ["rec1.wav"]  # Output files for each microphone
+    DEVICE_INDEXES = [1]  # Replace with your microphone device indexes
+
+    # Initialize PyAudio
+    audio = pyaudio.PyAudio()
+
+    # Open streams for each microphone
+    streams = [
+                audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, input_device_index=idx, frames_per_buffer=CHUNK)
+                for idx in DEVICE_INDEXES
+            ]
+
+    print("Recording...")
+
+    # Record audio
+    frames = [[] for _ in DEVICE_INDEXES]
+    for _ in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+        for i, stream in enumerate(streams):
+            data = stream.read(CHUNK)
+            frames[i].append(data)
+
+    print("Finished recording.")
+
+    # Save audio to files
+    for i, frame in enumerate(frames):
+        wf = wave.open(OUTPUT_FILES[i], 'wb')
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(audio.get_sample_size(FORMAT))
+        wf.setframerate(RATE)
+        wf.writeframes(b''.join(frame))
+        wf.close()
+
+    # Close streams
+    for stream in streams:
+        stream.stop_stream()
+        stream.close()
+    audio.terminate()
+
+
+def recordsound2():
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    RATE = 44100
+    CHUNK = 1024
+    RECORD_SECONDS = 5
+    OUTPUT_FILES = ["rec2.wav"]  # Output files for each microphone
+    DEVICE_INDEXES = [2]  # Replace with your microphone device indexes
+
+    # Initialize PyAudio
+    audio = pyaudio.PyAudio()
+
+    # Open streams for each microphone
+    streams = [
+                audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, input_device_index=idx, frames_per_buffer=CHUNK)
+                for idx in DEVICE_INDEXES
+            ]
+
+    print("Recording...")
+
+    # Record audio
+    frames = [[] for _ in DEVICE_INDEXES]
+    for _ in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+        for i, stream in enumerate(streams):
+            data = stream.read(CHUNK)
+            frames[i].append(data)
+
+    print("Finished recording.")
+
+    # Save audio to files
+    for i, frame in enumerate(frames):
+        wf = wave.open(OUTPUT_FILES[i], 'wb')
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(audio.get_sample_size(FORMAT))
+        wf.setframerate(RATE)
+        wf.writeframes(b''.join(frame))
+        wf.close()
+
+    # Close streams
+    for stream in streams:
+        stream.stop_stream()
+        stream.close()
+    audio.terminate()
+
+
+def recordsound3():
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    RATE = 44100
+    CHUNK = 1024
+    RECORD_SECONDS = 5
+    OUTPUT_FILES = ["rec3.wav"]  # Output files for each microphone
+    DEVICE_INDEXES = [3]  # Replace with your microphone device indexes
+
+    # Initialize PyAudio
+    audio = pyaudio.PyAudio()
+
+    # Open streams for each microphone
+    streams = [
+                audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, input_device_index=idx, frames_per_buffer=CHUNK)
+                for idx in DEVICE_INDEXES
+            ]
+
+    print("Recording...")
+
+    # Record audio
+    frames = [[] for _ in DEVICE_INDEXES]
+    for _ in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+        for i, stream in enumerate(streams):
+            data = stream.read(CHUNK)
+            frames[i].append(data)
+
+    print("Finished recording.")
+
+    # Save audio to files
+    for i, frame in enumerate(frames):
+        wf = wave.open(OUTPUT_FILES[i], 'wb')
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(audio.get_sample_size(FORMAT))
+        wf.setframerate(RATE)
+        wf.writeframes(b''.join(frame))
+        wf.close()
+
+    # Close streams
+    for stream in streams:
+        stream.stop_stream()
+        stream.close()
+    audio.terminate()
+
+
+def recordsound4():
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    RATE = 44100
+    CHUNK = 1024
+    RECORD_SECONDS = 5
+    OUTPUT_FILES = ["rec4.wav"]  # Output files for each microphone
+    DEVICE_INDEXES = [5]  # Replace with your microphone device indexes
+
+    # Initialize PyAudio
+    audio = pyaudio.PyAudio()
+
+    # Open streams for each microphone
+    streams = [
+                audio.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, input_device_index=idx, frames_per_buffer=CHUNK)
+                for idx in DEVICE_INDEXES
+            ]
+
+    print("Recording...")
+
+    # Record audio
+    frames = [[] for _ in DEVICE_INDEXES]
+    for _ in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+        for i, stream in enumerate(streams):
+            data = stream.read(CHUNK)
+            frames[i].append(data)
+
+    print("Finished recording.")
+
+    # Save audio to files
+    for i, frame in enumerate(frames):
+        wf = wave.open(OUTPUT_FILES[i], 'wb')
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(audio.get_sample_size(FORMAT))
+        wf.setframerate(RATE)
+        wf.writeframes(b''.join(frame))
+        wf.close()
+
+    # Close streams
+    for stream in streams:
+        stream.stop_stream()
+        stream.close()
+    audio.terminate()
+
+
+if __name__ == "__main__":
+
+    channel_list=[1,2,3]
+    positionTable={1:[1,2,4]}
+
+
+    for position in positionTable:
+
+        #set robot2position
+        #wait
+        os.makedirs("position"+str(position), exist_ok=True)
+        root = os.getcwd()
+        os.chdir("position"+str(position))
+
+        #channel1
+        process1 = Process(target=recordsound1)
+        process2 = Process(target=soundtrigger)
+
+        process1.start()
+        process2.start()
+
+        process1.join()
+        process2.join()
+
+        time.sleep(10)
+
+        #channel2
+        process1 = Process(target=recordsound2)
+        process2 = Process(target=soundtrigger)
+
+        process1.start()
+        process2.start()
+
+        process1.join()
+        process2.join()
+
+        time.sleep(4)
+
+        #channel3
+        process1 = Process(target=recordsound3)
+        process2 = Process(target=soundtrigger)
+
+        process1.start()
+        process2.start()
+
+        process1.join()
+        process2.join()
+
+
+        time.sleep(4)
+
+        #channel4
+        process1 = Process(target=recordsound4)
+        process2 = Process(target=soundtrigger)
+
+        process1.start()
+        process2.start()
+
+        process1.join()
+        process2.join()
+
+        time.sleep(4)
+
+        os.chdir(root)
+        
+
+
+
+
+
+
