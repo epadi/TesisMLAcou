@@ -39,10 +39,20 @@ def orderbydistance(dirref, dirlist):
     orderlist=sorted(dirplusdis,key=itemgetter(1))
     return orderlist
 
+def normalized_cross_correlation(signal1, signal2):
+    signal1 = np.asarray(signal1).squeeze()
+    signal2 = np.asarray(signal2).squeeze()
+    signal1 = signal1 - np.mean(signal1)
+    signal2 = signal2 - np.mean(signal2)
+    denominator = np.linalg.norm(signal1) * np.linalg.norm(signal2)
+    if denominator == 0:
+        return 0.0
+    return float(np.max(correlate(signal1, signal2, mode='full')) / denominator)
 
 
 
-signals_path='C:/Users/Esteban/python_code/Recordings/New_ARM/Session3'
+
+signals_path='C:/Users/Esteban/TesisCode/Recordings/WW27_Rec/S1'
 
 samplerate = 44100
 #moverse al directorio
@@ -66,13 +76,11 @@ for refpointext in orderedfromOrigin:
     print("cross correlation for signal:"+ str(countrefpoints))
     orderedfromrefpoint=orderbydistance(refpoint,directories)
     cross_ordpoints=[]
-    refch1_point,sample_rate1 = open_audio(refpoint+"/aligned_channel2.wav")
+    refch1_point,sample_rate1 = open_audio(refpoint+"/aligned_channel1.wav")
 
     for point in orderedfromrefpoint:
-        chn1_point, sample_rate2 = open_audio(point[0]+"/aligned_channel2.wav")
-        #cross_corr = np.correlate(refch1_point,chn1_point, mode='full')
-        cross_corr = correlate(refch1_point,chn1_point, mode='full')
-        max_val=np.max(cross_corr)
+        chn1_point, sample_rate2 = open_audio(point[0]+"/aligned_channel1.wav")
+        max_val = normalized_cross_correlation(refch1_point, chn1_point)
         cross_ordpoints.append([point[0],point[1],float(max_val)])
     
     signal=countrefpoints

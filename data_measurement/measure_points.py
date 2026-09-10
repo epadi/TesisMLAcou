@@ -19,7 +19,7 @@ def getlocation(dirname):
     Orien=float(locationsplit[7])
     return [PosX,PosY,PosZ,Orien]
 
-signals_path='C:/Users/Esteban/python_code/Recordings/WW27_Rec/'
+signals_path='C:/Users/Esteban/TesisCode/Recordings/WW27_Rec/'
 
 
 
@@ -61,6 +61,16 @@ ax.set_title("3D Scatter Plot")
 ax.set_xlabel("X-axis")
 ax.set_ylabel("Y-axis")
 ax.set_zlabel("Z-axis")
+
+# Create an X/Y plane scatter plot
+fig_xy, ax_xy = plt.subplots()
+ax_xy.scatter(x, y, c=z, cmap='viridis', marker='o')
+ax_xy.set_xlim(-300, 300)
+ax_xy.set_ylim(-300, 300)
+ax_xy.set_title("X/Y Plane Scatter Plot")
+ax_xy.set_xlabel("X-axis")
+ax_xy.set_ylabel("Y-axis")
+ax_xy.set_aspect('equal', adjustable='box')
 
 # Show the plot
 plt.show()

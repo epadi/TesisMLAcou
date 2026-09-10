@@ -37,11 +37,11 @@ def spectral_analysis(file_path):
         magnitude_db = 20 * np.log10(magnitude + 1e-10)  # Avoid log(0)
 
         # Find top 10 frequencies with highest magnitude_db values
-        top_10_indices = np.argsort(magnitude_db)[-20:][::-1]
+        top_10_indices = np.argsort(magnitude_db)[-10:][::-1]
         top_10_freqs = positive_freqs[top_10_indices]
         top_10_magnitudes = magnitude_db[top_10_indices]
 
-        print("\nTop 20 Frequencies with Highest Magnitude (dB):")
+        print("\nTop 10 Frequencies with Highest Magnitude (dB):")
         print("-" * 50)
         for i, (freq, mag) in enumerate(zip(top_10_freqs, top_10_magnitudes), 1):
             print(f"{i:2d}. Frequency: {freq:10.2f} Hz | Magnitude: {mag:10.2f} dB")
@@ -51,7 +51,7 @@ def spectral_analysis(file_path):
         plt.figure(figsize=(10, 6))
         plt.plot(positive_freqs, magnitude_db, color='blue')
         # Mark the top 10 frequencies
-        plt.plot(top_10_freqs, top_10_magnitudes, 'ro', markersize=8, label='Top 20 Frequencies')
+        plt.plot(top_10_freqs, top_10_magnitudes, 'ro', markersize=8, label='Top 10 Frequencies')
         plt.title("Spectral Analysis of Audio Signal")
         plt.xlabel("Frequency (Hz)")
         plt.ylabel("Magnitude (dB)")

@@ -9,7 +9,7 @@ import json
 from matplotlib.colors import LinearSegmentedColormap
 
 
-signals_path='C:/Users/Esteban/python_code/Recordings/New_ARM/Session2'
+signals_path='C:/Users/Esteban/TesisCode/Recordings/WW27_Rec/S1'
 os.chdir(signals_path)
 
 plotdefine="xcorr2D"
