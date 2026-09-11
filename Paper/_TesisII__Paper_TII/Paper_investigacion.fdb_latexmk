@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Paper_investigacion"] 1786832422.32067 "Paper_investigacion.aux" "Paper_investigacion.bbl" "Paper_investigacion" 1786899619.47218 0
+["bibtex Paper_investigacion"] 1789099100.17153 "Paper_investigacion.aux" "Paper_investigacion.bbl" "Paper_investigacion" 1789099435.72333 0
   "./bibli.bib" 1786832418 7084 1052efeed87178da40901f5a7758727a ""
   "C:/Users/Esteban/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "Paper_investigacion.aux" 1786899618 5586 97be49f9a745989f0939025ffeb94e25 "pdflatex"
+  "Paper_investigacion.aux" 1789099434 4570 4ceadc0e70e686e7aec525cdd7073235 "pdflatex"
   (generated)
   "Paper_investigacion.bbl"
   "Paper_investigacion.blg"
   (rewritten before read)
-["pdflatex"] 1786899615.96852 "c:/Users/Esteban/TesisMLAcou/Paper/_TesisII__Paper_TII/Paper_investigacion.tex" "Paper_investigacion.pdf" "Paper_investigacion" 1786899619.47275 0
+["pdflatex"] 1789099432.32047 "c:/Users/Esteban/TesisMLAcou/Paper/_TesisII__Paper_TII/Paper_investigacion.tex" "Paper_investigacion.pdf" "Paper_investigacion" 1789099435.72431 0
   "4channelSpec.png" 1786832100 345552 6f22b35b399e5c4fb0c7b12b3665de84 ""
   "C:/Users/Esteban/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1786830256 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Esteban/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1786830184 13368578 cdae4c256041eaad70db07b5f88094a9 ""
@@ -77,23 +77,17 @@
   "C:/Users/Esteban/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1780057721 17611 1fdd60d12fed6aebd140f4d060571642 ""
   "C:/Users/Esteban/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1780057721 7243 98a9e0737a56460d15d6b41be1ecc3b8 ""
   "C:/Users/Esteban/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Estimation3D.png" 1786832100 845276 03e23373206b694c6da954bc2eee6762 ""
+  "Estimation3D.png" 1789091222 649454 f680329e137d343b62e32648a975bf16 ""
   "Measuretogether.png" 1786832100 1258666 0e4aaaf7b310fcee5af57020df41a7ea ""
-  "Paper_investigacion.aux" 1786899618 5586 97be49f9a745989f0939025ffeb94e25 "pdflatex"
-  "Paper_investigacion.bbl" 1786832422 5077 7469f75b27d67bfd13e41b70209222e5 "bibtex Paper_investigacion"
-  "Paper_investigacion.tex" 1786833663 34362 e0d2b5fd3d9318af1ace47cad1b356ee ""
-  "boxplot.jpeg" 1786832100 143739 a3ea46cbb9a0808e958c35d828fb4075 ""
-  "c:/Users/Esteban/TesisMLAcou/Paper/_TesisII__Paper_TII/Paper_investigacion.tex" 1786833663 34362 e0d2b5fd3d9318af1ace47cad1b356ee ""
-  "espectral_analysis_gray1.jpeg" 1786832100 270701 9c544f2f70fbe2a956843614b4ad3c65 ""
-  "histograms_test_error.png" 1786832100 68169 878909a5347b15a239caa67c5d2fae6f ""
+  "Paper_investigacion.aux" 1789099434 4570 4ceadc0e70e686e7aec525cdd7073235 "pdflatex"
+  "Paper_investigacion.bbl" 1789099100 5077 7469f75b27d67bfd13e41b70209222e5 "bibtex Paper_investigacion"
+  "Paper_investigacion.tex" 1789099431 31245 3085c419734f411bd0e9bcc4ab44cab3 ""
+  "boxplot.png" 1789087231 37716 8aeaa7cd257084f6da4ea26d56ff4c9f ""
+  "c:/Users/Esteban/TesisMLAcou/Paper/_TesisII__Paper_TII/Paper_investigacion.tex" 1789099431 31245 3085c419734f411bd0e9bcc4ab44cab3 ""
+  "errorvscoordinates.png" 1789095207 318221 27d10a2d5228cb255486134b05eaa20a ""
+  "histograms_test_error.png" 1789087051 121932 1a728f2d712e1fb67c1de6a5a2802935 ""
   "method2_improved.jpeg" 1786832100 138675 85882817126b97d95bb8d9e05ec47d98 ""
-  "new_measurements_error1.jpeg" 1786832100 307837 78b5e386cf700af79ca6a688b36cb37e ""
-  "newmeasures1.JPG" 1786832100 113503 206ee6a3823367875e90d74204b77249 ""
-  "xbyxEstimationE.png" 1786832100 71212 fa20add89e363acee3bc43d7cd2f1a52 ""
-  "xyz_points1.jpeg" 1786832100 411564 d90b55cab65d65606ad1398930310a23 ""
-  "xyzcontrangeplot.png" 1786832100 48674 63a90d961847ed99d5d54c14446ddf3b ""
-  "ybyyEstimationE.png" 1786832100 68203 17a3725f3a9bb55b95ba711bb46c74ce ""
-  "zbyzEstimationE.png" 1786832100 101845 94da4543da38d434dc0c5fbf10e7f268 ""
+  "testpoints.png" 1789097798 237458 977ed6ad463d93bb86bb8bff72fe3190 ""
   (generated)
   "Paper_investigacion.aux"
   "Paper_investigacion.log"

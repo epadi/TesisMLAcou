@@ -167,29 +167,19 @@ The dataset was collected through twenty‑six recording sessions. In each sessi
 
 Audio from four channels was recorded. The acoustic signal was emitted four times, and the response was captured one microphone at a time. Each recording session consisted of 270 recordings, each containing four channels. A change of 10 degrees in the base of the robotic arm differentiated each recording session, producing a cylindrical envelope for the measurement area.
 
-The coordinates of each measurement, obtained from the robotic arm, are shown in Figure \ref{xyzlocations}. Each blue column in the three dimensions plot corresponds to the points in a recording session, and each point containts the nine orientations captured at that location. The total number of sessions was limited by the rotational constraint of the robotic arm’s base, which allowed only 270 degrees of angular movement in its base.
+The coordinates of each measurement, obtained from the robotic arm, are shown in Fig. \ref{xyzlocations}. Each blue column in the three dimensions plot corresponds to the points in a recording session, and each point containts the nine orientations captured at that location. The total number of sessions was limited by the rotational constraint of the robotic arm’s base, which allowed only 270 degrees of angular movement in its base.
 
 \begin{figure}[!htb]
         \begin{center}        
-            \includegraphics[height=8cm, width=8.5cm]{xyz_points1.jpeg}
-            \caption{Scatter plot of cube locations for each recording in the dataset}
+            \includegraphics[height=9cm, width=9cm]{testpoints.png}
+            \caption{Scatter plot of cube locations for each recording in the dataset, the blue columns represent the 26 sessions, and each point in the column represents the nine orientations captured at that location. The distribution of training and test points are pesentend in blue and red respectively.}
         \label{xyzlocations}                         
         \end{center}
 \end{figure}
 
 %##############################################################
 
-The source audio signal was obtained by arbitrarily extracting a 0.3‑second segment from an acoustic melody. Figure~\ref{signalespectrum} shows the spectrum of the signal, where it can be observed that its bandwidth reaches 10 kHz, with higher‑magnitude components concentrated at low frequencies. Before reproducing the source signal, the recording process is initialized by opening the capture window for one second. This procedure is repeated four times, once for each microphone. After completing the four recordings, the cube is moved to a new orientation until it complete the nine possible and after this it moves to a new location.
-
-%Summary Table with the database labels
-
-\begin{figure}[!htb]
-        \begin{center}        
-            \includegraphics[height=5cm, width=9cm]{espectral_analysis_gray1.jpeg}
-            \caption{Spectrum analysis of audio signal used as stimulus for recording}
-        \label{signalespectrum}                         
-        \end{center}
-\end{figure}
+The source audio signal was obtained by arbitrarily extracting a 0.3‑second segment from an acoustic melody. The spectrum of the signal has a bandwidth that reaches 10 kHz, with higher‑magnitude components concentrated at low frequencies. Before reproducing the source signal, the recording process is initialized by opening the capture window for one second. This procedure is repeated four times, once for each microphone. After completing the four recordings, the cube is moved to a new orientation until it complete the nine possible and after this it moves to a new location.
 
 Due to the temporal unpredictability in the recording start time caused by the OS process scheduler, the signals from the four channels are aligned by exploiting the fact that the distance from the source to each microphone is identical. Therefore, the magnitude of the direct sound can be used as an alignment reference for the signals.
 
@@ -200,7 +190,7 @@ To employ a CNN to train on the dataset a Log-Mel transformation is perform to t
 
 \begin{figure}[!htb]
         \begin{center}        
-            \includegraphics[height=5.5cm, width=8.5cm]{4channelSpec.png}
+            \includegraphics[height=5cm, width=8.5cm]{4channelSpec.png}
             \caption{Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8, Y=-0.94 , Z=-9.43 and orientation 50 degrees.}
         \label{spectogram4ch}                         
         \end{center}
@@ -212,7 +202,11 @@ To employ a CNN to train on the dataset a Log-Mel transformation is perform to t
 
 The model architecture selected for the task of classifying and estimating the location–orientation of the cube inside the measure box was the ResNet‑18 network, chosen for its robustness, simplicity, and suitability for inference in resource‑constrained environments \cite{Resnetwhy}. Two modifications were applied to the standard network structure. First, the input layer was extended to accept a stack of four RGB images, one corresponding to each channel. Second, for the regression task, the softmax output layer was replaced with a single output feature using a sigmoid activation function.
 
-The dataset collected is made up of 7020 samples, each sample composed of 4 images one for each channel. For training and validation it was split using an 80:20 ratio. Training was performed for 20 epochs for both the classification network and the regression network. The complete pipeline for the data processing is show in Figure \ref{method_flow}.
+
+
+
+
+The dataset collected is made up of 7020 samples, each sample composed of 4 images one for each channel. For training and validation it was split using an 80:20 ratio as show in Fig. \ref{xyzlocations} with the training and test points represented in blue and red respectively. Training was performed for 40 epochs for both the classification network and the regression network. The complete pipeline for the data processing is show in Figure \ref{method_flow}.
 
 
 \begin{figure}[!htb]
@@ -227,30 +221,35 @@ The dataset collected is made up of 7020 samples, each sample composed of 4 imag
 
 \subsection{Classification by Location and Orientation}
 
-First, the capability of classifying the recordings in the database based on their location and orientation was explored. For the location classification task, the 26 distinct values of the session label were used to train the CNN. The objective of this experiment was to determine whether, after training, the network could correctly classify in which session each recording was perform. After training, the network achieved an accuracy of 99.3\% on the validation set, producing only one misclassification out of the 1404 test samples.
+First, the capability of classifying the recordings in the database based on their location and orientation was explored. For the location classification task, the 26 distinct values of the session label were used to train the CNN. The objective of this experiment was to determine whether, after training, the network could correctly classify in which session each recording was perform. After training, the network achieved an accuracy of 99.3\% on the test set, producing only one misclassification out of the 1404 test samples.
 
-For orientation classification, the dataset containing the 9 distinct label values and this information was used to train the network. The training procedure was identical to that of the location task, using 20 epochs. After training, the network achieved an accuracy of 27.07\% on the validation set, exhibiting a high number of misclassification errors across the different orientations.
+For orientation classification, the dataset containing the 9 distinct label values and this information was used to train the network. The training procedure was identical to that of the location task, using 40 epochs. After training, the network achieved an accuracy of 27.07\% on the test set, exhibiting a high number of misclassification errors across the different orientations.
 
 
 \subsection{Location Estimation}
 
-To estimate the location along the X, Y, and Z coordinates, three independent networks were used. For each network, the standard ResNet output layer was replaced with a single sigmoid function to enable training for regression instead of classification. Additionally, the loss function was changed from cross‑entropy which is appropriate for classification tasks to MSE loss, since it operates on real‑valued outputs and computes the squared error between the predicted and actual values, making it suitable for regression.
+To estimate the location along the X, Y, and Z coordinates, three independent networks were trained. In all the networks, the standard ResNet output layer was replaced with a single sigmoid function to enable training for regression instead of classification. Additionally, the loss function was changed from cross‑entropy which is used for classification to the MSE loss, since it operates on real‑valued outputs and computes the squared error between the predicted and actual values, making it suitable for regression.
 
-The networks were trained for 20 epochs and subsequently evaluated using the validation set. Figure~\ref{histograms} shows the resulting histograms and corresponding density curves for the estimation errors produced by each CNN for its respective coordinate.
 
+
+The networks were trained for 40 epochs and subsequently evaluated using the test set. Figure~\ref{histograms} shows the resulting histograms and corresponding density curves for the estimation errors produced by each CNN for its respective coordinate.
+
+
+
+
+From Fig.~\ref{histograms}, it can be observed that the error histograms for the X, Y and Z exhibit a symmetric distribution around zero presenting similarity to a normal distribution. The errors are concentrated betwent the range of -2cm to 2cm, with a few outliers extending beyond this range. The Z coordinate shows a wider spread of errors compared to the X and Y coordinates, indicating that the network has more difficulty accurately estimating the Z position of the cube in certain scenarios. 
 
 \begin{figure}[H]
         \begin{center}        
             \includegraphics[height=15cm, width=8.5cm]{histograms_test_error.png}
-            \caption{Histograms of the estimation errors for each coordinate with the validation set after training.}
+            \caption{Histograms of the estimation errors for each coordinate with the test set after training.}
         \label{histograms}                         
         \end{center}
 \end{figure}
 
-From Fig.~\ref{histograms}, it can be observed that the error histograms for the X and Y axes closely follow a normal distribution. In contrast, the Z‑axis estimation exhibits a pronounced tail toward negative error values, causing its histogram to deviate from the characteristic bell‑shaped curve of a normal distribution.
 
-The means and standard deviations are presented in Table~\ref{tab:meandesv}. The error ranges in the X and Y dimensions are similar; considering 
-$2\sigma$ standard deviation, 95.44\% of the estimations fall below 1.87cm in the X dimension and 1.6cm in the Y dimension. In the case of the Z dimension, instead of relying on the mean and standard deviation values, we observe from Fig.~\ref{histograms} that the portion of the histogram near zero exhibits normal behavior. From this region, we obtain a value of 79.41\%, corresponding to the proportion of estimations in the evaluation set whose error was equal to or less than 2cm.
+The means and standard deviations for the histograms Fig.~\ref{histograms} are presented in Table~\ref{tab:meandesv}. The three coordinates exhibit mean values close to zero, indicating that the estimations are unbiased. The standard deviation for X and Y have a similar value near to 0.8cm, while the Z coordinate has a higher standard deviation of 1.05cm, indicating that the Z estimations are more dispersed. In all three cases the standard deviation is less than 2cm. Considering 
+$2\sigma$ standard deviation as a metric of evaluation result in 95.44\% of the total estimations fall below 1.56cm of error in the X dimension, 1.42cm in the Y dimension and 2.11cm in the Z dimension. The table \ref{esterrorbyrange} shows the percentage of estimations that fall within different error ranges for each coordinate. The results indicate that the majority of estimations for all three coordinates fall within a range of $\pm2$cm, with the Y coordinate having the highest percentage of estimations within this range at 98.87\%, followed by X at 97.95\% and Z at 94.26\%. 
 
 \begin{table}[!htb]
 \centering
@@ -258,57 +257,41 @@ $2\sigma$ standard deviation, 95.44\% of the estimations fall below 1.87cm in th
 \hline
 \textbf{Variable} & \textbf{Mean (cm)} & \textbf{Sample SD (cm)} \\
 \hline
-Error x & -0.4080 & 0.7304 \\
-Error y & -0.5296 & 0.5368 \\
-Error z & -1.1163 & 3.5504 \\
+Error x & 0.0590 & 0.7869 \\
+Error y & 0.3232 & 0.7112 \\
+Error z & -0.1000 & 1.0577 \\
 \hline
 \end{tabular}
 \caption{Mean and standard deviation for the three coordinates X,Y and Z}
 \label{tab:meandesv}
 \end{table}
 
-From the boxplot shown in Fig.~\ref{boxplot}, it can be observed that the error estimation is similar across the three coordinates when outliers are excluded from the analysis and only the mean, inter‑quartile range, and minimum–maximum values are considered.\\
 
-To understand how the error relates to the cube’s location inside the box, Fig.~\ref{3derror} plots the absolute error as a function of the three spatial coordinates. The first plot corresponds to the network responsible for estimating the X coordinate. Based on the color scale, the majority of points exhibit errors below 3 cm. A similar behavior is observed for the Y‑coordinate estimation, where most errors fall within the blue region. As shown previously in Fig.~\ref{histograms} and Fig.~\ref{boxplot}, the Z‑coordinate estimation contains outliers with significantly larger errors compared to those in the X and Y dimensions. Fig.~\ref{3derror} reveals the spatial distribution of these errors inside the box, showing that all large‑error cases occur when the cube is located near the top of the enclosure.
+The Fig.~\ref{boxplot} shows the boxplot for the distributions, it can be observed again that the error estimation is similar across the three coordinates
+ when outliers are excluded from the analysis. For the three boxes the median is near to zero, the inter quartile range are comparable for X and Y, while Z has a larger inter quartile range. The whiskers in the graph represent the 1.5 times the inter quartile range and the outliers are represented as points beyond the whiskers.
 
-\begin{figure}[H]
+ \begin{figure}[H]
         \begin{center}        
-            \includegraphics[height=4cm, width=8cm]{boxplot.jpeg}
+            \includegraphics[height=5.5cm, width=8.5cm]{boxplot.png}
             \caption{Box-plot of estimation error for the three coordinates X, Y and Z}
         \label{boxplot}                         
         \end{center}
 \end{figure}
 
 
+
+To understand how the error relates to the cube’s location inside the box, Fig.~\ref{3derror} plots the absolute error as a function of the three spatial coordinates. to facilitate visualization, the error values are represented using a color scale, where blue indicates low error and red indicates high error. The outliers above the scale of 3 cm error are represented as points with a red color, indicating that they have a significantly higher error compared to the majority of the data. The plots show that the error is not uniformly distributed across the three dimensions but also is not evident that the error is concentrated in specific regions of the box. The error distribution appears to be more scattered, with some areas exhibiting slightly higher errors than others. There is no clear pattern or trend in the error distribution, suggesting that the network’s performance is relatively consistent across the different locations within the box. In the case of points near together in the test set, meaning that we had a low density of points in the training set for that area, the error  tends to be similar to the error of the points that are close to them, indicating that the network is able to generalize well in those regions.
+
+
 \begin{figure}[H]
         \begin{center}        
-            \includegraphics[height=17cm, width=9cm]{Estimation3D.png}
+            \includegraphics[height=16cm, width=9cm]{Estimation3D.png}
             \caption{Absolute value of the error estimation for the three networks as function of the three coordinates X, Y and Z}
         \label{3derror}                         
         \end{center}
 \end{figure}
 
-Due to the fact that, in the original dataset, each element is treated as a distinct entry defined by its location–orientation pair, and the dataset was randomly divided into 80\% for training and 20\% for validation, it is possible for samples with the same location but different orientations to appear in both sets. To properly evaluate the model’s estimation capability when exposed to new location–orientation points, a third set of 1079 acoustic measurements was collected as the test set. In Fig.~\ref{new_mesures}, the test‑set points can be observed; these were obtained by setting the base rotation of the robotic arm to new angles located between the existing ones in the original database.
 
-\begin{figure}[H]
-        \begin{center}        
-            \includegraphics[height=5cm, width=6cm]{newmeasures1.JPG}
-            \caption{New cube locations for each recording in the test dataset}
-        \label{new_mesures}                         
-        \end{center}
-\end{figure}
-
-The estimation error was computed for the test set. The distributions for the three coordinates are shown in the histograms of Fig.~\ref{histograms2}. From the first two plots, it can be observed that, unlike the validation‑set distributions in Fig.~\ref{histograms}, the error distributions for X and Y are not normal. Instead, both exhibit a split structure, with two sections symmetrically distributed around zero. In the case of the Z‑coordinate, the distribution shows a behavior similar to that observed in the validation set, including several negative‑value outliers. For all three coordinates, the distributions are more spread along the error axis, indicating that the errors are larger than those obtained with the validation set.
-
-Table~\ref{esterrorbyrange} and Figure ~\ref{counterror} present the percentage of points whose location was estimated within specific error ranges. The behavior for X and Y is similar, although the estimator for Y performs slightly better, achieving 98.8\% of estimations with errors below 4cm. The X estimator follows with 94\%, while the Z estimator lags behind at 78.04\%, mainly due to the large errors occurring when the cube is positioned near the top of the box. In Fig.~\ref{counterror}, the curves show the percentage of estimated points as a function of the error range. Although Z exhibits a higher percentage within the (-1,1) cm range, its curve decreases more slowly compared to X and Y, resulting in lower percentages as the error range increases.
-
-\begin{figure}[H]
-        \begin{center}        
-            \includegraphics[height=4cm, width=8cm]{xyzcontrangeplot.png}
-            \caption{Count of points estimated within an error range}
-        \label{counterror}                         
-        \end{center}
-\end{figure}
 
 \begin{table}[h!]
 \centering
@@ -316,13 +299,13 @@ Table~\ref{esterrorbyrange} and Figure ~\ref{counterror} present the percentage 
 \hline
 \textbf{Error Range (cm)} & \textbf{Count X (\%)} & \textbf{ Count Y(\%)} & \textbf{Count Z(\%)} \\
 \hline
-(-1, 1) & 25.21 & 29.56 & 33.83 \\
-(-2, 2) & 63.58 & 68.30 & 57.83 \\
-(-3, 3) & 86.75 & 93.51 & 71.73 \\
-(-4, 4) & 94.25 & 98.80 & 78.04 \\
+(-1, 1) & 84.42 & 82.29 & 65.51 \\
+(-2, 2) & 97.95 & 98.87 & 94.26 \\
+(-3, 3) & 99.65 & 99.93 & 99.15 \\
+(-4, 4) & 99.86 & 99.93 & 99.86 \\
 \hline
 \end{tabular}
-\caption{Count of estimation error percentage by each error range (\%)}
+\caption{Count of estimation error percentage by each error range}
 \label{esterrorbyrange}
 \end{table}
 
@@ -330,43 +313,13 @@ Table~\ref{esterrorbyrange} and Figure ~\ref{counterror} present the percentage 
 
 \begin{figure}[H]
         \begin{center}        
-            \includegraphics[height=14cm, width=8cm]{new_measurements_error1.jpeg}
-            \caption{Histograms of the estimation errors for each coordinate as result of evaluation of the test set.}
-        \label{histograms2}                         
+            \includegraphics[height=14cm, width=8cm]{errorvscoordinates.png}
+            \caption{Estimation errors along the three coordinates X, Y and Z as function of the corresponding coordinate value.}
+        \label{XYZerror}                         
         \end{center}
 \end{figure}
 
-To analyze in more detail the behavior of the distributions shown in Fig.~\ref{histograms2}, the estimation error was plotted as a function of each coordinate. In Fig.~\ref{EstimationXbyX}, the estimation error for the X coordinate is presented along the x‑axis. The plot shows that the errors tend to be positive for negative values of X and negative for positive values of X. This transition from positive to negative error may originate from the fact that the two sides along the x‑axis are made of different materials: the wall toward the positive direction is acrylic, while the opposite wall is ceramic. Consequently, the acoustic reflection and refraction properties are different, which may influence the magnitude of the error estimated by the network.
-
-In Fig.~\ref{EstimationYbyY}, the estimation error for the Y coordinate is shown as a function of the Y value. Considering that positive Y values point toward the speaker and that the microphones are located on the side corresponding to negative Y values—with the robotic arm positioned at the center—an inversion of error magnitude similar to that observed along the X axis can be seen. Many points near the edges exhibit opposite error behavior compared to those near the center. Additionally, the estimations near the robotic arm appear more scattered, likely due to acoustic interference caused by the physical structure of the arm.
-
-\begin{figure}[H]
-        \begin{center}        
-            \includegraphics[height=4cm, width=8cm]{xbyxEstimationE.png}
-            \caption{Estimation error on coordinate X as a function of X}
-        \label{EstimationXbyX}                         
-        \end{center}
-\end{figure}
-
-
-\begin{figure}[H]
-        \begin{center}        
-            \includegraphics[height=4cm, width=8cm]{ybyyEstimationE.png}
-            \caption{Estimation error on coordinate Y as a function of Y}
-        \label{EstimationYbyY}                         
-        \end{center}
-\end{figure}
-
-Figure~\ref{EstimationZbyZ} shows the estimation error for the Z coordinate as a function of the Z value. For most of the Z range, the error remains within approximately $\pm5$cm. However, as previously highlighted in Fig. \ref{3derror} for the validation‑set Z errors, the same behavior appears in the test set: the estimation error increases in its negative magnitude as the cube moves above 30cm along the positive Z axis, reaching values near 40cm when the cube is positioned close to the top of the measurement box.
-
-\begin{figure}[H]
-        \begin{center}        
-            \includegraphics[height=4cm, width=8cm]{zbyzEstimationE.png}
-            \caption{Estimation error on coordinate Z as a function of Z}
-        \label{EstimationZbyZ}                         
-        \end{center}
-\end{figure}
-
+To extend and analyze more in detail the response of the networks along the coordinates, the network estimation error as a function  of individually the X, Y and Z coordinates is plotted in Fig.~\ref{XYZerror}. The estimation error was plotted as a function of each coordinate, with the other two remining coordinates having variations but not being the focus of the analysis. The plots include a tendency line in red obteined as the linear regression of the scatered points in the graph. The lines shows that the error moves from positive to negative when moving from negative to positive in the coordinates axis. Knowing that the error estimation is the diference betwen the predicted value and the real value, this means that the network tends to overestimate negative coordinates and underestimate positive coordinates. The tendency lines for the three coordinates evidence the same behaviour. Other aspects to highlight is that in X and Y the error is less in both extremes of the axis, this is due the fact that the movement of the cube for the data collection was circular in the plane X and Y causing that exist more points in the extremes of the axis, while in the middle of the axis there are less points and the error is higher. In contrast Z was uniformly sampled along the axis, with similar density of points along the axis.
 
 
 
@@ -375,11 +328,11 @@ Figure~\ref{EstimationZbyZ} shows the estimation error for the Z coordinate as a
 
 \section{Conclusion and Future Work}
 
-The experiments presented in this work demonstrate that, from the acoustic response recorded by an array of microphones, it is possible to locate an object within a confined space. Regarding the classification task based on the acoustic response, the results show that identifying whether an object is positioned within a particular region of the measurement box is a trivial task for a CNN trained on Log‑Mel spectrograms. In contrast, the network exhibited poor performance when attempting to classify the specific orientation of the cube.
+The experiments presented in this work demonstrate that, from the acoustic response recorded by an array of microphones, it is possible to locate an object within a confined, reduced space. Regarding the classification task based on the acoustic response, the results show that identifying whether an object is positioned within a particular region ofthe measurement box is a trivial task for a CNN trained on Log‑Mel spectrograms. In contrast,the network exhibited poor performance when attempting to classifythe specific orientation ofthe cube.
 
-For the task of estimating the cube’s position in a Cartesian coordinate system, the results indicate that the estimator exhibits similar overall behavior across the three coordinates, although the estimation error varies along each axis, with certain regions showing higher error levels. Among the three coordinates, Y achieved the highest success rate, followed by X, and finally Z, which was affected by the problematic cube locations near the top wall. The estimators for X and Y were capable of determining the cube’s position in most cases within an error range of $\pm4$cm.
+For the task of estimating the cube’s position in a Cartesian coordinate system, the results indicate that the estimator exhibits a similar overall behavior across the three coordinates, although the estimation error varies slightly along each axis, the results present errors fitting the normal distribution. Among the three coordinates, the estimation of Y achieved the highest success rate, followed by X, and finally Z. The estimators for the three coordinates were capable of determining the cube’s position in most cases within an error range of $\pm2$cm.
 
-This work did not consider the individual contribution of each channel; therefore, future research should explore the influence of each microphone on the overall estimation performance. Additionally, the histograms for the validation set revealed a pattern suggesting two distinct distributions for X and Y. This observation, together with the axis‑wise error plots showing two different behaviors, suggests that dividing the estimation process for each axis into two separate regions may help reduce the error range. Finally, further investigation is needed to understand the impact of cube locations associated with problematic Z estimations and how these positions affect the estimation of the other coordinates.
+This work did not consider the individual contribution of each channel; therefore, future research should explore the influence of each microphone on the overall estimation performance. Additionally, the histograms for the test set revealed a pattern suggesting two distinct distributions for X and Y. This observation, together with the axis‑wise error plots showing two different behaviors, suggests that dividing the estimation process for each axis into two separate regions may help reduce the error range. Finally, further investigation is needed to understand the impact of cube locations associated with problematic Z estimations and how these positions affect the estimation of the other coordinates.
 
 \nocite{*}
 

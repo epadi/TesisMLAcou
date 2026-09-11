@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  16 AUG 2026 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  10 SEP 2026 22:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -314,110 +314,70 @@ File: Measuretogether.png Graphic file (type png)
 <use Measuretogether.png>
 Package pdftex.def Info: Measuretogether.png  used on input line 156.
 (pdftex.def)             Requested size: 227.62137pt x 426.7854pt.
-<xyz_points1.jpeg, id=17, 1027.84pt x 1027.84pt>
-File: xyz_points1.jpeg Graphic file (type jpg)
-<use xyz_points1.jpeg>
-Package pdftex.def Info: xyz_points1.jpeg  used on input line 174.
-(pdftex.def)             Requested size: 241.84042pt x 227.61543pt.
- [3 <./Measuretogether.png> <./xyz_points1.jpeg>]
-<espectral_analysis_gray1.jpeg, id=22, 1381.16pt x 770.88pt>
-File: espectral_analysis_gray1.jpeg Graphic file (type jpg)
-<use espectral_analysis_gray1.jpeg>
-Package pdftex.def Info: espectral_analysis_gray1.jpeg  used on input line 188.
-(pdftex.def)             Requested size: 256.05855pt x 142.25769pt.
+<testpoints.png, id=17, 714.7503pt x 714.7503pt>
+File: testpoints.png Graphic file (type png)
+<use testpoints.png>
+Package pdftex.def Info: testpoints.png  used on input line 174.
+(pdftex.def)             Requested size: 256.07751pt x 256.07751pt.
 
-Overfull \hbox (4.05855pt too wide) in paragraph at lines 188--189
+Overfull \hbox (4.07751pt too wide) in paragraph at lines 174--175
  [] 
  []
 
+[3 <./Measuretogether.png> <./testpoints.png>]
 <4channelSpec.png, id=23, 481.04718pt x 347.04657pt>
 File: 4channelSpec.png Graphic file (type png)
 <use 4channelSpec.png>
-Package pdftex.def Info: 4channelSpec.png  used on input line 203.
-(pdftex.def)             Requested size: 241.85156pt x 156.49252pt.
+Package pdftex.def Info: 4channelSpec.png  used on input line 193.
+(pdftex.def)             Requested size: 241.85156pt x 142.26883pt.
 <method2_improved.jpeg, id=24, 331.4784pt x 185.0112pt>
 File: method2_improved.jpeg Graphic file (type jpg)
 <use method2_improved.jpeg>
-Package pdftex.def Info: method2_improved.jpeg  used on input line 220.
+Package pdftex.def Info: method2_improved.jpeg  used on input line 214.
 (pdftex.def)             Requested size: 256.07875pt x 170.72615pt.
 
-Overfull \hbox (4.07875pt too wide) in paragraph at lines 220--221
+Overfull \hbox (4.07875pt too wide) in paragraph at lines 214--215
  [] 
  []
 
-[4 <./espectral_analysis_gray1.jpeg> <./4channelSpec.png> <./method2_improved.jpeg>]
-<histograms_test_error.png, id=29, 465.99094pt x 1119.43219pt>
+[4 <./4channelSpec.png> <./method2_improved.jpeg>]
+<histograms_test_error.png, id=29, 715.473pt x 1293.633pt>
 File: histograms_test_error.png Graphic file (type png)
 <use histograms_test_error.png>
 Package pdftex.def Info: histograms_test_error.png  used on input line 244.
-(pdftex.def)             Requested size: 241.84738pt x 426.7893pt.
+(pdftex.def)             Requested size: 241.83836pt x 426.78177pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 257.
+(Font)              <8> on input line 256.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 257.
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
-
- []
-
-<boxplot.jpeg, id=30, 331.4784pt x 185.0112pt>
-File: boxplot.jpeg Graphic file (type jpg)
-<use boxplot.jpeg>
-Package pdftex.def Info: boxplot.jpeg  used on input line 276.
-(pdftex.def)             Requested size: 227.6278pt x 113.81085pt.
-<Estimation3D.png, id=31, 880.79062pt x 2214.77437pt>
+(Font)              <6> on input line 256.
+<boxplot.png, id=30, 626.5809pt x 410.4936pt>
+File: boxplot.png Graphic file (type png)
+<use boxplot.png>
+Package pdftex.def Info: boxplot.png  used on input line 275.
+(pdftex.def)             Requested size: 241.84149pt x 156.49028pt.
+ [5 <./histograms_test_error.png> <./boxplot.png>]
+<Estimation3D.png, id=37, 830.3823pt x 1987.425pt>
 File: Estimation3D.png Graphic file (type png)
 <use Estimation3D.png>
-Package pdftex.def Info: Estimation3D.png  used on input line 285.
-(pdftex.def)             Requested size: 256.06784pt x 483.66963pt.
+Package pdftex.def Info: Estimation3D.png  used on input line 288.
+(pdftex.def)             Requested size: 256.07277pt x 455.21796pt.
 
-Overfull \hbox (4.06784pt too wide) in paragraph at lines 285--286
+Overfull \hbox (4.07277pt too wide) in paragraph at lines 288--289
  [] 
  []
-
-[5 <./histograms_test_error.png> <./boxplot.jpeg>]
-<newmeasures1.JPG, id=36, 1027.84pt x 948.54375pt>
-File: newmeasures1.JPG Graphic file (type jpg)
-<use newmeasures1.JPG>
-Package pdftex.def Info: newmeasures1.JPG  used on input line 295.
-(pdftex.def)             Requested size: 170.7155pt x 142.26094pt.
-<xyzcontrangeplot.png, id=37, 614.295pt x 395.3169pt>
-File: xyzcontrangeplot.png Graphic file (type png)
-<use xyzcontrangeplot.png>
-Package pdftex.def Info: xyzcontrangeplot.png  used on input line 307.
-(pdftex.def)             Requested size: 227.62303pt x 113.80653pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<new_measurements_error1.jpeg, id=38, 770.88pt x 1381.16pt>
-File: new_measurements_error1.jpeg Graphic file (type jpg)
-<use new_measurements_error1.jpeg>
-Package pdftex.def Info: new_measurements_error1.jpeg  used on input line 333.
-(pdftex.def)             Requested size: 227.61935pt x 398.33437pt.
+<errorvscoordinates.png, id=38, 714.7503pt x 1293.633pt>
+File: errorvscoordinates.png Graphic file (type png)
+<use errorvscoordinates.png>
+Package pdftex.def Info: errorvscoordinates.png  used on input line 316.
+(pdftex.def)             Requested size: 227.62325pt x 398.33755pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4954) has occurred while \output is active []
 
- [6 <./Estimation3D.png> <./newmeasures1.JPG> <./xyzcontrangeplot.png>]
-<xbyxEstimationE.png, id=44, 716.6775pt x 427.5975pt>
-File: xbyxEstimationE.png Graphic file (type png)
-<use xbyxEstimationE.png>
-Package pdftex.def Info: xbyxEstimationE.png  used on input line 345.
-(pdftex.def)             Requested size: 227.61366pt x 113.80865pt.
-<ybyyEstimationE.png, id=45, 712.16063pt x 432.86719pt>
-File: ybyyEstimationE.png Graphic file (type png)
-<use ybyyEstimationE.png>
-Package pdftex.def Info: ybyyEstimationE.png  used on input line 354.
-(pdftex.def)             Requested size: 227.61353pt x 113.81097pt.
-<zbyzEstimationE.png, id=46, 708.39656pt x 419.31656pt>
-File: zbyzEstimationE.png Graphic file (type png)
-<use zbyzEstimationE.png>
-Package pdftex.def Info: zbyzEstimationE.png  used on input line 364.
-(pdftex.def)             Requested size: 227.62112pt x 113.80562pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./new_measurements_error1.jpeg> <./xbyxEstimationE.png> <./ybyyEstimationE.png>] (Paper_investigacion.bbl)
+ [6 <./Estimation3D.png> <./errorvscoordinates.png>] (Paper_investigacion.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -429,24 +389,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8 <./zbyzEstimationE.png>] (Paper_investigacion.aux)
+[7] (Paper_investigacion.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6839 strings out of 467501
- 121627 string characters out of 5407578
- 631767 words of memory out of 5000000
- 36032 multiletter control sequences out of 15000+600000
+ 6791 strings out of 467501
+ 120329 string characters out of 5407578
+ 631625 words of memory out of 5000000
+ 35984 multiletter control sequences out of 15000+600000
  661468 words of font info for 97 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  73i,8n,83p,1623b,347s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Paper_investigacion.pdf (8 pages, 4257671 bytes).
+Output written on Paper_investigacion.pdf (7 pages, 2932611 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
