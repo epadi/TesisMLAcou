@@ -1,0 +1,33 @@
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Room Impulse Response and the geometrical room representation \cite {RIR03}}}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Microphone array in binaural arrangement \cite {MA01}}}{7}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Summarized process to build a Markov Transition Field \cite {Faouzi24}}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Convolution operation over a tensor of 5x5 with zero padding and a stride of 1, resulting in a festure map of 5x5 \cite {convpadd}}}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Pooling escalation with average pooling and max-pooling}}{13}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Structure of Convolutional Neural Network for aircraft structural health monitoring \cite {cnnimg}}}{14}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison of B) RC vrs A) traditional RNN, the bold arrows are weights that change during training \cite {RC1}}}{15}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Image on the left is an acoustic image, on the right and microphone camera used to capture the image \cite {Acamera}}}{17}{figure.caption.23}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Measure box with: the robotic arm, the microphone measurement arrays and the source signal speaker.}}{28}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Microphone array configured as binaural pairs in horizontal and vertical}}{29}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Acustic to location processing pipeline}}{29}{figure.caption.26}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Example diagram.}}{35}{figure.caption.29}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

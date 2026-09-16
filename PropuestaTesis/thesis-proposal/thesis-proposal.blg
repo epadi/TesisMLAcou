@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis-proposal.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Database file #1: mendeley.bib
+Warning--entry type for "echoloco" isn't style-file defined
+--line 331 of file mendeley.bib
+Warning--entry type for "mordor" isn't style-file defined
+--line 340 of file mendeley.bib
+Warning--entry type for "RIR01" isn't style-file defined
+--line 348 of file mendeley.bib
+Warning--entry type for "RIR03" isn't style-file defined
+--line 369 of file mendeley.bib
+Warning--entry type for "BEA01" isn't style-file defined
+--line 377 of file mendeley.bib
+Warning--entry type for "MA01" isn't style-file defined
+--line 393 of file mendeley.bib
+Warning--entry type for "CNNASC1" isn't style-file defined
+--line 466 of file mendeley.bib
+Warning--entry type for "Acamera" isn't style-file defined
+--line 509 of file mendeley.bib
+Warning--empty booktitle in RIR05
+You've used 41 entries,
+            2773 wiz_defined-function locations,
+            893 strings with 14684 characters,
+and the built_in function-call counts, 20472 in all, are:
+= -- 1866
+> -- 1221
+< -- 28
++ -- 412
+- -- 370
+* -- 1629
+:= -- 3141
+add.period$ -- 182
+call.type$ -- 41
+change.case$ -- 244
+chr.to.int$ -- 40
+cite$ -- 83
+duplicate$ -- 935
+empty$ -- 1602
+format.name$ -- 423
+if$ -- 4400
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 28
+newline$ -- 265
+num.names$ -- 172
+pop$ -- 489
+preamble$ -- 1
+purify$ -- 202
+quote$ -- 0
+skip$ -- 772
+stack$ -- 0
+substring$ -- 500
+swap$ -- 164
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 451
+warning$ -- 1
+while$ -- 155
+width$ -- 0
+write$ -- 640
+(There were 9 warnings)

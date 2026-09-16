@@ -1,0 +1,334 @@
+\begin{thebibliography}{41}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bitterman et~al.(2024)Bitterman, Levi, Diamandi, Gannot, and
+  Rosenwein]{RIR06}
+Jacob Bitterman, Daniel Levi, Hilel~Hagai Diamandi, Sharon Gannot, and Tal
+  Rosenwein.
+\newblock Revrir: Joint reverberant speech and room impulse response embedding
+  using contrastive learning with application to room shape classification,
+  2024.
+\newblock URL \url{https://arxiv.org/abs/2406.03120}.
+
+\bibitem[Brunetto et~al.(2023)Brunetto, Hornauer, Yu, and Moutarde]{bat1}
+Amandine Brunetto, Sascha Hornauer, Stella~X. Yu, and Fabien Moutarde.
+\newblock The audio-visual batvision dataset for research on sight and sound.
+\newblock In \emph{2023 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, page 1–8. IEEE, October 2023.
+\newblock \doi{10.1109/iros55552.2023.10341715}.
+\newblock URL \url{http://dx.doi.org/10.1109/IROS55552.2023.10341715}.
+
+\bibitem[Byttebier(2021)]{ASC4}
+Laurens Byttebier.
+\newblock \emph{Small Footprint Neural Network Models for Acoustic Scene
+  Classification}.
+\newblock Mtech thesis, Ghent University, 2021.
+\newblock Available at
+  \url{https://libstore.ugent.be/fulltxt/RUG01/003/014/483/RUG01-003014483_2021_0001_AC.pdf}.
+
+\bibitem[Daniele~Battaglino and Evans(2016)]{CNNASC1}
+Ludovick~Lepauloux Daniele~Battaglino and Nicholas Evans.
+\newblock Acoustic scene classification using convolutional neural networks,
+  2016.
+\newblock URL
+  \url{https://dcase.community/documents/challenge2016/technical_reports/DCASE2016_Battaglino_1032.pdf}.
+
+\bibitem[de~Santana(2017)]{BEA01}
+Leandro de~Santana.
+\newblock Fundamentals of acoustic beamforming, 2017.
+\newblock URL
+  \url{https://www.sto.nato.int/publications/STO%20Educational%20Notes/STO-EN-AVT-287/EN-AVT-287-04.pdf}.
+
+\bibitem[Demontis et~al.(2018)Demontis, Ollivier, and Marchal]{RWB1}
+Hugo Demontis, Francois Ollivier, and Jacques Marchal.
+\newblock 3d identification of acoustic sources in rooms using a large-scale
+  microphone array.
+\newblock In \emph{2018 16th International Workshop on Acoustic Signal
+  Enhancement (IWAENC)}, pages 506--509, 2018.
+\newblock \doi{10.1109/IWAENC.2018.8521264}.
+
+\bibitem[Deprez and Robinson(2024)]{convdef}
+Maria Deprez and Emma~C. Robinson.
+\newblock Chapter 11 - convolutional neural networks.
+\newblock In Maria Deprez and Emma~C. Robinson, editors, \emph{Machine Learning
+  for Biomedical Applications}, pages 233--270. Academic Press, 2024.
+\newblock ISBN 978-0-12-822904-0.
+\newblock \doi{https://doi.org/10.1016/B978-0-12-822904-0.00016-9}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/B9780128229040000169}.
+
+\bibitem[Dokmanić et~al.(2013{\natexlab{a}})Dokmanić, Parhizkar, Walther, Lu,
+  and Vetterli]{RIR02}
+Ivan Dokmanić, Reza Parhizkar, Andreas Walther, Yue~M. Lu, and Martin
+  Vetterli.
+\newblock Acoustic echoes reveal room shape.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 110\penalty0
+  (30):\penalty0 12186--12191, 2013{\natexlab{a}}.
+\newblock \doi{10.1073/pnas.1221464110}.
+\newblock URL \url{https://www.pnas.org/doi/abs/10.1073/pnas.1221464110}.
+
+\bibitem[Dokmanić et~al.(2013{\natexlab{b}})Dokmanić, Parhizkar, Walther, Lu,
+  and Vetterli]{RIR07}
+Ivan Dokmanić, Reza Parhizkar, Andreas Walther, Yue~M. Lu, and Martin
+  Vetterli.
+\newblock Acoustic echoes reveal room shape.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 110\penalty0
+  (30):\penalty0 12186--12191, 2013{\natexlab{b}}.
+\newblock \doi{10.1073/pnas.1221464110}.
+\newblock URL \url{https://www.pnas.org/doi/abs/10.1073/pnas.1221464110}.
+
+\bibitem[Faouzi(2024)]{Faouzi24}
+Johann Faouzi.
+\newblock Time series classification: A review of algorithms and
+  implementations.
+\newblock In Jorge Rocha, Cláudia~M. Viana, and Sandra Oliveira, editors,
+  \emph{Time Series Analysis}, chapter~2. IntechOpen, Rijeka, 2024.
+\newblock \doi{10.5772/intechopen.1004810}.
+\newblock URL \url{https://doi.org/10.5772/intechopen.1004810}.
+
+\bibitem[Garibo-i Orts et~al.(2023)Garibo-i Orts, Firbas, Sebasti\'a, and
+  Conejero]{GRA02}
+\`Oscar Garibo-i Orts, Nicolas Firbas, Laura Sebasti\'a, and J.~Alberto
+  Conejero.
+\newblock Gramian angular fields for leveraging pretrained computer vision
+  models with anomalous diffusion trajectories.
+\newblock \emph{Phys. Rev. E}, 107:\penalty0 034138, Mar 2023.
+\newblock \doi{10.1103/PhysRevE.107.034138}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevE.107.034138}.
+
+\bibitem[Gionfrida et~al.(2024)Gionfrida, Wang, Gan, Chli, and Carlone]{RobotV}
+Letizia Gionfrida, Chen Wang, Lu~Gan, Margarita Chli, and Luca Carlone.
+\newblock Computer and robot vision: Past, present, and future [tc spotlight].
+\newblock \emph{IEEE Robotics \& Automation Magazine}, 31\penalty0
+  (3):\penalty0 211--215, 2024.
+\newblock \doi{10.1109/MRA.2024.3428780}.
+
+\bibitem[Han et~al.(2017)Han, Park, and Lee]{CNNASC2}
+Yoonchang Han, Jeongsoon Park, and Kyogu Lee.
+\newblock Convolutional neural networks with binaural representations and
+  background subtraction for acoustic scene classification.
+\newblock In \emph{Workshop on Detection and Classification of Acoustic Scenes
+  and Events}, 2017.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:52830611}.
+
+\bibitem[Heilmann et~al.(2008)Heilmann, Meyer, and D{\"o}bler]{RWB3}
+Gunnar Heilmann, Andy Meyer, and Dirk D{\"o}bler.
+\newblock Beamforming in the time-domain using 3d-microphone arrays.
+\newblock In \emph{XIXth Biennial Conference of the New Zealand Acoustical
+  Society, Auckland}, 2008.
+
+\bibitem[Jiang et~al.(2024)Jiang, Qin, Pulsipher, and Zavala]{polling}
+Shengli Jiang, Shiyi Qin, Joshua~L. Pulsipher, and Victor~M. Zavala.
+\newblock Chapter 3 - convolutional neural networks: Basic concepts and
+  applications in manufacturing.
+\newblock In Masoud Soroush and Richard {D Braatz}, editors, \emph{Artificial
+  Intelligence in Manufacturing}, pages 63--102. Academic Press, 2024.
+\newblock ISBN 978-0-323-99134-6.
+\newblock \doi{https://doi.org/10.1016/B978-0-323-99134-6.00007-4}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/B9780323991346000074}.
+
+\bibitem[Jin et~al.(2019)Jin, Liu, Wang, and Sun]{AOR3_ROBOT}
+Shaowei Jin, Huaping Liu, Bowen Wang, and Fuchun Sun.
+\newblock Open-environment robotic acoustic perception for object recognition.
+\newblock \emph{Frontiers in Neurorobotics}, Volume 13 - 2019, 2019.
+\newblock ISSN 1662-5218.
+\newblock \doi{10.3389/fnbot.2019.00096}.
+\newblock URL
+  \url{https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2019.00096}.
+
+\bibitem[Koeppen and Heilmann(2009)]{RWB2}
+Jacqueline Koeppen and Gunnar Heilmann.
+\newblock 3d beam forming measurements using 3d-microphone arrays.
+\newblock Technical report, SAE Technical Paper, 2009.
+
+\bibitem[Leticia~Jaén and García(2017)]{RIR08}
+Teodoro~Aguilera Leticia~Jaén, Fernando J.~Álvarez and Juan~J. García.
+\newblock Groom-level indoor positioning based on acoustic impulse response
+  identification.
+\newblock \emph{International Conference on Indoor Positioning and Indoor
+  Navigation}, September 2017.
+
+\bibitem[Lukoševičius and Jaeger(2009)]{RC1}
+Mantas Lukoševičius and Herbert Jaeger.
+\newblock Reservoir computing approaches to recurrent neural network training.
+\newblock \emph{Computer Science Review}, 3\penalty0 (3):\penalty0 127--149,
+  2009.
+\newblock ISSN 1574-0137.
+\newblock \doi{https://doi.org/10.1016/j.cosrev.2009.03.005}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S1574013709000173}.
+
+\bibitem[Luo et~al.(2017)Luo, Zhu, Althoefer, and Liu]{AOR1}
+Shan Luo, Leqi Zhu, Kaspar Althoefer, and Hongbin Liu.
+\newblock Knock-knock: Acoustic object recognition by using stacked denoising
+  autoencoders.
+\newblock \emph{Neurocomputing}, 267:\penalty0 18--24, 2017.
+\newblock ISSN 0925-2312.
+\newblock \doi{https://doi.org/10.1016/j.neucom.2017.03.014}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S092523121730509X}.
+
+\bibitem[Manabe et~al.(2022)Manabe, Fukunaga, Nakatsuma, and Kumon]{shape1}
+Tomoya Manabe, Rikuto Fukunaga, Kei Nakatsuma, and Makoto Kumon.
+\newblock Object surface recognition using microphone array by acoustic
+  standing wave.
+\newblock In \emph{2022 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 9274--9279, 2022.
+\newblock \doi{10.1109/IROS47612.2022.9981386}.
+
+\bibitem[McCowan(2001)]{BEA02}
+Iain McCowan.
+\newblock Microphone arrays : A tutorial.
+\newblock In \emph{Computer Science, Engineering}, 2001.
+\newblock URL \url{https://api.semanticscholar.org/CorpusID:16623291}.
+
+\bibitem[mordorintelligence(2025)]{mordor}
+mordorintelligence.
+\newblock Usa maintenance repair \& operations industry size \& share analysis
+  - growth trends \& forecasts (2025 - 2030), 2025.
+\newblock URL
+  \url{%https://www.mordorintelligence.com/industry-reports/united-states-maintenance-repair-and-operations-mro-market}.
+
+\bibitem[Peters et~al.(2012)Peters, Lei, and Friedland]{RIR05}
+Nils Peters, Howard Lei, and Gerald Friedland.
+\newblock Name that room: room identification using acoustic features in a
+  recording.
+\newblock MM '12, page 841–844, New York, NY, USA, 2012. Association for
+  Computing Machinery.
+\newblock ISBN 9781450310895.
+\newblock \doi{10.1145/2393347.2396326}.
+\newblock URL \url{https://doi.org/10.1145/2393347.2396326}.
+
+\bibitem[Rothstein et~al.(2023)Rothstein, Liu, and Bashima]{echosense}
+Michael Rothstein, Zhuolin Liu, and Islam Bashima.
+\newblock Echosense: Acoustic sensing for enclosed structure monitoring and
+  recognition.
+\newblock In \emph{2023 IEEE MIT Undergraduate Research Technology Conference
+  (URTC)}, pages 1--6, 2023.
+\newblock \doi{10.1109/URTC60662.2023.10534944}.
+
+\bibitem[Samad(2009)]{RIR03}
+Faizan Samad.
+\newblock Using audio ray tracing to calculate room impulse response, 2009.
+\newblock URL
+  \url{https://courses.washington.edu/phys536/presentations/mar%2009/samad-Applications%20of%20Audio%20Ray%20Tracing%20(1).pdf}.
+
+\bibitem[Software et~al.(2016)Software, Systems, and 01db]{Acamera}
+CAE Software, Systems, and 01db.
+\newblock Noise inspector - acoustic cameras technical datasheet, 2016.
+\newblock URL
+  \url{https://www.gkmconsultants.com/assets/documents/instruments/pdf/not1542-june-2016-e-noise-inspector-acoustic-camera-technical-data-sheet-en.pdf}.
+
+\bibitem[Stamać et~al.(2019)Stamać, Grubeša, and Petošić]{MA02}
+Jasna Stamać, Sanja Grubeša, and Antonio Petošić.
+\newblock Designing the acoustic camera using matlab with respect to different
+  types of microphone arrays.
+\newblock In \emph{2019 2nd International Colloquium on Smart Grid Metrology
+  (SMAGRIMET)}, pages 1--6, 2019.
+\newblock \doi{10.23919/SMAGRIMET.2019.8720363}.
+
+\bibitem[stanford edu(2007)]{RIR01}
+Winter~2007 stanford edu, Music~318.
+\newblock Room impulse response measurement and analysis, 2007.
+\newblock URL \url{https://ccrma.stanford.edu/~adnanm/SCI220/Music318ir.pdf}.
+
+\bibitem[Sun et~al.(2020)Sun, Song, Hong, and Li]{RC2}
+Chenxi Sun, Moxian Song, Shenda Hong, and Hongyan Li.
+\newblock A review of designs and applications of echo state networks.
+\newblock \emph{CoRR}, abs/2012.02974, 2020.
+\newblock URL \url{https://arxiv.org/abs/2012.02974}.
+
+\bibitem[Tabian et~al.(2019)Tabian, Fu, and Sharif~Khodaei]{cnnimg}
+Iuliana Tabian, Hailing Fu, and Zahra Sharif~Khodaei.
+\newblock A convolutional neural network for impact detection and
+  characterization of complex composite structures.
+\newblock \emph{Sensors}, 19\penalty0 (22), 2019.
+\newblock ISSN 1424-8220.
+\newblock \doi{10.3390/s19224933}.
+\newblock URL \url{https://www.mdpi.com/1424-8220/19/22/4933}.
+
+\bibitem[Tracy and Kottege(2021)]{cat1}
+Ethan Tracy and Navinda Kottege.
+\newblock Catchatter: Acoustic perception for mobile robots.
+\newblock \emph{IEEE Robotics and Automation Letters}, 6\penalty0 (4):\penalty0
+  7209--7216, 2021.
+\newblock \doi{10.1109/LRA.2021.3094492}.
+
+\bibitem[Tran et~al.(2024)Tran, Wu, and Tsai]{AOR2_LEGO}
+Van-Thuan Tran, Chia-Yang Wu, and Wei-Ho Tsai.
+\newblock Acoustic-based lego recognition using attention-based convolutional
+  neural networks.
+\newblock \emph{Artif. Intell. Rev.}, 57\penalty0 (1), January 2024.
+\newblock ISSN 0269-2821.
+\newblock \doi{10.1007/s10462-023-10625-x}.
+\newblock URL \url{https://doi.org/10.1007/s10462-023-10625-x}.
+
+\bibitem[V et~al.(2021)V, Mulimani, and Koolagudi]{ASC3}
+Spoorthy. V, Manjunath Mulimani, and Shashidhar~G. Koolagudi.
+\newblock Acoustic scene classification using deep learning architectures.
+\newblock In \emph{2021 6th International Conference for Convergence in
+  Technology (I2CT)}, pages 1--6, 2021.
+\newblock \doi{10.1109/I2CT51068.2021.9418177}.
+
+\bibitem[Vargas et~al.(2023)Vargas, Ayll{\'o}n-Gavil{\'a}n, Dur{\'a}n-Rosal,
+  Guti{\'e}rrez, Herv{\'a}s-Mart{\'i}nez, and Guijo-Rubio]{gramianangular}
+V{\'i}ctor~Manuel Vargas, Rafael Ayll{\'o}n-Gavil{\'a}n, Antonio~Manuel
+  Dur{\'a}n-Rosal, Pedro~Antonio Guti{\'e}rrez, C{\'e}sar
+  Herv{\'a}s-Mart{\'i}nez, and David Guijo-Rubio.
+\newblock Gramian angular and markov transition fields applied to time series
+  ordinal classification.
+\newblock In Ignacio Rojas, Gonzalo Joya, and Andreu Catala, editors,
+  \emph{Advances in Computational Intelligence}, pages 505--516, Cham, 2023.
+  Springer Nature Switzerland.
+\newblock ISBN 978-3-031-43078-7.
+
+\bibitem[Vitali(2018)]{MA01}
+Andrea Vitali.
+\newblock Microphone array beamforming in the pcm and pdm domain, 2018.
+\newblock URL
+  \url{https://www.st.com/resource/en/design_tip/dt0117-microphone-array-beamforming-in-the-pcm-and-pdm-domain-stmicroelectronics.pdf}.
+
+\bibitem[Wang et~al.(2024)Wang, Clarke, Wang, Gao, and Wu]{RIR09}
+Mason Wang, Samuel Clarke, Jui-Hsien Wang, Ruohan Gao, and Jiajun Wu.
+\newblock Soundcam: A dataset for finding humans using room acoustics, 2024.
+\newblock URL \url{https://arxiv.org/abs/2311.03517}.
+
+\bibitem[wildlife(2025)]{echoloco}
+BBC wildlife.
+\newblock What exactly is echolocation and how does it work? the incredible
+  adaptation that allows animals to ‘see’ and communicate in the dark,
+  2025.
+\newblock URL
+  \url{https://www.discoverwildlife.com/animal-facts/what-is-echolocation}.
+
+\bibitem[Woo et~al.(2024)Woo, Kim, Kim, and Han]{ESP_RC}
+Junhyuk Woo, Hyeongmo Kim, Soon~Ho Kim, and Kyungreem Han.
+\newblock Echo state property upon noisy driving input.
+\newblock \emph{Complexity}, 2024\penalty0 (1):\penalty0 5593925, 2024.
+\newblock \doi{https://doi.org/10.1155/2024/5593925}.
+\newblock URL
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1155/2024/5593925}.
+
+\bibitem[Yamashita et~al.(2018)Yamashita, , Yamashita, Gian, and
+  Togashi]{convpadd}
+Rikiya Yamashita, , Rikiya Yamashita, Richard~Kinh Gian, and Kaori Togashi.
+\newblock Convolutional neural networks: an overview and application in
+  radiology.
+\newblock In \emph{nsights Imaging}, page 611–629. springeropen, 2018.
+\newblock ISBN 978-0-12-822904-0.
+\newblock \doi{https://doi.org/10.1007/s13244-018-0639-9}.
+\newblock URL
+  \url{https://insightsimaging.springeropen.com/articles/10.1007/s13244-018-0639-9#citeas}.
+
+\bibitem[Zhang(2021)]{AOR4}
+Zhoutong Zhang.
+\newblock \emph{Inferring Shape and Material from Sound}.
+\newblock Mtech thesis, MIT, 2021.
+\newblock Available at \url{https://dspace.mit.edu/handle/1721.1/139579}.
+
+\end{thebibliography}
