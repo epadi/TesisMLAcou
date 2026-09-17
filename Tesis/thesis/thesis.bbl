@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -121,6 +121,17 @@ Gunnar Heilmann, Andy Meyer, and Dirk D{\"o}bler.
 \newblock In \emph{XIXth Biennial Conference of the New Zealand Acoustical
   Society, Auckland}, 2008.
 
+\bibitem[Hoffman(2019)]{friedmanprocess}
+Julien~I.E. Hoffman.
+\newblock Chapter 26 - analysis of variance. ii. more complex forms.
+\newblock In \emph{Basic Biostatistics for Medical and Biomedical Practitioners
+  (Second Edition)}, pages 419--441. Academic Press, second edition edition,
+  2019.
+\newblock ISBN 978-0-12-817084-7.
+\newblock \doi{https://doi.org/10.1016/B978-0-12-817084-7.00026-7}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/B9780128170847000267}.
+
 \bibitem[Jiang et~al.(2024)Jiang, Qin, Pulsipher, and Zavala]{polling}
 Shengli Jiang, Shiyi Qin, Joshua~L. Pulsipher, and Victor~M. Zavala.
 \newblock Chapter 3 - convolutional neural networks: Basic concepts and
@@ -203,6 +214,13 @@ Nils Peters, Howard Lei, and Gerald Friedland.
 \newblock ISBN 9781450310895.
 \newblock \doi{10.1145/2393347.2396326}.
 \newblock URL \url{https://doi.org/10.1145/2393347.2396326}.
+
+\bibitem[Rainio et~al.(2024)Rainio, Teuho, and Klén]{friedmanrecomendation}
+Mauri Rainio, Aleksi Teuho, and Riku Klén.
+\newblock Evaluation metrics and statistical tests for machine learning.
+\newblock \emph{Scientific Reports}, 14:\penalty0 6038, 2024.
+\newblock \doi{10.1038/s41598-024-56706-x}.
+\newblock URL \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC10937649/}.
 
 \bibitem[Rothstein et~al.(2023)Rothstein, Liu, and Bashima]{echosense}
 Michael Rothstein, Zhuolin Liu, and Islam Bashima.

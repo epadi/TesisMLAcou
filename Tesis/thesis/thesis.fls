@@ -791,27 +791,28 @@ INPUT .\body\methodology.tex
 INPUT .\body\methodology.tex
 INPUT .\body\methodology.tex
 INPUT body\methodology.tex
-INPUT ..\img\Measure box.png
-INPUT ..\img\Measure box.png
-INPUT ..\img\Measure box.png
-INPUT ..\img\Measure box.png
-INPUT ..\img\Measure box.png
-INPUT ..\img\Measure box.png
-INPUT ..\img\Measure box.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\BinauralPairs.png
-INPUT ..\img\method2.png
-INPUT ..\img\method2.png
-INPUT ..\img\method2.png
-INPUT ..\img\method2.png
-INPUT ..\img\method2.png
-INPUT ..\img\method2.png
-INPUT ..\img\method2.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\Measuretogether.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\allpoints.png
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT ..\img\AcousticPipeline.jpeg
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT .\body\design.tex
 INPUT .\body\design.tex
 INPUT .\body\design.tex

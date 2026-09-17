@@ -45,35 +45,36 @@
 \contentsline {subsection}{\numberline {3.2.2}Specific Objectives}{24}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Deliverables}{25}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Scope and Limitations}{25}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Research Procedure}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Research Design}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Methodology}{27}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Experiment Design}{28}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Factors and Levels}{30}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Response Variable}{30}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Data Collection}{31}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Statistical Tool Used Description}{31}{subsection.4.2.5}%
-\contentsline {chapter}{\numberline {5}Design}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Design criteria used (if needed)}{34}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Detailed specific criteria/tool}{34}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Description of the implementation of other algorithms (by other authors) used to test the hypothesis}{34}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Proposed algorithm}{34}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Design of the proposed algorithm}{34}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Limitations and Requirements}{34}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Implementation}{34}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Results}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Performance evaluation}{38}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{38}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Statistical Tool Results}{38}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Obtained Metrics}{38}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{38}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}Correctness (if needed)}{38}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Output (If needed)}{39}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Discussion}{41}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{43}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{44}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{44}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Appendixes}{45}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Source Code}{46}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{46}{section.9.2}%
-\contentsline {chapter}{References}{47}{chapter.10}%
+\contentsline {chapter}{\numberline {4}Methodology}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Experiment Design}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Experimental measurement configuration}{28}{section.4.2}%
+\contentsline {section}{\numberline {4.3}The Audio-Location Dataset for Model Training and Testing}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}The Audio-Location Processing Pipeline}{31}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Factors and Levels}{33}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Response Variables}{34}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Data Recollection for Model Evaluation}{34}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Statistical Tool Used for hipotesis Testing}{35}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Design}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Design criteria used (if needed)}{38}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed specific criteria/tool}{38}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Description of the implementation of other algorithms (by other authors) used to test the hypothesis}{38}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Proposed algorithm}{38}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Design of the proposed algorithm}{38}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Limitations and Requirements}{38}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Implementation}{38}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Results}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Performance evaluation}{42}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{42}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Statistical Tool Results}{42}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Obtained Metrics}{42}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{42}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Correctness (if needed)}{42}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Output (If needed)}{43}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Discussion}{45}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{47}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{48}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{48}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Appendixes}{49}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Source Code}{50}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{50}{section.9.2}%
+\contentsline {chapter}{References}{51}{chapter.10}%

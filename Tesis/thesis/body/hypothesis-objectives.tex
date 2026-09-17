@@ -7,9 +7,9 @@
 \section{Hypothesis}
 \label{section:hypothesis}
 
-The compendium of work presented in the Chapter 2 demonstrated that is possible detect with precision the source of a sound in a tridimensional space, recognize a particular room by its unique acoustic and even create a deep image of segments of this room using only audible sound echoes and infer shapes of object based on acoustic features. Those results support the idea that for a given object inside a enclosed space is possible to learn a function that map the RIR to the location of the object in that space. Based on these ideas our hypothesis is: 
+The compendium of work presented in the Chapter 2 demonstrated that is possible detect with some precision the source of a sound in a tridimensional space, recognize a particular room by its unique acoustic and even create a deep image of segments of this room using only audible sound echoes and infer shapes of object based on acoustic features. Those results support the idea that for a given object inside a enclosed space is possible to learn a function that map the RIR to the location of the object in that space. Based on these ideas our hypothesis is: 
 
-"An algorithm pipeline with beamforming and ESN that utilize the rich spatial-geometrical information comprehended in a set of RIR can infer the location and orientation of a cube of 20cm side allocated inside an small enclosed space of near of 1\(m^3\) \footnote{Region with acoustic superposition found by \cite{bat1}}, this with a movement distance resolution of at least 5cm and achieve less than 2cm of error in position and 10 degrees in orientation\footnote{Based on the size of the objects and maximin deformation presented in \cite{echosense}} with an error less than 6 degrees in the estimation from two consecutive positions."
+"An algorithm pipeline with beamforming and ESN that utilize the rich spatial-geometrical information comprehended in a set of RIR of acoustic signals can infer the location and orientation of a cube of 20cm side allocated inside an small enclosed space of near of 1\(m^3\) \footnote{Region with acoustic superposition found by \cite{bat1}}, this with a movement distance resolution of at least 5cm and achieve less than 2cm of error in position and 10 degrees in orientation\footnote{Based on the size of the objects and maximin deformation presented in \cite{echosense}} with an error less than 6 degrees in the estimation from two consecutive positions."
 
 %\textcolor{red}{(edit to show three segments why, how and how much)}
 
@@ -22,7 +22,7 @@ The current research established the following objectives:
 \subsection{Main Objective}
 \label{section:main-objective}
 \label{objective:main}
-Develop and evaluate a processing pipeline using beamforming together with CNN and ESN to transform a multichannel RIR to spatial coordinates and angles that situate an object within an enclosed space.    
+To model and evaluatea processing pipeline using beamforming together with CNN and ESN to transform a multichannel RIR acoustic signals to spatial coordinates and angles that situate an object within an enclosed space.    
 
 \subsection{Specific Objectives}
 \label{section:specific-objectives}
@@ -30,11 +30,11 @@ Develop and evaluate a processing pipeline using beamforming together with CNN a
 \begin{enumerate}
 	\item Collect a dataset of acoustic responses of an object positioned in different locations inside a room. 
 	
-	\item Develop a method using CNN to learn from the dataset a function that estimate the coordinates and orientation of an object inside the space.
+	\item Develop a reference method using CNN to learn from the dataset a function that estimate the coordinates and orientation of an object inside the space.
 
-    \item Develop a method using ESN to learn from the dataset a function that estimate the coordinates and orientation of an object inside the space.
+    \item Develop a resources eficient method using ESN to learn from the dataset a function that estimate the coordinates and orientation of an object inside the space.
 
-    \item Build a beamforming stage that divide the measure space in eight regions of acoustic sources.  
+    \item Build a beamforming stage that divide the measure space in four regions of acoustic sources.  
 	
 	\item Evaluate experimentally the accuracy of the estimators.  
 	
@@ -67,7 +67,7 @@ Thesis document with analysis and evaluation of the proposed solutions consideri
 The development of the measure box and the collection of the dataset will be part of the work. 
 
 \textbf{Scope and limitation 2:}
-Only two ML approaches will be considered: CNN as the ground truth and ESN as an optimal solution.    
+Only two ML approaches will be considered: CNN as the ground truth and ESN as a eficient solution.    
 
 \textbf{Scope and limitation 3:} 
 The proposed system will not work on real time, even for the experimental evaluation the data will be first collected and later presented to the model in order to obtain the evaluation metrics.

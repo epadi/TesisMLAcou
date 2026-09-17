@@ -22,11 +22,11 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Image on the left is an acoustic image, on the right and microphone camera used to capture the image \cite {Acamera}}}{17}{figure.caption.23}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Measure box with: the robotic arm, the microphone measurement arrays and the source signal speaker.}}{28}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Microphone array configured as binaural pairs in horizontal and vertical}}{29}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Acustic to location processing pipeline}}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Measure box: (a) Conceptual sketch for the acoustic measurement box, and (b) actual implementation for the data acquisition task.}}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Scatter plot of cube locations for each recording in the dataset, the blue columns represent the 26 sessions, and each point in the column represents the nine orientations captured at that location.}}{31}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Acoustic to location processing pipeline}}{32}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Example diagram.}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Example diagram.}}{39}{figure.caption.29}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -22,45 +22,45 @@ Warning--entry type for "CNNASC1" isn't style-file defined
 Warning--entry type for "Acamera" isn't style-file defined
 --line 509 of file mendeley.bib
 Warning--empty booktitle in RIR05
-You've used 41 entries,
+You've used 43 entries,
             2773 wiz_defined-function locations,
-            893 strings with 14666 characters,
-and the built_in function-call counts, 20472 in all, are:
-= -- 1866
-> -- 1221
-< -- 28
-+ -- 412
-- -- 370
-* -- 1629
-:= -- 3141
-add.period$ -- 182
-call.type$ -- 41
-change.case$ -- 244
-chr.to.int$ -- 40
-cite$ -- 83
-duplicate$ -- 935
-empty$ -- 1602
-format.name$ -- 423
-if$ -- 4400
+            910 strings with 15221 characters,
+and the built_in function-call counts, 21522 in all, are:
+= -- 1974
+> -- 1261
+< -- 30
++ -- 426
+- -- 382
+* -- 1708
+:= -- 3298
+add.period$ -- 194
+call.type$ -- 43
+change.case$ -- 255
+chr.to.int$ -- 42
+cite$ -- 87
+duplicate$ -- 989
+empty$ -- 1692
+format.name$ -- 437
+if$ -- 4636
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 28
-newline$ -- 265
-num.names$ -- 172
-pop$ -- 489
+missing$ -- 30
+newline$ -- 280
+num.names$ -- 180
+pop$ -- 505
 preamble$ -- 1
-purify$ -- 202
+purify$ -- 210
 quote$ -- 0
-skip$ -- 772
+skip$ -- 811
 stack$ -- 0
-substring$ -- 500
-swap$ -- 164
-text.length$ -- 12
+substring$ -- 544
+swap$ -- 175
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 451
+type$ -- 473
 warning$ -- 1
-while$ -- 155
+while$ -- 164
 width$ -- 0
-write$ -- 640
+write$ -- 678
 (There were 9 warnings)
