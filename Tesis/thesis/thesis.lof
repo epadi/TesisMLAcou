@@ -26,7 +26,13 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Scatter plot of cube locations for each recording in the dataset, the blue columns represent the 26 sessions, and each point in the column represents the nine orientations captured at that location.}}{31}{figure.caption.25}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Acoustic to location processing pipeline}}{32}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Example diagram.}}{39}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8, Y=-0.94 , Z=-9.43 and orientation 50 degrees.}}{39}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Network accuracy vs. reservoir size for 50 epochs runs.}}{43}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Test MAE as a function of Intermediate Hidden Layer Size for different Sparsity values}}{45}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Multihead Network architecture for the ESN Estimator.}}{47}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Frequency response of the stimulus signal showing the top 10 spectral components with the highest magnitude.}}{49}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}}{51}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}}{52}{figure.caption.40}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

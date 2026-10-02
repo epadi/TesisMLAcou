@@ -1,0 +1,7 @@
+PWD c:\Users\Esteban\TesisMLAcou\Tesis\thesis\body
+INPUT C:\Users\Esteban\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Esteban\TesisMLAcou\Tesis\thesis\body\design.tex
+OUTPUT design.log
+OUTPUT design.pdf
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm

@@ -1,9 +1,37 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abdel-Hamid et~al.(2014)Abdel-Hamid, Mohamed, Jiang, Deng, Penn, and
+  Yu]{log_mel_convolutional}
+Ossama Abdel-Hamid, Abdel-rahman Mohamed, Hui Jiang, Li~Deng, Gerald Penn, and
+  Dong Yu.
+\newblock Convolutional neural networks for speech recognition.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech, and Language
+  Processing}, 22\penalty0 (10):\penalty0 1533--1545, Oct 2014.
+\newblock ISSN 2329-9290.
+\newblock \doi{10.1109/TASLP.2014.2339736}.
+
+\bibitem[Adavanne et~al.(2019)Adavanne, Politis, Nikunen, and
+  Virtanen]{numelbands}
+Sharath Adavanne, Archontis Politis, Joonas Nikunen, and Tuomas Virtanen.
+\newblock Sound event localization and detection of overlapping sources using
+  convolutional recurrent neural networks.
+\newblock \emph{IEEE Journal of Selected Topics in Signal Processing},
+  13\penalty0 (1):\penalty0 34--48, 2019.
+\newblock \doi{10.1109/JSTSP.2018.2885636}.
+
+\bibitem[Bhogal and Singh(2025)]{Resnetwhy}
+Rosepreet~Kaur Bhogal and Ajmer Singh.
+\newblock A comprehensive review of resnet-18: Architecture and applications.
+\newblock In Jagdish~Chand Bansal, Snehanshu Saha, Carlos A.~Coello Coello, and
+  Hemant Rathore, editors, \emph{Advances in Data-Driven Computing and
+  Intelligent Systems}, pages 595--607, Singapore, 2025. Springer Nature
+  Singapore.
+\newblock ISBN 978-981-96-4536-7.
 
 \bibitem[Bitterman et~al.(2024)Bitterman, Levi, Diamandi, Gannot, and
   Rosenwein]{RIR06}
@@ -293,6 +321,13 @@ Spoorthy. V, Manjunath Mulimani, and Shashidhar~G. Koolagudi.
   Technology (I2CT)}, pages 1--6, 2021.
 \newblock \doi{10.1109/I2CT51068.2021.9418177}.
 
+\bibitem[Vapnik(1998)]{vapnikstatistical}
+Vladimir~N. Vapnik.
+\newblock \emph{Statistical Learning Theory}.
+\newblock Adaptive and Learning Systems for Signal Processing, Communications,
+  and Control. John Wiley \& Sons, New York, NY, USA, 1998.
+\newblock ISBN 978-0-471-03003-4.
+
 \bibitem[Vargas et~al.(2023)Vargas, Ayll{\'o}n-Gavil{\'a}n, Dur{\'a}n-Rosal,
   Guti{\'e}rrez, Herv{\'a}s-Mart{\'i}nez, and Guijo-Rubio]{gramianangular}
 V{\'i}ctor~Manuel Vargas, Rafael Ayll{\'o}n-Gavil{\'a}n, Antonio~Manuel
@@ -304,6 +339,16 @@ V{\'i}ctor~Manuel Vargas, Rafael Ayll{\'o}n-Gavil{\'a}n, Antonio~Manuel
   \emph{Advances in Computational Intelligence}, pages 505--516, Cham, 2023.
   Springer Nature Switzerland.
 \newblock ISBN 978-3-031-43078-7.
+
+\bibitem[Velasco et~al.(2004)Velasco, Román, González, and White]{audiospeed}
+S.~Velasco, F.~L. Román, A.~González, and J.~A. White.
+\newblock A computer-assisted experiment for the measurement of the temperature
+  dependence of the speed of sound in air.
+\newblock \emph{American Journal of Physics}, 72\penalty0 (2):\penalty0
+  276--279, 02 2004.
+\newblock ISSN 0002-9505.
+\newblock \doi{10.1119/1.1611479}.
+\newblock URL \url{https://doi.org/10.1119/1.1611479}.
 
 \bibitem[Vitali(2018)]{MA01}
 Andrea Vitali.
