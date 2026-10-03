@@ -69,18 +69,20 @@
 \contentsline {subsection}{\numberline {5.4.2}Audio compactation}{51}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Limitations and Requirements}{51}{subsection.5.4.3}%
 \contentsline {chapter}{\numberline {6}Results}{53}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Performance evaluation}{54}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{54}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Statistical Tool Results}{54}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Obtained Metrics}{54}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{54}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}Correctness (if needed)}{54}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Output (If needed)}{55}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Discussion}{57}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{59}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{60}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{60}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Appendixes}{61}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Source Code}{62}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{62}{section.9.2}%
-\contentsline {chapter}{References}{63}{chapter.10}%
+\contentsline {section}{\numberline {6.1}CNN as classifier}{54}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{54}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{55}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Statistical Tool Results}{55}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Obtained Metrics}{56}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{56}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Correctness (if needed)}{56}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Output (If needed)}{57}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Discussion}{59}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{61}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{62}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{62}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Appendixes}{63}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Source Code}{64}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{64}{section.9.2}%
+\contentsline {chapter}{References}{65}{chapter.10}%

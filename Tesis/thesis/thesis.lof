@@ -34,6 +34,10 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}}{51}{figure.caption.39}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}}{52}{figure.caption.40}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{55}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{56}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{57}{figure.caption.43}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{58}{figure.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

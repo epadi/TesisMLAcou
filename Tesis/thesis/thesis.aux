@@ -22,13 +22,6 @@
 \babel@aux{spanish}{}
 \babel@aux{english}{}
 \babel@aux{english}{}
-\citation{RIR03}
-\citation{MA01}
-\citation{Faouzi24}
-\citation{convpadd}
-\citation{cnnimg}
-\citation{RC1}
-\citation{Acamera}
 \citation{RobotV}
 \citation{echoloco}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
@@ -62,14 +55,14 @@
 \citation{MA02}
 \citation{MA01}
 \citation{MA01}
-\citation{BEA01}
 \newlabel{section:Concept2}{{2.2}{7}{Acoustic Beamforming}{section.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Microphone Array}{7}{subsection.2.2.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Microphone array in binaural arrangement \cite  {MA01}}}{7}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:micdipole}{{2.2}{7}{Microphone array in binaural arrangement \cite {MA01}}{figure.caption.7}{}}
-\newlabel{eqn:ddipole}{{{2}}{7}{Microphone Array}{AMS.8}{}}
+\citation{BEA01}
 \citation{BEA01}
 \citation{BEA02}
+\newlabel{eqn:ddipole}{{{2}}{8}{Microphone Array}{AMS.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Beamforming Pipe}{8}{subsection.2.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.1}Delay-and-Sum Beamforming Technique}{8}{subsubsection.2.2.2.1}\protected@file@percent }
 \newlabel{eqn:beamforming}{{{3}}{8}{Delay-and-Sum Beamforming Technique}{AMS.9}{}}
@@ -147,17 +140,17 @@
 \citation{RIR07}
 \citation{RIR08}
 \citation{RIR09}
-\citation{shape1}
-\citation{shape1}
-\citation{bat1}
-\citation{bat1}
-\citation{cat1}
-\citation{cat1}
-\citation{bat1}
-\citation{echosense}
-\citation{echosense}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Active Acoustic Sensing and Analysis}{20}{subsection.2.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2.1}RIR for Room Inference}{20}{subsubsection.2.6.2.1}\protected@file@percent }
+\citation{shape1}
+\citation{shape1}
+\citation{bat1}
+\citation{bat1}
+\citation{cat1}
+\citation{cat1}
+\citation{bat1}
+\citation{echosense}
+\citation{echosense}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2.2}Acoustic Object Shape Estimation}{21}{subsubsection.2.6.2.2}\protected@file@percent }
 \citation{bat1}
 \citation{echosense}
@@ -258,30 +251,40 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter:results}{{6}{53}{Results}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Performance evaluation}{54}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{54}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Statistical Tool Results}{54}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Obtained Metrics}{54}{section.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{54}{subsection.6.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Correctness (if needed)}{54}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Output (If needed)}{55}{section.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{57}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}CNN as classifier}{54}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{54}{subsection.6.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{55}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:cnn_confusion_matrix}{{6.1}{55}{Confusion matrix for CNN acoustic location classification on test set}{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{55}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Statistical Tool Results}{55}{section.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{56}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:cnn_confusion_matrix_orientation}{{6.2}{56}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Obtained Metrics}{56}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{56}{subsection.6.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Correctness (if needed)}{56}{section.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{57}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:session_points}{{6.3}{57}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Output (If needed)}{57}{section.6.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{58}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:cnn_confusion_matrix_orientation}{{6.4}{58}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{59}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:discussion}{{7}{57}{Discussion}{chapter.7}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{59}{chapter.8}\protected@file@percent }
+\newlabel{chapter:discussion}{{7}{59}{Discussion}{chapter.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{61}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:conclusions-fw}{{8}{59}{Conclusions and Future Work}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusions}{60}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Future Work}{60}{section.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendixes}{61}{chapter.9}\protected@file@percent }
+\newlabel{chapter:conclusions-fw}{{8}{61}{Conclusions and Future Work}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusions}{62}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Future Work}{62}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendixes}{63}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:appendixes}{{9}{61}{Appendixes}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Source Code}{62}{section.9.1}\protected@file@percent }
-\newlabel{deliverable:source-code}{{9.1}{62}{Source Code}{section.9.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{62}{section.9.2}\protected@file@percent }
+\newlabel{chapter:appendixes}{{9}{63}{Appendixes}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Source Code}{64}{section.9.1}\protected@file@percent }
+\newlabel{deliverable:source-code}{{9.1}{64}{Source Code}{section.9.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{64}{section.9.2}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{mendeley}
 \bibcite{log_mel_convolutional}{{1}{2014}{{Abdel-Hamid et~al.}}{{Abdel-Hamid, Mohamed, Jiang, Deng, Penn, and Yu}}}
@@ -291,7 +294,7 @@
 \bibcite{bat1}{{5}{2023}{{Brunetto et~al.}}{{Brunetto, Hornauer, Yu, and Moutarde}}}
 \bibcite{ASC4}{{6}{2021}{{Byttebier}}{{}}}
 \bibcite{CNNASC1}{{7}{2016}{{Daniele~Battaglino and Evans}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{63}{chapter.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{References}{65}{chapter.10}\protected@file@percent }
 \bibcite{BEA01}{{8}{2017}{{de~Santana}}{{}}}
 \bibcite{RWB1}{{9}{2018}{{Demontis et~al.}}{{Demontis, Ollivier, and Marchal}}}
 \bibcite{convdef}{{10}{2024}{{Deprez and Robinson}}{{}}}
