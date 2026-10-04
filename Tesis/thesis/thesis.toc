@@ -71,18 +71,19 @@
 \contentsline {chapter}{\numberline {6}Results}{53}{chapter.6}%
 \contentsline {section}{\numberline {6.1}CNN as classifier}{54}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{54}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{55}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Statistical Tool Results}{55}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Obtained Metrics}{56}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{56}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}Correctness (if needed)}{56}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Output (If needed)}{57}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Discussion}{59}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{61}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{62}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{62}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Appendixes}{63}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Source Code}{64}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{64}{section.9.2}%
-\contentsline {chapter}{References}{65}{chapter.10}%
+\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{55}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}CNN as regression model}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Statistical Tool Assumptions Tests}{63}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Statistical Tool Results}{63}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Obtained Metrics}{63}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Most Complex Scenario Metrics (if needed)}{64}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Correctness (if needed)}{64}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Output (If needed)}{64}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Discussion}{65}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{67}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{68}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{68}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Appendixes}{69}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Source Code}{70}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{70}{section.9.2}%
+\contentsline {chapter}{References}{71}{chapter.10}%

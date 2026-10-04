@@ -12,9 +12,9 @@ This chapter presents the results obtained while evaluating the proposed algorit
 
 The first evaluation of the CNN was on a clasification task where it had to classify the acoustic location of the sound source from the 26 possible locations, each one corresponding to a specific recording session characterized by the same X, and Y location and only changing the Z location. Trained on 20 epochs, the network shows a accuracy of 99.4\% on training and 98.59\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix}.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[height=12cm, width=13cm]{../img/clasification_location_cnn.png}
+        \includegraphics[height=10cm, width=10cm]{../img/clasification_location_cnn.png}
         \caption{Confusion matrix for CNN acoustic location classification on test set.}
         \label{fig:cnn_confusion_matrix}
     \end{center}
@@ -27,36 +27,168 @@ The second evaluation of the CNN was on a clasification task where it had to cla
 
 
 
-
-\begin{figure}[!htb]
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[height=12cm, width=12cm]{../img/confusion_matrix_orientation_cnn.png}
+        \includegraphics[height=10cm, width=10cm]{../img/clasification_orientation_cnn.png}
         \caption{Confusion matrix for CNN acoustic orientation classification on test set.}
         \label{fig:cnn_confusion_matrix_orientation}
     \end{center}
 \end{figure}
 
-A further exploration is carried out to analyze the performance of the CNN on the orientation classification task. As shown in figure \ref{fig:session_points}, three regions are defined to reduce changes in orientation for the other Euler rotational axes. For each of the three regions,The accuracy results are presented in table and the corresponding confusion matrix  are presented in figure \ref{fig:cnn_confusion_matrix_orientation}. 
+A further exploration is carried out to analyze the performance of the CNN on the orientation classification task. As shown in figure \ref{fig:session_points}, three regions are defined to reduce changes in orientation for the other Euler rotational axes. For each of the three regions,The accuracy results are presented in table \ref{tab:regional_accuracy} and the corresponding confusion matrix  are presented in figure \ref{fig:conf_matrix_3regions}. 
 
-\begin{figure}[!htb]
+
+
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[height=12cm, width=12cm]{../img/cross-cor_points.png}
-        \caption{Confusion matrix for CNN acoustic orientation classification on test set.}
+        \includegraphics[height=16cm, width=17cm]{../img/conf_matrix_3regions.png}
+        \caption{Confusion matrix for the three regions defined for orientation classification.}
+        \label{fig:conf_matrix_3regions}
+    \end{center}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Model Performance Across The Three Regions}
+  \label{tab:regional_accuracy}
+  \vspace{0.25cm}
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Region} & \textbf{Training Accuracy (\%)} & \textbf{Test Accuracy (\%)} \\
+    \midrule
+    Region1 & 100.0 & 15.56 \\
+    Region2 &  99.9 & 21.48 \\
+    Region3 & 100.0 & 20.00 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=10cm, width=12cm]{../img/cross-cor_points.png}
+        \caption{Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task.}
         \label{fig:session_points}
     \end{center}
 \end{figure}
 
-Also to investigate the similarity of the acoustic signal when the cube is rotated or the cube is moved, a cross-correlation analysis was performed. The selected sessions for the analisis correspond to a sample that comprends diferent position that goes from the nearest to the mics to the farthest in the area near the speaker. The results of the cross-correlation analysis are presented in figure \ref{fig:cnn_confusion_matrix_orientation}. 
+Also to investigate the similarity of the acoustic signal when the cube is rotated or the cube is moved, a cross-correlation analysis was performed. The selected sessions for the analisis correspond to a sample that comprends diferent position that goes from the nearest to the mics to the farthest in the area near the speaker. The results of the cross-correlation analysis are presented in figure \ref{fig:cross_correlation_results}. 
 
-\begin{figure}[!htb]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[height=20cm, width=13cm]{../img/reduced_allarround_xcor.png}
-        \caption{Confusion matrix for CNN acoustic orientation classification on test set.}
-        \label{fig:cnn_confusion_matrix_orientation}
+        \caption{Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal.}
+        \label{fig:cross_correlation_results}
     \end{center}
 \end{figure}
 
 
+\section{CNN as regression model}
+
+The CNN was evaluated as a regression model to estimate the X, Y, and Z coordinates of the cube inside the measure box. The model was trained for 40 epochs in all the cases, this following a five fold cross-validation scheme. The histograms for the error in estimation for the three coordinates are shown in figure \ref{fig:five_fold_X_histo}, figure \ref{fig:five_fold_Y_histo}, and figure \ref{fig:five_fold_Z_histo}. 
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9cm, width=16cm]{../img/five_fold_X_histo.png}
+        \caption{Histograms of estimation errors for X coordinate across five folds.}
+        \label{fig:five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/five_fold_Y_histo.png}
+        \caption{Histograms of estimation errors for Y coordinate across five folds.}
+        \label{fig:five_fold_Y_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/five_fold_Z_histo.png}
+        \caption{Histograms of estimation errors for Z coordinate across five folds.}
+        \label{fig:five_fold_Z_histo}
+    \end{center}
+\end{figure}
+
+
+The mean absolute error (MAE) for the coordinates across the five folds is presented in table \ref{tab:mae_xyz_folds}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}
+  \label{tab:mae_xyz_folds}
+  \vspace{0.25cm}
+    \footnotesize
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)} \\
+    \midrule
+    Fold 1 & 0.6019 & 0.5029 & 1.3013 \\
+    Fold 2 & 0.5231 & 0.4467 & 0.5549 \\
+    Fold 3 & 0.5569 & 0.4069 & 0.8829 \\
+    Fold 4 & 0.5764 & 0.3836 & 1.0473 \\
+    Fold 5 & 0.5062 & 0.3144 & 0.7316 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.5529 $\pm$ 0.0384} & \textbf{0.4109 $\pm$ 0.0706} & \textbf{0.9036 $\pm$ 0.2847} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Other important metrics for the evaluation of the regression model are the percentage of samples with an estimation that falls within a specific error range. The percentage of samples per error range in X, Y and Z is shown in table \ref{tab:error_distribution_xyz}.  
+
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}
+  \label{tab:error_distribution_xyz}
+  \vspace{0.20cm}
+  \footnotesize
+  \begin{tabular}{lccccccc}
+    \toprule
+    \textbf{Axis} & \shortstack{\textbf{Error Range}\\\textbf{(cm)}} & \textbf{Fold1(\%)} & \textbf{Fold2(\%)} & \textbf{Fold3(\%)} & \textbf{Fold4(\%)} & \textbf{Fold5(\%)} & \textbf{Mean(\%)} \\
+    \midrule
+    \textbf{X} & $(-1, 1)$ & 84.95 & 88.91 & 88.87 & 85.22 & 90.51 & 87.69 \\
+      & $(-2, 2)$ & 96.77 & 97.45 & 97.45 & 98.73 & 98.79 & 97.83 \\
+      & $(-3, 3)$ & 98.66 & 99.05 & 98.58 & 99.79 & 99.14 & 99.05 \\
+      & $(-4, 4)$ & 99.02 & 99.34 & 99.36 & 100.00 & 99.36 & 99.42 \\
+    \midrule
+    \textbf{Y} & $(-1, 1)$ & 90.58 & 90.88 & 92.84 & 93.56 & 96.65 & 92.90 \\
+      & $(-2, 2)$ & 97.47 & 98.03 & 97.94 & 98.44 & 99.71 & 98.32 \\
+      & $(-3, 3)$ & 98.66 & 99.93 & 99.43 & 99.65 & 99.93 & 99.52 \\
+      & $(-4, 4)$ & 98.66 & 100.00 & 99.86 & 100.00 & 99.93 & 99.69 \\
+    \midrule
+    \textbf{Z} & $(-1, 1)$ & 42.69 & 85.56 & 69.43 & 51.41 & 73.11 & 64.44 \\
+      & $(-2, 2)$ & 81.58 & 98.98 & 91.35 & 91.09 & 96.93 & 91.98 \\
+      & $(-3, 3)$ & 94.59 & 99.93 & 96.52 & 99.29 & 99.50 & 97.97 \\
+      & $(-4, 4)$ & 98.95 & 99.93 & 98.58 & 100.00 & 99.79 & 99.45 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+
+The estimation error for each location in the dataset is presented in figure \ref{fig:location_error}. The graph considers the point as tested location of each fold. The error is calculated as the absolute difference between the predicted and the true value of the X coordinate. The error is represented in centimeters.
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=15cm, width=16cm]{../img/Plot3D_errors.png}
+        \caption{Histogram of errors for X coordinate estimation across five folds.}
+        \label{fig:five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=8.5cm, width=15cm]{../img/plot2dXerror.png}
+        \caption{Histogram of errors for X coordinate estimation across five folds.}
+        \label{fig:five_fold_X_histo}
+    \end{center}
+\end{figure}
 
 
 

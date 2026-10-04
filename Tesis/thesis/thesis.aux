@@ -22,6 +22,13 @@
 \babel@aux{spanish}{}
 \babel@aux{english}{}
 \babel@aux{english}{}
+\citation{RIR03}
+\citation{MA01}
+\citation{Faouzi24}
+\citation{convpadd}
+\citation{cnnimg}
+\citation{RC1}
+\citation{Acamera}
 \citation{RobotV}
 \citation{echoloco}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
@@ -55,14 +62,14 @@
 \citation{MA02}
 \citation{MA01}
 \citation{MA01}
+\citation{BEA01}
 \newlabel{section:Concept2}{{2.2}{7}{Acoustic Beamforming}{section.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Microphone Array}{7}{subsection.2.2.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Microphone array in binaural arrangement \cite  {MA01}}}{7}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:micdipole}{{2.2}{7}{Microphone array in binaural arrangement \cite {MA01}}{figure.caption.7}{}}
-\citation{BEA01}
+\newlabel{eqn:ddipole}{{{2}}{7}{Microphone Array}{AMS.8}{}}
 \citation{BEA01}
 \citation{BEA02}
-\newlabel{eqn:ddipole}{{{2}}{8}{Microphone Array}{AMS.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Beamforming Pipe}{8}{subsection.2.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.1}Delay-and-Sum Beamforming Technique}{8}{subsubsection.2.2.2.1}\protected@file@percent }
 \newlabel{eqn:beamforming}{{{3}}{8}{Delay-and-Sum Beamforming Technique}{AMS.9}{}}
@@ -140,17 +147,17 @@
 \citation{RIR07}
 \citation{RIR08}
 \citation{RIR09}
+\citation{shape1}
+\citation{shape1}
+\citation{bat1}
+\citation{bat1}
+\citation{cat1}
+\citation{cat1}
+\citation{bat1}
+\citation{echosense}
+\citation{echosense}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Active Acoustic Sensing and Analysis}{20}{subsection.2.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2.1}RIR for Room Inference}{20}{subsubsection.2.6.2.1}\protected@file@percent }
-\citation{shape1}
-\citation{shape1}
-\citation{bat1}
-\citation{bat1}
-\citation{cat1}
-\citation{cat1}
-\citation{bat1}
-\citation{echosense}
-\citation{echosense}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2.2}Acoustic Object Shape Estimation}{21}{subsubsection.2.6.2.2}\protected@file@percent }
 \citation{bat1}
 \citation{echosense}
@@ -253,38 +260,57 @@
 \newlabel{chapter:results}{{6}{53}{Results}{chapter.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}CNN as classifier}{54}{section.6.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{54}{subsection.6.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{55}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:cnn_confusion_matrix}{{6.1}{55}{Confusion matrix for CNN acoustic location classification on test set}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Statistical Tool Assumptions Tests}{55}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Statistical Tool Results}{55}{section.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{56}{figure.caption.42}\protected@file@percent }
-\newlabel{fig:cnn_confusion_matrix_orientation}{{6.2}{56}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.42}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Obtained Metrics}{56}{section.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Most Complex Scenario Metrics (if needed)}{56}{subsection.6.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Correctness (if needed)}{56}{section.6.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{57}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:session_points}{{6.3}{57}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.43}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Output (If needed)}{57}{section.6.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{58}{figure.caption.44}\protected@file@percent }
-\newlabel{fig:cnn_confusion_matrix_orientation}{{6.4}{58}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.44}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{59}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{54}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:cnn_confusion_matrix}{{6.1}{54}{Confusion matrix for CNN acoustic location classification on test set}{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{55}{subsection.6.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{55}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:cnn_confusion_matrix_orientation}{{6.2}{55}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for the three regions defined for orientation classification.}}{56}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:conf_matrix_3regions}{{6.3}{56}{Confusion matrix for the three regions defined for orientation classification}{figure.caption.43}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Model Performance Across The Three Regions}}{56}{table.caption.44}\protected@file@percent }
+\newlabel{tab:regional_accuracy}{{6.1}{56}{Model Performance Across The Three Regions}{table.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task.}}{57}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:session_points}{{6.4}{57}{Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task}{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal.}}{58}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:cross_correlation_results}{{6.5}{58}{Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal}{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}CNN as regression model}{59}{section.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Histograms of estimation errors for X coordinate across five folds.}}{59}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:five_fold_X_histo}{{6.6}{59}{Histograms of estimation errors for X coordinate across five folds}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Histograms of estimation errors for Y coordinate across five folds.}}{60}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:five_fold_Y_histo}{{6.7}{60}{Histograms of estimation errors for Y coordinate across five folds}{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Histograms of estimation errors for Z coordinate across five folds.}}{60}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:five_fold_Z_histo}{{6.8}{60}{Histograms of estimation errors for Z coordinate across five folds}{figure.caption.49}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{61}{table.caption.50}\protected@file@percent }
+\newlabel{tab:mae_xyz_folds}{{6.2}{61}{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}{table.caption.50}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{61}{table.caption.51}\protected@file@percent }
+\newlabel{tab:error_distribution_xyz}{{6.3}{61}{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}{table.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Histogram of errors for X coordinate estimation across five folds.}}{62}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:five_fold_X_histo}{{6.9}{62}{Histogram of errors for X coordinate estimation across five folds}{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Histogram of errors for X coordinate estimation across five folds.}}{63}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:five_fold_X_histo}{{6.10}{63}{Histogram of errors for X coordinate estimation across five folds}{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Statistical Tool Assumptions Tests}{63}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Statistical Tool Results}{63}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Obtained Metrics}{63}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Most Complex Scenario Metrics (if needed)}{64}{subsection.6.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Correctness (if needed)}{64}{section.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Output (If needed)}{64}{section.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{65}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:discussion}{{7}{59}{Discussion}{chapter.7}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{61}{chapter.8}\protected@file@percent }
+\newlabel{chapter:discussion}{{7}{65}{Discussion}{chapter.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{67}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:conclusions-fw}{{8}{61}{Conclusions and Future Work}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusions}{62}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Future Work}{62}{section.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendixes}{63}{chapter.9}\protected@file@percent }
+\newlabel{chapter:conclusions-fw}{{8}{67}{Conclusions and Future Work}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusions}{68}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Future Work}{68}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendixes}{69}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:appendixes}{{9}{63}{Appendixes}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Source Code}{64}{section.9.1}\protected@file@percent }
-\newlabel{deliverable:source-code}{{9.1}{64}{Source Code}{section.9.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{64}{section.9.2}\protected@file@percent }
+\newlabel{chapter:appendixes}{{9}{69}{Appendixes}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Source Code}{70}{section.9.1}\protected@file@percent }
+\newlabel{deliverable:source-code}{{9.1}{70}{Source Code}{section.9.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{70}{section.9.2}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{mendeley}
 \bibcite{log_mel_convolutional}{{1}{2014}{{Abdel-Hamid et~al.}}{{Abdel-Hamid, Mohamed, Jiang, Deng, Penn, and Yu}}}
@@ -294,7 +320,7 @@
 \bibcite{bat1}{{5}{2023}{{Brunetto et~al.}}{{Brunetto, Hornauer, Yu, and Moutarde}}}
 \bibcite{ASC4}{{6}{2021}{{Byttebier}}{{}}}
 \bibcite{CNNASC1}{{7}{2016}{{Daniele~Battaglino and Evans}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{65}{chapter.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{References}{71}{chapter.10}\protected@file@percent }
 \bibcite{BEA01}{{8}{2017}{{de~Santana}}{{}}}
 \bibcite{RWB1}{{9}{2018}{{Demontis et~al.}}{{Demontis, Ollivier, and Marchal}}}
 \bibcite{convdef}{{10}{2024}{{Deprez and Robinson}}{{}}}
@@ -337,4 +363,4 @@
 \bibcite{convpadd}{{47}{2018}{{Yamashita et~al.}}{{Yamashita, , Yamashita, Gian, and Togashi}}}
 \bibcite{AOR4}{{48}{2021}{{Zhang}}{{}}}
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{\m@ne }}
-\gdef \@abspage@last{86}
+\gdef \@abspage@last{96}

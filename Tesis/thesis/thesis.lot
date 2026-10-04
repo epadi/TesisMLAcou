@@ -23,6 +23,9 @@
 \contentsline {table}{\numberline {5.4}{\ignorespaces Error Distribution Comparison Between Standard ESN and MultiHead ESN}}{45}{table.caption.35}%
 \contentsline {table}{\numberline {5.5}{\ignorespaces Top 10 frequencies with the highest magnitude (dB).}}{49}{table.caption.38}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Model Performance Across The Three Regions}}{56}{table.caption.44}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{61}{table.caption.50}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{61}{table.caption.51}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

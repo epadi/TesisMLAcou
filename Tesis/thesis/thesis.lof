@@ -34,10 +34,16 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}}{51}{figure.caption.39}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}}{52}{figure.caption.40}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{55}{figure.caption.41}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{56}{figure.caption.42}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{57}{figure.caption.43}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{58}{figure.caption.44}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{54}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{55}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for the three regions defined for orientation classification.}}{56}{figure.caption.43}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task.}}{57}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal.}}{58}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Histograms of estimation errors for X coordinate across five folds.}}{59}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Histograms of estimation errors for Y coordinate across five folds.}}{60}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Histograms of estimation errors for Z coordinate across five folds.}}{60}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Histogram of errors for X coordinate estimation across five folds.}}{62}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Histogram of errors for X coordinate estimation across five folds.}}{63}{figure.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
