@@ -73,17 +73,18 @@
 \contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{55}{subsection.6.1.2}%
 \contentsline {section}{\numberline {6.2}CNN as regression model}{59}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Statistical Tool Assumptions Tests}{63}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Statistical Tool Results}{63}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Obtained Metrics}{63}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Most Complex Scenario Metrics (if needed)}{64}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Correctness (if needed)}{64}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Output (If needed)}{64}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Discussion}{65}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{67}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{68}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{68}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Appendixes}{69}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Source Code}{70}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{70}{section.9.2}%
-\contentsline {chapter}{References}{71}{chapter.10}%
+\contentsline {section}{\numberline {6.3}ESN as classifier}{64}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Statistical Tool Assumptions Tests}{68}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Statistical Tool Results}{69}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Obtained Metrics}{69}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Most Complex Scenario Metrics (if needed)}{69}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.7}Correctness (if needed)}{69}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Output (If needed)}{69}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Discussion}{71}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{73}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{74}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{74}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Appendixes}{75}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Source Code}{76}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{76}{section.9.2}%
+\contentsline {chapter}{References}{77}{chapter.10}%

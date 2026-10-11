@@ -90,7 +90,7 @@ The CNN was evaluated as a regression model to estimate the X, Y, and Z coordina
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=9cm, width=16cm]{../img/five_fold_X_histo.png}
-        \caption{Histograms of estimation errors for X coordinate across five folds.}
+        \caption{Histograms of estimation errors with CNN for X values across five folds.}
         \label{fig:five_fold_X_histo}
     \end{center}
 \end{figure}
@@ -98,7 +98,7 @@ The CNN was evaluated as a regression model to estimate the X, Y, and Z coordina
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=9.5cm, width=16cm]{../img/five_fold_Y_histo.png}
-        \caption{Histograms of estimation errors for Y coordinate across five folds.}
+        \caption{Histograms of estimation errors with CNN for Y values across five folds.}
         \label{fig:five_fold_Y_histo}
     \end{center}
 \end{figure}
@@ -106,7 +106,7 @@ The CNN was evaluated as a regression model to estimate the X, Y, and Z coordina
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=9.5cm, width=16cm]{../img/five_fold_Z_histo.png}
-        \caption{Histograms of estimation errors for Z coordinate across five folds.}
+        \caption{Histograms of estimation errors with CNN for Z values across five folds.}
         \label{fig:five_fold_Z_histo}
     \end{center}
 \end{figure}
@@ -170,27 +170,172 @@ Other important metrics for the evaluation of the regression model are the perce
 
 
 
-The estimation error for each location in the dataset is presented in figure \ref{fig:location_error}. The graph considers the point as tested location of each fold. The error is calculated as the absolute difference between the predicted and the true value of the X coordinate. The error is represented in centimeters.
+The estimation error for each point in the dataset is presented in figure \ref{fig:plot3d_errors}. The graph consider the five fold subsets, each at the time it was the test set. The error is calculated as the absolute difference between the predicted and the true value of the coordinates for the respective dimension. The error is represented in centimeters. Figure \ref{fig:plot2d_errors} preasent the coordinate error with respect it axis of interest, showing the error estimation for X dimension as a funtion of X location, Y error as fuction of Y and Z error as function of Z.
 
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[height=15cm, width=16cm]{../img/Plot3D_errors.png}
-        \caption{Histogram of errors for X coordinate estimation across five folds.}
-        \label{fig:five_fold_X_histo}
+        \includegraphics[height=14cm, width=17cm]{../img/Plot3D_errors.png}
+        \caption{3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}
+        \label{fig:plot3d_errors}
     \end{center}
 \end{figure}
+
+
+To undestand how well the data is correlated for the regresion model, the Pearson correlation coefficient is showns in table \ref{tab:pearson_corr_xyz} this coeficient 
+measures the strength and direction of the linear relationship between two continuous variables. This coeficient provide an indication of how well data points cluster around a straight line.  In Model Evaluation of Predictions vs. Ground Truth, An Pearson Coeficient > 0.99 indicates that model predictions scale almost perfectly aligned with the actual targets.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Pearson Correlation Coefficients between Ground Truths and Predictions}
+  \label{tab:pearson_corr_xyz}
+  \vspace{0.25cm}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
+    \midrule
+    Fold 1 & 0.9970 & 0.9961 & 0.9979 \\
+    Fold 2 & 0.9980 & 0.9985 & 0.9991 \\
+    Fold 3 & 0.9969 & 0.9978 & 0.9982 \\
+    Fold 4 & 0.9985 & 0.9977 & 0.9986 \\
+    Fold 5 & 0.9978 & 0.9987 & 0.9987 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.9976 $\pm$ 0.0007} & \textbf{0.9978 $\pm$ 0.0010} & \textbf{0.9985 $\pm$ 0.0005} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[height=8.5cm, width=15cm]{../img/plot2dXerror.png}
-        \caption{Histogram of errors for X coordinate estimation across five folds.}
-        \label{fig:five_fold_X_histo}
+        \includegraphics[height=16cm, width=12cm]{../img/abserror_x_y_z.png}
+        \caption{Scatered plot showing the absolute estimation error vs it respective coordinate axis.}
+        \label{fig:plot2d_errors}
     \end{center}
 \end{figure}
 
 
+
+\section{ESN as classifier}
+
+Similar to the CNN for the ESN the histograms for the error distribution are presented in figure \ref{fig:ESN_five_fold_X_histo}  figure \ref{fig:ESN_five_fold_Y_histo} and figure \ref{fig:ESN_five_fold_Z_histo}, for X Y and Z coordinates respectively. 
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9cm, width=16cm]{../img/ESN_five_fold_X_histo.png}
+        \caption{Histograms of estimation errors with ESN for X values across five folds.}
+        \label{fig:ESN_five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/ESN_five_fold_Y_histo.png}
+        \caption{Histograms of estimation errors with ESN for Y values across five folds.}
+        \label{fig:ESN_five_fold_Y_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/ESN_five_fold_Z_histo.png}
+        \caption{Histograms of estimation errors with ESN for Z values across five folds.}
+        \label{fig:ESN_five_fold_Z_histo}
+    \end{center}
+\end{figure}
+
+
+The MAE for each network is presented in table \ref{tab:ESN_mae_xyz_folds}
+
+\begin{table}[htbp]
+  \centering
+  \caption{ESN Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}
+  \label{tab:ESN_mae_xyz_folds}
+  \vspace{0.25cm}
+  \footnotesize
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)} \\
+    \midrule
+    Fold 1 & 0.7231 & 1.0643 & 1.5111 \\
+    Fold 2 & 0.8729 & 0.8977 & 1.6283 \\
+    Fold 3 & 0.8955 & 0.8706 & 1.6953 \\
+    Fold 4 & 0.7974 & 0.8918 & 1.9315 \\
+    Fold 5 & 0.8521 & 0.9938 & 1.6847 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.8282 $\pm$ 0.0691} & \textbf{0.9436 $\pm$ 0.0825} & \textbf{1.6902 $\pm$ 0.1535} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+With respet to the distribution of errors per range, the table \ref{tab:ESN_error_distribution_xyz} show the results for the ESN evaluated in the same five fold condition as the CNN.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates}
+  \label{tab:ESN_error_distribution_xyz}
+  \vspace{0.20cm}
+  \footnotesize
+  \begin{tabular}{lccccccc}
+    \toprule
+    \textbf{Axis} & \shortstack{\textbf{Error Range}\\\textbf{(cm)}} & \textbf{Fold1(\%)} & \textbf{Fold2(\%)} & \textbf{Fold3(\%)} & \textbf{Fold4(\%)} & \textbf{Fold5(\%)} & \textbf{Mean(\%)} \\
+    \midrule
+    \textbf{X} & $(-1, 1)$ & 76.65 & 70.97 & 68.60 & 76.38 & 71.18 & 72.76 \\
+      & $(-2, 2)$ & 95.01 & 92.20 & 91.85 & 94.13 & 92.58 & 93.15 \\
+      & $(-3, 3)$ & 98.38 & 97.37 & 97.38 & 97.67 & 97.86 & 97.73 \\
+      & $(-4, 4)$ & 99.09 & 98.32 & 98.58 & 98.16 & 99.00 & 98.63 \\
+    \midrule
+    \textbf{Y} & $(-1, 1)$ & 57.81 & 65.57 & 66.76 & 65.77 & 66.33 & 64.45 \\
+      & $(-2, 2)$ & 87.13 & 91.17 & 91.85 & 90.24 & 86.52 & 89.38 \\
+      & $(-3, 3)$ & 95.50 & 98.32 & 98.09 & 97.10 & 94.65 & 96.73 \\
+      & $(-4, 4)$ & 98.10 & 99.49 & 99.36 & 99.43 & 97.50 & 98.78 \\
+    \midrule
+    \textbf{Z} & $(-1, 1)$ & 44.02 & 42.52 & 39.76 & 33.88 & 38.52 & 39.74 \\
+      & $(-2, 2)$ & 71.87 & 70.17 & 69.17 & 62.52 & 65.98 & 67.94 \\
+      & $(-3, 3)$ & 88.05 & 85.70 & 85.83 & 79.21 & 85.73 & 84.90 \\
+      & $(-4, 4)$ & 95.01 & 92.34 & 92.63 & 89.25 & 93.51 & 92.55 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=14cm, width=17cm]{../img/ESN_Plot3D_errors.png}
+        \caption{3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}
+        \label{fig:plot3d_errors}
+    \end{center}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Pearson Correlation Coefficients between Ground Truths and Predictions}
+  \label{tab:pearson_corr_xyz}
+  \vspace{0.25cm}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
+    \midrule
+    Fold 1 & 0.9980 & 0.9954 & 0.9929 \\
+    Fold 2 & 0.9963 & 0.9966 & 0.9929 \\
+    Fold 3 & 0.9958 & 0.9968 & 0.9898 \\
+    Fold 4 & 0.9962 & 0.9967 & 0.9921 \\
+    Fold 5 & 0.9965 & 0.9953 & 0.9936 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.9966 $\pm$ 0.0008} & \textbf{0.9962 $\pm$ 0.0007} & \textbf{0.9923 $\pm$ 0.0015} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=16cm, width=12cm]{../img/ESN_abserror_x_y_z.png}
+        \caption{Scatered plot showing the absolute estimation error vs it respective coordinate axis.}
+        \label{fig:plot2d_errors}
+    \end{center}
+\end{figure}
 
 \section{Statistical Tool Assumptions Tests}
 The evaluation of the assumptions of the statistical tool used should be reported.
