@@ -218,6 +218,19 @@ measures the strength and direction of the linear relationship between two conti
 
 \section{ESN as classifier}
 
+Previously described in section 5.2.2, the ESN first was evaluated as a clasifier for the architecture definition and hiperparameters search. With the values showns in table \ref{tab:esn_values} after training for 150 epoch, the ESN acurracy was 98.42\%. The resulting confusion matrix is presented Figure \ref{fig:confusion_ESN}.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=14cm, width=14cm]{../img/clasification_location_esn.png}
+        \caption{Confusion matrix for the ESN as result of the audio session clasification.}
+        \label{fig:confusion_ESN}
+    \end{center}
+\end{figure}
+
+
+\section{ESN as regression model}
+
 Similar to the CNN for the ESN the histograms for the error distribution are presented in figure \ref{fig:ESN_five_fold_X_histo}  figure \ref{fig:ESN_five_fold_Y_histo} and figure \ref{fig:ESN_five_fold_Z_histo}, for X Y and Z coordinates respectively. 
 
 \begin{figure}[H]
