@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1792366313.98602 "thesis.aux" "thesis.bbl" "thesis" 1792366356.89738 0
+["bibtex thesis"] 1792367301.49189 "thesis.aux" "thesis.bbl" "thesis" 1792367324.909 0
   "./mendeley.bib" 1791751245 24582 127ecdd6e612ef2ecf3e3915198198f7 ""
   "C:/Users/Esteban/AppData/Local/Programs/MiKTeX/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "thesis.aux" 1792366355 36866 ae71a878a3a14f401141f7be6f7548de "pdflatex"
+  "thesis.aux" 1792367320 37361 ebbf8030a5b40e2a9b7a9f9afeea7ceb "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1792366340.99981 "c:/Users/Esteban/TesisMLAcou/Tesis/thesis/thesis.tex" "thesis.pdf" "thesis" 1792366356.89871 0
+["pdflatex"] 1792367302.32213 "c:/Users/Esteban/TesisMLAcou/Tesis/thesis/thesis.tex" "thesis.pdf" "thesis" 1792367324.90999 0
   "../images/TECRGB.jpg" 1789519207 93932 a920efb685880843e6eedffc9440b57c ""
   "../images/certificate.pdf" 1789519207 17174 0ac8f3ffd4fb590d03262b10005a1cbf ""
   "../img/4channelSpec.png" 1786832100 345552 6f22b35b399e5c4fb0c7b12b3665de84 ""
@@ -378,7 +378,7 @@
   "body/appendix.tex" 1789519207 323 edf0af4beabf795b6160a08ff149fa5e ""
   "body/conclusions.tex" 1789519207 517 7b5fe7b5b5c277b0fb4fe7b83ac3784d ""
   "body/design.tex" 1791751245 25173 400cdfe8ed8f9d3ab9636cdb7b73938f ""
-  "body/discussion.tex" 1792366339 15084 3451b33cbab75922f96fb4aba91aa44f ""
+  "body/discussion.tex" 1792367280 15211 4daf093ef74ab7ac15fbf49429652f39 ""
   "body/front-page.tex" 1789519207 1084 9f6fa56cae16fa90658265015eaa24b6 ""
   "body/hypothesis-objectives.tex" 1789574058 4521 04f3ce34b0f5823aaf6fbc48809f9ca4 ""
   "body/introduction.tex" 1789519189 5814 088f1a6fdb9b60a50cafae9785a3269f ""
@@ -386,13 +386,13 @@
   "body/results.tex" 1792366295 16557 f98028059d1727d200b90d681be067f3 ""
   "body/theoretical-framework.tex" 1789521803 29179 632c237b4601501f4dbfeca52c681cb7 ""
   "c:/Users/Esteban/TesisMLAcou/Tesis/thesis/thesis.tex" 1789519207 3570 65c615eac1ea5eb206614771cbcc02e1 ""
-  "thesis.aux" 1792366355 36866 ae71a878a3a14f401141f7be6f7548de "pdflatex"
-  "thesis.bbl" 1792366314 18857 e33ec250e0b9c4828527e058677653ab "bibtex thesis"
-  "thesis.lof" 1792366355 6469 e8095134661019b45c15555ce8fd3824 "pdflatex"
-  "thesis.lot" 1792366355 2526 3ce30def7fcf70652c2bc4a97035ad94 "pdflatex"
-  "thesis.out" 1792366355 14639 a951672c2135c1f0db084bb71b9199bb "pdflatex"
+  "thesis.aux" 1792367320 37361 ebbf8030a5b40e2a9b7a9f9afeea7ceb "pdflatex"
+  "thesis.bbl" 1792367302 18857 e33ec250e0b9c4828527e058677653ab "bibtex thesis"
+  "thesis.lof" 1792367320 6469 e8095134661019b45c15555ce8fd3824 "pdflatex"
+  "thesis.lot" 1792367320 2526 3ce30def7fcf70652c2bc4a97035ad94 "pdflatex"
+  "thesis.out" 1792367320 15223 dd1eec776817902979e80bbe456dfa03 "pdflatex"
   "thesis.tex" 1789519207 3570 65c615eac1ea5eb206614771cbcc02e1 ""
-  "thesis.toc" 1792366355 7658 728db0c12757df2c356eb94c6f3c94d5 "pdflatex"
+  "thesis.toc" 1792367320 7989 62d08582c7565fde4a48df2c3f5d6dff "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.lof"
