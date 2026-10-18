@@ -13,46 +13,48 @@ Database file #1: bibli.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in RIR05
 
 Done.
 You've used 13 entries,
             4087 wiz_defined-function locations,
-            911 strings with 10382 characters,
-and the built_in function-call counts, 9766 in all, are:
-= -- 770
+            910 strings with 10378 characters,
+and the built_in function-call counts, 9724 in all, are:
+= -- 764
 > -- 243
 < -- 61
 + -- 135
 - -- 52
-* -- 472
-:= -- 1463
+* -- 469
+:= -- 1454
 add.period$ -- 29
 call.type$ -- 13
 change.case$ -- 15
 chr.to.int$ -- 141
-cite$ -- 13
-duplicate$ -- 707
-empty$ -- 805
+cite$ -- 14
+duplicate$ -- 704
+empty$ -- 801
 format.name$ -- 58
-if$ -- 2269
+if$ -- 2258
 int.to.chr$ -- 0
 int.to.str$ -- 13
-missing$ -- 135
+missing$ -- 134
 newline$ -- 76
 num.names$ -- 15
-pop$ -- 347
+pop$ -- 349
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 745
+skip$ -- 741
 stack$ -- 0
 substring$ -- 384
-swap$ -- 561
+swap$ -- 557
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 13
-warning$ -- 0
+warning$ -- 1
 while$ -- 35
 width$ -- 15
-write$ -- 159
+write$ -- 158
+(There was 1 warning)

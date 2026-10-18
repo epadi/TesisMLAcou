@@ -1,11 +1,21 @@
 import os
 import numpy as np
 import math
-from audio2numpy import open_audio
 from operator import itemgetter
 import matplotlib.pyplot as plt
 from scipy.signal import correlate
+from scipy.io import wavfile
 import json
+
+try:
+    from audio2numpy import open_audio
+except ImportError:
+    def open_audio(file_path):
+        sample_rate, data = wavfile.read(file_path)
+        audio = np.asarray(data)
+        if audio.ndim == 2:
+            audio = audio[:, 0]
+        return audio.astype(np.float64), float(sample_rate)
 
 def get_directories(path='.'):
     return [entry.name for entry in os.scandir(path) if entry.is_dir()]

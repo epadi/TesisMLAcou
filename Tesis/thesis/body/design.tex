@@ -114,7 +114,7 @@ A test with the described configuration shows acuracy below the 95\% for trainin
 \end{table}
 
 
-The table \ref{tab:esn_values} summarize the final values selected for the clasifier, with those values an acuracy of 98.42\% was achieved on 150 epoch training. 
+The table \ref{tab:esn_values} summarize the final values selected for the clasifier, with those values an acuracy of 98.42\% was achieved on 150 epoch training. The results
 
 \begin{table}[htbp]
 \centering
@@ -176,7 +176,6 @@ The ESN estimator after training 1200 epochs produced a MAE of ~2cm with the per
 \subsection{ESN Training and Evaluation}
 
 Each feedforward head was trained independently, the learning rate was set to $5e-5$ for all the sub-network heads, the batch size was set to 32. The training was perform separately for each head. The sub-heads for positive and negative coordinates were trained using only the samples with the corresponding sign, while the overall coordinate prediction head and the sign prediction head were trained using all the samples, the sub-heads for positive, negative and overall coordinate estimation were trained using Adam optimizationfor 400 epochs, while the sign prediction head was trained using Binary Cross entropy with Logits Loss for 800 epochs. The training process was performed using a five\-fold cross-validation approach, with four folds used for training and one fold reserved for testing, following an 80:20 percent ratio. The target values for X, Y and Z are normalized as described in section 5.1.3, and a denormalization step is applied to the output of the network to obtain the final coordinate estimations. The evaluation of the ESN consider the results of the four sub-heads using a hibrid aproach, the output selection rather than relying solely on a single prediction head, the final coordinate is computed through a decision tree. The sign head predicts the sign of the target Conditional Path Selection:If the predicted sign is positive, the positive head output is chosen.If negative, the negative head output is chosen. This yields a candidate coordinate estimation, referred to as the Conditional Path prediction.An outlier mitigation is also performed, if the absolute difference between the Overall Estimator prediction and the chosen Conditional Path prediction is calculated.If this difference exceeds a threshold (100 cm), indicating a potential critical sign classification failure, the model falls back to the alternate sign's estimator output to prevent high localization errors. the Algorith for the hibrid desition logic is shown in Algorith \ref{alg:hybrid_decision_logic}.
-
 
 
 \begin{algorithm}[htbp]

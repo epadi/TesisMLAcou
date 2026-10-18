@@ -116,13 +116,13 @@ Audio, Room Impulse Response, CNN, Log-Mel spectrogram, location estimation.
 
 Robots are expected to operate in a wide variety of environments. To achieve this, they must be equipped with situational awareness and sufficient autonomy to make appropriate decisions. Computer vision seeks to provide machines with an interpretable representation of the surrounding world. By processing images and videos, robots can detect objects, infer geometry, and extract textures, materials, and other scene features. Although visual analysis allows a machine to build rich internal models of its environment, this does not imply that perception is complete.
 
-Robotic perception enables a machine to understand its surroundings well enough to interact safely with the world \cite{RobotV}. Achieving such understanding requires techniques beyond computer vision in order to obtain a more comprehensive sensory experience of the environment. Acoustic sensing and analysis can significantly enhance robotic perception by following an approach similar to that found in nature. Animals that rely on binaural acoustic perception can analyze their environment to detect the source of a sound and direct their visual attention toward that region. Moreover, this capability is not merely an extension of vision; in certain conditions, animals can depend almost entirely on acoustic information. This is the case of echolocation, employed by bats, birds, dolphins, and whales. By interpreting the echoes of acoustic chirps, these animals gain spatial awareness of their surroundings and can navigate complex environments \cite{echoloco}.
+Robotic perception enables a machine to understand its surroundings well enough to interact safely with the world \cite{RobotV}. Achieving such understanding requires techniques beyond computer vision in order to obtain a more comprehensive sensory experience of the environment. Acoustic sensing and analysis can significantly enhance robotic perception by following an approach similar to that found in nature. Animals that rely on binaural acoustic perception can analyze their environment to detect the source of a sound and direct their visual attention toward that region. Moreover, this capability is not merely an extension of vision; in certain conditions, animals can depend almost entirely on acoustic information. Echolocation is one example, employed by bats, birds, dolphins, and whales. By interpreting the echoes of acoustic chirps, these animals gain spatial awareness of their surroundings and can navigate complex environments \cite{echoloco}.
 
 Traditional computer vision techniques that use cameras and LiDARs provide high-fidelity information to navigation systems; however, their reliability degrades in environments with poor illumination or in the presence of dust, smoke, or fog \cite{cat1}. Another important consideration is the cost of sensing hardware. In this regard, acoustic perception offers a significant advantage due to the low cost of commercial electret and MEMS microphones, which are considerably cheaper than optical cameras and LiDAR units. This makes acoustic sensing an attractive alternative to traditional sensors.
 
 Recent advances in machine learning, such as those presented in \cite{bat1, cat1, echosense}, have demonstrated the strong potential of neural networks to infer spatial and geometric information about surrounding objects solely from the analysis of acoustic echoes in the audible spectrum. Within the context of Industry 4.0, the manufacturing sector is rapidly increasing its adoption of automation and intelligent monitoring technologies. This trend has created a relevant application domain for acoustic-based methods, particularly in the supervision of machinery operating on production floors, where robotic arms and computer numerical control actuators manipulate objects within confined spaces \cite{mordor}.
 
-In such conditions, acoustic sensing provides valuable insight into the overall system state due to the nature of the Room Impulse Response (RIR), which acts as a transfer function encoding information about the environment configuration. The acoustic response of a room can be leveraged together with artificial neural networks—such as convolutional neural networks or recurrent neural networks—to learn meaningful representations of room echoes and identify spatial characteristics and object properties. Consequently, acoustic perception combined with neural network-based inference can significantly enhance the perceptual capabilities of machinery operating in complex environments.
+In such conditions, acoustic sensing provides valuable insight into the overall system state due to the nature of the Room Impulse Response (RIR), which acts as a transfer function encoding information about the configuration of the enviroment. The acoustic response of a room can be leveraged together with artificial neural networks—such as convolutional neural networks or recurrent neural networks—to learn meaningful representations of room echoes and identify spatial characteristics and object properties. Consequently, acoustic perception combined with neural network-based inference can significantly enhance the perceptual capabilities of machinery operating in complex environments.
 
 This paper presents the results of using acoustic sensing and CNNs to estimate the spatial location of an object inside a confined environment. Section II reviews related work on Room Impulse Responses (RIRs), room classification, geometry estimation, and acoustic-based shape recognition. Section III describes the construction of the measurement box, the robotic arm mechanism, and the microphone-speaker configuration, and also details the procedure used to collect the dataset. Section IV presents the experimental results and their corresponding analysis. Finally, Section V summarizes the main conclusions of the study and outlines several directions for future research.
 
@@ -130,11 +130,11 @@ This paper presents the results of using acoustic sensing and CNNs to estimate t
 
 For an enclosed space, the Room Impulse Response (RIR) provides a unique representation of its geometry and materials. Audio signals such as music or speech recorded in indoor environments inherently contain this echo information, which can be used to identify the room in which the recording was performed. This idea is explored in \cite{RIR05}, where the authors developed a machine learning system capable of classifying rooms from reverberant audio samples, achieving an accuracy of 85\%. Similarly, the work in \cite{RIR06} employed RIR and speech data to train a model that infers room volume from single‑microphone recordings. Using this inferred volume, the model classified rooms into three categories: small, large, or hall, with an accuracy of 85.8\%. In \cite{RIR07}, microphone arrays were used to analyze RIRs and estimate room geometry by leveraging properties of Euclidean distance matrices. The authors demonstrated that, under certain conditions, first‑order echoes provide a unique description of the geometry of convex polyhedral rooms. An indoor positioning device based on RIR “fingerprints” is presented in \cite{RIR08}, where room identification accuracy ranged from 65\% for living rooms to 95\% for bathrooms. The dataset introduced in \cite{RIR09} includes RIR samples recorded with people standing and moving inside the rooms. The authors showed the potential of applying machine learning techniques to this dataset for tasks such as human localization, identification, and detection.
 
-Acoustic perception of object shapes is investigated in \cite{shape1}, where the authors propose the use of acoustic standing waves to recognize the size and shape of target objects. By analyzing the distance spectrum profile generated by interference between transmitted and reflected sounds, In \cite{shape1} are estimated the dimensions of a rectangular board measuring 1.2 m × 0.9 m with a mean absolute error of 0.0194 m, demonstrating that the spectrum profile encodes geometric information that can be used to infer object shape. The approach presented in \cite{bat1} resulted in the development of the BatVision system, which perceives deep spatial layouts by analyzing echoes recorded by two microphones acting as artificial ears. A dataset of paired acoustic chirps and depth images was collected using mobile robots, and an adversarial discriminator was trained to generate depth maps from audio signals. BatVision successfully predicted detailed indoor scenes and obstacles with an L1 loss as low as 0.072, in some cases outperforming stereo‑vision‑based depth mapping.
+Acoustic perception of object shapes is investigated in \cite{shape1}, where the authors propose the use of acoustic standing waves to recognize the size and shape of target objects. By analyzing the distance spectrum profile generated by interference between transmitted and reflected sounds, The authors of \cite{shape1} estimated the dimensions of a rectangular board measuring 1.2 m × 0.9 m with a mean absolute error of 0.0194 m, demonstrating that the spectrum profile encodes geometric information that can be used to infer object shape. The approach presented in \cite{bat1} resulted in the development of the BatVision system, which perceives deep spatial layouts by analyzing echoes recorded by two microphones acting as artificial ears. A dataset of paired acoustic chirps and depth images was collected using mobile robots, and an adversarial discriminator was trained to generate depth maps from audio signals. BatVision successfully predicted detailed indoor scenes and obstacles with an L1 loss as low as 0.072, in some cases outperforming stereo‑vision‑based depth mapping.
 
-Building upon BatVision, the CatChatter system presented in \cite{cat1} reports two main contributions. First, an improved version of BatVision was developed by removing an input encoder that processed acoustic spectrograms before reaching the adversarial discriminator; this encoder caused spatial information loss, reducing the inference capability of the U‑Net. Second, a new system was introduced that uses LiDAR to generate 360‑degree depth images and increases acoustic perception from two microphones to four, enabling echo capture from all directions. The results are comparable to those reported in \cite{bat1}, but the prediction field—due to the 360‑degree depth information and additional microphones—was four times larger than that obtained with the stereo‑vision and two‑microphone configuration.
+Building upon BatVision, the CatChatter system presented in \cite{cat1} reports two main contributions. First, an improved version of BatVision was developed by removing an input encoder that processed acoustic spectrograms before they reached the adversarial discriminator; this encoder caused spatial information loss, reducing the inference capability of the U‑Net. Second, a new system was introduced that uses LiDAR to generate 360‑degree depth images and increases acoustic perception from two microphones to four, enabling echo capture from all directions. The results are comparable to those reported in \cite{bat1}, but the prediction field—due to the 360‑degree depth information and additional microphones—was four times larger than that obtained with the stereo‑vision and two‑microphone configuration.
 
-Acoustic sensing for detecting basic shapes and deformations is explored in \cite{echosense}, where the work identify and monitor small hollow objects from the inside. Deformations were introduced by altering object dimensions or blocking portions of the interior. A square‑wave sound signal was emitted inside the objects, and a four‑microphone array recorded the resulting echoes. Acoustic features were extracted from these signals and used to train a classifier capable of identifying object shape with 80\% accuracy, detecting the presence of deformation with 100\% accuracy, and localizing the deformation with 90\% accuracy.    
+Acoustic sensing for detecting basic shapes and deformations is explored in \cite{echosense}, where the authors identify and monitor small hollow objects from the inside. Deformations were introduced by altering object dimensions or blocking portions of the interior. A square‑wave sound signal was emitted inside the objects, and a four‑microphone array recorded the resulting echoes. Acoustic features were extracted from these signals and used to train a classifier capable of identifying object shape with 80\% accuracy, detecting the presence of deformation with 100\% accuracy, and localizing the deformation with 90\% accuracy.    
 
 %####################################################################
 
@@ -144,14 +144,14 @@ To collect the acoustic response of an enclosed space while the position of an i
 
 \subsection{Experimental configuration}
 
-The experimental container is a cubic box with sides of 1 m and a volume close to $1\,\mathrm{m}^3$. The concept is shown in Figure \ref{mesurementbox}(a). Three of its six walls are made of porcelain tiles with a thickness of 1 cm, one wall and the floor are made of solid concrete, and the remaining wall used for observation is made of acrylic with a thickness of 0.5 cm. The clear acrylic sheet allows direct observation of the movement mechanism inside the box. Unlike the other walls, which are permanently bonded, this acrylic wall can be removed to provide access to the interior of the measurement box.
+The experimental container is a cubic box with a side length of 1 m and a volume close to $1\,\mathrm{m}^3$. The concept is shown in Figure \ref{mesurementbox}(a). Three of its six walls are made of porcelain tiles with a thickness of 1 cm, one wall and the floor are made of solid concrete, and the remaining wall used for observation is made of acrylic with a thickness of 0.5 cm. The clear acrylic sheet allows direct observation of the movement mechanism inside the box. Unlike the other walls, which are permanently bonded, this acrylic wall can be removed to provide access to the interior of the measurement box.
 
-The movement mechanism inside the box consists of a robotic arm mounted at the center of the floor. The arm has four degrees of freedom (DOF) and is used to move and change the position and orientation of a cube with a side length of 20 cm attached to its end. The cube is made of plastic, with walls 2 mm thick. For the measurements, a mono speaker is placed at the center of one wall to generate the acoustic stimulus inside the system. On the opposite wall, four capacitive microphones are positioned 15 cm away from each corner to capture the acoustic response of the measurement box. The implementation of the measurement box was built inside a storage room and is shown in Figure \ref{mesurementbox}(b).
+The movement mechanism inside the box consists of a robotic arm mounted at the center of the floor. The arm has four degrees of freedom (DOF) and is used to control the position and orientation of a cube with a side length of 20 cm attached to its end. The cube is made of plastic, with walls 2 mm thick. For the measurements, a mono speaker is placed at the center of one wall to generate the acoustic stimulus inside the system. On the opposite wall, four capacitive microphones are positioned 15 cm away from each corner to capture the acoustic response of the measurement box. The measurement box was constructed inside a storage room and is shown in Fig. \ref{mesurementbox}(b).
 
 \begin{figure}[!htb]
         \begin{center}        
             \includegraphics[height=15cm, width=8cm]{Measuretogether.png}
-            \caption{Measure box: (a) Conceptual sketch for the acoustic measurement box, and (b) actual implementation for the data acquisition task.}
+            \caption{Measurement box: (a) conceptual sketch for the acoustic measurement box, and (b) actual implementation for the data acquisition task.}
         \label{mesurementbox}                         
         \end{center}
 \end{figure}
@@ -160,9 +160,9 @@ The movement mechanism inside the box consists of a robotic arm mounted at the c
 
 \subsection{The Audio-Location Dataset}
 
-The dataset was collected over twenty-six recording sessions. In each session, the robotic arm maintained a fixed angular value at its base and positioned the cube at specific coordinates and orientations. The initial orientation of the cube was set such that its sides were parallel to the measurement box walls. The variables modified during each measurement were the cube’s location and orientation. For each location, nine different orientations were recorded. After completing these nine measurements, the robotic arm lowered the cube by decreasing its position along the Z axis, and the recording process was repeated for the new location. This procedure continued until the cube reached the bottom of the measurement box.
+The dataset was collected over twenty-six recording sessions. In each session, the robotic arm maintained a fixed base angle and positioned the cube at specific coordinates and orientations. The initial orientation of the cube was set such that its sides were parallel to the measurement box walls. The variables modified during each measurement were the cube’s location and orientation. For each location, nine different orientations were recorded. After completing these nine measurements, the robotic arm lowered the cube by decreasing its position along the Z axis, and the recording process was repeated for the new location. This procedure continued until the cube reached the bottom of the measurement box.
 
-Audio from four channels was recorded. The acoustic signal was emitted four times, and the response was captured one microphone at a time. Each recording session consisted of 270 recordings, each containing four channels. A change of 10 degrees in the base of the robotic arm defined each recording session, producing a cylindrical envelope for the measurement area.
+Audio from four channels was recorded. The acoustic signal was emitted four times, and the response was captured one microphone at a time. Each recording session consisted of 270 recordings, each containing four channels.A movement of 10 degrees in the base of the arm define the begining of a new recording session, all the recording session producing a cylindrical envelope for the measurement area.
 
 The coordinates of each measurement, obtained from the robotic arm, are shown in Fig. \ref{xyzlocations}. Each blue column in the three-dimensional plot corresponds to one recording session, and each point represents one of the nine orientations captured at that location. The total number of sessions was limited by the rotational constraint of the robotic arm’s base, which allowed only 270 degrees of movement.
 
@@ -176,18 +176,18 @@ The coordinates of each measurement, obtained from the robotic arm, are shown in
 
 %##############################################################
 
-The source audio signal was obtained by extracting an arbitrary 0.3-second segment from an acoustic melody. The spectrum of the signal has a bandwidth of up to 10 kHz, with the highest-magnitude components concentrated at low frequencies. Before reproducing the source signal, the recording process is initialized by opening the capture window for one second. This procedure is repeated four times, once for each microphone. After completing the four recordings, the cube is moved to a new orientation until all nine possible orientations are covered, and then it is moved to a new location.
+The source audio signal was obtained by extracting an arbitrary 0.3-second segment from an acoustic melody. The spectrum of the signal has a bandwidth of up to 10 kHz, with the highest-magnitude components concentrated at low frequencies. Before playing the source signal, the recording process begins by opening the capture window for one second. This procedure is repeated four times, once for each microphone. After completing the four recordings, the cube is moved to a new orientation until all nine possible orientations are covered, and then it is moved to a new location.
 
 Because the recording start time is affected by the operating system scheduler, the signals from the four channels are aligned by exploiting the fact that the source-to-microphone distance is identical for each channel. Therefore, the magnitude of the direct sound can be used as a reference for alignment.
 
-Second, a signal-integrity validation is performed to divide each recording into its main body and tail (reverberation segment). From the main segment, the signal power is computed, and from the tail, its duration is extracted. Signals whose power and tail length fall within predefined limits are considered valid and included in the dataset.
+Next, signal integrity was checked by dividing each recording into its main segment and tail (the reverberation segment). The signal power was calculated from the main segment, and the tail duration was measured. Recordings with power and tail durations within predefined limits were considered valid and included in the dataset.
 
 To train a CNN on the dataset, a Log-Mel transformation is applied to the audio signals to obtain spectrograms that can be used as input to the network. This results in four Log-Mel spectrogram images of $570 \times 370$ pixels for each location-orientation pair, as shown in Figure \ref{spectogram4ch}.
 
 \begin{figure}[!htb]
         \begin{center}        
             \includegraphics[height=5cm, width=8.5cm]{4channelSpec.png}
-            \caption{Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8, Y=-0.94 , Z=-9.43 and orientation 50 degrees.}
+            \caption{Log-mel spectograms of the four audio channels recorded at session 1, location X=22.8cm, Y=-0.94cm , Z=-9.43cm and orientation $50^\circ$.}
         \label{spectogram4ch}                         
         \end{center}
 \end{figure}
@@ -198,13 +198,13 @@ To train a CNN on the dataset, a Log-Mel transformation is applied to the audio 
 
 The model architecture selected for the task of classifying and estimating the cube’s location and orientation inside the measurement box was the ResNet-18 network, chosen for its robustness, simplicity, and suitability for inference in resource-constrained environments \cite{Resnetwhy}. Two modifications were applied to the standard network structure. First, the input layer was extended to accept a stack of four RGB images, one corresponding to each channel. Second, for the regression task, the softmax output layer was replaced with a single output feature using a sigmoid activation function.
 
-The collected dataset consists of 7020 samples, each composed of four images, one per channel. For training and validation, a five-fold approach was used. The dataset was split using an 80:20 ratio; as an example, Fig. \ref{xyzlocations} shows the training and test points for Fold 1, represented in blue and red, respectively. Training was performed for 40 epochs for both the classification and regression networks. The complete data-processing pipeline is shown in Figure \ref{method_flow}.
+The collected dataset consists of 7020 samples, each composed of four images, one per channel. For training and validation, a five-fold approach was used. The dataset was split using an 80:20 ratio; as an example, Fig. \ref{xyzlocations} shows the training and test points for Fold 1, represented in blue and red, respectively. Training was performed for 40 epochs for both the classification and regression networks. The complete data-processing pipeline is shown in Fig. \ref{method_flow}.
 
 
 \begin{figure}[!htb]
         \begin{center}        
             \includegraphics[height=6cm, width=9cm]{method2_improved.jpeg}
-            \caption{Diagram of the audio data processing pipe for the estimator.}
+            \caption{Audio data processing pipeline for object location estimation.}
         \label{method_flow}                         
         \end{center}
 \end{figure}
@@ -213,9 +213,9 @@ The collected dataset consists of 7020 samples, each composed of four images, on
 
 \subsection{Classification by Location and Orientation}
 
-First, the ability to classify the recordings in the database according to their location and orientation was evaluated. For the location-classification task, the 26 distinct session labels were used to train the CNN. The objective of this experiment was to determine whether, after training, the network could correctly classify in which session each recording was performed. After training, the network achieved an accuracy higher than 99\% on the test sets across the five folds.
+First, the ability to classify the recordings in the database according to their location and orientation was evaluated. For the location-classification task, the 26 distinct session labels were used to train the CNN. The objective of this experiment was to determine whether, after training, the network could identify the session during which each recording was made. After training, the network achieved an accuracy higher than 99\% on the test sets across the five folds.
 
-For the orientation-classification task, the dataset containing the nine distinct label values was used to train the network. The training procedure was identical to that of the location task, using 40 epochs. After training, the network achieved an accuracy no higher than 27.07\% across the five folds, exhibiting a substantial number of misclassifications across the different orientations.
+For the orientation-classification task, the dataset containing nine orientation classes used to train the network. The training procedure was identical to that of the location task, using 40 epochs. After training, the network achieved an accuracy no higher than 27.07\% across the five folds, exhibiting a substantial number of misclassifications across the different orientations.
 
 \subsection{Location Estimation}
 
@@ -226,13 +226,13 @@ The networks were trained for 40 epochs and subsequently evaluated on each test 
 \begin{figure}[H]
         \begin{center}        
             \includegraphics[height=15cm, width=8.5cm]{histograms_test_error.png}
-            \caption{Histograms of the estimation errors for each coordinate with the test set after training.}
+            \caption{Histograms of estimation errors for each coordinate, evaluated on the test set after training.}
         \label{histograms}                         
         \end{center}
 \end{figure}
 
 
-The means and standard deviations for the histograms in Fig.~\ref{histograms} are presented in Table~\ref{tab:meandesv}. The three coordinates exhibit mean values close to zero, indicating that the estimations are unbiased. The standard deviation for X and Y is similar, approximately 0.8 cm, while the Z coordinate has a higher standard deviation of 1.05 cm, indicating that Z estimates are more dispersed. In all three cases, the standard deviation is below 2 cm. Considering $2\sigma$ as an evaluation metric, 95.44\% of the total estimations fall below 1.56 cm of error in the X dimension, 1.42 cm in the Y dimension, and 2.11 cm in the Z dimension.
+The means and standard deviations for the histograms in Fig.~\ref{histograms} are presented in Table~\ref{tab:meandesv}. The three coordinates exhibit mean values close to zero, indicating that the estimates are unbiased. The standard deviation for X and Y are similar, at approximately 0.8 cm, while the Z coordinate has a higher standard deviation of 1.05 cm, indicating that Z estimates are more dispersed. In all three cases, the standard deviation is below 2 cm. Considering $2\sigma$ as an evaluation metric, 95.44\% of the total estimations fall below 1.56 cm of error in the X dimension, 1.42 cm in the Y dimension, and 2.11 cm in the Z dimension.
 
 \begin{table}[!htb]
 \centering
@@ -255,12 +255,13 @@ Fig.~\ref{boxplot} shows the boxplots for the three distributions. It can be obs
  \begin{figure}[H]
         \begin{center}        
             \includegraphics[height=7cm, width=9cm]{boxplot.png}
-            \caption{Box-plot of estimation error for the three coordinates X, Y and Z}
+            \caption{Boxplots of estimation errors for the X, Y, and Z coordinates.}
         \label{boxplot}                         
         \end{center}
 \end{figure}
 
-The Mean Absolute Error (MAE) for the coordinates across the five folds is presented in table \ref{tab:mae_xyz_folds}, can be observed that the mean of the MAE for the five folds is less than 1cm for the three coordinates, having the lower values on Y and the higher on Z. Also the table \ref{tab:mean_error_distribution_xyz} contains the mean of percentage of samples with estimation within an error range, From the table the percentages for Z  are lower than the X and Y, but still arround of 92\% the error are below $\pm 2cm$ for the Z coordinate.
+
+“Table \ref{tab:mae_xyz_folds} presents the mean absolute error (MAE) for each coordinate across the five folds. The average MAE across the folds is below 1 cm for all three coordinates, with the lowest value for Y and the highest for Z. Table \ref{tab:mean_error_distribution_xyz} reports the mean percentage of samples whose estimation errors fall within specified ranges across the five folds. Although these percentages are lower for Z than for X and Y, approximately 92\% of the samples have Z-coordinate estimation errors within $\pm 2 cm$.
 
 \begin{table}[htbp]
   \centering
@@ -304,14 +305,14 @@ The Mean Absolute Error (MAE) for the coordinates across the five folds is prese
 
 To understand how the error relates to the cube’s location inside the box, Fig.~\ref{3derror} shows the absolute error as a function of the three spatial coordinates for all points in the dataset that were included in the test set for each five-fold run. To facilitate visualization, error values are represented using a color scale, where blue indicates low error and red indicates high error. Outliers above 5 cm are shown in red, indicating a significantly higher error than the majority of the data. The plots show that the error is relatively uniformly distributed across the three dimensions, without clear hotspots or regions of higher misprediction. The absence of a strong pattern in the 3D error distribution suggests that the network’s performance is relatively consistent across different locations inside the box. In regions where the test set contains points close together but the training set has a lower density, the error tends to be similar to that of nearby points, indicating that the network generalizes well in those areas.
 
-To analyze the response of the networks along the three coordinates in more detail, the absolute estimation error as a function of the X, Y, and Z coordinates is plotted in Fig.~\ref{XYZerror}. The estimation error is shown as a function of each coordinate while the other two coordinates vary but are not the focus of the analysis. X and Y exhibit a similar sample distribution along their respective axes, because the cube motion during data collection was circular in the X-Y plane, resulting in more points at the extremes of the axes. For Z, the cube was sampled more uniformly along the axis, with a similar density of points across the range. These plots show that, for all three coordinates, the magnitude of the estimation error increases toward both ends of the axis, being more pronounced in X and Y. This effect may be explained by the limited number of training samples in those regions. At the extremes, the network must learn the regression mapping using samples from only one side of the range, which makes the learning process more difficult.
+To analyze the response of the networks along the three coordinates in more detail, the absolute estimation error as a function of the X, Y, and Z coordinates is plotted in Fig.~\ref{XYZerror}. The estimation error is shown as a function of each coordinate while the other two coordinates vary but are not the focus of the analysis. X and Y exhibit a similar sample distribution along their respective axes, because the cube motion during data collection was circular in the X-Y plane, resulting in more points at the extremes of the axes. For Z, the cube was sampled more uniformly along the axis, with a similar density of points across the range. These plots show that, for all three coordinates, the magnitude of the estimation error increases toward both ends of the axis. This increase is more pronounced in X and Y. This effect may be explained by the limited number of training samples in those regions. At the extremes, the network must learn the regression mapping using samples from only one side of the range, which makes the learning process more difficult.
 
 
 
 \begin{figure}[H]
         \begin{center}        
             \includegraphics[height=20cm, width=9cm]{Estimation3D.png}
-            \caption{Absolute value of the error estimation for the three networks as function of the three coordinates X, Y and Z}
+            \caption{Absolute estimation errors produced by the three networks as a function of the spatial coordinates X, Y, and Z.}
         \label{3derror}                         
         \end{center}
 \end{figure}
@@ -319,7 +320,7 @@ To analyze the response of the networks along the three coordinates in more deta
 \begin{figure}[H]
         \begin{center}        
             \includegraphics[height=14cm, width=8cm]{errorvscoordinates.png}
-            \caption{Estimation errors along the three coordinates X, Y and Z as function of the corresponding coordinate value.}
+            \caption{Absolute estimation errors for X, Y, and Z as a function of the corresponding coordinate value.}
         \label{XYZerror}                         
         \end{center}
 \end{figure}
@@ -338,7 +339,7 @@ The experiments presented in this work demonstrate that, from the acoustic respo
 
 For the task of estimating the cube’s position in a Cartesian coordinate system, the results indicate that the estimator behaves similarly across the three coordinates, although the estimation error varies slightly along each axis. The error distributions are approximately normal, with the Y coordinate achieving the lowest MAE, followed by X and then Z. The estimators for the three coordinates were capable of determining the cube’s position within an error range of approximately $\pm 2$ cm for a large number of points in the space.
 
-This work did not consider the individual contribution of each channel; therefore, future research should explore the influence of each microphone on the overall estimation performance. Additionally, due to the motion restriction of the robotic arm, the X and Y samples were not uniformly distributed. It would therefore be valuable to include data augmentation or additional sampling to assess its impact on estimation performance in underrepresented regions. Finally, in the present work the estimation of coordinates was performed by independent networks; it would be interesting to evaluate a multi-head network that estimates the three coordinates simultaneously.
+This work did not consider the individual contribution of each channel; therefore, future research should explore the influence of each microphone on the overall estimation performance. Additionally, due to the motion restriction of the robotic arm, the X and Y samples were not uniformly distributed. It would therefore be valuable to include data augmentation or additional sampling to evaluate the impact on estimation performance in underrepresented regions. Finally, coordinate estimation was performed using independent networks in this study; it would be interesting to evaluate a multi-head network that estimates the three coordinates simultaneously.
 
 \nocite{*}
 
@@ -351,5 +352,4 @@ This work did not consider the individual contribution of each channel; therefor
 
 
 \end{document}
-
 

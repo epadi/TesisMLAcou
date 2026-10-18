@@ -1,12 +1,20 @@
 import os
 import numpy as np
 import math
-from audio2numpy import open_audio
+from scipy.io import wavfile
 from operator import itemgetter
 import matplotlib.pyplot as plt
 from scipy.signal import correlate
 import json
 
+
+def open_audio(file_path):
+    sample_rate, data = wavfile.read(file_path)
+    audio = np.asarray(data)
+    if audio.ndim == 2:
+       audio = audio[:, 0]
+    return audio.astype(np.float64), float(sample_rate)
+    
 
 def normalized_cross_correlation(signal1, signal2):
     signal1 = np.asarray(signal1).squeeze()

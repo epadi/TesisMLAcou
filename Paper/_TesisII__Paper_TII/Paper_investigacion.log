@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  10 OCT 2026 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  14 OCT 2026 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -349,18 +349,18 @@ File: 4channelSpec.png Graphic file (type png)
 <use 4channelSpec.png>
 Package pdftex.def Info: 4channelSpec.png  used on input line 189.
 (pdftex.def)             Requested size: 241.85156pt x 142.26883pt.
-<method2_improved.jpeg, id=23, 331.4784pt x 185.0112pt>
+<method2_improved.jpeg, id=23, 1381.16pt x 770.88pt>
 File: method2_improved.jpeg Graphic file (type jpg)
 <use method2_improved.jpeg>
 Package pdftex.def Info: method2_improved.jpeg  used on input line 206.
-(pdftex.def)             Requested size: 256.07875pt x 170.72615pt.
+(pdftex.def)             Requested size: 256.05855pt x 170.71158pt.
 
-Overfull \hbox (4.07875pt too wide) in paragraph at lines 206--207
+Overfull \hbox (4.05855pt too wide) in paragraph at lines 206--207
  [] 
  []
 
 [4 <./4channelSpec.png> <./method2_improved.jpeg>]
-<histograms_test_error.png, id=29, 715.473pt x 1293.633pt>
+<histograms_test_error.png, id=30, 715.473pt x 1293.633pt>
 File: histograms_test_error.png Graphic file (type png)
 <use histograms_test_error.png>
 Package pdftex.def Info: histograms_test_error.png  used on input line 228.
@@ -369,7 +369,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 239.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 239.
-<boxplot.png, id=30, 626.5809pt x 410.4936pt>
+<boxplot.png, id=31, 626.5809pt x 410.4936pt>
 File: boxplot.png Graphic file (type png)
 <use boxplot.png>
 Package pdftex.def Info: boxplot.png  used on input line 257.
@@ -380,28 +380,28 @@ Overfull \hbox (4.07759pt too wide) in paragraph at lines 257--258
  []
 
 
-Overfull \hbox (8.22061pt too wide) in paragraph at lines 271--284
+Overfull \hbox (8.22061pt too wide) in paragraph at lines 272--285
  [][] 
  []
 
 [5 <./histograms_test_error.png> <./boxplot.png>]
-<Estimation3D.png, id=37, 640.64343pt x 1721.68219pt>
+<Estimation3D.png, id=38, 640.64343pt x 1721.68219pt>
 File: Estimation3D.png Graphic file (type png)
 <use Estimation3D.png>
-Package pdftex.def Info: Estimation3D.png  used on input line 313.
+Package pdftex.def Info: Estimation3D.png  used on input line 314.
 (pdftex.def)             Requested size: 256.07687pt x 569.0501pt.
 
-Overfull \hbox (4.07687pt too wide) in paragraph at lines 313--314
+Overfull \hbox (4.07687pt too wide) in paragraph at lines 314--315
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<errorvscoordinates.png, id=38, 598.48593pt x 1286.55656pt>
+<errorvscoordinates.png, id=39, 598.48593pt x 1286.55656pt>
 File: errorvscoordinates.png Graphic file (type png)
 <use errorvscoordinates.png>
-Package pdftex.def Info: errorvscoordinates.png  used on input line 321.
+Package pdftex.def Info: errorvscoordinates.png  used on input line 322.
 (pdftex.def)             Requested size: 227.61879pt x 398.33763pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -431,11 +431,11 @@ Here is how much of TeX's memory you used:
  36050 multiletter control sequences out of 15000+600000
  661468 words of font info for 97 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 73i,9n,83p,1623b,345s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Paper_investigacion.pdf (7 pages, 3058185 bytes).
+ 73i,9n,83p,1623b,354s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Paper_investigacion.pdf (7 pages, 3020692 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
