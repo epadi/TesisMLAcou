@@ -30,7 +30,45 @@ Other figure of merit to evaluate regresion is the Pearson Correlation Coefficie
 The error distributions across the three dimensions are illustrated in Figure \ref{fig:plot3d_errors}, which shows the errors in the X, Y, and Z coordinates throughout the measurement box. The visualization indicates that errors are distributed relatively uniformly across the measurement space. Most errors are close to zero, while larger errors occur in a few regions; however, no clear clustering pattern is apparent. The figure \ref{fig:plot2d_errors} present the error for each coordinate only as function of it own cordinate value. In the case of X absolute estimate errors as a function of the X coordinate can be observe that the error remains low (near 2cm) in the central area and increase near the edges, with the boundary concentrating the estimation outliers. For Y a similar behaviour is observed, the center of the axis present lower values than the edge, but the error values in the center are even lower than the obtained in the estimation of X, this suggest that the task of estimating the coordinate on the Y axis is easier for the network compared to estimating magnitudes in the X domain. This aspect is particularly interesting due the fact that for the X estimation, the network is trained with a binaural input channels what allow the network to exploit the physical separation between two sound receivers, capable to learn interaural time difference from the channels, but the Y estimation perform bettern than the X. The fact that Y estimation have a strong relationship to the distance the cube is located in the path from the acoustic signal from the speaker source to the receiver microphones and this add a distintive interference effect when the cube is near the speakers or near the microphones that could explaing why the estimation along this axis present lower errors than X. For the estimation of Z, the errors are higher than X and Y. One possible explanation is that the Z-coordinate values are not uniformly distributed around zero: the dataset contains more positive values than negative ones. Consequently, the network is trained on more samples in the range from zero to 40 than in the negative range. This imbalance may contribute to the larger estimation errors observed for negative Z values. In addition, some negative Z values lie in a region occupied by the robotic arm's base, which may further complicate the estimation in that part of the measurement space. two general observation
 
 
+\section{ESN model and the regression problem}
+
+As with the CNN, the ESN was first evaluated as a classifier to assess its ability to extract from the acoustic data the features needed to locate the cube within the measurement box. The ESN achieved 98.42\% accuracy, just 0.17 percentage points below the CNN's 98.59\%. The confusion matrix in Figure \ref{fig:confusion_ESN} shows a well-defined diagonal, indicating close agreement between the true and predicted labels. The few misclassifications are between neighboring classes. Unlike the CNN, the ESN also classifies sessions 0 and 1 more accurately; these sessions correspond to locations at the physical edge of the measurement area.
+
+As with the CNN, the error distributions for the ESN estimators are shown in Figures \ref{fig:ESN_five_fold_X_histo}, \ref{fig:ESN_five_fold_Y_histo}, and \ref{fig:ESN_five_fold_Z_histo} for the X, Y, and Z coordinates, respectively. As in the CNN results, the histograms have approximately bell-shaped distributions centered around zero. However, the ESN error distributions are wider, indicating greater variability than that observed with the CNN.
+
+The MAE values reported for the ESN in Table \ref{tab:ESN_mae_xyz_folds} are higher overall than those reported for the CNN in Table \ref{tab:mae_xyz_folds}. However, the relative performance of the X and Y estimators is reversed: the ESN achieves a lower MAE for X than for Y, while Z has the highest MAE of the three coordinates. The ESN's sensitivity to hyperparameter selection may partly explain these differences. Because the hyperparameters were initially tuned for regression on X, they may not have been optimal for Y, despite both coordinates using the same ground-truth transformation. The Z-coordinate data also have a different spatial distribution, and their ground-truth values do not require the arcsine normalization described in Equation \ref{eq:normalization}. These differences may further affect how well the selected hyperparameters generalize across ESN for diferent coordinates.
+
+The error percentages reported across different tolerance ranges in Table \ref{tab:ESN_error_distribution_xyz} are consistent with the wider ESN error distributions shown in the histograms. A tolerance of $\pm 2$ cm captures a smaller proportion of the estimates; a tolerance of $\pm 3$ cm is needed to capture approximately 97\% of them.
+
+The Pearson correlation coefficients on table \ref{tab:esn_pearson_corr_xyz} also exceed 0.99 in most cases. The only exception is the Z estimator in fold 3, suggesting that the regression model may have difficulty capturing the relationship between the features and target values for some samples in this fold.
+
+Figure \ref{fig:esn_plot3d_errors} shows the spatial distribution of the estimation errors across all three dimensions. The scatter plot indicates that the error magnitudes are distributed relatively uniformly throughout the measurement region. However, the coordinate-wise plots in Figure \ref{fig:esn_plot2d_errors} show that the largest errors occur in a specific interior region rather than near the limits of the measurement space. This behavior may be explained by the multi-head architecture used for coordinate estimation. Two regression heads estimate the cube's position in the negative and positive coordinate ranges, respectively, while a third head selects which estimate to use. This selection may be less reliable near the center, where the two ranges meet. A fourth head identifies outliers by comparing the estimates; however, if the discrepancy between them is below the specified threshold, an incorrect head selection may not be flagged. This could explain why the central region remains prone to errors. Training both regression heads on an overlapping region around the boundary could mitigate this issue: each head would then learn from samples on both sides of the boundary, reducing the error when the selector chooses the less appropriate head.
+
+
+\section{Beamforming}
+
+\subsection{CNN with Beamforming}
+
+
+\subsection{ESN with Beamforming}
+
+\section{Model Comparison}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+This indicates that while the ESN can still provide reasonably accurate estimates, it is more prone to larger errors compared to the CNN. Consequently, for applications where minimizing the largest errors is critical, the CNN may be the preferred choice despite its higher computational cost.
+
+Despite the higher MAE values, the ESN offers a significant reduction in model complexity compared to the CNN. The ESN requires only about 3\% of the trainable parameters used by the ResNet18 CNN, making it a more efficient option for the regression task with acoustic features as input. This efficiency could be particularly advantageous in scenarios with limited computational resources or when real-time processing is required. Overall, while the CNN achieves lower absolute errors, the ESN provides a compelling trade-off between accuracy and computational efficiency.
