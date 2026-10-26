@@ -258,11 +258,11 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter:results}{{6}{53}{Results}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}CNN as classifier}{54}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}CNN for Acoustic Classification}{54}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}CNN Acoustic to Spatial Location Classification}{54}{subsection.6.1.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{54}{figure.caption.41}\protected@file@percent }
 \newlabel{fig:cnn_confusion_matrix}{{6.1}{54}{Confusion matrix for CNN acoustic location classification on test set}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{55}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}CNN Acoustic to Orientation Classification}{55}{subsection.6.1.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{55}{figure.caption.42}\protected@file@percent }
 \newlabel{fig:cnn_confusion_matrix_orientation}{{6.2}{55}{Confusion matrix for CNN acoustic orientation classification on test set}{figure.caption.42}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for the three regions defined for orientation classification.}}{56}{figure.caption.43}\protected@file@percent }
@@ -273,7 +273,7 @@
 \newlabel{fig:session_points}{{6.4}{57}{Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task}{figure.caption.45}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal.}}{58}{figure.caption.46}\protected@file@percent }
 \newlabel{fig:cross_correlation_results}{{6.5}{58}{Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal}{figure.caption.46}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}CNN as regression model}{59}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}CNN Acoustic to Spatial Location Regression}{59}{section.6.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Histograms of estimation errors with CNN for X values across five folds.}}{59}{figure.caption.47}\protected@file@percent }
 \newlabel{fig:five_fold_X_histo}{{6.6}{59}{Histograms of estimation errors with CNN for X values across five folds}{figure.caption.47}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Histograms of estimation errors with CNN for Y values across five folds.}}{60}{figure.caption.48}\protected@file@percent }
@@ -282,69 +282,84 @@
 \newlabel{fig:five_fold_Z_histo}{{6.8}{60}{Histograms of estimation errors with CNN for Z values across five folds}{figure.caption.49}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{61}{table.caption.50}\protected@file@percent }
 \newlabel{tab:mae_xyz_folds}{{6.2}{61}{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}{table.caption.50}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{61}{table.caption.51}\protected@file@percent }
-\newlabel{tab:error_distribution_xyz}{{6.3}{61}{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}{table.caption.51}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{62}{figure.caption.52}\protected@file@percent }
-\newlabel{fig:plot3d_errors}{{6.9}{62}{3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set}{figure.caption.52}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{63}{table.caption.53}\protected@file@percent }
-\newlabel{tab:pearson_corr_xyz}{{6.4}{63}{Pearson Correlation Coefficients between Ground Truths and Predictions}{table.caption.53}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Scatered plot showing the absolute estimation error vs it respective coordinate axis.}}{63}{figure.caption.54}\protected@file@percent }
-\newlabel{fig:plot2d_errors}{{6.10}{63}{Scatered plot showing the absolute estimation error vs it respective coordinate axis}{figure.caption.54}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}ESN as classifier}{64}{section.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrix for the ESN as result of the audio session clasification.}}{64}{figure.caption.55}\protected@file@percent }
-\newlabel{fig:confusion_ESN}{{6.11}{64}{Confusion matrix for the ESN as result of the audio session clasification}{figure.caption.55}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{61}{table.caption.51}\protected@file@percent }
+\newlabel{tab:pearson_corr_xyz}{{6.3}{61}{Pearson Correlation Coefficients between Ground Truths and Predictions}{table.caption.51}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{62}{table.caption.52}\protected@file@percent }
+\newlabel{tab:error_distribution_xyz}{{6.4}{62}{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}{table.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{63}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:plot3d_errors}{{6.9}{63}{3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set}{figure.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Scatered plot showing the absolute estimation error vs it respective coordinate axis.}}{64}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:plot2d_errors}{{6.10}{64}{Scatered plot showing the absolute estimation error vs it respective coordinate axis}{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}ESN for Acoustic Classification}{64}{section.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrix for the ESN as result of the audio session classification.}}{65}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:confusion_ESN}{{6.11}{65}{Confusion matrix for the ESN as result of the audio session classification}{figure.caption.55}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.4}ESN as regression model}{65}{section.6.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Histograms of estimation errors with ESN for X values across five folds.}}{65}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:ESN_five_fold_X_histo}{{6.12}{65}{Histograms of estimation errors with ESN for X values across five folds}{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Histograms of estimation errors with ESN for X values across five folds.}}{66}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:ESN_five_fold_X_histo}{{6.12}{66}{Histograms of estimation errors with ESN for X values across five folds}{figure.caption.56}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Histograms of estimation errors with ESN for Y values across five folds.}}{66}{figure.caption.57}\protected@file@percent }
 \newlabel{fig:ESN_five_fold_Y_histo}{{6.13}{66}{Histograms of estimation errors with ESN for Y values across five folds}{figure.caption.57}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Histograms of estimation errors with ESN for Z values across five folds.}}{66}{figure.caption.58}\protected@file@percent }
-\newlabel{fig:ESN_five_fold_Z_histo}{{6.14}{66}{Histograms of estimation errors with ESN for Z values across five folds}{figure.caption.58}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Histograms of estimation errors with ESN for Z values across five folds.}}{67}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:ESN_five_fold_Z_histo}{{6.14}{67}{Histograms of estimation errors with ESN for Z values across five folds}{figure.caption.58}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces ESN Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{67}{table.caption.59}\protected@file@percent }
 \newlabel{tab:ESN_mae_xyz_folds}{{6.5}{67}{ESN Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}{table.caption.59}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates}}{67}{table.caption.60}\protected@file@percent }
-\newlabel{tab:ESN_error_distribution_xyz}{{6.6}{67}{Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates}{table.caption.60}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates}}{68}{table.caption.60}\protected@file@percent }
+\newlabel{tab:ESN_error_distribution_xyz}{{6.6}{68}{Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates}{table.caption.60}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}}{68}{figure.caption.61}\protected@file@percent }
 \newlabel{fig:esn_plot3d_errors}{{6.15}{68}{3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set}{figure.caption.61}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{68}{table.caption.62}\protected@file@percent }
-\newlabel{tab:esn_pearson_corr_xyz}{{6.7}{68}{Pearson Correlation Coefficients between Ground Truths and Predictions}{table.caption.62}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN.}}{69}{figure.caption.63}\protected@file@percent }
-\newlabel{fig:esn_plot2d_errors}{{6.16}{69}{Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN}{figure.caption.63}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Statistical Tool Assumptions Tests}{69}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Statistical Tool Results}{70}{section.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}Obtained Metrics}{70}{section.6.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Most Complex Scenario Metrics (if needed)}{70}{subsection.6.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.8}Correctness (if needed)}{70}{section.6.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.9}Output (If needed)}{70}{section.6.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{71}{chapter.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{69}{table.caption.62}\protected@file@percent }
+\newlabel{tab:esn_pearson_corr_xyz}{{6.7}{69}{Pearson Correlation Coefficients between Ground Truths and Predictions}{table.caption.62}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN.}}{70}{figure.caption.63}\protected@file@percent }
+\newlabel{fig:esn_plot2d_errors}{{6.16}{70}{Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN}{figure.caption.63}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Beamforming}{70}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}CNN with Beamforming}{71}{subsection.6.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for X values across five folds.}}{71}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:BeamCNN_five_fold_X_histo}{{6.17}{71}{Histograms of estimation errors with Beamforming and CNN for X values across five folds}{figure.caption.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Y values across five folds.}}{72}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:BeamCNN_five_fold_Y_histo}{{6.18}{72}{Histograms of estimation errors with Beamforming and CNN for Y values across five folds}{figure.caption.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Z values across five folds.}}{73}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:BeamCNN_five_fold_Z_histo}{{6.19}{73}{Histograms of estimation errors with Beamforming and CNN for Z values across five folds}{figure.caption.66}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{73}{table.caption.67}\protected@file@percent }
+\newlabel{tab:BeamCNN_mae_xyz_folds}{{6.8}{73}{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}{table.caption.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{74}{table.caption.68}\protected@file@percent }
+\newlabel{tab:BeamCNN_error_distribution_xyz}{{6.9}{74}{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}{table.caption.68}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces 3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{75}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:BeamCNN_plot3d_errors}{{6.20}{75}{3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set}{figure.caption.69}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.10}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{76}{table.caption.70}\protected@file@percent }
+\newlabel{tab:pearson_corr_xyz}{{6.10}{76}{Pearson Correlation Coefficients between Ground Truths and Predictions}{table.caption.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces Scattered plot showing the absolute estimation error vs the respective coordinate axis.}}{76}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:BeamCNN_plot2d_errors}{{6.21}{76}{Scattered plot showing the absolute estimation error vs the respective coordinate axis}{figure.caption.71}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}ESN with Beamforming}{77}{subsection.6.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Correctness (if needed)}{77}{section.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Output (If needed)}{77}{section.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{79}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:discussion}{{7}{71}{Discussion}{chapter.7}{}}
+\newlabel{chapter:discussion}{{7}{79}{Discussion}{chapter.7}{}}
 \citation{vapnikstatistical}
 \citation{vapnikstatistical}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}CNN model and the regression problem}{72}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}CNN model to identify cube regions and orientations}{72}{subsection.7.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}CNN model to estimate the cube location}{73}{subsection.7.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}CNN model and the regression problem}{80}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}CNN model to identify cube regions and orientations}{80}{subsection.7.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}CNN model to estimate the cube location}{81}{subsection.7.1.2}\protected@file@percent }
 \citation{friedmanrecomendation}
 \citation{friedmanrecomendation}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}ESN model and the regression problem}{76}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Beamforming}{78}{section.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}CNN with Beamforming}{78}{subsection.7.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}ESN with Beamforming}{78}{subsection.7.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Model Comparison}{78}{section.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{79}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}ESN model and the regression problem}{84}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Beamforming}{86}{section.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}CNN with Beamforming}{86}{subsection.7.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}ESN with Beamforming}{86}{subsection.7.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Model Comparison}{86}{section.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{87}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:conclusions-fw}{{8}{79}{Conclusions and Future Work}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusions}{80}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Future Work}{80}{section.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendixes}{81}{chapter.9}\protected@file@percent }
+\newlabel{chapter:conclusions-fw}{{8}{87}{Conclusions and Future Work}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Conclusions}{88}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Future Work}{88}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Appendixes}{89}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:appendixes}{{9}{81}{Appendixes}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Source Code}{82}{section.9.1}\protected@file@percent }
-\newlabel{deliverable:source-code}{{9.1}{82}{Source Code}{section.9.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{82}{section.9.2}\protected@file@percent }
+\newlabel{chapter:appendixes}{{9}{89}{Appendixes}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Source Code}{90}{section.9.1}\protected@file@percent }
+\newlabel{deliverable:source-code}{{9.1}{90}{Source Code}{section.9.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{90}{section.9.2}\protected@file@percent }
 \bibstyle{plainnat}
 \bibdata{mendeley}
 \bibcite{log_mel_convolutional}{{1}{2014}{{Abdel-Hamid et~al.}}{{Abdel-Hamid, Mohamed, Jiang, Deng, Penn, and Yu}}}
@@ -354,7 +369,7 @@
 \bibcite{bat1}{{5}{2023}{{Brunetto et~al.}}{{Brunetto, Hornauer, Yu, and Moutarde}}}
 \bibcite{ASC4}{{6}{2021}{{Byttebier}}{{}}}
 \bibcite{CNNASC1}{{7}{2016}{{Daniele~Battaglino and Evans}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{83}{chapter.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{References}{91}{chapter.10}\protected@file@percent }
 \bibcite{BEA01}{{8}{2017}{{de~Santana}}{{}}}
 \bibcite{RWB1}{{9}{2018}{{Demontis et~al.}}{{Demontis, Ollivier, and Marchal}}}
 \bibcite{convdef}{{10}{2024}{{Deprez and Robinson}}{{}}}
@@ -397,4 +412,4 @@
 \bibcite{convpadd}{{47}{2018}{{Yamashita et~al.}}{{Yamashita, , Yamashita, Gian, and Togashi}}}
 \bibcite{AOR4}{{48}{2021}{{Zhang}}{{}}}
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{\m@ne }}
-\gdef \@abspage@last{108}
+\gdef \@abspage@last{116}

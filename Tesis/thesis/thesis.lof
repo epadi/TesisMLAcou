@@ -42,14 +42,19 @@
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Histograms of estimation errors with CNN for X values across five folds.}}{59}{figure.caption.47}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Histograms of estimation errors with CNN for Y values across five folds.}}{60}{figure.caption.48}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Histograms of estimation errors with CNN for Z values across five folds.}}{60}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{62}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Scatered plot showing the absolute estimation error vs it respective coordinate axis.}}{63}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrix for the ESN as result of the audio session clasification.}}{64}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Histograms of estimation errors with ESN for X values across five folds.}}{65}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{63}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Scatered plot showing the absolute estimation error vs it respective coordinate axis.}}{64}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrix for the ESN as result of the audio session classification.}}{65}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Histograms of estimation errors with ESN for X values across five folds.}}{66}{figure.caption.56}%
 \contentsline {figure}{\numberline {6.13}{\ignorespaces Histograms of estimation errors with ESN for Y values across five folds.}}{66}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Histograms of estimation errors with ESN for Z values across five folds.}}{66}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Histograms of estimation errors with ESN for Z values across five folds.}}{67}{figure.caption.58}%
 \contentsline {figure}{\numberline {6.15}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}}{68}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN.}}{69}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN.}}{70}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for X values across five folds.}}{71}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Y values across five folds.}}{72}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Z values across five folds.}}{73}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces 3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{75}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Scattered plot showing the absolute estimation error vs the respective coordinate axis.}}{76}{figure.caption.71}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

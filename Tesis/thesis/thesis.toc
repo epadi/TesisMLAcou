@@ -69,31 +69,30 @@
 \contentsline {subsection}{\numberline {5.4.2}Audio compactation}{51}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Limitations and Requirements}{51}{subsection.5.4.3}%
 \contentsline {chapter}{\numberline {6}Results}{53}{chapter.6}%
-\contentsline {section}{\numberline {6.1}CNN as classifier}{54}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}CNN acoustic location as classification}{54}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}CNN acoustic orientation as classification}{55}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}CNN as regression model}{59}{section.6.2}%
-\contentsline {section}{\numberline {6.3}ESN as classifier}{64}{section.6.3}%
+\contentsline {section}{\numberline {6.1}CNN for Acoustic Classification}{54}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}CNN Acoustic to Spatial Location Classification}{54}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}CNN Acoustic to Orientation Classification}{55}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}CNN Acoustic to Spatial Location Regression}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}ESN for Acoustic Classification}{64}{section.6.3}%
 \contentsline {section}{\numberline {6.4}ESN as regression model}{65}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Statistical Tool Assumptions Tests}{69}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Statistical Tool Results}{70}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Obtained Metrics}{70}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Most Complex Scenario Metrics (if needed)}{70}{subsection.6.7.1}%
-\contentsline {section}{\numberline {6.8}Correctness (if needed)}{70}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Output (If needed)}{70}{section.6.9}%
-\contentsline {chapter}{\numberline {7}Discussion}{71}{chapter.7}%
-\contentsline {section}{\numberline {7.1}CNN model and the regression problem}{72}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}CNN model to identify cube regions and orientations}{72}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}CNN model to estimate the cube location}{73}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}ESN model and the regression problem}{76}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Beamforming}{78}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}CNN with Beamforming}{78}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}ESN with Beamforming}{78}{subsection.7.3.2}%
-\contentsline {section}{\numberline {7.4}Model Comparison}{78}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{79}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{80}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{80}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Appendixes}{81}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Source Code}{82}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{82}{section.9.2}%
-\contentsline {chapter}{References}{83}{chapter.10}%
+\contentsline {section}{\numberline {6.5}Beamforming}{70}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}CNN with Beamforming}{71}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}ESN with Beamforming}{77}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Correctness (if needed)}{77}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Output (If needed)}{77}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Discussion}{79}{chapter.7}%
+\contentsline {section}{\numberline {7.1}CNN model and the regression problem}{80}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}CNN model to identify cube regions and orientations}{80}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}CNN model to estimate the cube location}{81}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}ESN model and the regression problem}{84}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Beamforming}{86}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}CNN with Beamforming}{86}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}ESN with Beamforming}{86}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Model Comparison}{86}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{87}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{88}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{88}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Appendixes}{89}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Source Code}{90}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{90}{section.9.2}%
+\contentsline {chapter}{References}{91}{chapter.10}%

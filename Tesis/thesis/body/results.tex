@@ -6,11 +6,11 @@
 This chapter presents the results obtained while evaluating the proposed algorithm/mechanisms. The discussion and analysis of results are presented in the \nameref{chapter:discussion} chapter.
 
 
-\section{CNN as classifier}
+\section{CNN for Acoustic Classification}
 
-\subsection{CNN acoustic location as classification}
+\subsection{CNN Acoustic to Spatial Location Classification}
 
-The first evaluation of the CNN was on a clasification task where it had to classify the acoustic location of the sound source from the 26 possible locations, each one corresponding to a specific recording session characterized by the same X, and Y location and only changing the Z location. Trained on 20 epochs, the network shows a accuracy of 99.4\% on training and 98.59\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix}.
+The first evaluation of the CNN was on a classification task where it had to classify the acoustic location of the sound source from the 26 possible locations, each one corresponding to a specific recording session characterized by the same X, and Y location and only changing the Z location. Trained on 20 epochs, the network shows a accuracy of 99.4\% on training and 98.59\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix}.
 
 \begin{figure}[H]
     \begin{center}
@@ -20,11 +20,9 @@ The first evaluation of the CNN was on a clasification task where it had to clas
     \end{center}
 \end{figure}
 
-\subsection{CNN acoustic orientation as classification}
+\subsection{CNN Acoustic to Orientation Classification}
 
-The second evaluation of the CNN was on a clasification task where it had to classify based on the orientation of the cube from a total of 9 possible orientations. for each orientation the cube is rotated 10 degrees with respect to one of its centroidal axes. trained on 20 epochs, the network shows a accuracy of 99.0\% on training and 29.06\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix_orientation}.
-
-
+The second evaluation of the CNN was on a classification task where it had to classify based on the orientation of the cube from a total of 9 possible orientations. For each orientation the cube is rotated 10 degrees with respect to one of its centroidal axes. Trained on 20 epochs, the network shows a accuracy of 99.0\% on training and 29.06\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix_orientation}.
 
 
 \begin{figure}[H]
@@ -35,7 +33,7 @@ The second evaluation of the CNN was on a clasification task where it had to cla
     \end{center}
 \end{figure}
 
-A further exploration is carried out to analyze the performance of the CNN on the orientation classification task. As shown in figure \ref{fig:session_points}, three regions are defined to reduce changes in orientation for the other Euler rotational axes. For each of the three regions,The accuracy results are presented in table \ref{tab:regional_accuracy} and the corresponding confusion matrix  are presented in figure \ref{fig:conf_matrix_3regions}. 
+A further exploration is carried out to analyze the performance of the CNN on the orientation classification task. As shown in Figure \ref{fig:session_points}, three regions are defined to reduce changes in orientation for the other Euler rotational axes. For each of the three regions, the accuracy results are presented in Table \ref{tab:regional_accuracy} and the corresponding confusion matrix  are presented in Figure \ref{fig:conf_matrix_3regions}. 
 
 
 
@@ -83,9 +81,9 @@ Also to investigate the similarity of the acoustic signal when the cube is rotat
 \end{figure}
 
 
-\section{CNN as regression model}
+\section{CNN Acoustic to Spatial Location Regression}
 
-The CNN was evaluated as a regression model to estimate the X, Y, and Z coordinates of the cube inside the measure box. The model was trained for 40 epochs in all the cases, this following a five fold cross-validation scheme. The histograms for the error in estimation for the three coordinates are shown in figure \ref{fig:five_fold_X_histo}, figure \ref{fig:five_fold_Y_histo}, and figure \ref{fig:five_fold_Z_histo}. 
+The CNN was evaluated as a regression model to estimate the X, Y, and Z coordinates of the cube inside the measurement box. In all cases, it was trained for 40 epochs following a five-fold cross-validation scheme. The histograms of the estimation errors for the three coordinates are shown in Figures \ref{fig:five_fold_X_histo}, \ref{fig:five_fold_Y_histo}, and \ref{fig:five_fold_Z_histo}. 
 
 \begin{figure}[H]
     \begin{center}
@@ -112,7 +110,7 @@ The CNN was evaluated as a regression model to estimate the X, Y, and Z coordina
 \end{figure}
 
 
-The mean absolute error (MAE) for the coordinates across the five folds is presented in table \ref{tab:mae_xyz_folds}.
+The main figure of merit for the regression model is the mean absolute error (MAE), which measures the average magnitude of the prediction errors regardless of their direction. The MAE values for the three coordinates across the five folds are presented in Table \ref{tab:mae_xyz_folds}.
 
 \begin{table}[htbp]
   \centering
@@ -135,9 +133,31 @@ The mean absolute error (MAE) for the coordinates across the five folds is prese
   \end{tabular}
 \end{table}
 
-Other important metrics for the evaluation of the regression model are the percentage of samples with an estimation that falls within a specific error range. The percentage of samples per error range in X, Y and Z is shown in table \ref{tab:error_distribution_xyz}.  
+
+The second figure of merit is the Pearson correlation coefficient, which measures the strength and direction of the linear relationship between two continuous variables. It indicates how closely the data points cluster around a straight line. To understand how well the predictions of the regression model correlate with the ground truth, the Pearson correlation coefficients for each coordinate are shown in Table \ref{tab:pearson_corr_xyz}. In the evaluation of predictions against ground truth, a coefficient greater than 0.99 indicates that the model predictions are almost perfectly aligned with the actual targets.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Pearson Correlation Coefficients between Ground Truths and Predictions}
+  \label{tab:pearson_corr_xyz}
+  \vspace{0.25cm}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
+    \midrule
+    Fold 1 & 0.9970 & 0.9961 & 0.9979 \\
+    Fold 2 & 0.9980 & 0.9985 & 0.9991 \\
+    Fold 3 & 0.9969 & 0.9978 & 0.9982 \\
+    Fold 4 & 0.9985 & 0.9977 & 0.9986 \\
+    Fold 5 & 0.9978 & 0.9987 & 0.9987 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.9976 $\pm$ 0.0007} & \textbf{0.9978 $\pm$ 0.0010} & \textbf{0.9985 $\pm$ 0.0005} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
+Another important metric for evaluating the regression model is the percentage of samples whose estimation error falls within a specific range. The percentage of samples per error range for X, Y, and Z is shown in Table \ref{tab:error_distribution_xyz}.  
 
 \begin{table}[htbp]
   \centering
@@ -168,9 +188,7 @@ Other important metrics for the evaluation of the regression model are the perce
 \end{table}
 
 
-
-
-The estimation error for each point in the dataset is presented in figure \ref{fig:plot3d_errors}. The graph consider the five fold subsets, each at the time it was the test set. The error is calculated as the absolute difference between the predicted and the true value of the coordinates for the respective dimension. The error is represented in centimeters. Figure \ref{fig:plot2d_errors} preasent the coordinate error with respect it axis of interest, showing the error estimation for X dimension as a funtion of X location, Y error as fuction of Y and Z error as function of Z.
+The estimation error for each point in the dataset is presented in Figure \ref{fig:plot3d_errors}. The graph considers the five folds, each evaluated while it served as the test set. The error is calculated as the absolute difference between the predicted and true values of the coordinate in the respective dimension, and is expressed in centimeters. Figure \ref{fig:plot2d_errors} presents the error of each coordinate with respect to its own axis, showing the X error as a function of X, the Y error as a function of Y, and the Z error as a function of Z.
 
 
 \begin{figure}[H]
@@ -180,31 +198,6 @@ The estimation error for each point in the dataset is presented in figure \ref{f
         \label{fig:plot3d_errors}
     \end{center}
 \end{figure}
-
-
-To undestand how well the data is correlated for the regresion model, the Pearson correlation coefficient is showns in table \ref{tab:pearson_corr_xyz} this coeficient 
-measures the strength and direction of the linear relationship between two continuous variables. This coeficient provide an indication of how well data points cluster around a straight line.  In Model Evaluation of Predictions vs. Ground Truth, An Pearson Coeficient > 0.99 indicates that model predictions scale almost perfectly aligned with the actual targets.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Pearson Correlation Coefficients between Ground Truths and Predictions}
-  \label{tab:pearson_corr_xyz}
-  \vspace{0.25cm}
-  \begin{tabular}{lccc}
-    \toprule
-    \textbf{Folds} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
-    \midrule
-    Fold 1 & 0.9970 & 0.9961 & 0.9979 \\
-    Fold 2 & 0.9980 & 0.9985 & 0.9991 \\
-    Fold 3 & 0.9969 & 0.9978 & 0.9982 \\
-    Fold 4 & 0.9985 & 0.9977 & 0.9986 \\
-    Fold 5 & 0.9978 & 0.9987 & 0.9987 \\
-    \midrule
-    \textbf{Mean $\pm$ SD} & \textbf{0.9976 $\pm$ 0.0007} & \textbf{0.9978 $\pm$ 0.0010} & \textbf{0.9985 $\pm$ 0.0005} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
 
 \begin{figure}[H]
     \begin{center}
@@ -216,14 +209,14 @@ measures the strength and direction of the linear relationship between two conti
 
 
 
-\section{ESN as classifier}
+\section{ESN for Acoustic Classification}
 
-Previously described in section 5.2.2, the ESN first was evaluated as a clasifier for the architecture definition and hiperparameters search. With the values showns in table \ref{tab:esn_values} after training for 150 epoch, the ESN acurracy was 98.42\%. The resulting confusion matrix is presented Figure \ref{fig:confusion_ESN}.
+Previously described in section 5.2.2, the ESN first was evaluated as a classifier for the architecture definition and hyperparameters search. With the values shown in table \ref{tab:esn_values} after training for 150 epochs, the ESN accuracy was 98.42\%. The resulting confusion matrix is presented in Figure \ref{fig:confusion_ESN}.
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=14cm, width=14cm]{../img/clasification_location_esn.jpg}
-        \caption{Confusion matrix for the ESN as result of the audio session clasification.}
+        \caption{Confusion matrix for the ESN as result of the audio session classification.}
         \label{fig:confusion_ESN}
     \end{center}
 \end{figure}
@@ -350,17 +343,147 @@ With respet to the distribution of errors per range, the table \ref{tab:ESN_erro
     \end{center}
 \end{figure}
 
-\section{Statistical Tool Assumptions Tests}
-The evaluation of the assumptions of the statistical tool used should be reported.
+\section{Beamforming}
 
-\section{Statistical Tool Results}
-The results of the statistical tool used are presented in this section.
+The following section presents the results for the CNN and ESN models when the input signals are pre-processed with beamforming. The network architectures remain the same as previously described; the only difference is that beamforming is applied to the input signals to emphasize specific reflections according to the direction from which the acoustic reflection originates.
 
-\section{Obtained Metrics}
+
+\subsection{CNN with Beamforming}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9cm, width=16cm]{../img/BeamCNN_five_fold_X_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and CNN for X values across five folds.}
+        \label{fig:BeamCNN_five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamCNN_five_fold_Y_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and CNN for Y values across five folds.}
+        \label{fig:BeamCNN_five_fold_Y_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamCNN_five_fold_Z_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and CNN for Z values across five folds.}
+        \label{fig:BeamCNN_five_fold_Z_histo}
+    \end{center}
+\end{figure}
+
+
+The mean absolute error (MAE) for the coordinates across the five folds is presented in table \ref{tab:BeamCNN_mae_xyz_folds}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}
+  \label{tab:BeamCNN_mae_xyz_folds}
+  \vspace{0.25cm}
+  \footnotesize
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)}\\
+    \midrule
+    Fold 1 & 0.4941 & 0.4903 & 0.8064 \\
+    Fold 2 & 0.5467 & 0.4418 & 0.7854 \\
+    Fold 3 & 0.4246 & 0.4064 & 0.8489 \\
+    Fold 4 & 0.4426 & 0.4684 & 0.8927 \\
+    Fold 5 & 0.4865 & 0.5012 & 0.9552 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.4789 $\pm$ 0.0478} & \textbf{0.4616 $\pm$ 0.0383} & \textbf{0.8577 $\pm$ 0.0683} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+
+Other important metrics for the evaluation of the regression model are the percentage of samples with an estimation that falls within a specific error range. The percentage of samples per error range in X, Y and Z is shown in table \ref{tab:BeamCNN_error_distribution_xyz}.  
+
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}
+  \label{tab:BeamCNN_error_distribution_xyz}
+  \vspace{0.20cm}
+  \footnotesize
+  \begin{tabular}{lccccccc}
+    \toprule
+    \textbf{Axis} & \shortstack{\textbf{Error Range}\\\textbf{(cm)}} & \textbf{Fold1(\%)} & \textbf{Fold2(\%)} & \textbf{Fold3(\%)} & \textbf{Fold4(\%)} & \textbf{Fold5(\%)} & \textbf{Mean(\%)} \\
+    \midrule
+    \textbf{X} & $(-1, 1)$ & 87.97 & 87.02 & 91.00 & 90.74 & 88.16 & 88.98 \\
+      & $(-2, 2)$ & 96.20 & 96.21 & 98.23 & 98.80 & 97.79 & 97.44 \\
+      & $(-3, 3)$ & 98.66 & 98.25 & 99.08 & 99.29 & 98.86 & 98.83 \\
+      & $(-4, 4)$ & 99.16 & 98.69 & 99.43 & 99.58 & 99.22 & 99.21 \\
+    \midrule
+    \textbf{Y} & $(-1, 1)$ & 90.08 & 90.66 & 92.77 & 90.17 & 86.95 & 90.13 \\
+      & $(-2, 2)$ & 96.98 & 98.18 & 98.37 & 96.46 & 97.50 & 97.50 \\
+      & $(-3, 3)$ & 98.17 & 99.27 & 98.94 & 98.23 & 99.50 & 98.82 \\
+      & $(-4, 4)$ & 98.45 & 99.64 & 99.29 & 99.08 & 99.79 & 99.25 \\
+    \midrule
+    \textbf{Z} & $(-1, 1)$ & 70.75 & 72.36 & 70.45 & 66.62 & 63.38 & 68.71 \\
+      & $(-2, 2)$ & 93.53 & 94.60 & 91.78 & 92.72 & 90.58 & 92.64 \\
+      & $(-3, 3)$ & 98.59 & 98.47 & 97.52 & 97.31 & 97.43 & 97.86 \\
+      & $(-4, 4)$ & 99.23 & 99.64 & 99.08 & 98.59 & 98.93 & 99.09 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+The estimation error for each point in the dataset is presented in figure \ref{fig:BeamCNN_plot3d_errors}. The graph consider the five fold subsets, each at the time it was the test set. The error is calculated as the absolute difference between the predicted and the true value of the coordinates for the respective dimension. The error is represented in centimeters. Figure \ref{fig:BeamCNN_plot2d_errors} preasent the coordinate error with respect it axis of interest, showing the error estimation for X dimension as a funtion of X location, Y error as fuction of Y and Z error as function of Z.
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=14cm, width=17cm]{../img/BeamCNN_Plot3D_errors.png}
+        \caption{3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}
+        \label{fig:BeamCNN_plot3d_errors}
+    \end{center}
+\end{figure}
+
+
+To undestand how well the data is correlated for the regresion model, the Pearson correlation coefficient is showns in table \ref{tab:pearson_corr_xyz} this coeficient 
+measures the strength and direction of the linear relationship between two continuous variables. This coeficient provide an indication of how well data points cluster around a straight line.  In Model Evaluation of Predictions vs. Ground Truth, An Pearson Coeficient > 0.99 indicates that model predictions scale almost perfectly aligned with the actual targets.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Pearson Correlation Coefficients between Ground Truths and Predictions}
+  \label{tab:pearson_corr_xyz}
+  \vspace{0.25cm}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
+    \midrule
+    Fold 1 & 0.9966 & 0.9940 & 0.9980 \\
+    Fold 2 & 0.9952 & 0.9952 & 0.9980 \\
+    Fold 3 & 0.9966 & 0.9949 & 0.9979 \\
+    Fold 4 & 0.9967 & 0.9953 & 0.9973 \\
+    Fold 5 & 0.9967 & 0.9956 & 0.9962 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.9964 $\pm$ 0.0007} & \textbf{0.9950 $\pm$ 0.0006} & \textbf{0.9975 $\pm$ 0.0008} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=16cm, width=12cm]{../img/BeamCNN_abserror_x_y_z.png}
+        \caption{Scattered plot showing the absolute estimation error vs the respective coordinate axis.}
+        \label{fig:BeamCNN_plot2d_errors}
+    \end{center}
+\end{figure}
+
+
+ 
+\subsection{ESN with Beamforming}
 Additional metrics obtained during the development of the research are presented in this section. 
 
 
-\subsection{Most Complex Scenario Metrics (if needed)}
 
 
 \section{Correctness (if needed)}
