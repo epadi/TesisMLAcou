@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,6 +23,16 @@ Sharath Adavanne, Archontis Politis, Joonas Nikunen, and Tuomas Virtanen.
 \newblock \emph{IEEE Journal of Selected Topics in Signal Processing},
   13\penalty0 (1):\penalty0 34--48, 2019.
 \newblock \doi{10.1109/JSTSP.2018.2885636}.
+
+\bibitem[Arias-Vergara et~al.(2021)Arias-Vergara, Klumpp, Vasquez-Correa,
+  N{\"o}th, Orozco-Arroyave, and Schuster]{spectrogramns1}
+T.~Arias-Vergara, P.~Klumpp, J.~C. Vasquez-Correa, E.~N{\"o}th, J.~R.
+  Orozco-Arroyave, and M.~Schuster.
+\newblock Multi-channel spectrograms for speech processing applications using
+  deep learning methods.
+\newblock \emph{Pattern Analysis and Applications}, 24\penalty0 (1):\penalty0
+  423--431, 2021.
+\newblock \doi{10.1007/s10044-020-00921-5}.
 
 \bibitem[Bhogal and Singh(2025)]{Resnetwhy}
 Rosepreet~Kaur Bhogal and Ajmer Singh.
@@ -109,31 +119,21 @@ Ivan Dokmanić, Reza Parhizkar, Andreas Walther, Yue~M. Lu, and Martin
 \newblock \doi{10.1073/pnas.1221464110}.
 \newblock URL \url{https://www.pnas.org/doi/abs/10.1073/pnas.1221464110}.
 
-\bibitem[Faouzi(2024)]{Faouzi24}
-Johann Faouzi.
-\newblock Time series classification: A review of algorithms and
-  implementations.
-\newblock In Jorge Rocha, Cláudia~M. Viana, and Sandra Oliveira, editors,
-  \emph{Time Series Analysis}, chapter~2. IntechOpen, Rijeka, 2024.
-\newblock \doi{10.5772/intechopen.1004810}.
-\newblock URL \url{https://doi.org/10.5772/intechopen.1004810}.
-
-\bibitem[Garibo-i Orts et~al.(2023)Garibo-i Orts, Firbas, Sebasti\'a, and
-  Conejero]{GRA02}
-\`Oscar Garibo-i Orts, Nicolas Firbas, Laura Sebasti\'a, and J.~Alberto
-  Conejero.
-\newblock Gramian angular fields for leveraging pretrained computer vision
-  models with anomalous diffusion trajectories.
-\newblock \emph{Phys. Rev. E}, 107:\penalty0 034138, Mar 2023.
-\newblock \doi{10.1103/PhysRevE.107.034138}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevE.107.034138}.
-
 \bibitem[Gionfrida et~al.(2024)Gionfrida, Wang, Gan, Chli, and Carlone]{RobotV}
 Letizia Gionfrida, Chen Wang, Lu~Gan, Margarita Chli, and Luca Carlone.
 \newblock Computer and robot vision: Past, present, and future [tc spotlight].
 \newblock \emph{IEEE Robotics \& Automation Magazine}, 31\penalty0
   (3):\penalty0 211--215, 2024.
 \newblock \doi{10.1109/MRA.2024.3428780}.
+
+\bibitem[Hajihashemi et~al.(2026)Hajihashemi, Gharahbagh, Machado, and
+  Tavares]{melscale}
+Vahid Hajihashemi, Abdorreza~Alavi Gharahbagh, Jos{\'e} J.~M. Machado, and
+  Jo{\~a}o Manuel R.~S. Tavares.
+\newblock Mel-based feature extraction for acoustic event detection and
+  classification: A systematic review and research roadmap.
+\newblock \emph{Expert Systems with Applications}, 326:\penalty0 132549, 2026.
+\newblock \doi{10.1016/j.eswa.2026.132549}.
 
 \bibitem[Han et~al.(2017)Han, Park, and Lee]{CNNASC2}
 Yoonchang Han, Jeongsoon Park, and Kyogu Lee.
@@ -327,18 +327,6 @@ Vladimir~N. Vapnik.
 \newblock Adaptive and Learning Systems for Signal Processing, Communications,
   and Control. John Wiley \& Sons, New York, NY, USA, 1998.
 \newblock ISBN 978-0-471-03003-4.
-
-\bibitem[Vargas et~al.(2023)Vargas, Ayll{\'o}n-Gavil{\'a}n, Dur{\'a}n-Rosal,
-  Guti{\'e}rrez, Herv{\'a}s-Mart{\'i}nez, and Guijo-Rubio]{gramianangular}
-V{\'i}ctor~Manuel Vargas, Rafael Ayll{\'o}n-Gavil{\'a}n, Antonio~Manuel
-  Dur{\'a}n-Rosal, Pedro~Antonio Guti{\'e}rrez, C{\'e}sar
-  Herv{\'a}s-Mart{\'i}nez, and David Guijo-Rubio.
-\newblock Gramian angular and markov transition fields applied to time series
-  ordinal classification.
-\newblock In Ignacio Rojas, Gonzalo Joya, and Andreu Catala, editors,
-  \emph{Advances in Computational Intelligence}, pages 505--516, Cham, 2023.
-  Springer Nature Switzerland.
-\newblock ISBN 978-3-031-43078-7.
 
 \bibitem[Velasco et~al.(2004)Velasco, Román, González, and White]{audiospeed}
 S.~Velasco, F.~L. Román, A.~González, and J.~A. White.
