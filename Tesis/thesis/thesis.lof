@@ -22,38 +22,43 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Measure box: (a) Conceptual sketch for the acoustic measurement box, and (b) actual implementation for the data acquisition task.}}{29}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Scatter plot of cube locations for each recording in the dataset, the blue columns represent the 26 sessions, and each point in the column represents the nine orientations captured at that location.}}{31}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Scatter plot of cube locations for each recording in the dataset, the blue columns represent the 26 sessions, and each point in the column represents the nine orientations captured at that location.}}{30}{figure.caption.22}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Acoustic to location processing pipeline}}{32}{figure.caption.23}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8, Y=-0.94 , Z=-9.43 and orientation 50 degrees.}}{39}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Network accuracy vs. reservoir size for 50 epochs runs.}}{43}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Test MAE as a function of Intermediate Hidden Layer Size for different Sparsity values}}{45}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Multihead Network architecture for the ESN Estimator.}}{47}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Frequency response of the stimulus signal showing the top 10 spectral components with the highest magnitude.}}{49}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}}{51}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}}{52}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8, Y=-0.94 , Z=-9.43 and orientation 50 degrees.}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Network accuracy vs. reservoir size for 50 epochs runs.}}{43}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Test MAE as a function of Intermediate Hidden Layer Size for different Sparsity values}}{45}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Multihead Network architecture for the ESN Estimator.}}{47}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Frequency response of the stimulus signal showing the top 10 spectral components with the highest magnitude.}}{49}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}}{51}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}}{52}{figure.caption.36}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{54}{figure.caption.38}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{55}{figure.caption.39}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for the three regions defined for orientation classification.}}{56}{figure.caption.40}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task.}}{57}{figure.caption.42}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal.}}{58}{figure.caption.43}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Histograms of estimation errors with CNN for X values across five folds.}}{59}{figure.caption.44}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Histograms of estimation errors with CNN for Y values across five folds.}}{60}{figure.caption.45}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Histograms of estimation errors with CNN for Z values across five folds.}}{60}{figure.caption.46}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{63}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Scatered plot showing the absolute estimation error vs it respective coordinate axis.}}{64}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrix for the ESN as result of the audio session classification.}}{65}{figure.caption.52}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Histograms of estimation errors with ESN for X values across five folds.}}{66}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Histograms of estimation errors with ESN for Y values across five folds.}}{66}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Histograms of estimation errors with ESN for Z values across five folds.}}{67}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}}{68}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN.}}{70}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for X values across five folds.}}{71}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Y values across five folds.}}{72}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Z values across five folds.}}{73}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces 3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{75}{figure.caption.66}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Scattered plot showing the absolute estimation error vs the respective coordinate axis.}}{76}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Confusion matrix for CNN acoustic location classification on test set.}}{54}{figure.caption.37}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Confusion matrix for CNN acoustic orientation classification on test set.}}{55}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Confusion matrix for the three regions defined for orientation classification.}}{56}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task.}}{57}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal.}}{58}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Histograms of estimation errors with CNN for X values across five folds.}}{59}{figure.caption.43}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Histograms of estimation errors with CNN for Y values across five folds.}}{60}{figure.caption.44}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Histograms of estimation errors with CNN for Z values across five folds.}}{60}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{63}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Scatered plot showing the absolute estimation error vs it respective coordinate axis.}}{64}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrix for the ESN as result of the audio session classification.}}{65}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Histograms of estimation errors with ESN for X values across five folds.}}{66}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Histograms of estimation errors with ESN for Y values across five folds.}}{66}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Histograms of estimation errors with ESN for Z values across five folds.}}{67}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces 3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}}{68}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN.}}{70}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for X values across five folds.}}{71}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Y values across five folds.}}{72}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Histograms of estimation errors with Beamforming and CNN for Z values across five folds.}}{73}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces 3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{75}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Scattered plot showing the absolute estimation error vs the respective coordinate axis.}}{76}{figure.caption.67}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Histograms of estimation errors with Beamforming and ESN for X values across five folds.}}{77}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Histograms of estimation errors with Beamforming and ESN for Y values across five folds.}}{78}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Histograms of estimation errors with Beamforming and ESN for Z values across five folds.}}{79}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.25}{\ignorespaces 3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}}{81}{figure.caption.73}%
+\contentsline {figure}{\numberline {6.26}{\ignorespaces Scattered plot showing the absolute estimation error vs the respective coordinate axis.}}{82}{figure.caption.75}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

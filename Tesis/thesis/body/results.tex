@@ -481,13 +481,250 @@ measures the strength and direction of the linear relationship between two conti
 
  
 \subsection{ESN with Beamforming}
-Additional metrics obtained during the development of the research are presented in this section. 
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9cm, width=16cm]{../img/BeamESN_five_fold_X_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and ESN for X values across five folds.}
+        \label{fig:BeamESN_five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamESN_five_fold_Y_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and ESN for Y values across five folds.}
+        \label{fig:BeamESN_five_fold_Y_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamESN_five_fold_Z_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and ESN for Z values across five folds.}
+        \label{fig:BeamESN_five_fold_Z_histo}
+    \end{center}
+\end{figure}
+
+
+The mean absolute error (MAE) for the coordinates across the five folds is presented in table \ref{tab:BeamESN_mae_xyz_folds}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}
+  \label{tab:BeamESN_mae_xyz_folds}
+  \vspace{0.25cm}
+  \footnotesize
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)}\\
+    \midrule
+    Fold 1 & 1.0824 & 1.3697 & 1.7033 \\
+    Fold 2 & 1.0560 & 1.0145 & 2.3761 \\
+    Fold 3 & 1.0589 & 1.1298 & 1.7263 \\
+    Fold 4 & 1.2223 & 1.1506 & 1.7914 \\
+    Fold 5 & 0.9797 & 1.5625 & 1.5734 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{1.0799 $\pm$ 0.0886} & \textbf{1.2454 $\pm$ 0.2177} & \textbf{1.8341 $\pm$ 0.3149} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Other important metrics for the evaluation of the regression model are the percentage of samples with an estimation that falls within a specific error range. The percentage of samples per error range in X, Y and Z is shown in table \ref{tab:BeamESN_error_distribution_xyz}.  
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}
+  \label{tab:BeamESN_error_distribution_xyz}
+  \vspace{0.20cm}
+  \footnotesize
+  \begin{tabular}{lccccccc}
+    \toprule
+    \textbf{Axis} & \shortstack{\textbf{Error Range}\\\textbf{(cm)}} & \textbf{Fold1(\%)} & \textbf{Fold2(\%)} & \textbf{Fold3(\%)} & \textbf{Fold4(\%)} & \textbf{Fold5(\%)} & \textbf{Mean(\%)} \\
+    \midrule
+    \textbf{X} & $(-1, 1)$ & 65.75 & 63.02 & 69.10 & 65.98 & 68.26 & 66.42 \\
+      & $(-2, 2)$ & 91.84 & 86.00 & 89.37 & 87.34 & 90.51 & 89.01 \\
+      & $(-3, 3)$ & 96.55 & 95.55 & 95.25 & 94.20 & 96.15 & 95.54 \\
+      & $(-4, 4)$ & 97.82 & 97.96 & 96.67 & 96.32 & 98.22 & 97.40 \\
+    \midrule
+    \textbf{Y} & $(-1, 1)$ & 50.98 & 63.31 & 55.42 & 53.61 & 44.79 & 53.62 \\
+      & $(-2, 2)$ & 79.47 & 88.26 & 85.68 & 84.94 & 72.40 & 82.15 \\
+      & $(-3, 3)$ & 90.08 & 96.50 & 96.46 & 94.41 & 87.73 & 93.04 \\
+      & $(-4, 4)$ & 94.80 & 98.98 & 98.37 & 98.02 & 93.51 & 96.73 \\
+    \midrule
+    \textbf{Z} & $(-1, 1)$ & 41.63 & 29.83 & 41.53 & 39.11 & 40.23 & 38.47 \\
+      & $(-2, 2)$ & 68.78 & 54.27 & 70.16 & 66.69 & 70.97 & 66.17 \\
+      & $(-3, 3)$ & 83.54 & 70.97 & 83.91 & 82.39 & 87.95 & 81.75 \\
+      & $(-4, 4)$ & 91.49 & 81.77 & 91.92 & 91.51 & 95.44 & 90.43 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+The estimation error for each point in the dataset is presented in figure \ref{fig:BeamESN_plot3d_errors}. The graph consider the five fold subsets, each at the time it was the test set. The error is calculated as the absolute difference between the predicted and the true value of the coordinates for the respective dimension. The error is represented in centimeters. Figure \ref{fig:BeamESN_plot2d_errors} preasent the coordinate error with respect it axis of interest, showing the error estimation for X dimension as a funtion of X location, Y error as fuction of Y and Z error as function of Z.
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=14cm, width=17cm]{../img/BeamESN_Plot3D_errors.png}
+        \caption{3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set.}
+        \label{fig:BeamESN_plot3d_errors}
+    \end{center}
+\end{figure}
+
+
+To undestand how well the data is correlated for the regresion model, the Pearson correlation coefficient is showns in table \ref{tab:pearson_corr_xyz} this coeficient 
+measures the strength and direction of the linear relationship between two continuous variables. This coeficient provide an indication of how well data points cluster around a straight line.  In Model Evaluation of Predictions vs. Ground Truth, An Pearson Coeficient > 0.99 indicates that model predictions scale almost perfectly aligned with the actual targets.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Pearson Correlation Coefficients between Ground Truths and Predictions}
+  \label{tab:pearson_corr_xyz}
+  \vspace{0.25cm}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Folds} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
+    \midrule
+    Fold 1 & 0.9872 & 0.9918 & 0.9904 \\
+    Fold 2 & 0.9957 & 0.9931 & 0.9878 \\
+    Fold 3 & 0.9917 & 0.9936 & 0.9894 \\
+    Fold 4 & 0.9841 & 0.9954 & 0.9894 \\
+    Fold 5 & 0.9935 & 0.9916 & 0.9922 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.9904 $\pm$ 0.0047} & \textbf{0.9931 $\pm$ 0.0015} & \textbf{0.9898 $\pm$ 0.0016} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=16cm, width=12cm]{../img/BeamESN_abserror_x_y_z.png}
+        \caption{Scattered plot showing the absolute estimation error vs the respective coordinate axis.}
+        \label{fig:BeamESN_plot2d_errors}
+    \end{center}
+\end{figure}
+
+
+\section{Model Comparison}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Comparison of Mean Absolute Error (MAE) Across Folds for $X$ Coordinate Estimation}
+  \label{tab:mae_x_models_comparison}
+  \vspace{0.25cm}
+  \footnotesize
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Folds} & \textbf{Beam CNN (cm)} & \textbf{CNN (cm)} & \textbf{ESN (cm)} & \textbf{Beam ESN (cm)} \\
+    \midrule
+    Fold 1 & 0.4941 & 0.6019 & 0.7231 & 1.0824 \\
+    Fold 2 & 0.5467 & 0.5231 & 0.8729 & 1.0560 \\
+    Fold 3 & 0.4246 & 0.5569 & 0.8955 & 1.0589 \\
+    Fold 4 & 0.4426 & 0.5764 & 0.7974 & 1.2223 \\
+    Fold 5 & 0.4865 & 0.5062 & 0.8521 & 0.9797 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.4789 $\pm$ 0.0478} & \textbf{0.5529 $\pm$ 0.0384} & \textbf{0.8282 $\pm$ 0.0687} & \textbf{1.0799 $\pm$ 0.0886} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Probability of Being the True Best Model}
+  \label{tab:best_model_probability}
+  \vspace{0.25cm}
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Model} & \textbf{Probability (\%)} \\
+    \midrule
+    Beam CNN & 63.4 \\
+    CNN      & 32.3 \\
+    ESN      & 4.1  \\
+    Beam ESN & 0.2  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Comparison of Mean Absolute Error (MAE) Across Folds for $Y$ Coordinate Estimation}
+  \label{tab:mae_y_models_comparison}
+  \vspace{0.25cm}
+  \footnotesize
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Folds} & \textbf{Beam CNN (cm)} & \textbf{CNN (cm)} & \textbf{ESN (cm)} & \textbf{Beam ESN (cm)} \\
+    \midrule
+    Fold 1 & 0.4903 & 0.5029 & 1.0643 & 1.3697 \\
+    Fold 2 & 0.4418 & 0.4467 & 0.8977 & 1.0145 \\
+    Fold 3 & 0.4064 & 0.4069 & 0.8706 & 1.1298 \\
+    Fold 4 & 0.4684 & 0.3836 & 0.8918 & 1.1506 \\
+    Fold 5 & 0.5012 & 0.3144 & 0.9938 & 1.5625 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.4616 $\pm$ 0.0383} & \textbf{0.4109 $\pm$ 0.0700} & \textbf{0.9436 $\pm$ 0.0814} & \textbf{1.2454 $\pm$ 0.2177} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Probability of Being the True Best Model ($Y$ Estimator)}
+  \label{tab:best_model_probability_y}
+  \vspace{0.25cm}
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Model} & \textbf{Probability (\%)} \\
+    \midrule
+    Beam CNN & 52.1 \\
+    CNN      & 42.7 \\
+    ESN      & 5.0  \\
+    Beam ESN & 0.2  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 
+\begin{table}[htbp]
+  \centering
+  \caption{Comparison of Mean Absolute Error (MAE) Across Folds for $Z$ Coordinate Estimation}
+  \label{tab:mae_z_models_comparison}
+  \vspace{0.25cm}
+  \footnotesize
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Folds} & \textbf{Beam CNN (cm)} & \textbf{CNN (cm)} & \textbf{ESN (cm)} & \textbf{Beam ESN (cm)} \\
+    \midrule
+    Fold 1 & 0.8064 & 1.3013 & 1.5111 & 1.7033 \\
+    Fold 2 & 0.7854 & 0.5549 & 1.6283 & 2.3761 \\
+    Fold 3 & 0.8489 & 0.8829 & 1.6953 & 1.7263 \\
+    Fold 4 & 0.8927 & 1.0473 & 1.9315 & 1.7914 \\
+    Fold 5 & 0.9552 & 0.7316 & 1.6847 & 1.5734 \\
+    \midrule
+    \textbf{Mean $\pm$ SD} & \textbf{0.8577 $\pm$ 0.0683} & \textbf{0.9036 $\pm$ 0.2862} & \textbf{1.6902 $\pm$ 0.1534} & \textbf{1.8341 $\pm$ 0.3149} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-\section{Correctness (if needed)}
-If the correctness of the proposal was evaluated, it should be presented in this section.
-\section{Output (If needed)}
-If the proposal's output differs from what was analyzed with the statistical tool, it should be presented in this section.
-\newpage
+
+\begin{table}[htbp]
+  \centering
+  \caption{Probability of Being the True Best Model ($Z$ Estimator)}
+  \label{tab:best_model_probability_z}
+  \vspace{0.25cm}
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Model} & \textbf{Probability (\%)} \\
+    \midrule
+    Beam CNN & 52.6 \\
+    CNN      & 43.6 \\
+    ESN      & 2.3  \\
+    Beam ESN & 1.4  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
