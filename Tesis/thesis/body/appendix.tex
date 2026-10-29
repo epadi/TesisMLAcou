@@ -13,4 +13,110 @@ Pointer or description of the source code can be given in this section..
 
 \section{Gathered Data from the Experiments}
 
-If required, raw data could be presented in this section.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9cm, width=16cm]{../img/BeamCNN_five_fold_X_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and CNN for X values across five folds.}
+        \label{fig:BeamCNN_five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamCNN_five_fold_Y_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and CNN for Y values across five folds.}
+        \label{fig:BeamCNN_five_fold_Y_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamCNN_five_fold_Z_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and CNN for Z values across five folds.}
+        \label{fig:BeamCNN_five_fold_Z_histo}
+    \end{center}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}
+  \label{tab:BeamCNN_error_distribution_xyz}
+  \vspace{0.20cm}
+  \footnotesize
+  \begin{tabular}{lccccccc}
+    \toprule
+    \textbf{Axis} & \shortstack{\textbf{Error Range}\\\textbf{(cm)}} & \textbf{Fold1(\%)} & \textbf{Fold2(\%)} & \textbf{Fold3(\%)} & \textbf{Fold4(\%)} & \textbf{Fold5(\%)} & \textbf{Mean(\%)} \\
+    \midrule
+    \textbf{X} & $(-1, 1)$ & 87.97 & 87.02 & 91.00 & 90.74 & 88.16 & 88.98 \\
+      & $(-2, 2)$ & 96.20 & 96.21 & 98.23 & 98.80 & 97.79 & 97.44 \\
+      & $(-3, 3)$ & 98.66 & 98.25 & 99.08 & 99.29 & 98.86 & 98.83 \\
+      & $(-4, 4)$ & 99.16 & 98.69 & 99.43 & 99.58 & 99.22 & 99.21 \\
+    \midrule
+    \textbf{Y} & $(-1, 1)$ & 90.08 & 90.66 & 92.77 & 90.17 & 86.95 & 90.13 \\
+      & $(-2, 2)$ & 96.98 & 98.18 & 98.37 & 96.46 & 97.50 & 97.50 \\
+      & $(-3, 3)$ & 98.17 & 99.27 & 98.94 & 98.23 & 99.50 & 98.82 \\
+      & $(-4, 4)$ & 98.45 & 99.64 & 99.29 & 99.08 & 99.79 & 99.25 \\
+    \midrule
+    \textbf{Z} & $(-1, 1)$ & 70.75 & 72.36 & 70.45 & 66.62 & 63.38 & 68.71 \\
+      & $(-2, 2)$ & 93.53 & 94.60 & 91.78 & 92.72 & 90.58 & 92.64 \\
+      & $(-3, 3)$ & 98.59 & 98.47 & 97.52 & 97.31 & 97.43 & 97.86 \\
+      & $(-4, 4)$ & 99.23 & 99.64 & 99.08 & 98.59 & 98.93 & 99.09 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9cm, width=16cm]{../img/BeamESN_five_fold_X_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and ESN for X values across five folds.}
+        \label{fig:BeamESN_five_fold_X_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamESN_five_fold_Y_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and ESN for Y values across five folds.}
+        \label{fig:BeamESN_five_fold_Y_histo}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[height=9.5cm, width=16cm]{../img/BeamESN_five_fold_Z_histo.png}
+        \caption{Histograms of estimation errors with Beamforming and ESN for Z values across five folds.}
+        \label{fig:BeamESN_five_fold_Z_histo}
+    \end{center}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}
+  \label{tab:BeamESN_error_distribution_xyz}
+  \vspace{0.20cm}
+  \footnotesize
+  \begin{tabular}{lccccccc}
+    \toprule
+    \textbf{Axis} & \shortstack{\textbf{Error Range}\\\textbf{(cm)}} & \textbf{Fold1(\%)} & \textbf{Fold2(\%)} & \textbf{Fold3(\%)} & \textbf{Fold4(\%)} & \textbf{Fold5(\%)} & \textbf{Mean(\%)} \\
+    \midrule
+    \textbf{X} & $(-1, 1)$ & 65.75 & 63.02 & 69.10 & 65.98 & 68.26 & 66.42 \\
+      & $(-2, 2)$ & 91.84 & 86.00 & 89.37 & 87.34 & 90.51 & 89.01 \\
+      & $(-3, 3)$ & 96.55 & 95.55 & 95.25 & 94.20 & 96.15 & 95.54 \\
+      & $(-4, 4)$ & 97.82 & 97.96 & 96.67 & 96.32 & 98.22 & 97.40 \\
+    \midrule
+    \textbf{Y} & $(-1, 1)$ & 50.98 & 63.31 & 55.42 & 53.61 & 44.79 & 53.62 \\
+      & $(-2, 2)$ & 79.47 & 88.26 & 85.68 & 84.94 & 72.40 & 82.15 \\
+      & $(-3, 3)$ & 90.08 & 96.50 & 96.46 & 94.41 & 87.73 & 93.04 \\
+      & $(-4, 4)$ & 94.80 & 98.98 & 98.37 & 98.02 & 93.51 & 96.73 \\
+    \midrule
+    \textbf{Z} & $(-1, 1)$ & 41.63 & 29.83 & 41.53 & 39.11 & 40.23 & 38.47 \\
+      & $(-2, 2)$ & 68.78 & 54.27 & 70.16 & 66.69 & 70.97 & 66.17 \\
+      & $(-3, 3)$ & 83.54 & 70.97 & 83.91 & 82.39 & 87.95 & 81.75 \\
+      & $(-4, 4)$ & 91.49 & 81.77 & 91.92 & 91.51 & 95.44 & 90.43 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+

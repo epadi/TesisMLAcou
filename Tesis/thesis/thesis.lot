@@ -22,25 +22,25 @@
 \contentsline {table}{\numberline {5.4}{\ignorespaces Error Distribution Comparison Between Standard ESN and MultiHead ESN}}{45}{table.caption.31}%
 \contentsline {table}{\numberline {5.5}{\ignorespaces Top 10 frequencies with the highest magnitude (dB).}}{49}{table.caption.34}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Model Performance Across The Three Regions}}{56}{table.caption.40}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{61}{table.caption.46}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{61}{table.caption.47}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{62}{table.caption.48}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces ESN Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{67}{table.caption.55}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates}}{68}{table.caption.56}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{69}{table.caption.58}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{73}{table.caption.63}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{74}{table.caption.64}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{76}{table.caption.66}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{79}{table.caption.71}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{80}{table.caption.72}%
-\contentsline {table}{\numberline {6.13}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions}}{82}{table.caption.74}%
-\contentsline {table}{\numberline {6.14}{\ignorespaces Comparison of Mean Absolute Error (MAE) Across Folds for $X$ Coordinate Estimation}}{83}{table.caption.76}%
-\contentsline {table}{\numberline {6.15}{\ignorespaces Probability of Being the True Best Model}}{83}{table.caption.77}%
-\contentsline {table}{\numberline {6.16}{\ignorespaces Comparison of Mean Absolute Error (MAE) Across Folds for $Y$ Coordinate Estimation}}{83}{table.caption.78}%
-\contentsline {table}{\numberline {6.17}{\ignorespaces Probability of Being the True Best Model ($Y$ Estimator)}}{84}{table.caption.79}%
-\contentsline {table}{\numberline {6.18}{\ignorespaces Comparison of Mean Absolute Error (MAE) Across Folds for $Z$ Coordinate Estimation}}{84}{table.caption.80}%
-\contentsline {table}{\numberline {6.19}{\ignorespaces Probability of Being the True Best Model ($Z$ Estimator)}}{84}{table.caption.81}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Model Performance Across The Three Regions}}{57}{table.caption.40}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Regression Model}}{61}{table.caption.46}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions for the CNN Regression Model}}{62}{table.caption.47}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates for the CNN Regression Model}}{62}{table.caption.48}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces ESN Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}}{68}{table.caption.55}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Percentage of samples with estimation errors within specific ranges for $X$, $Y$, and $Z$ Coordinates for the ESN across five folds}}{68}{table.caption.56}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions for the ESN across five folds}}{69}{table.caption.58}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Model with Beamforming}}{71}{table.caption.60}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions for the CNN Model with Beamforming}}{72}{table.caption.61}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates for the ESN with Beamforming}}{74}{table.caption.64}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces Pearson Correlation Coefficients between Ground Truths and Predictions for the ESN with Beamforming}}{74}{table.caption.65}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces Mean Absolute Error Across Folds for $X$ Coordinate Estimation for each Model}}{77}{table.caption.68}%
+\contentsline {table}{\numberline {6.13}{\ignorespaces Probability of Being the True Best Model ($X$ Estimator)}}{78}{table.caption.69}%
+\contentsline {table}{\numberline {6.14}{\ignorespaces Mean Absolute Error Across Folds for $Y$ Coordinate Estimation for each Model}}{78}{table.caption.70}%
+\contentsline {table}{\numberline {6.15}{\ignorespaces Probability of Being the True Best Model ($Y$ Estimator)}}{78}{table.caption.71}%
+\contentsline {table}{\numberline {6.16}{\ignorespaces Mean Absolute Error Across Folds for $Z$ Coordinate Estimation for each Model}}{79}{table.caption.72}%
+\contentsline {table}{\numberline {6.17}{\ignorespaces Probability of Being the True Best Model ($Z$ Estimator)}}{79}{table.caption.73}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {9.1}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{94}{table.caption.77}%
+\contentsline {table}{\numberline {9.2}{\ignorespaces Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates}}{97}{table.caption.81}%
