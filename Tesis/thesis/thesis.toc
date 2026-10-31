@@ -79,7 +79,7 @@
 \contentsline {chapter}{\numberline {7}Discussion}{81}{chapter.7}%
 \contentsline {section}{\numberline {7.1}CNN model and the regression problem}{82}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}CNN model to identify cube regions and orientations}{82}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}CNN model to estimate the cube location}{83}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.2}CNN model to estimate the cube location}{84}{subsection.7.1.2}%
 \contentsline {section}{\numberline {7.2}ESN model and the regression problem}{86}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Beamforming}{88}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}CNN with Beamforming}{88}{subsection.7.3.1}%
