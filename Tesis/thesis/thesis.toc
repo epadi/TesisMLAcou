@@ -83,12 +83,12 @@
 \contentsline {section}{\numberline {7.2}ESN model and the regression problem}{86}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Beamforming}{88}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}CNN with Beamforming}{88}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}ESN with Beamforming}{88}{subsection.7.3.2}%
-\contentsline {section}{\numberline {7.4}Model Comparison}{88}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{89}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{90}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{90}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Appendixes}{91}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Source Code}{92}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{92}{section.9.2}%
-\contentsline {chapter}{References}{99}{chapter.10}%
+\contentsline {subsection}{\numberline {7.3.2}ESN with Beamforming}{89}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Model Comparison}{89}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{91}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{92}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{92}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Appendixes}{93}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Source Code}{94}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Gathered Data from the Experiments}{94}{section.9.2}%
+\contentsline {chapter}{References}{101}{chapter.10}%

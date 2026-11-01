@@ -418,7 +418,7 @@ The figure \ref{fig:BeamCNN_plot3d_errors} shows the error distribution in a 3D 
  
 \subsection{ESN and Beamforming for Acoustic to Spatial Location Regression}
 
-The last model evaluated is the Multihead Echo State Network with Beamforming. The same metrics considered in previous sections for the CNN with Beamforming are used here to evaluate this model. The main metrics include the mean absolute error in table \ref{tab:BeamESN_mae_xyz_folds} and the Pearson correlation coefficient for the $X$, $Y$, and $Z$ coordinates in table \ref{tab:pearson_corr_xyz}.
+The last model evaluated is the Multihead Echo State Network with Beamforming. The same metrics considered in previous sections for the CNN with Beamforming are used here to evaluate this model. The main metrics include the mean absolute error in table \ref{tab:BeamESN_mae_xyz_folds} and the Pearson correlation coefficient for the $X$, $Y$, and $Z$ coordinates in table \ref{tab:BeamESN_pearson_corr_xyz}.
 
 \begin{table}[htbp]
   \centering
@@ -444,7 +444,7 @@ The last model evaluated is the Multihead Echo State Network with Beamforming. T
 \begin{table}[htbp]
   \centering
   \caption{Pearson Correlation Coefficients between Ground Truths and Predictions for the ESN with Beamforming}
-  \label{tab:pearson_corr_xyz}
+  \label{tab:BeamESN_pearson_corr_xyz}
   \vspace{0.25cm}
   \begin{tabular}{lccc}
     \toprule
