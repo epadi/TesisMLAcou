@@ -1,5 +1,5 @@
 \chapter{Design}
-\epigraph{``Another quote.''}{\vspace{10pt}Another Author}
+%\epigraph{``Another quote.''}{\vspace{10pt}Another Author}
 \label{chapter:design}
 \newpage
 
@@ -215,8 +215,7 @@ Each feedforward head was trained independently, the learning rate was set to $5
 \section{Beamforming Implementation}
 
 %Motivation for Beamforming
-
-\subsection{Frequency Selection}
+%\subsection{Frequency Selection}
 
 In order to implement beamforming using the audio channels, the principal spectral components of the source signal used as the stimulus within the measurement box must be analyzed. For this purpose the top 10 frequencies with the highest magnitude are presented in Table \ref{tab:mainfreq}, from which the most relevant frequency components can be identified, and the corresponding frequency response in the audio signal is illustrated in Figure \ref{fig:resfreqaudio} for the range of 100 Hz to 800 Hz.
 
@@ -250,7 +249,7 @@ In order to implement beamforming using the audio channels, the principal spectr
 \label{tab:mainfreq}
 \end{table}
 
-The microphones are arranged in pairs in a plane parallel to the X-Z plane, enabling binaural recording. Measurements along the X and Z axes can therefore be used to evaluate the effect of beamforming on position estimation. Figure \ref{fig:geometrybbox} shows the midpoints of the sides perpendicular to the X-axis, which are treated as potential source locations for the beamforming procedure. To model sound arriving at both microphones from these locations or nearby regions, the difference between the two acoustic path lengths must be calculated. Using trigonometry, the distance from point E to point G is 0.522\,m, while the distance from E to point H is 0.9862\,m. The difference, 0.4642\,m, is the additional distance the sound wave travels to reach point H. Assuming a speed of sound of 346\,m/s—the approximate value at 26\,$^{\circ}$C \cite{audiospeed}, which is close to the average temperature at the testing site—the time difference of arrival (TDOA) between the microphones is 1.34\,ms. As shown in Equation \ref{eq:Fa0}, this value serves as the reference delay for beamforming. Applying this delay to one microphone signal aligns the signals for constructive interference and maximizes the coherent summation of the desired sound wave. According to Equation \ref{eqn:ddipole}, given a microphone separation of 0.7\,m, the minimum frequency for beamforming is 123.57\,Hz. Figure \ref{resfreqaudio} and Table \ref{tab:mainfreq} show that the stimulus contains its main frequency components above this threshold, making beamforming feasible in this setup.
+The microphones are arranged in pairs in a plane parallel to the X-Z plane, enabling binaural recording. Measurements along the X and Z axes can therefore be used to evaluate the effect of beamforming on position estimation. Figure \ref{fig:geometrybbox} shows the midpoints of the sides perpendicular to the X-axis, which are treated as potential source locations for the beamforming procedure. To model sound arriving at both microphones from these locations or nearby regions, the difference between the two acoustic path lengths must be calculated. Using trigonometry, the distance from point E to point G is 0.522\,m, while the distance from E to point H is 0.9862\,m. The difference, 0.4642\,m, is the additional distance the sound wave travels to reach point H. Assuming a speed of sound of 346\,m/s—the approximate value at 26\,$^{\circ}$C \cite{audiospeed}, which is close to the average temperature at the testing site—the time difference of arrival (TDOA) between the microphones is 1.34\,ms. As shown in Equation \ref{eq:Fa0}, this value serves as the reference delay for beamforming. Applying this delay to one microphone signal aligns the signals for constructive interference and maximizes the coherent summation of the desired sound wave. According to Equation \ref{eqn:ddipole}, given a microphone separation of 0.7\,m, the minimum frequency for beamforming is 123.57\,Hz. Figure \ref{fig:resfreqaudio} and Table \ref{tab:mainfreq} show that the stimulus contains its main frequency components above this threshold, making beamforming feasible in this setup.
 
 \begin{figure}[H]
     \begin{center}
@@ -273,4 +272,3 @@ As an example, selecting the highest-magnitude components around 400\,Hz for bea
         \label{fig:ondas400}
     \end{center}
 \end{figure}
-

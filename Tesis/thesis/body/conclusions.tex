@@ -1,5 +1,5 @@
 \chapter{Conclusions and Future Work}
-\epigraph{``Another quote.''}{\vspace{10pt}Another author}
+%\epigraph{``Another quote.''}{\vspace{10pt}Another author}
 \label{chapter:conclusions-fw}
 
 \newpage
@@ -10,24 +10,29 @@ This chapter presents the final conclusions obtained through the research effort
 
 \begin{itemize}
 	
-	\item Conclusion 1.
+	\item The CNN and ESN architectures are capable to learn from acoustic representations like Log-Mel spectograms the mapping function from audio features to the target coordinates that define the location of an cube of 20cm lenght inside an enclosed espace of $1m^{3}$ with a MAE less than 2cm as clasification and regression tasks. The orientation of the cube can´t be accurately determined using the current acoustic representations and network architectures.
 	
-	\item Conclusion 2.
+	\item CNN model had the biggest errors located in the edges of the measurement space for coordinates X, Y and Z compare to the ESN that had the errors with high magnitude in the center region.
 	
-	\item Conclusion 3.
-	\item 
+	\item Without beamforming CNN was the best overall model according to the Bayesian comparison, while the ESN remained a competitive and more parameter-efficient alternative, using approximately 3\% as many trainable parameters as ResNet-18 CNN.
 	
+	\item Beamforming improved CNN performance, especially for the X and Z coordinates, but did not consistently improve Y estimation and negatively affected the ESN.
 	
+	\item The beamforming CNN had the higest probability of being the best model according to the Bayesian comparison, followed by the non-beamforming CNN and then the ESN.
+
 \end{itemize}
 
 
 \section{Future Work}
 
+Future work reusing the current dataset could include:
 \begin{itemize}
-	\item Future work 1.
-	
-	\item Future work 2.
-	
-	\item Future work 3.
+	\item Investigate the efect of filtering the common echoes from the acoustic representations, the echoes that are present in all measurements and do not carry information about the cube's location. This preprocessing step could speed up the training process and potentially improve the localization accuracy by reducing irrelevant information.
+	\item For the Multi head ESN architecture, explore the process of training the negative and positive feedforward networks with overlap to reduce the errors in the transition region.
+	\item Explore the idea to use a multihead aproach with the CNN to see if the estimation can be improve.
+	\item Analize the audio of the big error outliers to identify if exist especific patterns in the signal that can be filter to remove any noise that affect the estination.
+	\item Investigate the data aumentation thecniques to balance the dataset
 	
 \end{itemize}
+
+
