@@ -149,19 +149,17 @@ In this work, we adopt the Bayesian framework described in \cite{calvo2018bayesi
 
 Parameter Interpretation: The parameters are a weight vector $\mathbf{w} = (w_1, \dots, w_n)$ where $\sum_{i=1}^n w_i = 1$ and $w_i > 0$. Each weight $w_i$ directly represents the marginal probability that algorithm $i$ is ranked in first position (i.e., is the best algorithm).
 
-Likelihood Formulation: Under the PL model, the probability assigned to a specific ranking $\sigma = (\sigma(1), \dots, \sigma(n))$ is calculated as: 
+Likelihood Formulation: Under the PL model, given the ranking for a fold $k$ is $\sigma^{(k)} = (\sigma_1^{(k)}, \sigma_2^{(k)}, \sigma_3^{(k)}, \sigma_4^{(k)})$, the probability of observing this ranking is calculated as: 
 
 \begin{equation}
 \label{eq:PL}
-P_{PL}(\sigma | \mathbf{w}) = \prod_{j=1}^n \frac{w_{\sigma(j)}}{\sum_{l=j}^n w_{\sigma(l)}}
+P(\sigma^{(k)} \mid \mathbf{w}) = \prod_{r=1}^{3} \frac{w_{\sigma_r^{(k)}}}{\sum_{m=r}^{4} w_{\sigma_m^{(k)}}}
 \end{equation}
 
 
-3) A prior distribution is specified for the weight vector $\mathbf{w}$. A common choice is the Dirichlet prior:
+3) A prior distribution is specified for the weight vector $\mathbf{w}$. A common choice is the Dirichlet prior: $$P(\mathbf{w}) = \text{Dir}(\mathbf{w}; \boldsymbol{\alpha})$$ 
 
-$$P(\mathbf{w}) = \text{Dir}(\mathbf{w}; \boldsymbol{\alpha})$$ where $\boldsymbol{\alpha} = (\alpha_1, \dots, \alpha_n)$ are hyperparameters3.
-
-where $\alpha_i > 0$ are the hyperparameters of the prior, and set to $\alpha_i = 1$ for a non-informative prior.
+where $\boldsymbol{\alpha} = (\alpha_1, \dots, \alpha_n)$, with $\alpha_i > 0$ the hyperparameters of the prior, and set to $\alpha_i = 1$ for a non-informative prior.
 
 4) Compute the posterior distribution of the weight vector $\mathbf{w}$ given the observed rankings. Using Bayes' theorem, the posterior is proportional to the likelihood times the prior:
 
@@ -169,12 +167,14 @@ $$P(\mathbf{w} | R) \propto  P( R|\mathbf{w}) \cdot P(\mathbf{w})$$
 
 \begin{equation}
 \label{eq:Bayes}
-P(\mathbf{w} | R)  \propto \prod_{\sigma \in R} P_{PL}(\sigma | \mathbf{w}) \cdot P(\mathbf{w})
+P(\mathbf{w} | R)  \propto [\prod_{\sigma \in R} P_{PL}(\sigma | \mathbf{w})]^\alpha \cdot P(\mathbf{w})
 \end{equation}
 
-Because this posterior distribution lacks a closed-form analytical expression, Markov Chain Monte Carlo (MCMC) sampling is employed to draw a representative set of weight vector samples from the posterior distribution $P(\mathbf{w} | R)$
+Where $\alpha$ is a deflation factor  $(1+K\rho)^{-1}$ with $K$ being the number of folds and $\rho$ the correlation between training and test sets, defined by \citeauthor{nadeau2003inference} in \cite{nadeau2003inference} that adjusts the likelihood due to the fold cross-validation penalty applied in the Bayesian Plackett-Luce model as described in \cite{holmes2017assigning}.
 
-5) Once the posterior samples of the weight vector $\mathbf{w}$ are obtained, counting the times the weight $w_i$ is the largest among all weights allows us to estimate the posterior probability that algorithm $i$ is the best.
+Because the posterior distribution presented in Equation \eqref{eq:Bayes} lacks a closed-form analytical expression, Markov Chain Monte Carlo (MCMC) sampling is employed to draw a representative set of weight vector samples from the posterior distribution $P(\mathbf{w} | R)$
+
+5) Once the posterior samples of the weight vector $\mathbf{w}$ are obtained, counting the times the weight $w_i$ is the largest among all weights allows to estimate the posterior probability that algorithm $i$ is the best.
 
 
 

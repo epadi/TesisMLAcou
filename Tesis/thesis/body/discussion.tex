@@ -57,25 +57,59 @@ Comparing the MAE values for the CNN with beamforming in Table \ref{tab:BeamCNN_
 
 The population samples percentages across the tolerance ranges in Table \ref{tab:BeamCNN_error_distribution_xyz} indicate that beamforming improves the proportion of estimates within tighter tolerances for the X and Z coordinates. For the Y coordinate, the improvement is less pronounced, consistent with the MAE results.
 
-
-Figure \ref{fig:BeamCNN_plot3d_errors} shows the spatial distribution of estimation errors across the three coordinates for the CNN with beamforming. As in the case without beamforming, the errors appear to be distributed relatively uniformly across the measurement region. The coordinate-wise plots in Figure \ref{fig:BeamCNN_plot2d_errors} show that, for X and Z, outliers are less frequent near the edges than in the corresponding plots without beamforming in Figure \ref{fig:plot2d_errors}. This pattern is not observed for Y, where errors occur near the edges in both cases. This difference may help explain why beamforming reduces the MAE for X and Z but not for Y.
-
-
-
-
+Figure \ref{fig:BeamCNN_plot3d_errors} shows the spatial distribution of estimation errors across the three coordinates for the CNN with beamforming. As in the case without beamforming, the errors appear to be distributed relatively uniformly across the measurement region. The coordinate-wise plots in Figure \ref{fig:BeamCNN_plot2d_errors} show that, for X and Z, outliers are less frequent near the edges than in the corresponding plots without beamforming in Figure \ref{fig:plot2d_errors}. This pattern is not observed for Y, where errors occur near the edges in both cases. This difference may help explain why beamforming reduces the MAE for X and Z but not for Y. This result is expected because the binaural input signals provide spatial cues that support beamforming for X and Z estimation, but not for Y estimation.
 
 \subsection{ESN with Beamforming}
 
-Comparing the MAE values for the ESN with beamforming in Table \ref{tab:BeamESN_mae_xyz_folds} with those for the ESN without beamforming in Table \ref{tab:ESN_mae_xyz_folds}, we observe that beamforming generally reduces the MAE for all coordinates, with the most significant improvement seen in the Z coordinate.
+In the case of the ESN with beamforming, the MAE values in Table \ref{tab:BeamESN_mae_xyz_folds} compared with those for the ESN without beamforming in Table \ref{tab:ESN_mae_xyz_folds}, are higher for all the three coordinates, indicating that beamforming negatively impacts the ESN's estimation accuracy across the board.
 
-The population percentages across the tolerance ranges in Table \ref{tab:BeamESN_error_distribution_xyz} indicate that beamforming increases the proportion of estimates within tighter tolerances, particularly for the Z coordinate. The improvement for the X and Y coordinates is more modest but still noticeable.
+The population percentages across the tolerance ranges in Table \ref{tab:BeamESN_error_distribution_xyz} are more spread out compared to the ESN without beamforming, indicating that fewer estimates fall within tighter tolerances. This observation aligns with the higher MAE values, confirming that beamforming negatively affects the ESN's estimation accuracy.
 
-The Pearson correlation coefficients in Table \ref{tab:BeamESN_pearson_corr_xyz} remain high, above 0.98 for most coordinates, suggesting that the ESN with beamforming maintains a strong linear relationship between the predicted and ground-truth positions. The variations across folds are consistent with the observed MAE and error distribution trends.
+The Pearson correlation coefficients in Table \ref{tab:BeamESN_pearson_corr_xyz} exceed 0.99 in most cases, suggesting that the ESN with beamforming generally maintains a strong linear relationship between the predicted and ground-truth positions. However, four fold-coordinate combinations have coefficients below 0.99, compared with only one for the ESN without beamforming in Table \ref{tab:esn_pearson_corr_xyz}. This indicates that beamforming may weaken the correlation for some folds and coordinates.
 
-Figure \ref{fig:BeamESN_plot3d_errors} shows the spatial distribution of estimation errors for the ESN with beamforming. Similar to the CNN case, the errors are relatively uniformly distributed across the measurement region. The coordinate-wise plots in Figure \ref{fig:BeamESN_plot2d_errors} indicate that the largest errors are concentrated in specific regions, implying that beamforming primarily affects the magnitude rather than the spatial distribution of the errors.
-
+Figure \ref{fig:BeamESN_plot3d_errors} shows the spatial distribution of estimation errors for the ESN with beamforming. As in the previous cases, the errors are distributed relatively uniformly across the measurement region without evidence of clustering. The coordinate-wise plots in Figure \ref{fig:BeamESN_plot2d_errors} indicate that the largest errors remain concentrated in the central region of the measurement area. This suggests that beamforming does not substantially change the spatial pattern of the ESN's errors, although more outliers appear than in the plots compared with the ESN without beamforming in Figure \ref{fig:esn_plot2d_errors}.
 
 \section{Model Comparison}
+
+The MAE values for the different models and configurations are summarized in Tables \ref{tab:mae_x_models_comparison}, \ref{tab:mae_y_models_comparison}, and \ref{tab:mae_z_models_comparison}. this tables are used define tthe likehood function of each model and probide the potential function to sample the distribution of the bayesian model employ to compare the performance of the models across the different coordinates.
+
+The first comparison is for the $X$ coordinate, and is presented in Table  Table \ref{tab:best_model_probability_x}. The CNN model with bemforming had the highest probability with a value of 63.4\% of being the best model according to the Bayesian Plackett-Luce analysis. The second highest probability is attributed to the CNN model without beamforming. This results is consistent with the MAE values in Table \ref{tab:mae_x_models_comparison}, where the Beam CNN exhibits the lowest mean error, followed by the CNN without beamforming. The ESN models, both with and without beamforming, have higher MAE values and correspondingly lower probabilities of being the best model. The Beamforming for the case of the ESN appears to negatively impact its performance, as indicated by the higher MAE and lower probability compared to the ESN without beamforming.
+
+For the $Y$ coordinate, the comparison is presented in Table \ref{tab:best_model_probability_y}. The Beam CNN again has the highest probability with a value of 52.1\% of being the best model, followed by the CNN without beamforming. This is not consistent with the mean values presented in Table \ref{tab:mae_y_models_comparison}, where the CNN without beamforming exhibits the lowest mean error, followed by the Beam CNN, but the Bayesian model assigns a higher probability to the Beam CNN due the count of folds where beam CNN performs bettern than the CNN (3:2) and the magnitude of the diferences in those folds. In the case of the ESN models, both with and without beamforming, the probabilities remain low, reflecting their higher MAE values and the negative impact of beamforming on the ESN's performance for the $Y$ coordinate as well.
+
+The comparison of models in Z keep the trending pattern observed for the $X$ and $Y$ coordinates. The Beam CNN again demonstrates superior performance with the highest probability of being the best model, followed by the CNN without beamforming. The ESN models, particularly the Beam ESN, continue to show lower probabilities. The results in probabilities correspond to the ranking implied by the values mean MAEvalues presented in Table \ref{tab:mae_z_models_comparison}.
+
+
+Overall, the Beam CNN consistently demonstrates the highest probability of being the best model across all three coordinates, indicating its performance could be considered the top performer in spatial coordinate estimation. The CNN without beamforming generally follows as the second-best model, while the ESN models, particularly the Beam ESN, show lower probabilities. The probability values in the tables are conservative due the small diferences in MAE values among the top-performing models and the fold cross-validation penalty applied in the Bayesian Plackett-Luce analysis.
+
+The fact that Beamforming only improves the performance of CNN model could be explained by the effect of beamforming discused in secction \ref{subsec:cnn_beamforming_regression} that the frequency of big errors on the edges of the measurement area is reduced, the principle of use beamforming is to highlight the coustic echoes originated from the edges of the measurement area and as discused from the observation of figure \ref{fig:plot2d_errors}, these regions in the edges are the ones with bigger errors, which benefits the CNN models. The ESN model, on the other hand, do not benefit as much from this effect as is show in figure \ref{fig:esn_plot2d_errors} the errors in the edges are not the main problem for this model. and the overall negative impact of beamforming on the ESN could be attributed to parameters tuning where set suboptimally for the beamformed input signals.
+
+Although beamforming improves the CNN's performance and degrades the ESN's, both models without beamforming achieve MAE values below 2 cm for all three coordinates (Tables \ref{tab:mae_x_models_comparison}, \ref{tab:mae_y_models_comparison}, and \ref{tab:mae_z_models_comparison}). These results indicate that both models perform reasonably well. Despite its higher MAE values, the ESN maintains competitive accuracy while using only 3\% as many trainable parameters as the ResNet-18 CNN. This makes the ESN a more parameter-efficient option for regression using acoustic features, which may be advantageous when computational resources are limited or real-time processing is required. Overall, while the CNN achieves lower absolute errors, the ESN offers a compelling trade-off between accuracy and model complexity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -94,7 +128,7 @@ Figure \ref{fig:BeamESN_plot3d_errors} shows the spatial distribution of estimat
 
 %This indicates that while the ESN can still provide reasonably accurate estimates, it is more prone to larger errors compared to the CNN. Consequently, for applications where minimizing the largest errors is critical, the CNN may be the preferred choice despite its higher computational cost.
 
-%Despite the higher MAE values, the ESN offers a significant reduction in model complexity compared to the CNN. The ESN requires only about 3\% of the trainable parameters used by the ResNet18 CNN, making it a more efficient option for the regression task with acoustic features as input. This efficiency could be particularly advantageous in scenarios with limited computational resources or when real-time processing is required. Overall, while the CNN achieves lower absolute errors, the ESN provides a compelling trade-off between accuracy and computational efficiency.
+
 
 
 %A CNN is structurally robust but computationally expensive to train because it must calculate gradients through every layer over hundreds of epochs. An ESN is extraordinarily fast to train (requiring only a single linear regression step at the readout layer), but that speed is offset by the heavy computational cost of the hyperparameter search.

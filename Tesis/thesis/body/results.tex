@@ -348,6 +348,7 @@ The figure \ref{fig:esn_plot3d_errors} shows the 3D scatter plot of the absolute
 This section presents the results for the CNN and ESN models when the input signals are preprocessed with beamforming. The network architectures remain the same as previously described; the only difference is that beamforming is applied to the input signals to emphasize specific reflections according to their directions of arrival. For both models using beamforming, the Mean Absolute Error (MAE), the Pearson correlation coefficient, and absolute error distribution grahics are reported in this section. The detailed fold-wise histograms and the percentages of samples within the estimation error ranges are provided in the appendix.
 
 \subsection{CNN and Beamforming for Acoustic to Spatial Location Regression}
+\label{subsec:cnn_beamforming_regression}
 
 For the CNN model, the input signals are preprocessed with beamforming before being converted into Log-Mel images, and the network is trained to estimate the acoustic source's 3D coordinates. The MAE for each coordinate axis across the five folds is presented in Table \ref{tab:BeamCNN_mae_xyz_folds}. The Pearson correlation coefficients for each coordinate axis are shown in Table \ref{tab:BeamCNN_pearson_corr_xyz}.
 
@@ -485,14 +486,14 @@ In order to visualize the distribution and the magnitude of the estimation error
 
 To compare the models' performance in estimating the spatial coordinates, the MAE values for each fold, along with their means and standard deviations, are presented for the $X$, $Y$, and $Z$ coordinates in Tables \ref{tab:mae_x_models_comparison}, \ref{tab:mae_y_models_comparison}, and \ref{tab:mae_z_models_comparison}, respectively. The fold-wise MAE values are used to rank the models for each coordinate. These rankings are then used as input to the Bayesian Plackett Luce model, whose posterior distribution is sampled using Markov chain Monte Carlo (MCMC).
 
-The Plackett--Luce likelihood was discounted by a factor of $(1 + K\rho)^{-1}$, where $\rho = 0.25$ represents the ratio of the test-set size to the training-set size in our five-fold setup. This correlation penalty effectively scales the posterior probability distribution, providing a more conservative estimate of the probability that a given architecture is the best model for estimating each coordinate ($X$, $Y$, and $Z$).
+The Plackett--Luce likelihood was discounted by a factor $\alpha$ of $\left(1 + K\rho\right)^{-1}$, with $\rho = t_{\text{test}}/t_{\text{train}} = 0.25$ and $K=5$, resulting in a value of 0.444. This correlation penalty effectively scales the posterior probability distribution, providing a more conservative estimate of the probability that a given architecture is the best model for estimating each coordinate ($X$, $Y$, and $Z$).
 \\
 
 For each coordinate, the respective MAE values and model comparison results are presented as follows:
 \\
-The estimation in the $X$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_x_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_x}.
+The estimation in the $X$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_x_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_x}. The Beam prefixed indicate the respective models incorporate beamforming into the input data processing pipeline.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Mean Absolute Error Across Folds for $X$ Coordinate Estimation for each Model}
   \label{tab:mae_x_models_comparison}
@@ -513,7 +514,7 @@ The estimation in the $X$ coordinate, the MAE values across the five folds for e
   \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Probability of Being the True Best Model ($X$ Estimator)}
   \label{tab:best_model_probability_x}
@@ -533,7 +534,7 @@ The estimation in the $X$ coordinate, the MAE values across the five folds for e
 
 For estimation in the $Y$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_y_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_y}.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Mean Absolute Error Across Folds for $Y$ Coordinate Estimation for each Model}
   \label{tab:mae_y_models_comparison}
@@ -555,7 +556,7 @@ For estimation in the $Y$ coordinate, the MAE values across the five folds for e
 \end{table}
 
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Probability of Being the True Best Model ($Y$ Estimator)}
   \label{tab:best_model_probability_y}
@@ -575,7 +576,7 @@ For estimation in the $Y$ coordinate, the MAE values across the five folds for e
 
 For estimation in the $Z$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_z_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_z}.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Mean Absolute Error Across Folds for $Z$ Coordinate Estimation for each Model}
   \label{tab:mae_z_models_comparison}
@@ -597,7 +598,7 @@ For estimation in the $Z$ coordinate, the MAE values across the five folds for e
 \end{table}
 
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \caption{Probability of Being the True Best Model ($Z$ Estimator)}
   \label{tab:best_model_probability_z}

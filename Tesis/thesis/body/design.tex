@@ -214,13 +214,11 @@ Each feedforward head was trained independently, the learning rate was set to $5
 
 \section{Beamforming Implementation}
 
-\section{Beamforming}
-
 %Motivation for Beamforming
 
 \subsection{Frequency Selection}
 
-In order to implement beamforming using the audio channels, the principal spectral components of the source signal used as the stimulus within the measurement box must be analyzed. For this purpose, the Python "XXX" libraries are used, and the frequency response of the audio signal is plotted. The frequency response plot is shown in Figure \ref{fig:resfreqaudio}, while the top 10 frequencies with the highest magnitude are presented in Table \ref{tab:mainfreq}, where it can be observed that frequencies near 400\,Hz exhibit the largest magnitudes. Based on this, 400\,Hz is selected as the beamforming frequency.
+In order to implement beamforming using the audio channels, the principal spectral components of the source signal used as the stimulus within the measurement box must be analyzed. For this purpose the top 10 frequencies with the highest magnitude are presented in Table \ref{tab:mainfreq}, from which the most relevant frequency components can be identified, and the corresponding frequency response in the audio signal is illustrated in Figure \ref{fig:resfreqaudio} for the range of 100 Hz to 800 Hz.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -248,13 +246,13 @@ In order to implement beamforming using the audio channels, the principal spectr
 10 & 133.67 & 44.88 \\
 \hline
 \end{tabular}
-\caption{Top 10 frequencies with the highest magnitude (dB).}
+\caption{Top 10 frequency components of the stimulus signal with the highest magnitude.}
 \label{tab:mainfreq}
 \end{table}
 
-Given that the microphones are placed in a plane parallel to the X-Z plane, forming pairs that enable binaural audition, measurements along the X and Z axes can serve as candidate inputs to evaluate the impact of beamforming on estimating the cube's position. A geometric analysis of the measurement box is required. In Figure \ref{fig:geometrybbox}, the midpoint of the sides perpendicular to the X-axis is defined as a location of interest. These points will be considered the acoustic source for the beamforming procedure. Assuming the sound originates from this point or surrounding regions, it is necessary to compute the path-length difference traveled by the same acoustic wave arriving at both microphones. Using trigonometry, the distance from point E to G is determined to be 0.522\,m, and the distance from E to H is 0.9862\,m. Their difference yields 0.4649\,m, which represents the extra distance the acoustic wave must travel to reach point H compared to point G. Assuming the speed of sound is 346\,m/s—the approximate speed at a temperature of 26\,$^{\circ}$C \cite{audiospeed}, which closely matches the average temperature at the testing site—the time difference of arrival (TDOA) between both microphones is 1.34\,ms, as expressed in Equation \ref{eq:Fa0}.
+The microphones are arranged in pairs in a plane parallel to the X-Z plane, enabling binaural recording. Measurements along the X and Z axes can therefore be used to evaluate the effect of beamforming on position estimation. Figure \ref{fig:geometrybbox} shows the midpoints of the sides perpendicular to the X-axis, which are treated as potential source locations for the beamforming procedure. To model sound arriving at both microphones from these locations or nearby regions, the difference between the two acoustic path lengths must be calculated. Using trigonometry, the distance from point E to point G is 0.522\,m, while the distance from E to point H is 0.9862\,m. The difference, 0.4642\,m, is the additional distance the sound wave travels to reach point H. Assuming a speed of sound of 346\,m/s—the approximate value at 26\,$^{\circ}$C \cite{audiospeed}, which is close to the average temperature at the testing site—the time difference of arrival (TDOA) between the microphones is 1.34\,ms. As shown in Equation \ref{eq:Fa0}, this value serves as the reference delay for beamforming. Applying this delay to one microphone signal aligns the signals for constructive interference and maximizes the coherent summation of the desired sound wave. According to Equation \ref{eqn:ddipole}, given a microphone separation of 0.7\,m, the minimum frequency for beamforming is 123.57\,Hz. Figure \ref{resfreqaudio} and Table \ref{tab:mainfreq} show that the stimulus contains its main frequency components above this threshold, making beamforming feasible in this setup.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[height=12cm, width=13cm]{../img/Analisis_geometrico_BFM.png}
         \caption{Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}
@@ -266,18 +264,15 @@ Given that the microphones are placed in a plane parallel to the X-Z plane, form
  \Delta t_{\text{arrival}} = \frac{0.4642\,\text{m}}{346\,\text{m/s}} = 1.34\,\text{ms}
 \end{equation}
 
-Selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.35\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are summed. Consequently, introducing a delay equal to half the period (1.25\,ms) produces constructive interference for signals originating from point E at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
+As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.35\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are summed. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignemet of the signals resulting in constructive interference for signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[height=9cm, width=13cm]{../img/signalbothmics.png}
         \caption{Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}
         \label{fig:ondas400}
     \end{center}
 \end{figure}
-
-
-\subsection{Audio compactation}
 
 \subsection{Limitations and Requirements}
 A brief description of the design mechanism's limitations and requirements in accordance with the definitions in Scope and Limitations.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{53}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -179,6 +179,11 @@ Julien~I.E. Hoffman.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/B9780128170847000267}.
 
+\bibitem[Holmes and Walker(2017)]{holmes2017assigning}
+Christopher~C Holmes and Stephen~G Walker.
+\newblock Assigning a value to a power likelihood in a general bayesian model.
+\newblock \emph{Biometrika}, 104\penalty0 (2):\penalty0 497--503, 2017.
+
 \bibitem[Jiang et~al.(2024)Jiang, Qin, Pulsipher, and Zavala]{polling}
 Shengli Jiang, Shiyi Qin, Joshua~L. Pulsipher, and Victor~M. Zavala.
 \newblock Chapter 3 - convolutional neural networks: Basic concepts and
@@ -256,6 +261,11 @@ mordorintelligence.
   - growth trends \& forecasts (2025 - 2030), 2025.
 \newblock URL
   \url{%https://www.mordorintelligence.com/industry-reports/united-states-maintenance-repair-and-operations-mro-market}.
+
+\bibitem[Nadeau and Bengio(2003)]{nadeau2003inference}
+Claude Nadeau and Yoshua Bengio.
+\newblock Inference for the generalization error.
+\newblock \emph{Machine Learning}, 52\penalty0 (3):\penalty0 239--281, 2003.
 
 \bibitem[Peters et~al.(2012)Peters, Lei, and Friedland]{RIR05}
 Nils Peters, Howard Lei, and Gerald Friedland.
