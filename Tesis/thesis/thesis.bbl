@@ -1,4 +1,4 @@
-\begin{thebibliography}{53}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -167,17 +167,6 @@ Gunnar Heilmann, Andy Meyer, and Dirk D{\"o}bler.
 \newblock Beamforming in the time-domain using 3d-microphone arrays.
 \newblock In \emph{XIXth Biennial Conference of the New Zealand Acoustical
   Society, Auckland}, 2008.
-
-\bibitem[Hoffman(2019)]{friedmanprocess}
-Julien~I.E. Hoffman.
-\newblock Chapter 26 - analysis of variance. ii. more complex forms.
-\newblock In \emph{Basic Biostatistics for Medical and Biomedical Practitioners
-  (Second Edition)}, pages 419--441. Academic Press, second edition edition,
-  2019.
-\newblock ISBN 978-0-12-817084-7.
-\newblock \doi{https://doi.org/10.1016/B978-0-12-817084-7.00026-7}.
-\newblock URL
-  \url{https://www.sciencedirect.com/science/article/pii/B9780128170847000267}.
 
 \bibitem[Holmes and Walker(2017)]{holmes2017assigning}
 Christopher~C Holmes and Stephen~G Walker.

@@ -3,7 +3,7 @@
 \label{chapter:design}
 \newpage
 
-This chapter presents the models use to test the hipotesis. As the ground truth a CNN estimator is selected to explore the the capability of a model to learn and estimate from the acoustic signals the location of an object in a tridimentional space. The input trasformation to images and the changes requiered to the red to work as an estimator are mentioned. Also, in this section the design of a memory eficient network in the form of an ESN estimator is presented. A justification for The ESN model architecture selection, the input trasformation and training and evaluation process is provided. Finally the Beamforming mechanism intended to compress information and highlight acoustic echoes from specific regions is described in detail.
+This chapter presents the models use to test the hipotesis. As the ground truth a CNN estimator is selected to explore the the capability of a model to learn and estimate from the acoustic signals the location of an object in a tridimentional space. The input trasformation to images and the changes requiered to the network to work as an estimator are mentioned. Also, in this section the design of a memory eficient network in the form of an ESN estimator is presented. A justification for the ESN model architecture selection, the input trasformation and training and evaluation process is provided. Finally, the beamforming mechanism intended to highlight acoustic echoes from specific regions is described.
 
 \section{CNN Estimator}
 
@@ -11,19 +11,19 @@ The related work presented in seccion 2.6.2 provide insights respect the potenti
 
 \subsection{Log-Mel spectrogram as images}
 
-To employ a CNN to train on the dataset a Log-Mel transformation is perform to the audio signals in order to obtain spectograms of images that can be use as input for the network. The audio signals have length of 35000 samples, and a Short-Time Fourier Transform (STFT) using a window length of 2048 that provide a good frequency representation and a window step of 512 samples the frequency frames are obtained as detailed in equation \ref{eq:fframes} resulting in 68 frames. An aditional aditional mel filterbank is used to compress espectral data into 128 bands to help machine learning models to process the information more eficienty \cite{log_mel_convolutional}
+To train a CNN on the dataset, a Log-Mel transformation is applied to the audio signals to generate spectrograms that can be used as network input. Each audio signal is 35,000 samples long. A short-time Fourier transform (STFT) is computed using a 2,048-sample window and a hop size of 512 samples, yielding 68 frames, as described in Equation \ref{eq:fframes}. An additional Mel filter bank compresses the spectral data into 128 bands, making it easier for machine-learning models to process \cite{log_mel_convolutional}.
 
 \begin{equation}
 \label{eq:fframes}
 \text{Frequency frames} = \frac{signal\_length}{window\_step} 
 \end{equation}
 
-Finally to reduce feature variance in the mel bands a logaritmic trasformation is perform. The resulting log-mel matrix is transform to images of 570x370 pixes per location-orientation as the one show in Figure \ref{spectogram4ch}. 
+Finally to reduce feature variance in the mel bands a logaritmic trasformation is perform. The resulting Log-Mel matrix is transform to images of 570x370 pixels per location-orientation as the one shown in Figure \ref{spectogram4ch}. 
 
 \begin{figure}[!htb]
         \begin{center}        
             \includegraphics[height=10cm, width=15cm]{../img/4channelSpec.png}
-            \caption{Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8, Y=-0.94 , Z=-9.43 and orientation 50 degrees.}
+            \caption{Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}
         \label{spectogram4ch}                         
         \end{center}
 \end{figure}
@@ -32,30 +32,30 @@ Finally to reduce feature variance in the mel bands a logaritmic trasformation i
 
 \subsection{CNN Architecture}
 
-The model architecture selected for the task of classifying and estimating the location–orientation of the cube inside the measure box was the ResNet‑18 network, chosen for its robustness, simplicity, and suitability for inference in resource‑constrained environments \cite{Resnetwhy} (like the present in google colab notebooks). Two modifications were applied to the standard network structure. First, the input layer was extended to accept a stack of four RGB images, one corresponding to each audio channel. Second, for the regression task, the softmax output layer was replaced with a single output feature using a sigmoid activation function.
+The model architecture selected for the task of classifying and estimating the location–orientation of the cube inside the measure box was the ResNet‑18 network with a total of 11,689,512 trainable parameters, chosen for its robustness, simplicity, and suitability for inference in resource‑constrained environments \cite{Resnetwhy}. Two modifications were applied to the standard network structure. First, the input layer was extended to accept a stack of four RGB images, one corresponding to each audio channel. Second, for the regression task, the softmax output layer was replaced with a single output feature using a sigmoid activation function.
 
 \subsection{CNN Training and Evaluation}
 
-The network is trained to reduce the Mean Square Error for regression tasks, the optimization algorithm is the Adaptive Momentum Estimation. 
-The training loop runs for 40 epochs, following the five fold paradigm, the training portion contains four folds and the test set is the remaining fold for a partitioning of 80:20 percent ratio. The epoch process happens in batches of size 32, for a total of 350 batches per epoch.
-The target values for X, Y and Z are normalized before the training process. A min-max normalization scales the value into the range $[0,1]$ to fit the output response of the network. For X and Y an extra normalization step is performed since the path between these points describes a circular trajectory, the robotic arm’s rotational movement at constant angular increments of 10 degrees causes the projections of these coordinates to be expressed as multiples of sine and cosine functions. Consequently, the distribution along the coordinate axes is not uniform and requires an arcsin transformation shown in equation \ref{eq:normalization} in order to result in a equidistant mapping.
+The network was trained to minimize the mean squared error (MSE) using the adaptive moment estimation (Adam) optimizer. Five-fold cross-validation was used: in each fold, four folds were used for training and the remaining fold for testing, corresponding to an 80:20 train-test split. The model was trained for 40 epochs in each fold, with 350 batches of 32 samples per epoch for a total time of training per fold near to 1.2 hours.
+
+Before training, the target values for X, Y, and Z were normalized. Min-max normalization scaled each value to the range $[0,1]$ to match the network's output range. An additional normalization step was applied to X and Y because the points lie along a circular trajectory. The robotic arm's rotational movement in constant 10-degree increments means that the projections of these coordinates are expressed as multiples of sine and cosine functions. Consequently, the coordinate values are not uniformly distributed. The arcsine transformation shown in Equation \ref{eq:normalization} was therefore applied to obtain an equidistant mapping.
 
 
 \begin{equation}
 \label{eq:normalization}
-label\_arcnorm =  \frac{\arcsin(2label\_norm - 1) + \frac{\pi}{2}}{\pi}
+\text{label\_arcnorm} =  \frac{\arcsin(2\text{label\_norm} - 1) + \frac{\pi}{2}}{\pi}
 \end{equation}
 
-After training the model is change to evaluation mode and the test set procesed to obtain the output from the estimator. A denormalization in the inverse funtion of equation \ref{eq:normalization} is perform and the results is use to calculate the estimation error as the diference with the ground truth coordinate value. The MAE, the error distribution and the percentage estimations per error range are calculated with the test results. 
+After training, the model was switched to evaluation mode, and the test set was processed to obtain the estimator's predictions. The inverse of the transformation in Equation \ref{eq:normalization} was applied to denormalize the predictions. Estimation errors were then calculated as the differences between the predicted and ground-truth coordinates. The mean absolute error (MAE), error distribution, and percentage of predictions within each error range were calculated from the test results.
 
 
 \section{ESN Estimator}
 
-The ESN model is particularly efective learning from sequential data capable of learning from complex sequences of values due it rich temporal memory non linear dynamics, both atributes that share with the RNN but without the drawbacks of training the recurrent part of the network. The ESN tend to be a compact network, that the reason it is proposed in this document as a memory efficient model well suited to work as an estimator. 
+Echo State Networks (ESNs) are well suited to sequential data because their rich temporal memory and nonlinear dynamics enable them to learn complex patterns, as in recurrent neural networks (RNNs). Unlike conventional RNNs, however, ESNs do not require training the recurrent part of the network. They also tend to be compact, making them a memory-efficient choice for the estimator proposed in this thesis.
 
 \subsection{Mel spectrogram as sequence}
 
-For the ESN, the audio channels are cropped to only 20 000 sample to reduce the long tail with low signal power, the resulting signals are trasformend into sequence of Mel values, for this task, in similar way as te process described in seccion 5.1.1 a Short-Time Fourier Transform (STFT) using a window length of 1024 frames this time for speed up the transformation process and a window step of 512 samples was employ to obtain 40 frames. The Mel bank filter compress the data into 128 bands, a resulution adecuate for acoustic scene identification and direction of arrival identification \cite{numelbands}. The resulting bands are proceced by a decibel trasformation. The resulting spectrum sequence have a length of 40 values with 128 features per channel. A final step of feature scaling using min-max normalization is performed on the input features as a good practice to avoid problems with high magnitude variation between input values.
+For the ESN, each audio channel is cropped to 20,000 samples to remove the low-energy tail of the signal. The cropped signals are then transformed into sequences of Mel-spectrum values using a process similar to that described in the CNN subsection on Log-Mel spectrograms. To reduce computation time, the short-time Fourier transform (STFT) uses a window length of 1,024 samples and a hop size of 512 samples, yielding 40 frames. A Mel filter bank compresses the data into 128 bands, a resolution adequate for acoustic scene and direction-of-arrival identification \cite{numelbands}. The resulting bands are converted to decibels, producing a sequence of 40 time steps with 128 features per channel. Finally, min-max normalization is applied to the input features to mitigate issues caused by large differences in magnitude.
 
 \subsection{ESN Architecture}
 
@@ -83,7 +83,7 @@ The parameters for the networks are show in the table \ref{tab:esn_parameters}:
 
 The spectral radius that control how memory decay in the reservoir is desire to have it as hier as posible in order that the network present a long term memory behaviour, the maximun value recommended had a boundary of 1 to ensure the ESP to warranty that the internal states of the reservoir will converge over time avoiding instability. For the ESN presented in this work a value of 0.99 was choose as spectral radius for the reservoir matrix. The leaky rate also controlls how fast the reservoir forget and it set to 0.1 to avoid memory loss and keep as much as posible of the history of the input sequence in the reservoir.
 
-The sparity is keep to 0.1 for mantain a high conectivity of neurons in the reservoir. For the reservoir size, as the value set to this parameter is expensive in memory during training and is a direct factor determining the amount of trainable weights in the feedforward network, a search is perform to find a value with a good ration of acurracy/size. The figure \ref{reservoirsize} show the curve of the results obtained for the acuracy vs the reservoir size and can be observe that the acuracy increase as the reservoir size increase until reach the 1500 neurons, after this point increasing the size of the reservoir do not necesarily correspond to an improvement in the performance of the network.
+Sparsity was set to 0.1 to maintain sufficient connectivity among the reservoir neurons. Because reservoir size affects both memory use during training and the number of trainable weights in the feedforward network, a search was conducted to identify a favorable balance between accuracy and model size. Figure \ref{reservoirsize} shows the relationship between accuracy and reservoir size. Accuracy increases with reservoir size up to 1,500 neurons; beyond that point, further increases do not necessarily improve network performance.
 
 \begin{figure}[!htb]
         \begin{center}        
@@ -94,7 +94,7 @@ The sparity is keep to 0.1 for mantain a high conectivity of neurons in the rese
 \end{figure}
 
 
-A test with the described configuration shows acuracy below the 95\% for training runs of 100 epochs, so a further improvement considered was to increase the features extracted from the reservoir using intermediate reservoir stages. Four configurations were considered: the original one, only capturing the state of the reservoir at the end, capturing a intermediate step at the midle of the sequence, three captures at 33\%, 66\% and at the end, and the las configuration with four captures at the 25\%, 50\%, 75\% and at the end of the sequence. The results are presented in table \ref{tab:intermediate_steps}. with the higher mean value, a configuration of four capturing steps was choose as feature input to the feedforward network.
+A test of the described configuration achieved less than 95\% accuracy after 100 training epochs. To improve performance, the number of features extracted from the reservoir was increased by capturing its state at multiple points in the sequence. Four configurations were evaluated: one capture at the end of the sequence; two captures, at the midpoint and end; three captures, at 33\%, 66\%, and 100\% of the sequence; and four captures, at 25\%, 50\%, 75\%, and 100\%. The results are presented in Table \ref{tab:intermediate_steps}. The four-capture configuration achieved the highest mean accuracy and was therefore selected to provide features to the feedforward network.
 
 
 \begin{table}[htbp]
@@ -114,7 +114,7 @@ A test with the described configuration shows acuracy below the 95\% for trainin
 \end{table}
 
 
-The table \ref{tab:esn_values} summarize the final values selected for the clasifier, with those values an acuracy of 98.42\% was achieved on 150 epoch training. The results
+The table \ref{tab:esn_values} summarize the final values selected for the clasifier, with those values an acuracy of 98.42\% was achieved on 150 epoch training.
 
 \begin{table}[htbp]
 \centering
@@ -133,7 +133,7 @@ Intermediate Captures & 4 \\
 \end{tabular}
 \end{table}
 
-The results with the clasifier demostrated that the ESN had the capability of learn from the sequence the characteristic patterns to distinguish the session pilar in which they were recorded. This network was the base for the regresion network. The output layer was replaced from 26 to 1, and two aditional hiperparameter  for the network as it regresion form were defined using grid search: 1) The alredy defined sparcity value, and 2) To improve the learning capacity of the ESN, the single layer feedforward network is replaced by a two layer network with a hidden layer of magnitude  defined as hidden size. The search results for these two parameters are presented in figure \ref{sparityhiddenlayer}. Considering as criteria to choose the parameters a good performance of the network at the minimal size, the sparcity of 0.7 and a hidden layer of 20 is selected for the ESN estimator.\\
+The classification results demonstrated that the ESN could learn patterns from the input sequences to distinguish the sessions in which the recordings were made. This classifier served as the basis for the regression network. The output layer was changed from 26 units to one, and two additional hyperparameters were tuned using grid search: (1) the reservoir sparsity and (2) the hidden-layer size. To improve the ESN's learning capacity, the single-layer feedforward network was replaced with a two-layer network containing a hidden layer whose number of units is specified by the hidden-layer size. The search results for these parameters are shown in Figure \ref{sparityhiddenlayer}. To balance model performance and size, a sparsity of 0.7 and a hidden-layer size of 20 were selected for the ESN estimator.\\
 
 
 \begin{figure}[htb]
@@ -162,7 +162,11 @@ $(-4, 4)$ & 85.16 & 99.09 \\
 \end{table}
 
 
-The ESN estimator after training 1200 epochs produced a MAE of ~2cm with the percentage sample per error range shows in table \ref{tab:esn_error_comparison}, in order to further reduce the MAE of the ESN, it architecture was enhanced to use multihead feedforward network. The reason for this change comes from the observation that the ESN perform well as a clasifier, been capable to distinguish recording session near to each other, once the fedforward network was configured for the regresion task the errors in estimation were even larger that the distance betwen adyacent sessions, suggesting the possibility that the network was not able to learn the mapping function from the reservoir features to the output coordinates. A key diference between the clasification and regresion tasks is that the clasifier had an independent output for each class, but not only the output, it had an entire feedforward network in the form of a single layer perceptron for each class, so the network was able to learn a different mapping function for each class. The multihead feedforward network is a similar approach, but instead of having a single layer perceptron for each class, the learning task was dividen into three independent task, one network was dedicated to map the function for the positive coordinates, another for the negative coordinates and a third to predict the sign of the coordinate. The sign prediction network is resposable to select which of the other two networks will be used to predict the value of the coordinate. that provided a sustancial improvement in the performance of the ESN estimator. but still some small amount of estimation presented a large error in the case of misprediction of the sign of the coordinate, for this reason a forth network was proposed to estimate the value of the coordinate for the entire range of values, the output acuracy of this network is lower than the other arrangement, but is intended to be used as guidence for the other network, if the diference from estimation fromthe two networks is larger than a threshold, the network consider that a error inthe sign prediction network has ocurred andthe output is selected fromthe network of opposite sign. The architecture ofthe multihead feedforward network is shown in figure \ref{fig:multihead} and the results of the ESN estimator with this configuration is shown in table \ref{tab:esn_error_comparison} with a MAE of ~0.7cm and a significant improvement in the percentage of samples per error range.
+After 1,200 training epochs, the ESN estimator achieved a mean absolute error (MAE) of approximately 2 cm. The error-range percentages are reported in Table \ref{tab:esn_error_comparison}. To further reduce the MAE, the architecture was extended with a multihead feedforward network. This change was motivated by the ESN's performance as a classifier: it could distinguish recording sessions, including sessions with nearby positions. However, in the regression task, the estimation errors were sometimes larger than the distance between adjacent sessions, suggesting that the network had difficulty learning the mapping from reservoir features to output coordinates.
+
+The classifier used a separate output for each class, allowing it to learn a distinct mapping for each class. Inspired by this approach, the multihead network divides coordinate prediction into separate tasks: one head predicts positive coordinate values, another predicts negative values, and a third predicts the coordinate sign. The sign-prediction head selects which of the positive or negative value heads provides the coordinate estimate. This approach substantially improved the ESN estimator's performance, but occasional sign-prediction errors still caused large estimation errors. To address this issue, a fourth head was added to estimate the coordinate across its full range. Although this head is less accurate on its own, its prediction serves as a reference for the other heads. If its prediction differs from the selected positive or negative value prediction by more than a threshold (a difference exceeds 100 cm, indicating a sign-classification outlier error), the model treats this as a possible sign-prediction error and selects the estimate from the opposite-sign head instead.The hybrid decision logic is shown in Algorithm \ref{alg:hybrid_decision_logic}.
+
+For the sign and full range heads, the feedforward networks contains 60,000 trainable parameters each. The positive and negative coordinate heads that requiere to be more acurate have 120,000 trainable parameters each. This results in a total of 360,000 trainable parameters for the multihead feedforward network what is only near to 3\% of the ResNet-18 CNN parameters. The multihead feedforward network architecture is shown in Figure \ref{fig:multihead}. Its results, including an MAE of approximately 0.7 cm and improved error-range percentages, are reported in Table \ref{tab:esn_error_comparison}.
 
 
 \begin{figure}[htb]
@@ -173,9 +177,12 @@ The ESN estimator after training 1200 epochs produced a MAE of ~2cm with the per
         \end{center}
 \end{figure}
 
-\subsection{ESN Training and Evaluation}
+\subsection{Multi-Head ESN Training and Evaluation}
 
-Each feedforward head was trained independently, the learning rate was set to $5e-5$ for all the sub-network heads, the batch size was set to 32. The training was perform separately for each head. The sub-heads for positive and negative coordinates were trained using only the samples with the corresponding sign, while the overall coordinate prediction head and the sign prediction head were trained using all the samples, the sub-heads for positive, negative and overall coordinate estimation were trained using Adam optimizationfor 400 epochs, while the sign prediction head was trained using Binary Cross entropy with Logits Loss for 800 epochs. The training process was performed using a five\-fold cross-validation approach, with four folds used for training and one fold reserved for testing, following an 80:20 percent ratio. The target values for X, Y and Z are normalized as described in section 5.1.3, and a denormalization step is applied to the output of the network to obtain the final coordinate estimations. The evaluation of the ESN consider the results of the four sub-heads using a hibrid aproach, the output selection rather than relying solely on a single prediction head, the final coordinate is computed through a decision tree. The sign head predicts the sign of the target Conditional Path Selection:If the predicted sign is positive, the positive head output is chosen.If negative, the negative head output is chosen. This yields a candidate coordinate estimation, referred to as the Conditional Path prediction.An outlier mitigation is also performed, if the absolute difference between the Overall Estimator prediction and the chosen Conditional Path prediction is calculated.If this difference exceeds a threshold (100 cm), indicating a potential critical sign classification failure, the model falls back to the alternate sign's estimator output to prevent high localization errors. the Algorith for the hibrid desition logic is shown in Algorith \ref{alg:hybrid_decision_logic}.
+Each feedforward head was trained independently using a batch size of 32 and a learning rate of $5 \times 10^{-5}$. The positive and negative coordinate heads were trained only on samples with the corresponding sign, whereas the overall-coordinate and sign-prediction heads were trained on all samples. The positive, negative, and overall-coordinate heads were trained with the Adam optimizer for 400 epochs. The sign-prediction head was trained for 800 epochs using binary cross-entropy with logits loss. The total training time for each fold was approximately 1.5 hours.
+
+The models were trained and evaluated using five-fold cross-validation: four folds were used for training and one for testing in each iteration, corresponding to an 80:20 split. The target values for X, Y, and Z were normalized as described in Section 5.1.3. The network outputs were then denormalized to obtain the final coordinate estimates.
+ 
 
 
 \begin{algorithm}[htbp]
@@ -217,7 +224,7 @@ Each feedforward head was trained independently, the learning rate was set to $5
 %Motivation for Beamforming
 %\subsection{Frequency Selection}
 
-In order to implement beamforming using the audio channels, the principal spectral components of the source signal used as the stimulus within the measurement box must be analyzed. For this purpose the top 10 frequencies with the highest magnitude are presented in Table \ref{tab:mainfreq}, from which the most relevant frequency components can be identified, and the corresponding frequency response in the audio signal is illustrated in Figure \ref{fig:resfreqaudio} for the range of 100 Hz to 800 Hz.
+In order to implement beamforming using the audio channels, the principal spectral components of the source signal used as the stimulus within the measurement box must be analyzed. For this purpose the top 10 frequencies with the highest magnitude are presented in Table \ref{tab:mainfreq}, from which the most relevant frequency components can be identified, and the corresponding frequency response in the audio signal is illustrated in Figure \ref{fig:resfreqaudio} for the range of 0 Hz to 800 Hz.
 
 \begin{figure}[!htb]
     \begin{center}
@@ -263,7 +270,7 @@ The microphones are arranged in pairs in a plane parallel to the X-Z plane, enab
  \Delta t_{\text{arrival}} = \frac{0.4642\,\text{m}}{346\,\text{m/s}} = 1.34\,\text{ms}
 \end{equation}
 
-As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.35\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are summed. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignemet of the signals resulting in constructive interference for signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
+As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.34\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are summed. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignemet of the signals resulting in constructive interference for signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
 
 \begin{figure}[H]
     \begin{center}

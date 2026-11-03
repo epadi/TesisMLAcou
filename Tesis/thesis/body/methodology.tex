@@ -17,11 +17,11 @@ The following chapter details the methodology used in this research, including t
 
 The experimental container is a cubic box with a side length of 1 m and a volume close to $1\,\mathrm{m}^3$. The concept is shown in Figure \ref{mesurementbox}(a). Three of its six walls are made of porcelain tiles with a thickness of 1 cm, one wall and the floor are made of solid concrete, and the remaining wall used for observation is made of acrylic with a thickness of 0.5 cm. The clear acrylic sheet allows direct observation of the movement mechanism inside the box. Unlike the other walls, which are permanently bonded, this acrylic wall can be removed to provide access to the interior of the measurement box.
 
-The movement mechanism inside the box consists of a robotic arm mounted at the center of the floor. The arm has four degrees of freedom (DOF) and is used to control the position and orientation of a cube with a side length of 20 cm attached to its end. The cube is made of plastic, with walls 2 mm thick. For the measurements, a mono speaker is placed at the center of one wall to generate the acoustic stimulus inside the system. On the opposite wall, four capacitive microphones are positioned 15 cm away from each corner to capture the acoustic response of the measurement box. The measurement box was constructed inside a storage room and is shown in Fig. \ref{mesurementbox}(b).
+The movement mechanism inside the box consists of a robotic arm mounted at the center of the floor. The arm has four Degrees of Freedom (DOF) and is used to control the position and orientation of a cube with a side length of 20 cm attached to its end. The cube is made of plastic, with walls 2 mm thick. For the measurements, a mono speaker is placed at the center of one wall to generate the acoustic stimulus inside the system. On the opposite wall, four capacitive microphones are positioned 15 cm away from each corner to capture the acoustic response of the measurement box. The measurement box was constructed inside a storage room and is shown in Fig. \ref{mesurementbox}(b).
 
 \begin{figure}[!htb]
         \begin{center}        
-            \includegraphics[height=20cm, width=12cm]{../img/Measuretogether.png}
+            \includegraphics[height=20cm, width=11cm]{../img/Measuretogether.png}
             \caption{Measure box: (a) Conceptual sketch for the acoustic measurement box, and (b) actual implementation for the data acquisition task.}
         \label{mesurementbox}                         
         \end{center}
@@ -53,7 +53,7 @@ The source audio signal was created by extracting an arbitrary 0.3-second segmen
 \section{The Audio-Location Processing Pipeline}
 
 
-Figure \ref{fig:method} shows the processing pipeline for the acoustic signals. The microphone array in the measurement box records four signals, which form the four audio channels used as input to the pipelines. In the first step, AudAlign, the signals are aligned to compensate for variation in their start times caused by the operating system's process scheduler. Alignment is performed by exploiting the equal distances between the source and each microphone; therefore, the magnitude of the direct sound can serve as a reference. During the same step, signal integrity is validated. Each recording is divided into a main segment and a tail (the reverberation segment). The signal power is calculated from the main segment, and the tail duration is measured. Recordings whose signal power and tail duration fall within predefined limits are considered valid and included in the dataset. The resulting dataset is used in four scenarios: two use CNN-based pipelines, and two use ESN-based pipelines. The CNN-based pipelines require the time-series data to be converted into image representations, whereas the ESN-based pipelines use a transformation from audio to spectral sequences. In addition, beamforming is used to address acoustic superposition by dividing the room into four regions and representing the reverberation originating from each region in a separate set of channels. These channels are also provided as input to the CNN and ESN estimators.
+Figure \ref{fig:method} shows the processing pipeline for the acoustic signals. The microphone array in the measurement box records four signals, which form the four audio channels used as input to the pipelines. In the first box in the diagram AudAlign, the signals are aligned to compensate for variation in their start times caused by the operating system's process scheduler. Alignment is performed by exploiting the equal distances between the source and each microphone; therefore, the magnitude of the direct sound can serve as a reference. Also in AudAlign the signal integrity is validated. Each recording is divided into a main segment and a tail (the reverberation segment). The signal power is calculated from the main segment, and the tail duration is measured. Recordings whose signal power and tail duration fall within predefined limits are considered valid and included in the dataset. The resulting dataset is used in four scenarios: two use CNN-based pipelines, and two use ESN-based pipelines. The CNN-based pipelines require the time-series data to be converted into image representations, whereas the ESN-based pipelines use a transformation from audio to spectral sequences. In addition, beamforming is used to address acoustic superposition by dividing the room into four regions and representing the reverberation originating from each region in a separate set of channels. These channels are also provided as input to the CNN and ESN estimators.
 
 
 \begin{figure}[hbt!]
@@ -91,7 +91,7 @@ Figure \ref{fig:method} shows the processing pipeline for the acoustic signals. 
 
 \section{Response Variables and evaluation metrics}
 
-The networks in this research are configured as regression models, the outputs are the predicted coordinates (X, Y, Z) and orientation of the cube in the room. The response variables are the error between the predicted and actual values of these outputs, which are calculated as mean of the absolute difference between the predicted and actual values as shows in equation \ref{eq:mae}. The Mean Absolute Error (MAE) is used as the performance metric for evaluating the models. The MAE is a widely used metric for regression tasks, as it provides a clear measure of the average magnitude of errors in predictions, without considering their direction. Lower MAE values indicate better model performance, as they reflect smaller discrepancies between predicted and actual values \cite{friedmanprocess}.
+The networks in this research are configured as regression models, the outputs are the predicted coordinates (X, Y, Z) and orientation of the cube in the room. The response variables are the error between the predicted and actual values of these outputs, which are calculated as mean of the absolute difference between the predicted \(\hat{y}_i\)  and actual values \(y_i\) as shows in equation \ref{eq:mae}. The Mean Absolute Error (MAE) is used as the performance metric for evaluating the models. The MAE is a widely used metric for regression tasks, as it provides a clear measure of the average magnitude of errors in predictions, without considering their direction. Lower MAE values indicate better model performance, as they reflect smaller discrepancies between predicted and actual values \cite{friedmanrecomendation}.
 
 
 \begin{equation}
@@ -100,15 +100,16 @@ The networks in this research are configured as regression models, the outputs a
 \end{equation}
 
 
-The other metric used for evaluating a regression model  way to evaluate the model is to measure correlation between the real and the predicted values12. The
-most well-known method for this is Pearson’s correlation coefficient, defined as:
+Another way to evaluate a regression model is to measure the correlation between the actual and predicted values. The most widely used measure is Pearson’s correlation coefficient, defined as follows:
 
 \begin{equation}
 \label{eq:pearson}
-r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2 \sum_{i=1}^{n} (y_i - \bar{y})^2}} \in [-1, 1],
+r = \frac{\sum_{i=1}^{n} (y_i - \bar{y})(\hat{y}_i - \bar{\hat{y}})}{\sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2 \sum_{i=1}^{n} (\hat{y}_i - \bar{\hat{y}})^2}} \in [-1, 1],
 \end{equation}
 
-This metric provides additional insight into the model's performance, complementing the MAE by indicating how well the predictions follow the trend of the actual values \cite{friedmanprocess}.
+where \(y_i\) and \(\hat{y}_i\) are the actual and predicted values, respectively, and \(\bar{y}\) and \(\bar{\hat{y}}\) are their corresponding means. The numerator represents the covariance between the actual and predicted values, while the denominator normalizes this covariance by the product of the standard deviations of the actual and predicted values, ensuring that the correlation coefficient \(r\) lies within the range \([-1, 1]\).
+
+This metric provides additional insight into the model's performance, complementing the MAE by indicating how well the predictions follow the trend of the actual values \cite{friedmanrecomendation}.
 
 
 \section{Data Recording for Model Evaluation}
@@ -141,7 +142,7 @@ Because performance metrics are obtained through cross-validation, the observati
 
 On this problem, Bayesian approaches have been proposed as a more suitable alternative for comparing multiple models when the observations are not even independent, as they can properly account for the uncertainty and dependencies in the data \cite{benavoli2017time,  mollica2017bayesian, calvo2018bayesian}. These approaches provide a coherent probabilistic framework to model the rankings of the learing algorithms based on their performance metrics and make inferences about their relative performance.
 
-In this work, we adopt the Bayesian framework described in \cite{calvo2018bayesian} to compare the four regression models base on the MAE as the mainperformance metrics obtained through cross-validation. This method allows us to properly account for the dependencies and uncertainties in the performance metrics obtained through five fold cross-validation. The procedure to compare multiple regression models using the Bayesian approach is implemented with the steps decribed in \cite{calvo2018bayesian} and detailed as follows:
+In this work, we adopt the Bayesian Plackett-Luce (PL) framework described in \cite{calvo2018bayesian} to compare the four regression models base on the MAE as the main performance metrics obtained through cross-validation. This method allows us to properly account for the dependencies and uncertainties in the performance metrics obtained through five fold cross-validation. The procedure to compare multiple regression models using the Bayesian approach is implemented with the steps decribed in \cite{calvo2018bayesian} and detailed as follows:
 
 1) Create a matrix of performance metrics obtained through cross-validation for each regression model, where each row corresponds to a fold and each column corresponds to a model and from this matrix a ranking matrix is derived, where each element represents the rank of a model in a specific fold based on its performance metric.
 

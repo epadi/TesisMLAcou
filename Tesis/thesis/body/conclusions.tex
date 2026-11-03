@@ -10,7 +10,9 @@ This chapter presents the final conclusions obtained through the research effort
 
 \begin{itemize}
 	
-	\item The CNN and ESN architectures are capable to learn from acoustic representations like Log-Mel spectograms the mapping function from audio features to the target coordinates that define the location of an cube of 20cm lenght inside an enclosed espace of $1m^{3}$ with a MAE less than 2cm as clasification and regression tasks. The orientation of the cube can´t be accurately determined using the current acoustic representations and network architectures.
+	\item The CNN and ESN architectures are capable to learn from acoustic representations like Log-Mel spectograms the mapping function from audio features to the target coordinates that define the location of an cube of 20cm length inside an enclosed espace of $1m^{3}$ with a MAE less than 2cm as clasification and regression tasks. 
+	
+	\item The orientation of the cube can not be accurately determined using the current acoustic representations and network architectures.
 	
 	\item CNN model had the biggest errors located in the edges of the measurement space for coordinates X, Y and Z compare to the ESN that had the errors with high magnitude in the center region.
 	
@@ -31,7 +33,7 @@ Future work reusing the current dataset could include:
 	\item For the Multi head ESN architecture, explore the process of training the negative and positive feedforward networks with overlap to reduce the errors in the transition region.
 	\item Explore the idea to use a multihead aproach with the CNN to see if the estimation can be improve.
 	\item Analize the audio of the big error outliers to identify if exist especific patterns in the signal that can be filter to remove any noise that affect the estination.
-	\item Investigate the data aumentation thecniques to balance the dataset
+	\item Investigate the data aumentation thecniques to balance the dataset and improve the generalization of the models.
 	
 \end{itemize}
 

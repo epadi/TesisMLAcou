@@ -728,6 +728,9 @@ INPUT ..\img\mic_dipole.png
 INPUT ..\img\mic_dipole.png
 INPUT ..\img\mic_dipole.png
 INPUT ..\img\mic_dipole.png
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT ..\img\convolution.png
 INPUT ..\img\convolution.png
 INPUT ..\img\convolution.png
@@ -772,6 +775,9 @@ INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
@@ -806,9 +812,6 @@ INPUT ..\img\AcousticPipeline.jpeg
 INPUT ..\img\AcousticPipeline.jpeg
 INPUT ..\img\AcousticPipeline.jpeg
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib8.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib6.tfm
@@ -931,9 +934,6 @@ INPUT ..\img\five_fold_Z_histo.png
 INPUT ..\img\five_fold_Z_histo.png
 INPUT ..\img\five_fold_Z_histo.png
 INPUT ..\img\five_fold_Z_histo.png
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
 INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1000.tfm
 INPUT ..\img\Plot3D_errors.png
 INPUT ..\img\Plot3D_errors.png
@@ -1029,7 +1029,6 @@ INPUT .\body\conclusions.tex
 INPUT .\body\conclusions.tex
 INPUT .\body\conclusions.tex
 INPUT body\conclusions.tex
-INPUT C:\Users\Esteban\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\body\appendix.tex
 INPUT .\body\appendix.tex
 INPUT .\body\appendix.tex
@@ -1086,8 +1085,6 @@ INPUT .\thesis.out
 INPUT .\thesis.out
 INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
-INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
-INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
 INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
 INPUT C:\Users\Esteban\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk

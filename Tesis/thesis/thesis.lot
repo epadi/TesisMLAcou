@@ -14,12 +14,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Five-fold cross-validation structure and performance summary.}}{33}{table.caption.24}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Five-fold cross-validation structure and performance summary.}}{34}{table.caption.24}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Key parameters of an Echo State Network (ESN)}}{42}{table.caption.26}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Performance Across Intermediate Steps}}{44}{table.caption.28}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Echo State Network (ESN) Hyperparameters}}{44}{table.caption.29}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Error Distribution Comparison Between Standard ESN and MultiHead ESN}}{45}{table.caption.31}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Error Distribution Comparison Between Standard ESN and MultiHead ESN}}{44}{table.caption.31}%
 \contentsline {table}{\numberline {5.5}{\ignorespaces Top 10 frequency components of the stimulus signal with the highest magnitude.}}{49}{table.caption.34}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces Model Performance Across The Three Regions}}{57}{table.caption.40}%

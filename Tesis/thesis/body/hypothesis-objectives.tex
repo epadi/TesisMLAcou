@@ -7,7 +7,7 @@
 \section{Hypothesis}
 \label{section:hypothesis}
 
-The studies reviewed in Chapter 2 demonstrate that sound sources can be located in three-dimensional space with some precision, rooms can be recognized by their acoustic signatures, depth images of parts of a room can be created using only audible sound echoes, and object shapes can be inferred from acoustic features extracted from echoes originating inside the objects. Collectively, these findings suggest that a function can be learned to map the room impulse response (RIR) to the location of an object in an enclosed space. Based on these findings, our hypothesis is:
+The studies reviewed in Chapter 2 demonstrate that sound sources can be located in three-dimensional space with some precision, also that rooms can be recognized by their acoustic signatures, depth images of parts of a room can be created using only audible sound echoes, and object shapes can be inferred from acoustic features extracted from echoes originating inside the objects. Collectively, these findings suggest that a function can be learned to map the RIR encoded in acoustic echoes to the location of an object in an enclosed space. Based on these findings, our hypothesis is:
 
 "An algorithm pipeline with beamforming and ESN that utilize the rich RIR spatial-geometrical information comprehended in a set of acoustic signals can infer the location and orientation of a cube of 20cm side allocated inside an small enclosed space of near of 1\(m^3\) \footnote{Region with acoustic superposition found by \cite{bat1}}, this with a movement distance resolution of at least 5cm and achieve less than 2cm of Mean Absolute Error in position and 10 degrees in orientation\footnote{Based on the size of the objects and maximum deformation presented in \cite{echosense}} with an error less than 6 degrees of Mean Absolute Error in the estimation from two consecutive positions."
 
@@ -23,7 +23,7 @@ The current research established the following objectives:
 \label{section:main-objective}
 \label{objective:main}
 
-To model and evaluate a processing pipeline that combines beamforming with CNN and ESN models to map multichannel acoustic signals to an object's spatial coordinates and orientation within an enclosed space.
+To model and evaluate a processing pipeline that combines beamforming with CNN and ESN to map multichannel acoustic signals to an object's spatial coordinates and orientation within an enclosed space.
 
 \subsection{Specific Objectives}
 \label{section:specific-objectives}
@@ -33,7 +33,7 @@ To model and evaluate a processing pipeline that combines beamforming with CNN a
 	
 	\item Develop a CNN-based reference method that learns to estimate an object's coordinates and orientation from the dataset.
 
-    \item Develop a resource-efficient ESN-based method that learns to estimate an object's coordinates and orientation from the dataset.
+    \item Develop a resource efficient ESN based method that learns to estimate an object's coordinates and orientation from the dataset.
 
     \item Build a beamforming stage that divides the measurement space into four regions based on acoustic source locations.
 	

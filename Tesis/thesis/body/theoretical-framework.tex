@@ -52,24 +52,24 @@ D=\frac {1}{4} \frac {c}{f}\tag{2}
 
 \subsubsection{Delay-and-Sum Beamforming Technique}
 
-Beamforming is based on the physical principle that an acoustic wave originating at a particular location in space travels and arrives at each sensor at a different time, defined by the distance between the single source and each sensor. The result of adding all these signals depends on the phase relationship between them, so it is possible to control the delay of each signal to constructively add those from a particular location while, at the same time, destructively canceling those originating in other regions \cite{BEA01}. Mathematically, the beamforming formula is shown in Equation \ref{eqn:beamforming}, where \(L(t,S_0)\) is the beamforming output and \(p_m\) is the microphone output for a signal originating at \(S_0=(x_0,y_0,z_0)\) and captured by a microphone located at \(S\). All the signals are summed together and divided by the total number of microphones \(M\) in the array.
+Beamforming is based on the physical principle that an acoustic wave originating at a particular location in space travels and arrives at each sensor at a different time, defined by the distance between the single source and each sensor. The result of adding all these signals depends on the phase relationship between them, so it is possible to control the delay of each signal to constructively add those from a particular location while, at the same time, destructively canceling those originating in other regions \cite{BEA01}. Mathematically, the beamforming formula is shown in Equation \ref{eqn:beamforming}, where \(L(t,S_0)\) is the beamforming output, $p_m(t + \tau_m(\mathbf{s}_0))$ is the acoustic pressure signal recorded by microphone $m$, advanced by the specific time-of-flight delay ($\tau_m$ or $t_0$) it takes for sound to travel from the coordinate $\mathbf{s}_0$ to that specific microphone, and $\Vert{}\mathbf{s}_m - \mathbf{s}_0\Vert{}$ is the spherical spreading compensation factor. Because acoustic energy decays proportionally to the distance traveled ($1/r$). All the signals are summed together and divided by the total number of microphones \(M\) in the array.
 
 \begin{equation*}
 \label{eqn:beamforming}
-L(t,s_0)=\frac {4\pi}{M} \sum_{m=1}^M pm(s_0,t+t_0)|S-S_0| \tag{3}
+L(t, \mathbf{s}_0) = \frac{4\pi}{M} \sum_{m=1}^{M} p_m(t + \tau_m(\mathbf{s}_0)) \|\mathbf{s}_m - \mathbf{s}_0\| \tag{3}
 \end{equation*}
 
 %\subsubsection{Deconvolution}
 %In real applications, the beamforming output comprises the acoustic signal convolved with the microphone array response. The deconvolution principle assumes that %the recorded signal \(r(t)\) is the convolution of the sound \(g(t)\) (as shown in Equation \ref{eqn:sound}) and a transfer function for the array, which %represents the array response to a given source \cite{BEA01}. The Point-Spread Function (PSF) is the array response to a monopole placed in front of the array. %The PSF provides the information required to obtain the array transfer function needed for deconvolution, which extracts the sound free of the distortion created %by the array.
 
-\subsubsection{Post-Filtering}
+%\subsubsection{Post-Filtering}
 
-Considering that the signal measured by each microphone is the sum of the sound and the noise, and that the noise is uncorrelated between microphones and with the beamforming output signal, the beamforming output can be further enhanced by selectively filtering the resulting signal based on the cross-spectral densities between channels in the microphone array \cite{BEA02}.
+%Considering that the signal measured by each microphone is the sum of the sound and the noise, and that the noise is uncorrelated between microphones and with the beamforming %output signal, the beamforming output can be further enhanced by selectively filtering the resulting signal based on the cross-spectral densities between channels in the %microphone array \cite{BEA02}.
 
 
 \section{Time Series Transformation into Images}
 
-Given a time series, it is sometimes desirable to apply certain transformations that provide a more compact representation of the data or highlight specific properties and attributes of it. Transforming a time series into an image involves converting vectors into matrices using a transformation criterion that maps values from one domain to another. One example is the conversion of audio signals into spectrograms or log-mel spectrograms, which provide a time-frequency representation of the signal. In machine learning applications, these image-like representations can be used as input to convolutional neural networks and other image-based models, enabling the extraction of meaningful features from time series data.
+Given a time series, it is sometimes desirable to apply certain transformations that provide a more compact representation of the data or highlight specific properties and attributes of it. Transforming a time series into an image involves converting vectors into matrices using a transformation criterion that maps values from one domain to another. One example is the conversion of audio signals into spectrograms or Log-Mel spectrograms, which provide a time-frequency representation of the signal. In machine learning applications, these image-like representations can be used as input to convolutional neural networks and other image-based models, enabling the extraction of meaningful features from time series data.
 
 \subsection{Log-Mel Spectrogram}
 
@@ -77,7 +77,7 @@ Spectrograms are widely used in audio and speech processing, as well as in other
 
 \subsection{Log-Mel-Scale}
 
-The mel scale is a representation of how people perceive audio pitches. It is based on the ability of humans to judge equal distances between pitches. Pitch, in acoustics, is the perceptual quality that allows sounds to be ordered from low to high by frequency, which is what the human mind does when processing tones \cite{melscale}.
+Pitch, in acoustics, is the perceptual quality that allows sounds to be ordered from low to high by frequency, which is what the human mind does when processing tones \cite{melscale}. The Mel scale is a representation of how humans perceive audio pitches. It is based on the ability of humans to judge equal distances between pitches.
 
 The conversion from frequency to the mel scale is given by Equation \ref{eqn:mel}.
 
@@ -87,7 +87,7 @@ The conversion from frequency to the mel scale is given by Equation \ref{eqn:mel
 m(f) = 2595 \log_{10}\left(1 + \frac{f}{700}\right) = 1127 \ln\left(1 + \frac{f}{700}\right)
 \end{equation}
 
-For the discretization of the mel frequencies, the continuous mel scale is filtered using a bank of triangular bandpass filters, each representing a specific range of mel values. The canonical number of filters is 128 in applications with complex environmental audio tasks, in order to preserve fine spectral cues \cite{melscale}.
+For the discretization of the mel frequencies, the continuous mel scale is filtered using a bank of triangular bandpass filters, each representing a specific range of mel values. The canonical number of filters is 128 in Machine Learning applications with complex environmental audio tasks, in order to preserve fine spectral cues \cite{melscale}.
 
 
 \section{Convolutional Neural Network}
