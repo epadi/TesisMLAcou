@@ -1,0 +1,53 @@
+\begin{thebibliography}{10}
+
+\bibitem{humecho}
+L.~Thaler, ``Echolocation in people,'' 2022.
+
+\bibitem{RIR03}
+F.~Samad, ``Using audio ray tracing to calculate room impulse response,'' 2009.
+
+\bibitem{beamf}
+Polytec, ``Beamforming,'' 2025.
+
+\bibitem{RC1}
+M.~Lukoševičius and H.~Jaeger, ``Reservoir computing approaches to recurrent
+  neural network training,'' {\em Computer Science Review}, vol.~3, no.~3,
+  pp.~127--149, 2009.
+
+\bibitem{RIR05}
+N.~Peters, H.~Lei, and G.~Friedland, ``Name that room: room identification
+  using acoustic features in a recording,'' MM '12, (New York, NY, USA),
+  p.~841–844, Association for Computing Machinery, 2012.
+
+\bibitem{RIR07}
+I.~Dokmanić, R.~Parhizkar, A.~Walther, Y.~M. Lu, and M.~Vetterli, ``Acoustic
+  echoes reveal room shape,'' {\em Proceedings of the National Academy of
+  Sciences}, vol.~110, no.~30, pp.~12186--12191, 2013.
+
+\bibitem{bat1}
+A.~Brunetto, S.~Hornauer, S.~X. Yu, and F.~Moutarde, ``The audio-visual
+  batvision dataset for research on sight and sound,'' in {\em 2023 IEEE/RSJ
+  International Conference on Intelligent Robots and Systems (IROS)}, p.~1–8,
+  IEEE, Oct. 2023.
+
+\bibitem{shape1}
+T.~Manabe, R.~Fukunaga, K.~Nakatsuma, and M.~Kumon, ``Object surface
+  recognition using microphone array by acoustic standing wave,'' in {\em 2022
+  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pp.~9274--9279, 2022.
+
+\bibitem{echosense}
+M.~Rothstein, Z.~Liu, and I.~Bashima, ``Echosense: Acoustic sensing for
+  enclosed structure monitoring and recognition,'' in {\em 2023 IEEE MIT
+  Undergraduate Research Technology Conference (URTC)}, pp.~1--6, 2023.
+
+\bibitem{RIR09}
+M.~Wang, S.~Clarke, J.-H. Wang, R.~Gao, and J.~Wu, ``Soundcam: A dataset for
+  finding humans using room acoustics,'' 2024.
+
+\bibitem{RIR06}
+J.~Bitterman, D.~Levi, H.~H. Diamandi, S.~Gannot, and T.~Rosenwein, ``Revrir:
+  Joint reverberant speech and room impulse response embedding using
+  contrastive learning with application to room shape classification,'' 2024.
+
+\end{thebibliography}

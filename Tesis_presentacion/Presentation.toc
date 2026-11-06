@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción}{4}{0}{1}
+\beamer@sectionintoc {2}{Trabajos Relacionados}{7}{0}{2}
+\beamer@sectionintoc {3}{Problema y Propuesta de Solución}{9}{0}{3}
+\beamer@sectionintoc {4}{Objetivos y Metodología}{12}{0}{4}
+\beamer@sectionintoc {5}{Metodología}{14}{0}{5}
+\beamer@sectionintoc {6}{Diseño}{18}{0}{6}
