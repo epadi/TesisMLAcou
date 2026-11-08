@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  7 NOV 2026 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  8 NOV 2026 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -926,7 +926,7 @@ Package pdftex.def Info: TEC.jpg  used on input line 87.
 <Picture-5_Lore-Thaler-min-1024x526.jpg, id=83, 1027.84pt x 527.9725pt>
 File: Picture-5_Lore-Thaler-min-1024x526.jpg Graphic file (type jpg)
 <use Picture-5_Lore-Thaler-min-1024x526.jpg>
-Package pdftex.def Info: Picture-5_Lore-Thaler-min-1024x526.jpg  used on input line 131.
+Package pdftex.def Info: Picture-5_Lore-Thaler-min-1024x526.jpg  used on input line 103.
 (pdftex.def)             Requested size: 341.431pt x 170.71089pt.
  [2
 
@@ -935,60 +935,60 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
+) (Presentation.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
 ) [3
 
 ]
-<RIR.png, id=121, 632.3625pt x 262.73157pt>
+<RIR.png, id=123, 632.3625pt x 262.73157pt>
 File: RIR.png Graphic file (type png)
 <use RIR.png>
-Package pdftex.def Info: RIR.png  used on input line 224.
+Package pdftex.def Info: RIR.png  used on input line 139.
 (pdftex.def)             Requested size: 256.07646pt x 113.81023pt.
  [4
 
  <./RIR.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 242.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 157.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 242.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 157.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 242.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 157.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-<Beamforming.png, id=137, 581.17125pt x 387.69844pt>
+<Beamforming.png, id=139, 581.17125pt x 387.69844pt>
 File: Beamforming.png Graphic file (type png)
 <use Beamforming.png>
-Package pdftex.def Info: Beamforming.png  used on input line 242.
+Package pdftex.def Info: Beamforming.png  used on input line 157.
 (pdftex.def)             Requested size: 216.67056pt x 142.263pt.
  [5
 
  <./Beamforming.png>]
-<imgRC1_red.png, id=151, 409.53pt x 233.37187pt>
+<imgRC1_red.png, id=155, 409.53pt x 233.37187pt>
 File: imgRC1_red.png Graphic file (type png)
 <use imgRC1_red.png>
-Package pdftex.def Info: imgRC1_red.png  used on input line 263.
+Package pdftex.def Info: imgRC1_red.png  used on input line 178.
 (pdftex.def)             Requested size: 113.81151pt x 71.13023pt.
 
-Overfull \vbox (3.38678pt too high) detected at line 263
+Overfull \vbox (3.38678pt too high) detected at line 178
  []
 
 [6
 
  <./imgRC1_red.png>]
-Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
+Overfull \hbox (3.84454pt too wide) in paragraph at lines 209--209
 []|\T1/cmss/m/n/8 Clasificación| 
  []
 
 
-Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
-[]|\T1/cmss/m/n/8 Clasificación| 
- []
-
-
-Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
+Overfull \hbox (3.84454pt too wide) in paragraph at lines 209--209
 []|\T1/cmss/m/n/8 Clasificación| 
  []
 
@@ -998,7 +998,7 @@ Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
 <semiconductor-manufacturing-facility.jpg, id=191, 903.375pt x 508.14844pt>
 File: semiconductor-manufacturing-facility.jpg Graphic file (type jpg)
 <use semiconductor-manufacturing-facility.jpg>
-Package pdftex.def Info: semiconductor-manufacturing-facility.jpg  used on input line 323.
+Package pdftex.def Info: semiconductor-manufacturing-facility.jpg  used on input line 234.
 (pdftex.def)             Requested size: 216.6628pt x 142.26508pt.
  [8
 
@@ -1016,10 +1016,10 @@ Package pdftex.def Info: semiconductor-manufacturing-facility.jpg  used on input
 <Measuretogether.png, id=251, 1055.44313pt x 550.30594pt>
 File: Measuretogether.png Graphic file (type png)
 <use Measuretogether.png>
-Package pdftex.def Info: Measuretogether.png  used on input line 402.
+Package pdftex.def Info: Measuretogether.png  used on input line 312.
 (pdftex.def)             Requested size: 341.4206pt x 170.71063pt.
 
-Overfull \vbox (16.09203pt too high) detected at line 402
+Overfull \vbox (16.09203pt too high) detected at line 312
  []
 
 [14
@@ -1028,15 +1028,15 @@ Overfull \vbox (16.09203pt too high) detected at line 402
 <allpoints.png, id=261, 845.1575pt x 845.1575pt>
 File: allpoints.png Graphic file (type png)
 <use allpoints.png>
-Package pdftex.def Info: allpoints.png  used on input line 423.
+Package pdftex.def Info: allpoints.png  used on input line 334.
 (pdftex.def)             Requested size: 199.16656pt x 199.16656pt.
 
-Overfull \hbox (4.16309pt too wide) in paragraph at lines 423--423
+Overfull \hbox (4.16309pt too wide) in paragraph at lines 334--334
  [] 
  []
 
 
-Overfull \vbox (37.54796pt too high) detected at line 423
+Overfull \vbox (9.09521pt too high) detected at line 334
  []
 
 [15
@@ -1045,159 +1045,159 @@ Overfull \vbox (37.54796pt too high) detected at line 423
 <AcousticPipeline.jpeg, id=272, 331.4784pt x 185.0112pt>
 File: AcousticPipeline.jpeg Graphic file (type jpg)
 <use AcousticPipeline.jpeg>
-Package pdftex.def Info: AcousticPipeline.jpeg  used on input line 433.
+Package pdftex.def Info: AcousticPipeline.jpeg  used on input line 344.
 (pdftex.def)             Requested size: 341.44171pt x 142.26991pt.
  [16
 
  <./AcousticPipeline.jpeg>] [17
 
 ]
-<4channelSpec.png, id=296, 481.04718pt x 347.04657pt>
+<4channelSpec.png, id=300, 481.04718pt x 347.04657pt>
 File: 4channelSpec.png Graphic file (type png)
 <use 4channelSpec.png>
-Package pdftex.def Info: 4channelSpec.png  used on input line 482.
+Package pdftex.def Info: 4channelSpec.png  used on input line 396.
 (pdftex.def)             Requested size: 170.71788pt x 142.26883pt.
  [18
 
  <./4channelSpec.png>]
-<sparcityhiddenlayer.png, id=307, 667.74469pt x 372.64218pt>
+<sparcityhiddenlayer.png, id=311, 667.74469pt x 372.64218pt>
 File: sparcityhiddenlayer.png Graphic file (type png)
 <use sparcityhiddenlayer.png>
-Package pdftex.def Info: sparcityhiddenlayer.png  used on input line 521.
+Package pdftex.def Info: sparcityhiddenlayer.png  used on input line 435.
 (pdftex.def)             Requested size: 186.33553pt x 103.98656pt.
  [19
 
  <./sparcityhiddenlayer.png>]
-<Multi-Head_ESN_Estimator.jpg, id=320, 1564.84625pt x 859.21pt>
+<Multi-Head_ESN_Estimator.jpg, id=325, 1564.84625pt x 859.21pt>
 File: Multi-Head_ESN_Estimator.jpg Graphic file (type jpg)
 <use Multi-Head_ESN_Estimator.jpg>
-Package pdftex.def Info: Multi-Head_ESN_Estimator.jpg  used on input line 548.
+Package pdftex.def Info: Multi-Head_ESN_Estimator.jpg  used on input line 466.
 (pdftex.def)             Requested size: 207.25757pt x 113.79889pt.
  [20
 
  <./Multi-Head_ESN_Estimator.jpg>]
-<Beamforming.jpg, id=330, 2152.04pt x 1991.44pt>
+<Beamforming.jpg, id=337, 2152.04pt x 1991.44pt>
 File: Beamforming.jpg Graphic file (type jpg)
 <use Beamforming.jpg>
-Package pdftex.def Info: Beamforming.jpg  used on input line 581.
+Package pdftex.def Info: Beamforming.jpg  used on input line 499.
 (pdftex.def)             Requested size: 170.68903pt x 157.95103pt.
 
-Overfull \vbox (1.24391pt too high) detected at line 581
+Overfull \vbox (1.24391pt too high) detected at line 499
  []
 
 [21
 
  <./Beamforming.jpg>]
-<clasification_location_cnn.png, id=340, 812.3148pt x 729.2043pt>
+<clasification_location_cnn.png, id=348, 812.3148pt x 729.2043pt>
 File: clasification_location_cnn.png Graphic file (type png)
 <use clasification_location_cnn.png>
-Package pdftex.def Info: clasification_location_cnn.png  used on input line 620.
+Package pdftex.def Info: clasification_location_cnn.png  used on input line 538.
 (pdftex.def)             Requested size: 170.71509pt x 153.24869pt.
-<clasification_orientation_cnn.png, id=341, 679.338pt x 715.473pt>
+<clasification_orientation_cnn.png, id=349, 679.338pt x 715.473pt>
 File: clasification_orientation_cnn.png Graphic file (type png)
 <use clasification_orientation_cnn.png>
-Package pdftex.def Info: clasification_orientation_cnn.png  used on input line 620.
+Package pdftex.def Info: clasification_orientation_cnn.png  used on input line 538.
 (pdftex.def)             Requested size: 145.8786pt x 153.6381pt.
 
-Overfull \vbox (8.17215pt too high) detected at line 620
+Overfull \vbox (8.17215pt too high) detected at line 538
  []
 
 [22
 
  <./clasification_location_cnn.png> <./clasification_orientation_cnn.png>]
-<cross-cor_points.png, id=352, 491.58656pt x 436.63126pt>
+<cross-cor_points.png, id=360, 491.58656pt x 436.63126pt>
 File: cross-cor_points.png Graphic file (type png)
 <use cross-cor_points.png>
-Package pdftex.def Info: cross-cor_points.png  used on input line 652.
+Package pdftex.def Info: cross-cor_points.png  used on input line 570.
 (pdftex.def)             Requested size: 170.7152pt x 151.63065pt.
-<conf_matrix_3regions.png, id=353, 1037.37563pt x 913.16156pt>
+<conf_matrix_3regions.png, id=361, 1037.37563pt x 913.16156pt>
 File: conf_matrix_3regions.png Graphic file (type png)
 <use conf_matrix_3regions.png>
-Package pdftex.def Info: conf_matrix_3regions.png  used on input line 652.
+Package pdftex.def Info: conf_matrix_3regions.png  used on input line 570.
 (pdftex.def)             Requested size: 199.1612pt x 175.31387pt.
 
-Overfull \vbox (9.10675pt too high) detected at line 652
+Overfull \vbox (9.10675pt too high) detected at line 570
  []
 
 [23
 
  <./cross-cor_points.png> <./conf_matrix_3regions.png>]
-<reduced_allarround_xcor.png, id=365, 916.92563pt x 1018.55531pt>
+<reduced_allarround_xcor.png, id=373, 916.92563pt x 1018.55531pt>
 File: reduced_allarround_xcor.png Graphic file (type png)
 <use reduced_allarround_xcor.png>
-Package pdftex.def Info: reduced_allarround_xcor.png  used on input line 690.
-(pdftex.def)             Requested size: 153.67868pt x 170.71204pt.
+Package pdftex.def Info: reduced_allarround_xcor.png  used on input line 607.
+(pdftex.def)             Requested size: 227.62186pt x 184.93286pt.
 
-Overfull \vbox (14.00491pt too high) detected at line 690
+Overfull \vbox (7.34482pt too high) detected at line 607
  []
 
 [24
 
  <./reduced_allarround_xcor.png>]
-<CNN_histograms.png, id=376, 1438.173pt x 426.393pt>
+<CNN_histograms.png, id=384, 1438.173pt x 426.393pt>
 File: CNN_histograms.png Graphic file (type png)
 <use CNN_histograms.png>
-Package pdftex.def Info: CNN_histograms.png  used on input line 706.
+Package pdftex.def Info: CNN_histograms.png  used on input line 629.
 (pdftex.def)             Requested size: 426.781pt x 126.53305pt.
  [25
 
  <./CNN_histograms.png>] [26
 
 ]
-<Plot3D_errors.png, id=401, 1654.68187pt x 545.78906pt>
+<Plot3D_errors.png, id=409, 1654.68187pt x 545.78906pt>
 File: Plot3D_errors.png Graphic file (type png)
 <use Plot3D_errors.png>
-Package pdftex.def Info: Plot3D_errors.png  used on input line 748.
+Package pdftex.def Info: Plot3D_errors.png  used on input line 671.
 (pdftex.def)             Requested size: 426.77336pt x 140.76918pt.
  [27
 
  <./Plot3D_errors.png>]
-<abserror_x_y_z.png, id=412, 1788.6825pt x 427.5975pt>
+<abserror_x_y_z.png, id=420, 1788.6825pt x 427.5975pt>
 File: abserror_x_y_z.png Graphic file (type png)
 <use abserror_x_y_z.png>
-Package pdftex.def Info: abserror_x_y_z.png  used on input line 760.
+Package pdftex.def Info: abserror_x_y_z.png  used on input line 683.
 (pdftex.def)             Requested size: 426.78162pt x 102.02522pt.
  [28
 
  <./abserror_x_y_z.png>]
-<ESN_histograms.png, id=423, 1438.173pt x 426.393pt>
+<ESN_histograms.png, id=431, 1436.7276pt x 426.393pt>
 File: ESN_histograms.png Graphic file (type png)
 <use ESN_histograms.png>
-Package pdftex.def Info: ESN_histograms.png  used on input line 775.
-(pdftex.def)             Requested size: 426.781pt x 126.53305pt.
+Package pdftex.def Info: ESN_histograms.png  used on input line 702.
+(pdftex.def)             Requested size: 426.79053pt x 126.66318pt.
  [29
 
  <./ESN_histograms.png>] [30
 
 ]
-<ESN_Plot3D_errors.png, id=444, 1682.53593pt x 562.35094pt>
+<ESN_Plot3D_errors.png, id=452, 1682.53593pt x 562.35094pt>
 File: ESN_Plot3D_errors.png Graphic file (type png)
 <use ESN_Plot3D_errors.png>
-Package pdftex.def Info: ESN_Plot3D_errors.png  used on input line 815.
+Package pdftex.def Info: ESN_Plot3D_errors.png  used on input line 742.
 (pdftex.def)             Requested size: 426.76889pt x 142.63818pt.
  [31
 
  <./ESN_Plot3D_errors.png>]
-<ESN_abserror_x_y_z.png, id=456, 1821.05344pt x 423.08063pt>
+<ESN_abserror_x_y_z.png, id=464, 1821.05344pt x 423.08063pt>
 File: ESN_abserror_x_y_z.png Graphic file (type png)
 <use ESN_abserror_x_y_z.png>
-Package pdftex.def Info: ESN_abserror_x_y_z.png  used on input line 827.
+Package pdftex.def Info: ESN_abserror_x_y_z.png  used on input line 754.
 (pdftex.def)             Requested size: 426.78056pt x 99.15282pt.
  [32
 
  <./ESN_abserror_x_y_z.png>]
-<BeamCNN_abserror_x_y_z.png, id=467, 1951.29pt x 398.99063pt>
+<BeamCNN_abserror_x_y_z.png, id=475, 1951.29pt x 398.99063pt>
 File: BeamCNN_abserror_x_y_z.png Graphic file (type png)
 <use BeamCNN_abserror_x_y_z.png>
-Package pdftex.def Info: BeamCNN_abserror_x_y_z.png  used on input line 843.
+Package pdftex.def Info: BeamCNN_abserror_x_y_z.png  used on input line 770.
 (pdftex.def)             Requested size: 426.78409pt x 87.2668pt.
  [33
 
  <./BeamCNN_abserror_x_y_z.png>]
-<BeamESN_abserror_x_y_z.png, id=478, 1635.86156pt x 375.65344pt>
+<BeamESN_abserror_x_y_z.png, id=486, 1635.86156pt x 375.65344pt>
 File: BeamESN_abserror_x_y_z.png Graphic file (type png)
 <use BeamESN_abserror_x_y_z.png>
-Package pdftex.def Info: BeamESN_abserror_x_y_z.png  used on input line 859.
+Package pdftex.def Info: BeamESN_abserror_x_y_z.png  used on input line 786.
 (pdftex.def)             Requested size: 426.78668pt x 98.00577pt.
  [34
 
@@ -1216,10 +1216,10 @@ Package pdftex.def Info: BeamESN_abserror_x_y_z.png  used on input line 859.
 ] [41
 
 ]
-<gracias.jpg, id=560, 314.67563pt x 219.06844pt>
+<gracias.jpg, id=566, 314.67563pt x 219.06844pt>
 File: gracias.jpg Graphic file (type jpg)
 <use gracias.jpg>
-Package pdftex.def Info: gracias.jpg  used on input line 1147.
+Package pdftex.def Info: gracias.jpg  used on input line 1076.
 (pdftex.def)             Requested size: 170.71455pt x 142.26576pt.
  [42
 
@@ -1257,20 +1257,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.6pt have occurred.
 
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 1713A9852A9FD135AE7BFFA1036EB2DC;1011.
+(rerunfilecheck)             Checksum: F7B1FFF4684D24FE1C5E574564C120D7;1104.
  ) 
 Here is how much of TeX's memory you used:
- 31665 strings out of 467501
- 655564 string characters out of 5407578
- 1059388 words of memory out of 5000000
- 60184 multiletter control sequences out of 15000+600000
- 653635 words of font info for 101 fonts, out of 8000000 for 9000
+ 31673 strings out of 467501
+ 655786 string characters out of 5407578
+ 1059400 words of memory out of 5000000
+ 60187 multiletter control sequences out of 15000+600000
+ 656089 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,123p,890b,866s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecso1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0700.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on Presentation.pdf (45 pages, 7742673 bytes).
+ 128i,16n,123p,943b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecso1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0700.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on Presentation.pdf (45 pages, 7739193 bytes).
 PDF statistics:
- 1259 PDF objects out of 1440 (max. 8388607)
+ 1341 PDF objects out of 1440 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
  265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

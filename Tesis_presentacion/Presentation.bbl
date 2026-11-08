@@ -14,16 +14,6 @@ M.~Lukoševičius and H.~Jaeger, ``Reservoir computing approaches to recurrent
   neural network training,'' {\em Computer Science Review}, vol.~3, no.~3,
   pp.~127--149, 2009.
 
-\bibitem{RIR05}
-N.~Peters, H.~Lei, and G.~Friedland, ``Name that room: room identification
-  using acoustic features in a recording,'' MM '12, (New York, NY, USA),
-  p.~841–844, Association for Computing Machinery, 2012.
-
-\bibitem{RIR07}
-I.~Dokmanić, R.~Parhizkar, A.~Walther, Y.~M. Lu, and M.~Vetterli, ``Acoustic
-  echoes reveal room shape,'' {\em Proceedings of the National Academy of
-  Sciences}, vol.~110, no.~30, pp.~12186--12191, 2013.
-
 \bibitem{bat1}
 A.~Brunetto, S.~Hornauer, S.~X. Yu, and F.~Moutarde, ``The audio-visual
   batvision dataset for research on sight and sound,'' in {\em 2023 IEEE/RSJ
@@ -49,5 +39,14 @@ M.~Wang, S.~Clarke, J.-H. Wang, R.~Gao, and J.~Wu, ``Soundcam: A dataset for
 J.~Bitterman, D.~Levi, H.~H. Diamandi, S.~Gannot, and T.~Rosenwein, ``Revrir:
   Joint reverberant speech and room impulse response embedding using
   contrastive learning with application to room shape classification,'' 2024.
+
+\bibitem{calvo2018bayesian}
+B.~Calvo, G.~Santaf{\'e}, and J.~A. Lozano, ``Bayesian inference for algorithm
+  ranking analysis,'' in {\em Proceedings of the Genetic and Evolutionary
+  Computation Conference}, 2018.
+
+\bibitem{nadeau2003inference}
+C.~Nadeau and Y.~Bengio, ``Inference for the generalization error,'' {\em
+  Machine Learning}, vol.~52, no.~3, pp.~239--281, 2003.
 
 \end{thebibliography}

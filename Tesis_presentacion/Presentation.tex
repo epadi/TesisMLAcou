@@ -23,7 +23,7 @@
 \subtitle[]{Tesis de Maestría en Computación}
 \author[]{Autor: Esteban Padilla Padilla\\Supervisor: Ing. Kervin Sánchez Herrera M.Sc.}
 \institute[]{Escuela de Ingeniería en Computación\\Instituto Tecnológico de Costa Rica}
-\date[]{27 de junio de 2025}
+\date[]{24 de Noviembre de 2026}
 
 \setbeamerfont{title}{size=\fontsize{15}{10}\bfseries}
 \setbeamerfont{subtitle}{size=\fontsize{12}{10}\bfseries}
@@ -46,7 +46,7 @@
                 \textpdfrender{}{\inserttitle}}}};
                 
     %Sutitulo
-    \node[anchor=east] at ([xshift=-60pt, yshift=-90pt] current page.north east) (subtitle)
+    \node[anchor=east] at ([xshift=-125pt, yshift=-90pt] current page.north east) (subtitle)
     {\parbox[t]{.6\paperwidth}{\raggedleft%
             \usebeamerfont{subtitle}\textcolor{black}{%
                 \textpdfrender{}{\insertsubtitle}}}};
@@ -63,7 +63,7 @@
             \usebeamerfont{institute}\textcolor{NavyBlue}{\insertinstitute}}};
     
     %Fecha
-    \node[anchor=east] at ([xshift=-195pt,yshift=-165pt]current page.north east) (date)
+    \node[anchor=east] at ([xshift=-180pt,yshift=-165pt]current page.north east) (date)
     {\parbox[t]{.78\paperwidth}{\raggedleft%
             \usebeamerfont{date}\textcolor{black}{\insertdate}}};
 
@@ -106,7 +106,15 @@
 
 \begin{frame}
 \frametitle{Tabla de contenidos}
-\tableofcontents
+\begingroup
+\addtobeamertemplate{section in toc}{}{\vspace{\baselineskip}}
+\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    \tableofcontents[sections={1-4}]
+    \column{0.5\textwidth}
+    \tableofcontents[sections={5-8}]
+\end{columns}
+\endgroup
 \end{frame}
 
 
@@ -130,7 +138,7 @@
 
 \end{frame}
 
-\begin{frame}{Formación de haces}
+\begin{frame}{\textit{Beamforming}}
     \begin{minipage}{0.45\textwidth}
             
         \begin{itemize}%[<+-|alert@+>]
@@ -143,7 +151,7 @@
         %\uncover<3->{
         \begin{figure}
         \includegraphics[width=\textwidth, height=5cm]{Beamforming.png}
-        \caption{Formación de haces por retraso y sumatoria \cite{beamf}.}
+        \caption{\textit{Beamforming} por retraso y sumatoria \cite{beamf}.}
         \end{figure}
     \end{minipage}
 \end{frame}
@@ -181,10 +189,6 @@
     \hline
     Autores & A\~no& Logro & Tipo & Método \\ 
     \hline
-     Peters et al.  & 2012 & Identificación de habitaciones mediante sonido \cite{RIR05}. & Clasificación & Aprendizaje automático\\ 
-    \hline
-    Dokmanić et al. & 2013 & Estimación de la forma de una habitación mediante ecos \cite{RIR07}. & Estimación & Matrices euclidianas\\ 
-    \hline
     Brunetto et al. & 2020 & Creación de imágenes de profundidad mediante ecos acústicos \cite{bat1}. & Generativo & Aprendizaje automático\\
     \hline 
     Manabe et al.   & 2022 & Reconocimiento de superficies y bordes de objetos usando ondas estacionarias \cite{shape1}. & Estimación & Espectros de distancia\\
@@ -214,7 +218,7 @@
         \small  
         \begin{itemize}%[<+-|alert@+>]
         \item La mayoría tiene como objetivo la identificación o la clasificación.
-        \item Emplean enfoques de aprendizaje de máquina basados en redes de alimentación hacia adelante.
+        \item Emplean enfoques de aprendizaje de máquina basados en redes de \textit{feedforward}.
         \item Debido a la dificultad de las mediciones acústicas, emplean conjuntos de datos pequeños.
         \item Se enfocan en habitaciones grandes.
         \end{itemize}
@@ -254,19 +258,18 @@ Lo anterior nos lleva a formular el siguiente problema:
 
 \begin{frame}{Propuesta de solución}
 
-    A partir de un conjunto de RIH, utilizar aprendizaje de máquina para transformar estas series acústicas en coordenadas de ubicación y ángulos de orientación de un objeto de interés dentro del espacio.\\
+    A partir de un conjunto de señales acusticas que contienen la informacion de RIH, utilizar aprendizaje de máquina para transformar estas series acústicas en coordenadas de ubicación y ángulos de orientación de un objeto de interés dentro del espacio.\\
     Se emplean:
         \begin{itemize}%[<+-|alert@+>]
-        \item Formación de haces para resolver la superposición de ecos.
-        \item Redes neuronales recurrentes de tipo ESN para procesar directamente las series temporales.
+        \item Beamforming para resolver la superposición de ecos.
+        \item Redes neuronales recurrentes de tipo ESN para procesar directamente las secuencias de caracteristicas acústicas.
         \end{itemize}
         
 \end{frame}
 
 \begin{frame}{Hipótesis}
 
- ``Una secuencia de procesamiento que emplee formación de haces y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica contenida en un conjunto de \textbf{RIH} para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro \footnote{Basado en las limitaciones encontradas por Brunetto et al. en el sistema \textit{Batvision} \cite{bat1}.}. Esto se plantea para cambios de posición no menores a 5 cm en alguna de sus coordenadas y cambios de orientación mayores a 10 grados, con un error de posición menor a 2 cm y de orientación menor a 6 grados \footnote{Basado en las dimensiones de deformación detectables por Rothstein et al. en su trabajo \textit{Echosense} \cite{echosense}.}.''     
-
+ ``Una secuencia de procesamiento que emplee \textit{beamforming} y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica de la \textit{\textbf{RIH}} contenida en un conjunto de señales acústicas para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro cubico \footnote{Basado en las limitaciones encontradas por Brunetto et al. en el sistema \textit{Batvision} \cite{bat1}.}. Esto con una resolución de desplazamiento de al menos 5 cm en alguna de sus coordenadas y cambios de orientación mayores a 10 grados, con un error absoluto medio de posición menor a 2 cm y de orientación menor a 6 grados \footnote{Basado en las dimensiones de deformación detectables por Rothstein et al. en su trabajo \textit{Echosense} \cite{echosense}.}.''
 
 \end{frame}
 
@@ -274,12 +277,12 @@ Lo anterior nos lleva a formular el siguiente problema:
 
 
 
-\section{Objetivos y metodología}
+\section{Objetivos}
 %-------------------------------------------------------------------------
 
 \begin{frame}{Objetivo general}
 
-Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto con \textbf{\textit{ESN}} para transformar una entrada multicanal de señales acústicas en coordenadas y ángulos que permitan estimar la ubicación de un objeto en un espacio cerrado.
+Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto con \textbf{\textit{ESN}} para transformar una entrada multicanal de señales acústicas en coordenadas y ángulos que permitan estimar la ubicación de un objeto en un espacio cerrado.
 
 \end{frame}
 
@@ -290,8 +293,8 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 \item Recopilar un conjunto de datos de la respuesta acústica de un espacio pequeño y cerrado para múltiples posiciones de un objeto en su interior.
 \item Desarrollar una etapa de aprendizaje basada en redes neuronales convolucionales (\textit{CNN}) que sirva como referencia para estimar las coordenadas y la orientación de un objeto dentro de un espacio cerrado.
 \item Desarrollar una etapa de aprendizaje que use \textit{ESN} para estimar coordenadas y orientación de un objeto dentro de un espacio cerrado.
-\item Implementar una etapa de formación de haces que permita dividir el espacio en ocho regiones de audición.
-\item Evaluar experimentalmente la exactitud y precisión de los estimadores. 
+\item Implementar una etapa de \textit{beamforming} que permita dividir el espacio en cuatro regiones de audición.
+\item Evaluar experimentalmente la exactitud de los estimadores. 
 
 
 \end{itemize}
@@ -310,13 +313,14 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 
 
 \begin{frame}{Metodología: recolección de datos}
+    \vspace*{-1cm}
     \begin{minipage}{0.5\textwidth}
+        
         \begin{itemize}%[<+-|alert@+>]
-        \item La señal era un fragmento de 0,3 segundos de una melodía.
-        \item El conjunto de datos se recopiló en 26 sesiones.
-        \item Cada sesión consistió en 30 ubicaciones distintas del cubo.
+        \item La señal estímulo utilizada fue un fragmento de 0,3 segundos de una melodía.
+        \item El conjunto de datos se recopiló en 26 sesiones, cada una con 30 ubicaciones distintas del cubo en Z.
         \item En cada ubicación se registraron nueve orientaciones del cubo.
-        \item Por sesión se obtuvieron 270 muestras de cuatro canales cada una.
+        \item Por sesión se obtuvieron 270 muestras de cuatro canales cada una. 
         \item En total se obtuvieron 7020 muestras de cuatro canales cada una.
         \end{itemize}
     \end{minipage}
@@ -324,7 +328,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         %\uncover<3->{
         \begin{figure}
         \includegraphics[width=7cm, height=7cm]{allpoints.png}
-        \caption{Gráfico de las ubicaciones del cubo para cada grabación del conjunto de datos.}
+        \caption{Posiciones del cubo para cada grabación del conjunto de datos.}
         \end{figure}
     \end{minipage}
 \end{frame}
@@ -346,13 +350,16 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \item Se emplea validación cruzada de cinco particiones para el entrenamiento y evaluación de los modelos.
         \item Se evalúan dos métricas:
         \begin{itemize}
-            \item Error absoluto medio (MAE).
-            \item El coeficiente de Pearson.
+            \item Error Absoluto Medio (MAE).
+            \item El coeficiente de correlación de Pearson.
         \end{itemize}
         \item Se presenta la distribución de los errores de estimación para cada coordenada.
-        \item Se comparan los resultados mediante el modelo bayesiano de Plackett-Luce.    
-        \item Se aplica un factor de penalización de Nadeau y Bengio debido a la validación cruzada: $\alpha = \left(1 + K\rho\right)^{-1}$, con $\rho = t_{\text{prueba}}/t_{\text{entrenamiento}} = 0.25$ y $K=5$, lo que resulta en un valor de 0.444.
-        \item La distribución posterior se muestrea mediante un algoritmo de Monte Carlo por cadenas de Markov (MCMC).
+        \item Se comparan los resultados de los estimadores mediante un modelo Bayesiano \cite{calvo2018bayesian}:
+            \begin{itemize}
+                \item Se utiliza un modelo de Plackett-Luce.
+                \item Se aplica un factor de penalización según Nadeau y Bengio debido a la validación cruzada \cite{nadeau2003inference}: $\alpha = \left(1 + K\rho\right)^{-1}$, con $\rho = t_{\text{prueba}}/t_{\text{entrenamiento}} = 0.25$ y $K=5$, lo que resulta en un valor de 0.44.
+                \item La distribución posterior se muestrea mediante un algoritmo de Monte Carlo por cadenas de Markov (MCMC).
+            \end{itemize}
    
         \end{itemize}
 
@@ -400,7 +407,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 
         \begin{table}
             \centering
-            \caption{Hiperparámetros de la red de estado de eco (ESN)}
+            \caption{Hiperparámetros de la red ESN}
             \label{tab:esn_values}
             \scriptsize
             \begin{tabular}{lr}
@@ -420,7 +427,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{sparcityhiddenlayer.png}
-            \caption{\scriptsize MAE en función del tamaño de la capa oculta para distintos valores de esparsidad.}
+            \caption{\scriptsize MAE en función del tamaño de la capa oculta para distintos valores de \textit{sparsity}.}
         \end{figure}
     \end{column}
 \end{columns}
@@ -433,16 +440,20 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 
 \begin{columns}[T,onlytextwidth]
     \begin{column}{0.50\textwidth}
-        \small
+        \scriptsize
         \begin{itemize}
             \item ESN con MAE $> 2$ cm y solo un 62\% de las estimaciones con errores inferiores a $\pm 2$ cm.
-            \item ESN de múltiples cabezas para mejorar la precisión de las estimaciones.
+            \item ESN como clasificador para la ubicación acústica mostrando resultados superiores a 98\%.
+            \item Divide y Conquista:ESN de múltiples cabezas para mejorar la exactitud de las estimaciones.
+            \item MAE $< 2$ cm para cada cabeza y errores por debajo de 2 cm en más del 95\% de las estimaciones.
             \item Cada cabeza se entrena de manera independiente; el tiempo total es de aproximadamente 1.5 horas.
+            \item Total de 4 cabezas: 360 mil parametros.
         
         \end{itemize}
 
     \end{column}
     \begin{column}{0.50\textwidth}
+            \vspace*{-0.6cm}
         \begin{figure}
             \centering
             \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{Multi-Head_ESN_Estimator.jpg}
@@ -457,7 +468,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 
 
 
-\begin{frame}{Formación de haces}
+\begin{frame}{\textit{Beamforming}}
 
 \vspace*{-0.6cm}
 
@@ -467,7 +478,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \centering
         \vspace*{1cm}
         \begin{itemize}
-            \item Frecuencia mínima de operación: 123 Hz.
+            \item De la ecuación del dipolo acústico $D=\frac {1}{4} \frac {c}{f}$ se obtiene la frecuencia mínima de operación : 123 Hz.
             \item Señal de audio con un ancho de banda de 10 kHz y componentes principales a 400 Hz.
             \item Diferencia de tiempo de llegada entre los micrófonos de 1.34 ms, a una velocidad del sonido de 343 m/s.
             \item Cuatro pares diferenciales de audio obtenidos como resultado.
@@ -538,7 +549,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=6cm,height=6cm,keepaspectratio]{cross-cor_points.png}
-            \caption{\scriptsize Punto de sesión utilizado para el análisis de correlación cruzada.}
+            \caption{\scriptsize Sesiónes y regiones utilizadas para disminuir la variacion en los ejes de Euler}
         \end{figure}
 
     \end{column}
@@ -564,32 +575,31 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 \begin{frame}{CNN como clasificador: orientación}
 
 \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
+    \begin{column}{0.40\textwidth}
+
+
         \small
         \centering
-        \vspace*{-0.6cm}
-
-   
-        \begin{figure}
-            \centering
-            \includegraphics[width=6cm,height=6cm,keepaspectratio]{reduced_allarround_xcor.png}
-            \caption{\scriptsize Resultados de correlación cruzada para el análisis de similitud de la señal acústica ante cambios de distancia y orientación en las regiones definidas en el estudio.}
-        \end{figure}
-
-    \end{column}
-    \begin{column}{0.50\textwidth}
-              \small
-              \centering
-        \vspace*{1cm}
+        \vspace*{0.5cm}
         \begin{itemize}
             \item La estimación de la orientación alcanza una exactitud de aproximadamente 29\%.
             \item La exactitud no mejora al reducir el análisis a regiones con menor variación del cubo en sus otros ejes de Euler.
             \item La correlación cruzada muestra que la similitud es mayor ante cambios de orientación que de distancia.
-            
-            
-        
         \end{itemize}
 
+    \end{column}
+    \begin{column}{0.60\textwidth}
+
+        \small
+        \centering
+        \vspace*{-1cm}
+
+   
+        \begin{figure}
+            \centering
+            \includegraphics[width=8cm,height=6.5cm]{reduced_allarround_xcor.png}
+            \caption{\scriptsize Resultados de correlación cruzada para el análisis de similitud de la señal acústica ante cambios de distancia y orientación.}
+        \end{figure}
 
     \end{column}
 \end{columns}
@@ -603,11 +613,17 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 \begin{frame}{CNN como estimador: histogramas}
 
 
+    \small
+
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{CNN_histograms.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de la coordenada X con la CNN en las cinco particiones.}
+            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con CNN para los 5 \textit{folds}.}
         \end{figure}
+
+        \begin{itemize}
+            \item Coordenada X posee 97.83\% de estimaciones con error por debajo de 2cm, Y posee 98.32\% y Z posee 91.98\%.
+        \end{itemize}
 
 
 \end{frame}
@@ -618,7 +634,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 \begin{frame}{CNN como estimador: MAE y correlación de Pearson}
 \begin{table}[htbp]
   \centering
-  \caption{Error absoluto medio (MAE) y coeficientes de correlación de Pearson en las particiones para las coordenadas $X$, $Y$ y $Z$ del modelo de regresión CNN}
+  \caption{Error absoluto medio (MAE) y coeficientes de correlación de Pearson en las particiones para las coordenadas $X$, $Y$ y $Z$ del modelo de regresión CNN.}
   \label{tab:metrics_xyz_folds_cnn}
   \vspace{0.25cm}
   \footnotesize
@@ -649,7 +665,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{Plot3D_errors.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de coordenadas 3D con la CNN en las cinco particiones.}
+            \caption{\scriptsize Gráficos para las tres coordenadas de los errores de estimación con CNN para las cinco particiones.}
         \end{figure}
 
 \end{frame}
@@ -661,7 +677,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{abserror_x_y_z.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de coordenadas 2D con la CNN en las cinco particiones.}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con CNN para las cinco particiones.}
         \end{figure}
 
 \end{frame}
@@ -675,8 +691,12 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{ESN_histograms.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de la coordenada X con la ESN en las cinco particiones.}
+            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con la ESN en las cinco particiones}
         \end{figure}
+
+        \begin{itemize}
+            \item Coordenada X posee 93.15\% de estimaciones con error por debajo de 2cm, Y posee 89.38\% y Z posee 67.94\%.
+        \end{itemize}
 
 
 \end{frame}
@@ -716,7 +736,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{ESN_Plot3D_errors.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de coordenadas 3D con la ESN en las cinco particiones.}
+            \caption{\scriptsize Gráficos para las tres coordenadas de los errores de estimación con la ESN en las cinco particiones.}
         \end{figure}
 
 \end{frame}
@@ -728,39 +748,39 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{ESN_abserror_x_y_z.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de coordenadas 2D con la ESN en las cinco particiones.}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la ESN en las cinco particiones.}
         \end{figure}
 
 \end{frame}
 
 
-\begin{frame}{CNN y formación de haces}
+\begin{frame}{CNN y \textit{beamforming}}
 
          \begin{itemize}
-            \item La formación de haces reduce el MAE y mejora los coeficientes de correlación.
-            \item Reduce los errores en los extremos del rango de medición.
+            \item El \textit{beamforming} reduce el MAE y mejora los coeficientes de correlación.
+            \item Reduce la frecuencia de los errores altos en los extremos del rango de medición.
         \end{itemize}   
 
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{BeamCNN_abserror_x_y_z.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de coordenadas 2D con la CNN en las cinco particiones.}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la CNN y \textit{beamforming} en las cinco particiones.}
         \end{figure}
 
 \end{frame}
 
 
-\begin{frame}{ESN y formación de haces}
+\begin{frame}{ESN y \textit{beamforming}}
 
              \begin{itemize}
-            \item La formación de haces aumenta el MAE y deteriora los coeficientes de correlación.
+            \item El \textit{beamforming} aumenta el MAE y deteriora los coeficientes de correlación.
             \item Aumenta los errores en todo el rango del eje de medición.
         \end{itemize}   
 
         \begin{figure}
             \centering
             \includegraphics[width=15cm,height=13cm,keepaspectratio]{BeamESN_abserror_x_y_z.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de coordenadas 2D con la ESN en las cinco particiones.}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la ESN y \textit{beamforming} en las cinco particiones.}
         \end{figure}
 
 \end{frame}
@@ -778,9 +798,8 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \vspace*{1cm}
 
            \begin{itemize}
-            \item El modelo CNN con formación de haces tiene la probabilidad más alta de ser el mejor para estimar la coordenada X.
+            \item El modelo CNN con \textit{beamforming} tiene la probabilidad más alta de ser el mejor para estimar la coordenada X.
             \item El resultado concuerda con los valores medios de MAE de cada modelo.
-            \item Las probabilidades se reducen por el factor de penalización de Nadeau y Bengio.
         \end{itemize}
 
 
@@ -849,9 +868,9 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \vspace*{1cm}
 
            \begin{itemize}
-            \item El modelo de CNN con formación de haces tiene la probabilidad más alta de ser el mejor modelo para la estimación de la coordenada Y.
-            \item La CNN sin formación de haces presenta el menor MAE promedio.
-            \item La ESN con formación de haces presenta el mayor MAE promedio.
+            \item El modelo de CNN con \textit{beamforming} tiene la probabilidad más alta de ser el mejor modelo para la estimación de la coordenada Y.
+            \item La CNN sin \textit{beamforming} presenta el menor MAE promedio.
+            \item La ESN con \textit{beamforming} presenta el mayor MAE promedio.
         \end{itemize}
 
 
@@ -921,9 +940,9 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
         \vspace*{1cm}
 
            \begin{itemize}
-            \item El modelo de CNN con formación de haces tiene la probabilidad más alta de ser el mejor modelo para la estimación de la coordenada Z.
-            \item La CNN con formación de haces presenta el menor MAE promedio.
-            \item La ESN con formación de haces presenta el mayor MAE promedio.
+            \item El modelo de CNN con \textit{beamforming} tiene la probabilidad más alta de ser el mejor modelo para la estimación de la coordenada Z.
+            \item La CNN con \textit{beamforming} presenta el menor MAE promedio.
+            \item La ESN con \textit{beamforming} presenta el mayor MAE promedio.
         \end{itemize}
 
 
@@ -1000,15 +1019,18 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 \end{frame}
 
 
+\section{Conclusiones y trabajos futuros}
+
+
 \begin{frame}{Conclusiones}
 
 \begin{itemize}
 	
-	\item Sin formación de haces, la CNN fue el mejor modelo en general según la comparación bayesiana, mientras que la ESN fue una alternativa competitiva y más eficiente en parámetros, al utilizar aproximadamente el 3\% de los parámetros entrenables de la CNN ResNet-18.
+	\item Sin \textit{beamforming}, la CNN fue el mejor modelo en general según la comparación bayesiana, mientras que la ESN fue una alternativa competitiva y más eficiente en parámetros, al utilizar aproximadamente el 3\% de los parámetros entrenables de la CNN ResNet-18.
 	
-	\item La formación de haces mejoró el rendimiento de la CNN, especialmente para las coordenadas X y Z, pero no mejoró de forma consistente la estimación de Y y afectó negativamente a la ESN.
+	\item El \textit{beamforming} mejoró el rendimiento de la CNN y afectó negativamente a la ESN.
 	
-	\item La CNN con formación de haces tuvo la mayor probabilidad de ser el mejor modelo según la comparación bayesiana, seguida por la CNN sin formación de haces y después por la ESN.
+	\item La CNN con \textit{beamforming} tuvo la mayor probabilidad de ser el mejor modelo según la comparación bayesiana, seguida por la CNN sin \textit{beamforming} y después por la ESN.
 
 \end{itemize}
 
@@ -1021,7 +1043,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 \begin{itemize}
 
 	\item Investigar el efecto de filtrar los ecos comunes de las representaciones acústicas, presentes en todas las mediciones y sin información sobre la ubicación del cubo. Esta etapa de preprocesamiento podría acelerar el entrenamiento y mejorar la precisión de localización al reducir la información irrelevante.
-	\item Para la arquitectura ESN de múltiples cabezas, explorar el entrenamiento con solapamiento de las redes de alimentación hacia adelante negativa y positiva para reducir los errores en la región de transición.
+	\item Para la arquitectura ESN de múltiples cabezas, explorar el entrenamiento con solapamiento de las redes negativa y positiva para reducir los errores en la región de transición.
 	\item Explorar el uso de una CNN de múltiples cabezas para determinar si mejora la estimación.
 
 
@@ -1043,7 +1065,7 @@ Desarrollar y evaluar un sistema por etapas que emplee formación de haces junto
 
 \end{frame}
 
-\section{}
+
 
 
 
