@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  5 NOV 2026 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.15)  7 NOV 2026 18:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -603,9 +603,34 @@ Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
 \extratabsurround=\skip67
 \backup@length=\skip68
 \ar@cellbox=\box84
+) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen319
+\lightrulewidth=\dimen320
+\cmidrulewidth=\dimen321
+\belowrulesep=\dimen322
+\belowbottomsep=\dimen323
+\aboverulesep=\dimen324
+\abovetopsep=\dimen325
+\cmidrulesep=\dimen326
+\cmidrulekern=\dimen327
+\defaultaddspace=\dimen328
+\@cmidla=\count368
+\@cmidlb=\count369
+\@aboverulesep=\dimen329
+\@belowrulesep=\dimen330
+\@thisruleclass=\count370
+\@lastruleclass=\count371
+\@thisrulewidth=\dimen331
+) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip69
+\multirow@cntb=\count372
+\multirow@dima=\skip70
+\bigstrutjot=\dimen332
 ) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2026/08/08 v26.10 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count368
+\babel@savecnt=\count373
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2105.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2107.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2109.
@@ -613,12 +638,12 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2111.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2113.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2138.
-\U@D=\dimen319
+\U@D=\dimen333
 \l@unhyphenated=\language79
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read3
 LaTeX Info: Redefining \textlatin on input line 4045.
-\bbl@dirlevel=\count369
+\bbl@dirlevel=\count374
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4298.
@@ -634,14 +659,14 @@ Package babel Info: Importing font and identification data for 'spanish'
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
 \es@quottoks=\toks51
-\es@quotdepth=\count370
+\es@quotdepth=\count375
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 14.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 14.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 16.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 16.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2026-08-01 v3.1.12 (3.1.12)
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
@@ -688,41 +713,41 @@ File: pgflibraryshapes.multipart.code.tex 2026-08-01 v3.1.12 (3.1.12)
 File: tikzlibraryarrows.code.tex 2026-08-01 v3.1.12 (3.1.12)
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2026-08-01 v3.1.12 (3.1.12)
-\arrowsize=\dimen320
+\arrowsize=\dimen334
 ))
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
+LaTeX Info: Redefining \. on input line 17.
+LaTeX Info: Redefining \% on input line 17.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 15.
+(babel)             Reported on input line 17.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 22.
+(hyperref)                removing `\\' on input line 24.
 
 (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen321
-\captionmargin=\dimen322
-\caption@leftmargin=\dimen323
-\caption@rightmargin=\dimen324
-\caption@width=\dimen325
-\caption@indent=\dimen326
-\caption@parindent=\dimen327
-\caption@hangindent=\dimen328
+\caption@tempdima=\dimen335
+\captionmargin=\dimen336
+\caption@leftmargin=\dimen337
+\caption@rightmargin=\dimen338
+\caption@width=\dimen339
+\caption@indent=\dimen340
+\caption@parindent=\dimen341
+\caption@hangindent=\dimen342
 Package caption Info: beamer document class detected.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-beamer.sto
 File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to the beamer document classes (AR)
 ))
-\c@caption@flags=\count371
-\c@continuedfloat=\count372
+\c@caption@flags=\count376
+\c@continuedfloat=\count377
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 ) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-07-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count373
+\l__color_backend_stack_int=\count378
 ) (Presentation.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -731,24 +756,24 @@ LaTeX Info: Redefining \% on input line 12.
 )
 \openout1 = `Presentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -786,16 +811,16 @@ LaTeX Font Info:    ... okay on input line 82.
 
 (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count374
-\scratchdimen=\dimen329
+\scratchcounter=\count379
+\scratchdimen=\dimen343
 \scratchbox=\box105
-\nofMPsegments=\count375
-\nofMParguments=\count376
+\nofMPsegments=\count380
+\nofMParguments=\count381
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count377
-\MPscratchDim=\dimen330
-\MPnumerator=\count378
-\makeMPintoPDFobject=\count379
+\MPscratchCnt=\count382
+\MPscratchDim=\dimen344
+\MPnumerator=\count383
+\makeMPintoPDFobject=\count384
 \everyMPtoPDFconversion=\toks53
 ) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -803,64 +828,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 82.
+Package hyperref Info: Link coloring OFF on input line 84.
  (Presentation.out) (Presentation.out)
 \@outlinefile=\write5
 \openout5 = `Presentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 82.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 84.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 82.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 84.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 82.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 82.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 82.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 82.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 82.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 82.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 82.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 82.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 82.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 82.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 82.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 82.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 82.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 84.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 82.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 84.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 82.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 82.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 82.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 82.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 82.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 82.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 82.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 84.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 84.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 82.
+(Font)              `pureletters' in the math version `normal' on input line 84.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 82.
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 84.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 82.
+(Font)              `pureletters' in the math version `bold' on input line 84.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 82.
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 84.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 82.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 84.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-bibliography-dictionary-English.dict
@@ -874,34 +899,34 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (Presentation.nav)
 Package babel Info: Main language set to 'spanish'.
-<Whisk_4529d9a66c.jpg, id=42, 1413.28pt x 770.88pt>
+<Whisk_4529d9a66c.jpg, id=46, 1413.28pt x 770.88pt>
 File: Whisk_4529d9a66c.jpg Graphic file (type jpg)
 <use Whisk_4529d9a66c.jpg>
-Package pdftex.def Info: Whisk_4529d9a66c.jpg  used on input line 85.
+Package pdftex.def Info: Whisk_4529d9a66c.jpg  used on input line 87.
 (pdftex.def)             Requested size: 455.2348pt x 85.3499pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 85.
+(Font)              size <14.4> substituted on input line 87.
 
-<TEC.jpg, id=43, 463.7325pt x 497.60907pt>
+<TEC.jpg, id=47, 463.7325pt x 497.60907pt>
 File: TEC.jpg Graphic file (type jpg)
 <use TEC.jpg>
-Package pdftex.def Info: TEC.jpg  used on input line 85.
+Package pdftex.def Info: TEC.jpg  used on input line 87.
 (pdftex.def)             Requested size: 51.21504pt x 54.94977pt.
 [1
 
 {C:/Users/Esteban/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Whisk_4529d9a66c.jpg> <./TEC.jpg>]
-<Picture-5_Lore-Thaler-min-1024x526.jpg, id=79, 1027.84pt x 527.9725pt>
+<Picture-5_Lore-Thaler-min-1024x526.jpg, id=83, 1027.84pt x 527.9725pt>
 File: Picture-5_Lore-Thaler-min-1024x526.jpg Graphic file (type jpg)
 <use Picture-5_Lore-Thaler-min-1024x526.jpg>
-Package pdftex.def Info: Picture-5_Lore-Thaler-min-1024x526.jpg  used on input line 129.
+Package pdftex.def Info: Picture-5_Lore-Thaler-min-1024x526.jpg  used on input line 131.
 (pdftex.def)             Requested size: 341.431pt x 170.71089pt.
  [2
 
@@ -913,67 +938,67 @@ LaTeX Info: Redefining \% on input line 2.
 ) [3
 
 ]
-<RIR.png, id=115, 632.3625pt x 262.73157pt>
+<RIR.png, id=121, 632.3625pt x 262.73157pt>
 File: RIR.png Graphic file (type png)
 <use RIR.png>
-Package pdftex.def Info: RIR.png  used on input line 222.
+Package pdftex.def Info: RIR.png  used on input line 224.
 (pdftex.def)             Requested size: 256.07646pt x 113.81023pt.
  [4
 
  <./RIR.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 240.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 242.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 240.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 242.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 240.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 242.
  (C:\Users\Esteban\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-<Beamforming.png, id=131, 581.17125pt x 387.69844pt>
+<Beamforming.png, id=137, 581.17125pt x 387.69844pt>
 File: Beamforming.png Graphic file (type png)
 <use Beamforming.png>
-Package pdftex.def Info: Beamforming.png  used on input line 240.
+Package pdftex.def Info: Beamforming.png  used on input line 242.
 (pdftex.def)             Requested size: 216.67056pt x 142.263pt.
  [5
 
  <./Beamforming.png>]
-<imgRC1_red.png, id=147, 409.53pt x 233.37187pt>
+<imgRC1_red.png, id=151, 409.53pt x 233.37187pt>
 File: imgRC1_red.png Graphic file (type png)
 <use imgRC1_red.png>
-Package pdftex.def Info: imgRC1_red.png  used on input line 261.
+Package pdftex.def Info: imgRC1_red.png  used on input line 263.
 (pdftex.def)             Requested size: 113.81151pt x 71.13023pt.
 
-Overfull \vbox (3.38678pt too high) detected at line 261
+Overfull \vbox (3.38678pt too high) detected at line 263
  []
 
 [6
 
  <./imgRC1_red.png>]
-Overfull \hbox (3.84454pt too wide) in paragraph at lines 296--296
+Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
 []|\T1/cmss/m/n/8 Clasificación| 
  []
 
 
-Overfull \hbox (3.84454pt too wide) in paragraph at lines 296--296
+Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
 []|\T1/cmss/m/n/8 Clasificación| 
  []
 
 
-Overfull \hbox (3.84454pt too wide) in paragraph at lines 296--296
+Overfull \hbox (3.84454pt too wide) in paragraph at lines 298--298
 []|\T1/cmss/m/n/8 Clasificación| 
  []
 
 [7
 
 ]
-<semiconductor-manufacturing-facility.jpg, id=190, 903.375pt x 508.14844pt>
+<semiconductor-manufacturing-facility.jpg, id=191, 903.375pt x 508.14844pt>
 File: semiconductor-manufacturing-facility.jpg Graphic file (type jpg)
 <use semiconductor-manufacturing-facility.jpg>
-Package pdftex.def Info: semiconductor-manufacturing-facility.jpg  used on input line 321.
+Package pdftex.def Info: semiconductor-manufacturing-facility.jpg  used on input line 323.
 (pdftex.def)             Requested size: 216.6628pt x 142.26508pt.
  [8
 
@@ -988,96 +1013,222 @@ Package pdftex.def Info: semiconductor-manufacturing-facility.jpg  used on input
 ] [13
 
 ]
-<Measuretogether.png, id=249, 1055.44313pt x 550.30594pt>
+<Measuretogether.png, id=251, 1055.44313pt x 550.30594pt>
 File: Measuretogether.png Graphic file (type png)
 <use Measuretogether.png>
-Package pdftex.def Info: Measuretogether.png  used on input line 400.
+Package pdftex.def Info: Measuretogether.png  used on input line 402.
 (pdftex.def)             Requested size: 341.4206pt x 170.71063pt.
 
-Overfull \vbox (16.09203pt too high) detected at line 400
+Overfull \vbox (16.09203pt too high) detected at line 402
  []
 
 [14
 
  <./Measuretogether.png>]
-<allpoints.png, id=259, 845.1575pt x 845.1575pt>
+<allpoints.png, id=261, 845.1575pt x 845.1575pt>
 File: allpoints.png Graphic file (type png)
 <use allpoints.png>
-Package pdftex.def Info: allpoints.png  used on input line 421.
+Package pdftex.def Info: allpoints.png  used on input line 423.
 (pdftex.def)             Requested size: 199.16656pt x 199.16656pt.
 
-Overfull \hbox (4.16309pt too wide) in paragraph at lines 421--421
+Overfull \hbox (4.16309pt too wide) in paragraph at lines 423--423
  [] 
  []
 
 
-Overfull \vbox (37.54796pt too high) detected at line 421
+Overfull \vbox (37.54796pt too high) detected at line 423
  []
 
 [15
 
  <./allpoints.png>]
-<AcousticPipeline.jpeg, id=270, 331.4784pt x 185.0112pt>
+<AcousticPipeline.jpeg, id=272, 331.4784pt x 185.0112pt>
 File: AcousticPipeline.jpeg Graphic file (type jpg)
 <use AcousticPipeline.jpeg>
-Package pdftex.def Info: AcousticPipeline.jpeg  used on input line 431.
+Package pdftex.def Info: AcousticPipeline.jpeg  used on input line 433.
 (pdftex.def)             Requested size: 341.44171pt x 142.26991pt.
  [16
 
  <./AcousticPipeline.jpeg>] [17
 
 ]
-<4channelSpec.png, id=291, 481.04718pt x 347.04657pt>
+<4channelSpec.png, id=296, 481.04718pt x 347.04657pt>
 File: 4channelSpec.png Graphic file (type png)
 <use 4channelSpec.png>
-Package pdftex.def Info: 4channelSpec.png  used on input line 478.
+Package pdftex.def Info: 4channelSpec.png  used on input line 482.
 (pdftex.def)             Requested size: 170.71788pt x 142.26883pt.
  [18
 
  <./4channelSpec.png>]
-<sparcityhiddenlayer.png, id=302, 667.74469pt x 372.64218pt>
+<sparcityhiddenlayer.png, id=307, 667.74469pt x 372.64218pt>
 File: sparcityhiddenlayer.png Graphic file (type png)
 <use sparcityhiddenlayer.png>
-Package pdftex.def Info: sparcityhiddenlayer.png  used on input line 517.
+Package pdftex.def Info: sparcityhiddenlayer.png  used on input line 521.
 (pdftex.def)             Requested size: 186.33553pt x 103.98656pt.
  [19
 
  <./sparcityhiddenlayer.png>]
-<Multi-Head_ESN_Estimator.jpg, id=316, 1564.84625pt x 859.21pt>
+<Multi-Head_ESN_Estimator.jpg, id=320, 1564.84625pt x 859.21pt>
 File: Multi-Head_ESN_Estimator.jpg Graphic file (type jpg)
 <use Multi-Head_ESN_Estimator.jpg>
-Package pdftex.def Info: Multi-Head_ESN_Estimator.jpg  used on input line 544.
+Package pdftex.def Info: Multi-Head_ESN_Estimator.jpg  used on input line 548.
 (pdftex.def)             Requested size: 207.25757pt x 113.79889pt.
  [20
 
  <./Multi-Head_ESN_Estimator.jpg>]
-<Beamforming.jpg, id=326, 2152.04pt x 1991.44pt>
+<Beamforming.jpg, id=330, 2152.04pt x 1991.44pt>
 File: Beamforming.jpg Graphic file (type jpg)
 <use Beamforming.jpg>
-Package pdftex.def Info: Beamforming.jpg  used on input line 578.
+Package pdftex.def Info: Beamforming.jpg  used on input line 581.
 (pdftex.def)             Requested size: 170.68903pt x 157.95103pt.
 
-Overfull \vbox (1.24391pt too high) detected at line 578
+Overfull \vbox (1.24391pt too high) detected at line 581
  []
 
 [21
 
- <./Beamforming.jpg>] [22
+ <./Beamforming.jpg>]
+<clasification_location_cnn.png, id=340, 812.3148pt x 729.2043pt>
+File: clasification_location_cnn.png Graphic file (type png)
+<use clasification_location_cnn.png>
+Package pdftex.def Info: clasification_location_cnn.png  used on input line 620.
+(pdftex.def)             Requested size: 170.71509pt x 153.24869pt.
+<clasification_orientation_cnn.png, id=341, 679.338pt x 715.473pt>
+File: clasification_orientation_cnn.png Graphic file (type png)
+<use clasification_orientation_cnn.png>
+Package pdftex.def Info: clasification_orientation_cnn.png  used on input line 620.
+(pdftex.def)             Requested size: 145.8786pt x 153.6381pt.
+
+Overfull \vbox (8.17215pt too high) detected at line 620
+ []
+
+[22
+
+ <./clasification_location_cnn.png> <./clasification_orientation_cnn.png>]
+<cross-cor_points.png, id=352, 491.58656pt x 436.63126pt>
+File: cross-cor_points.png Graphic file (type png)
+<use cross-cor_points.png>
+Package pdftex.def Info: cross-cor_points.png  used on input line 652.
+(pdftex.def)             Requested size: 170.7152pt x 151.63065pt.
+<conf_matrix_3regions.png, id=353, 1037.37563pt x 913.16156pt>
+File: conf_matrix_3regions.png Graphic file (type png)
+<use conf_matrix_3regions.png>
+Package pdftex.def Info: conf_matrix_3regions.png  used on input line 652.
+(pdftex.def)             Requested size: 199.1612pt x 175.31387pt.
+
+Overfull \vbox (9.10675pt too high) detected at line 652
+ []
+
+[23
+
+ <./cross-cor_points.png> <./conf_matrix_3regions.png>]
+<reduced_allarround_xcor.png, id=365, 916.92563pt x 1018.55531pt>
+File: reduced_allarround_xcor.png Graphic file (type png)
+<use reduced_allarround_xcor.png>
+Package pdftex.def Info: reduced_allarround_xcor.png  used on input line 690.
+(pdftex.def)             Requested size: 153.67868pt x 170.71204pt.
+
+Overfull \vbox (14.00491pt too high) detected at line 690
+ []
+
+[24
+
+ <./reduced_allarround_xcor.png>]
+<CNN_histograms.png, id=376, 1438.173pt x 426.393pt>
+File: CNN_histograms.png Graphic file (type png)
+<use CNN_histograms.png>
+Package pdftex.def Info: CNN_histograms.png  used on input line 706.
+(pdftex.def)             Requested size: 426.781pt x 126.53305pt.
+ [25
+
+ <./CNN_histograms.png>] [26
 
 ]
-<gracias.jpg, id=345, 314.67563pt x 219.06844pt>
+<Plot3D_errors.png, id=401, 1654.68187pt x 545.78906pt>
+File: Plot3D_errors.png Graphic file (type png)
+<use Plot3D_errors.png>
+Package pdftex.def Info: Plot3D_errors.png  used on input line 748.
+(pdftex.def)             Requested size: 426.77336pt x 140.76918pt.
+ [27
+
+ <./Plot3D_errors.png>]
+<abserror_x_y_z.png, id=412, 1788.6825pt x 427.5975pt>
+File: abserror_x_y_z.png Graphic file (type png)
+<use abserror_x_y_z.png>
+Package pdftex.def Info: abserror_x_y_z.png  used on input line 760.
+(pdftex.def)             Requested size: 426.78162pt x 102.02522pt.
+ [28
+
+ <./abserror_x_y_z.png>]
+<ESN_histograms.png, id=423, 1438.173pt x 426.393pt>
+File: ESN_histograms.png Graphic file (type png)
+<use ESN_histograms.png>
+Package pdftex.def Info: ESN_histograms.png  used on input line 775.
+(pdftex.def)             Requested size: 426.781pt x 126.53305pt.
+ [29
+
+ <./ESN_histograms.png>] [30
+
+]
+<ESN_Plot3D_errors.png, id=444, 1682.53593pt x 562.35094pt>
+File: ESN_Plot3D_errors.png Graphic file (type png)
+<use ESN_Plot3D_errors.png>
+Package pdftex.def Info: ESN_Plot3D_errors.png  used on input line 815.
+(pdftex.def)             Requested size: 426.76889pt x 142.63818pt.
+ [31
+
+ <./ESN_Plot3D_errors.png>]
+<ESN_abserror_x_y_z.png, id=456, 1821.05344pt x 423.08063pt>
+File: ESN_abserror_x_y_z.png Graphic file (type png)
+<use ESN_abserror_x_y_z.png>
+Package pdftex.def Info: ESN_abserror_x_y_z.png  used on input line 827.
+(pdftex.def)             Requested size: 426.78056pt x 99.15282pt.
+ [32
+
+ <./ESN_abserror_x_y_z.png>]
+<BeamCNN_abserror_x_y_z.png, id=467, 1951.29pt x 398.99063pt>
+File: BeamCNN_abserror_x_y_z.png Graphic file (type png)
+<use BeamCNN_abserror_x_y_z.png>
+Package pdftex.def Info: BeamCNN_abserror_x_y_z.png  used on input line 843.
+(pdftex.def)             Requested size: 426.78409pt x 87.2668pt.
+ [33
+
+ <./BeamCNN_abserror_x_y_z.png>]
+<BeamESN_abserror_x_y_z.png, id=478, 1635.86156pt x 375.65344pt>
+File: BeamESN_abserror_x_y_z.png Graphic file (type png)
+<use BeamESN_abserror_x_y_z.png>
+Package pdftex.def Info: BeamESN_abserror_x_y_z.png  used on input line 859.
+(pdftex.def)             Requested size: 426.78668pt x 98.00577pt.
+ [34
+
+ <./BeamESN_abserror_x_y_z.png>] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+]
+<gracias.jpg, id=560, 314.67563pt x 219.06844pt>
 File: gracias.jpg Graphic file (type jpg)
 <use gracias.jpg>
-Package pdftex.def Info: gracias.jpg  used on input line 634.
+Package pdftex.def Info: gracias.jpg  used on input line 1147.
 (pdftex.def)             Requested size: 170.71455pt x 142.26576pt.
- [23
+ [42
 
- <./gracias.jpg>] (Presentation.bbl) [24
+ <./gracias.jpg>] (Presentation.bbl) [43
 
- <C:/Users/Esteban/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>] [25
+ <C:/Users/Esteban/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>] [44
 
 
-] [26
+] [45
 
 
 ]
@@ -1106,20 +1257,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.6pt have occurred.
 
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: D9BE04323C2470077A8C025E6DBFA7B5;854.
+(rerunfilecheck)             Checksum: 1713A9852A9FD135AE7BFFA1036EB2DC;1011.
  ) 
 Here is how much of TeX's memory you used:
- 31341 strings out of 467501
- 649147 string characters out of 5407578
- 1055765 words of memory out of 5000000
- 59911 multiletter control sequences out of 15000+600000
- 656964 words of font info for 105 fonts, out of 8000000 for 9000
+ 31665 strings out of 467501
+ 655564 string characters out of 5407578
+ 1059388 words of memory out of 5000000
+ 60184 multiletter control sequences out of 15000+600000
+ 653635 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,123p,924b,860s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecso1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0700.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecso1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecso1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Presentation.pdf (26 pages, 5250785 bytes).
+ 128i,16n,123p,890b,866s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsi0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecso1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0700.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0800.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1000.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\Esteban\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Esteban/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on Presentation.pdf (45 pages, 7742673 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1259 PDF objects out of 1440 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
