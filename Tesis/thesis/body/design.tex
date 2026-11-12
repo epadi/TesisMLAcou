@@ -3,11 +3,11 @@
 \label{chapter:design}
 \newpage
 
-This chapter presents the models use to test the hipotesis. As the ground truth a CNN estimator is selected to explore the the capability of a model to learn and estimate from the acoustic signals the location of an object in a tridimentional space. The input trasformation to images and the changes requiered to the network to work as an estimator are mentioned. Also, in this section the design of a memory eficient network in the form of an ESN estimator is presented. A justification for the ESN model architecture selection, the input trasformation and training and evaluation process is provided. Finally, the beamforming mechanism intended to highlight acoustic echoes from specific regions is described.
+This chapter presents the models used to test the hypothesis. A CNN estimator is selected as the baseline for assessing a model's ability to estimate an object's location in three-dimensional space from acoustic signals. This chapter describes the input transformation into images and the changes required to use the network as an estimator. It also presents the design of a memory-efficient ESN estimator and justifies its architecture, input transformation, training, and evaluation processes. Finally, it describes the beamforming mechanism used to highlight acoustic echoes from specific regions.
 
 \section{CNN Estimator}
 
-The related work presented in seccion 2.6.2 provide insights respect the potential use of neural network to estimate the location of an object using acoustic echoes, and considering the especific findings in \cite{echosense} is that a metric is extrapolated for the magnitude of estimation error. Due the fact that the dataset was new and unexplored, the model choose to establish a reference point was a CNN, this with the premise that a CNN have enogh representational capacity to learn from an especific acostic trasformation the function that maps the input features to espatial coordinates, providing valuable information if our original goals can be achieved with a more restricted network as is the case of an ESN. 
+The related work presented in seccion 2.6.2 provide insights respect the potential use of neural network to estimate the location of an object using acoustic echoes, and considering the especific findings in \cite{echosense} is that a metric is extrapolated for the magnitude of estimation error. Due the fact that the dataset was new and unexplored, the model chosen to establish a reference point was a CNN, this with the premise that a CNN has enough representational capacity to learn from an especific acoustic trasformation the function that maps the input features to espatial coordinates, providing valuable information if our original goals can be achieved with a more restricted network as is the case of an ESN.
 
 \subsection{Log-Mel spectrogram as images}
 
@@ -18,12 +18,12 @@ To train a CNN on the dataset, a Log-Mel transformation is applied to the audio 
 \text{Frequency frames} = \frac{signal\_length}{window\_step} 
 \end{equation}
 
-Finally to reduce feature variance in the mel bands a logaritmic trasformation is perform. The resulting Log-Mel matrix is transform to images of 570x370 pixels per location-orientation as the one shown in Figure \ref{spectogram4ch}. 
+Finally to reduce feature variance in the mel bands a logarithmic transformation is performed. The resulting Log-Mel matrix is transform to images of 570x370 pixels per location-orientation as the one shown in Figure \ref{spectogram4ch}.
 
 \begin{figure}[!htb]
         \begin{center}        
             \includegraphics[height=10cm, width=15cm]{../img/4channelSpec.png}
-            \caption{Log-Mel spectograms correspondig of the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}
+            \caption{Log-Mel spectrograms corresponding of the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}
         \label{spectogram4ch}                         
         \end{center}
 \end{figure}
@@ -36,7 +36,7 @@ The model architecture selected for the task of classifying and estimating the l
 
 \subsection{CNN Training and Evaluation}
 
-The network was trained to minimize the mean squared error (MSE) using the adaptive moment estimation (Adam) optimizer. Five-fold cross-validation was used: in each fold, four folds were used for training and the remaining fold for testing, corresponding to an 80:20 train-test split. The model was trained for 40 epochs in each fold, with 350 batches of 32 samples per epoch for a total time of training per fold near to 1.2 hours.
+The network was trained to minimize the mean squared error (MSE) using the adaptive moment estimation (Adam) optimizer. Five-fold cross-validation was used: in each fold, four folds were used for training and the remaining fold for testing, corresponding to an 80:20 train-test split. The model was trained for 40 epochs in each fold, with 350 batches of 16 samples per epoch for a total time of training per fold near to 1.2 hours.
 
 Before training, the target values for X, Y, and Z were normalized. Min-max normalization scaled each value to the range $[0,1]$ to match the network's output range. An additional normalization step was applied to X and Y because the points lie along a circular trajectory. The robotic arm's rotational movement in constant 10-degree increments means that the projections of these coordinates are expressed as multiples of sine and cosine functions. Consequently, the coordinate values are not uniformly distributed. The arcsine transformation shown in Equation \ref{eq:normalization} was therefore applied to obtain an equidistant mapping.
 
@@ -59,7 +59,7 @@ For the ESN, each audio channel is cropped to 20,000 samples to remove the low-e
 
 \subsection{ESN Architecture}
 
-The development of the ESN architecture begins with the vanilla flavor of the ESN all set to work as an clasifier. for exploration and evaluation the network is first configure as an clasifier due that this task is easier than regression \cite{vapnikstatistical}, so the earlier evaluations and changes on the ESN are conducted in it clasification mode. 
+The development of the ESN architecture begins with the vanilla flavor of the ESN all set to work as a classifier. for exploration and evaluation the network is first configured as a classifier due to the fact that this task is easier than regression \cite{vapnikstatistical}, so the earlier evaluations and changes on the ESN are conducted in its classification mode.
 
 The base ESN had as input four mel spectograms sequences of 128 bands each, for a total of 512 inputs, the neurons use tanh activation function for reservoir and the feedforward network. The output softmax layer clasifiy into 26 classes based on the session in which the audio is recorded.
 
@@ -76,12 +76,12 @@ The parameters for the networks are show in the table \ref{tab:esn_parameters}:
 \texttt{reservoir size} & The total number of internal recurrent neurons within the reservoir, determining the dimensional capacity to represent complex dynamical states. \\
 \texttt{spectral radius} & The largest absolute eigenvalue of the recurrent weight matrix, governing stability, memory decay rate, and the Echo State Property (ESP). \\
 \texttt{sparsity} & The fraction of zero-weight connections within the reservoir matrix, decoupling internal sub-dynamics and lowering computation costs per update. \\
-\texttt{leaky rate} & The leaking integration parameter $[0, 1]$, controlling how fast the reseirvoir forget previous states. \\
+\texttt{leaky rate} & The leaking integration parameter $[0, 1]$, controlling how fast the reservoir forgets previous states. \\
 \hline
 \end{tabular}
 \end{table}
 
-The spectral radius that control how memory decay in the reservoir is desire to have it as hier as posible in order that the network present a long term memory behaviour, the maximun value recommended had a boundary of 1 to ensure the ESP to warranty that the internal states of the reservoir will converge over time avoiding instability. For the ESN presented in this work a value of 0.99 was choose as spectral radius for the reservoir matrix. The leaky rate also controlls how fast the reservoir forget and it set to 0.1 to avoid memory loss and keep as much as posible of the history of the input sequence in the reservoir.
+The spectral radius that control how memory decay in the reservoir is desire to have it as higher as possible in order that the network present a long term memory behaviour, the maximum value recommended had a boundary of 1 to ensure the ESP to warranty that the internal states of the reservoir will converge over time avoiding instability. For the ESN presented in this work a value of 0.99 was choose as spectral radius for the reservoir matrix. The leaky rate also controls how fast the reservoir forget and it set to 0.1 to avoid memory loss and keep as much as posible of the history of the input sequence in the reservoir.
 
 Sparsity was set to 0.1 to maintain sufficient connectivity among the reservoir neurons. Because reservoir size affects both memory use during training and the number of trainable weights in the feedforward network, a search was conducted to identify a favorable balance between accuracy and model size. Figure \ref{reservoirsize} shows the relationship between accuracy and reservoir size. Accuracy increases with reservoir size up to 1,500 neurons; beyond that point, further increases do not necessarily improve network performance.
 
@@ -270,7 +270,7 @@ The microphones are arranged in pairs in a plane parallel to the X-Z plane, enab
  \Delta t_{\text{arrival}} = \frac{0.4642\,\text{m}}{346\,\text{m/s}} = 1.34\,\text{ms}
 \end{equation}
 
-As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.34\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are summed. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignemet of the signals resulting in constructive interference for signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
+As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.34\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are summed. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignment of the signals resulting in constructive interference for signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
 
 \begin{figure}[H]
     \begin{center}

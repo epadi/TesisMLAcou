@@ -190,8 +190,6 @@
     Autores & A\~no& Logro & Tipo & Método \\ 
     \hline
     Brunetto et al. & 2020 & Creación de imágenes de profundidad mediante ecos acústicos \cite{bat1}. & Generativo & Aprendizaje automático\\
-    \hline 
-    Manabe et al.   & 2022 & Reconocimiento de superficies y bordes de objetos usando ondas estacionarias \cite{shape1}. & Estimación & Espectros de distancia\\
     \hline
     Rothstein et al. & 2023 & Identificación estructuras cerradas desde su interior mediante ecos \cite{echosense}. & Clasificación & Aprendizaje automático\\
     \hline 
@@ -218,8 +216,7 @@
         \small  
         \begin{itemize}%[<+-|alert@+>]
         \item La mayoría tiene como objetivo la identificación o la clasificación.
-        \item Emplean enfoques de aprendizaje de máquina basados en redes de \textit{feedforward}.
-        \item Debido a la dificultad de las mediciones acústicas, emplean conjuntos de datos pequeños.
+        \item Emplean enfoques de aprendizaje de máquina basados en redes neuronales convolucionales (\textit{CNN}).
         \item Se enfocan en habitaciones grandes.
         \end{itemize}
         
@@ -282,7 +279,7 @@ Lo anterior nos lleva a formular el siguiente problema:
 
 \begin{frame}{Objetivo general}
 
-Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto con \textbf{\textit{ESN}} para transformar una entrada multicanal de señales acústicas en coordenadas y ángulos que permitan estimar la ubicación de un objeto en un espacio cerrado.
+Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto con \textbf{\textit{CNN}} y \textbf{\textit{ESN}} para transformar una entrada multicanal de señales acústicas en coordenadas y ángulos que permitan estimar la ubicación de un objeto en un espacio cerrado.
 
 \end{frame}
 
@@ -318,10 +315,8 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
         
         \begin{itemize}%[<+-|alert@+>]
         \item La señal estímulo utilizada fue un fragmento de 0,3 segundos de una melodía.
-        \item El conjunto de datos se recopiló en 26 sesiones, cada una con 30 ubicaciones distintas del cubo en Z.
-        \item En cada ubicación se registraron nueve orientaciones del cubo.
-        \item Por sesión se obtuvieron 270 muestras de cuatro canales cada una. 
-        \item En total se obtuvieron 7020 muestras de cuatro canales cada una.
+        \item El conjunto de datos se recopiló en 26 sesiones $X$ 30 ubicaciones distintas del cubo en Z $X$ 9 orientaciones.
+        \item En total se obtuvieron 7020 muestras de cuatro canales, para un total de 28080 grabaciones.
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.45\textwidth}
@@ -380,7 +375,7 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
             \item La entrada es una pila de 4 imágenes de espectrogramas RGB.
             \item Única salida de regresión con función de activación sigmoidal.
             \item Normalización mínimo-máximo y arcoseno.
-            \item Entrenamiento durante 40 épocas: aproximadamente 1.2 horas.
+            \item Entrenamiento durante 40 épocas
   
         \end{itemize}
     \end{minipage}
@@ -396,13 +391,14 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 \end{frame}
 
 \begin{frame}{ESN}
-
+    \vspace*{-0.6cm}
 \begin{columns}[T,onlytextwidth]
     \begin{column}{0.55\textwidth}
         \small
         \begin{itemize}
-            \item Secuencia de espectrogramas como entrada para la ESN con 128 características por 40 tramas.
-            \item Búsqueda en cuadrícula para la optimización de hiperparámetros.
+            \item Espectograma como secuencia de 128 bandas Mel por 40 tramas.
+            \item Búsqueda en cuadrícula para la optimización de hiperparámetros del ESN.
+            \item Primero se resuelve el problema como clasificacion y luego como regresion siguendo el principo de vapnik \cite{vapnikstatistical}.
         \end{itemize}
 
         \begin{table}
@@ -442,11 +438,11 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
     \begin{column}{0.50\textwidth}
         \scriptsize
         \begin{itemize}
-            \item ESN con MAE $> 2$ cm y solo un 62\% de las estimaciones con errores inferiores a $\pm 2$ cm.
             \item ESN como clasificador para la ubicación acústica mostrando resultados superiores a 98\%.
+            \item ESN como estimador con MAE cercanos $2$ cm y un 38\% de las estimaciones con errores superiores a $\pm 2$ cm.
             \item Divide y Conquista:ESN de múltiples cabezas para mejorar la exactitud de las estimaciones.
-            \item MAE $< 2$ cm para cada cabeza y errores por debajo de 2 cm en más del 95\% de las estimaciones.
-            \item Cada cabeza se entrena de manera independiente; el tiempo total es de aproximadamente 1.5 horas.
+            \item MAE $< 1$ cm para cada cabeza y 95\% de las estimaciones con errores inferiores a $\pm 2$ cm.
+            \item Cada cabeza se entrena de manera independiente. La lógica de selección determina la salida final.
             \item Total de 4 cabezas: 360 mil parametros.
         
         \end{itemize}

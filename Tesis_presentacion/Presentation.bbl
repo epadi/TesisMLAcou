@@ -20,12 +20,6 @@ A.~Brunetto, S.~Hornauer, S.~X. Yu, and F.~Moutarde, ``The audio-visual
   International Conference on Intelligent Robots and Systems (IROS)}, p.~1–8,
   IEEE, Oct. 2023.
 
-\bibitem{shape1}
-T.~Manabe, R.~Fukunaga, K.~Nakatsuma, and M.~Kumon, ``Object surface
-  recognition using microphone array by acoustic standing wave,'' in {\em 2022
-  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  pp.~9274--9279, 2022.
-
 \bibitem{echosense}
 M.~Rothstein, Z.~Liu, and I.~Bashima, ``Echosense: Acoustic sensing for
   enclosed structure monitoring and recognition,'' in {\em 2023 IEEE MIT
@@ -48,5 +42,10 @@ B.~Calvo, G.~Santaf{\'e}, and J.~A. Lozano, ``Bayesian inference for algorithm
 \bibitem{nadeau2003inference}
 C.~Nadeau and Y.~Bengio, ``Inference for the generalization error,'' {\em
   Machine Learning}, vol.~52, no.~3, pp.~239--281, 2003.
+
+\bibitem{vapnikstatistical}
+V.~N. Vapnik, {\em Statistical Learning Theory}.
+\newblock Adaptive and Learning Systems for Signal Processing, Communications,
+  and Control, New York, NY, USA: John Wiley \& Sons, 1998.
 
 \end{thebibliography}

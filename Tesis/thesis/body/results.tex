@@ -3,16 +3,16 @@
 \label{chapter:results}
 \newpage
 
-This chapter presents the results obtained from the evaluation of the proposed models for acoustic inferencing tasks. First, the models are evaluated on their ability to classify the acoustic location of the cube inside the measurement enviroment. Then, a more broad evaluation is conducted where the models are assessed on their ability to do regression and properly estimate the location of the object inside the measurement box. For the regresion results, the figures of merit are presented for each model on each spatial dimension they are traing to predict. Finally a probabilistic evaluation is conducted to compare the performance of the models against each other.
+This chapter presents the results obtained from the evaluation of the proposed models for acoustic inferencing tasks. First, the models are evaluated on their ability to classify the acoustic location of the cube inside the measurement environment. Then, a more broad evaluation is conducted where the models are assessed on their ability to do regression and properly estimate the location of the object inside the measurement box. For the regression results, the figures of merit are presented for each model on each spatial dimension they are trained to predict. Finally a probabilistic evaluation is conducted to compare the performance of the models against each other.
 
 
 \section{CNN for Acoustic Classification}
 
-The first model trained and evaluated is the Resnet18 CNN, this network is powerfull for image classification tasks \cite{Resnetwhy} and it used as the reference model for the acoustic inferencing tasks presented in this work.
+The first model trained and evaluated is the ResNet-18 CNN. This network is powerful for image classification tasks \cite{Resnetwhy} and is used as the reference model for the acoustic inference tasks in this work.
 
 \subsection{CNN Model for Acoustic to Spatial Location Classification}
 
-The CNN was trained on a classification task where it had to classify the acoustic location of the sound source from the 26 possible locations, each one corresponding to a specific recording session characterized by the same X, and Y location and only changing the Z location. The network was trained on 20 epochs. After the training the network shows a accuracy of 99.4\% on training and 98.59\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix}.
+The CNN was trained to classify the sound source's acoustic location among 26 possible locations. Each location corresponds to a recording session with the same X and Y coordinates but a different Z coordinate. The network was trained for 20 epochs and achieved accuracies of 99.4\% on the training set and 98.59\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix}.
 
 \begin{figure}[H]
     \begin{center}
@@ -64,17 +64,17 @@ Because the CNN performed poorly on the overall orientation classification task,
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=10cm, width=12cm]{../img/cross-cor_points.png}
-        \caption{Session point used for cross-correlation analysis. the image also shows the three regions for analysis of the orientation classification task.}
+        \caption{Session point used for cross-correlation analysis. The image also shows the three regions used to analyze the orientation-classification task.}
         \label{fig:session_points}
     \end{center}
 \end{figure}
 
-Given the even poorly performing test accuracies across the three regions, it is evident that the model struggles to generalize well beyond the training data. To investigate the similarity of the acoustic signal when the cube is rotated or the cube is moved, a cross-correlation analysis was performed for the center point of each sesion on each region, as illustrated in figure \ref{fig:session_points}. The results of the cross-correlation analysis are presented in figure \ref{fig:cross_correlation_results}, showing the degree of similarity for different distances and orientations. This analysis helps to understand the limitations of the model in capturing the spatial variations of the acoustic signal.
+Given the even poorly performing test accuracies across the three regions, it is evident that the model struggles to generalize well beyond the training data. To investigate the similarity of the acoustic signal when the cube is rotated or moved, a cross-correlation analysis was performed for the center point of each session in each region, as illustrated in Figure \ref{fig:session_points}. The results are presented in Figure \ref{fig:cross_correlation_results}, showing the degree of similarity for different distances and orientations. This analysis helps explain the limitations of the model in capturing spatial variations in the acoustic signal.
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=14cm, width=15cm]{../img/reduced_allarround_xcor.png}
-        \caption{Cross-correlation results for distance and orientation for similarity analysis of the acoustic signal for the regions defined in the figure \ref{fig:session_points}.}
+        \caption{Cross-correlation results for distance and orientation, used to analyze acoustic-signal similarity in the regions defined in Figure \ref{fig:session_points}.}
         \label{fig:cross_correlation_results}
     \end{center}
 \end{figure}
@@ -193,7 +193,7 @@ Figure \ref{fig:plot3d_errors} shows the estimation error for each data point ac
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=14cm, width=17cm]{../img/Plot3D_errors.png}
-        \caption{3D scatered plot showing the absolute error value for all the points estimated in the five folds as test set for the CNN Regression Model. The results are shown for the estimation error of each coordinate in centimeters.}
+        \caption{3D scatter plot showing the absolute error value for all the points estimated in the five folds as test set for the CNN Regression Model. The results are shown for the estimation error of each coordinate in centimeters.}
         \label{fig:plot3d_errors}
     \end{center}
 \end{figure}
@@ -201,7 +201,7 @@ Figure \ref{fig:plot3d_errors} shows the estimation error for each data point ac
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=19cm, width=13cm]{../img/abserror_x_y_z.png}
-        \caption{Scatered plot showing the absolute estimation error vs it respective coordinate axis for the CNN Regression Model. The results are shown for the estimation error of each coordinate in centimeters.}
+        \caption{Scatter plot showing the absolute estimation error vs. its respective coordinate axis for the CNN Regression Model. The results are shown for the estimation error of each coordinate in centimeters.}
         \label{fig:plot2d_errors}
     \end{center}
 \end{figure}
@@ -273,7 +273,7 @@ The MAE for each network is presented in table \ref{tab:ESN_mae_xyz_folds} and t
 \end{table}
 
 
-With respet to the distribution of errors per range, the table \ref{tab:ESN_error_distribution_xyz} show the results for the ESN evaluated in the same five fold condition as the CNN.
+With respect to the distribution of errors by range, Table \ref{tab:ESN_error_distribution_xyz} shows the ESN results under the same five-fold cross-validation conditions as the CNN.
 
 \begin{table}[htbp]
   \centering
@@ -309,7 +309,7 @@ The figure \ref{fig:esn_plot3d_errors} shows the 3D scatter plot of the absolute
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=14cm, width=17cm]{../img/ESN_Plot3D_errors.png}
-        \caption{3D scatered plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}
+        \caption{3D scatter plot showing the absolute error value for all the points estimated with the ESN in the five folds as test set.}
         \label{fig:esn_plot3d_errors}
     \end{center}
 \end{figure}
@@ -337,7 +337,7 @@ The figure \ref{fig:esn_plot3d_errors} shows the 3D scatter plot of the absolute
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=19cm, width=13cm]{../img/ESN_abserror_x_y_z.png}
-        \caption{Scatered plot showing the absolute estimation error vs its respective coordinate axis for the ESN across five folds.}
+        \caption{Scatter plot showing the absolute estimation error vs. its respective coordinate axis for the ESN across five folds.}
         \label{fig:esn_plot2d_errors}
     \end{center}
 \end{figure}
@@ -345,7 +345,7 @@ The figure \ref{fig:esn_plot3d_errors} shows the 3D scatter plot of the absolute
 
 \section{Beamforming}
 
-This section presents the results for the CNN and ESN models when the input signals are preprocessed with beamforming. The network architectures remain the same as previously described; the only difference is that beamforming is applied to the input signals to emphasize specific reflections according to their directions of arrival. For both models using beamforming, the Mean Absolute Error (MAE), the Pearson correlation coefficient, and absolute error distribution grahics are reported in this section. The detailed fold-wise histograms and the percentages of samples within the estimation error ranges are provided in the appendix.
+This section presents the results for the CNN and ESN models when the input signals are preprocessed with beamforming. The network architectures remain the same as previously described; the only difference is that beamforming is applied to the input signals to emphasize specific reflections according to their directions of arrival. For both models using beamforming, this section reports the Mean Absolute Error (MAE), the Pearson correlation coefficient, and plots of the absolute error distributions. The detailed fold-wise histograms and the percentages of samples within the estimation error ranges are provided in the appendix.
 
 \subsection{CNN and Beamforming for Acoustic to Spatial Location Regression}
 \label{subsec:cnn_beamforming_regression}
@@ -400,17 +400,17 @@ For the CNN model, the input signals are preprocessed with beamforming before be
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=14cm, width=17cm]{../img/BeamCNN_Plot3D_errors.png}
-        \caption{3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set for the CNN Model with Beamforming.}
+        \caption{3D scatter plot of the absolute estimation errors for all points predicted by the CNN with beamforming across the five test folds.}
         \label{fig:BeamCNN_plot3d_errors}
     \end{center}
 \end{figure}
 
-The figure \ref{fig:BeamCNN_plot3d_errors} shows the error distribution in a 3D scattered plot of the absolute error values for all the points estimated in the five folds as the test set for the CNN Model with Beamforming. The figure \ref{fig:BeamCNN_plot2d_errors} presents the absolute estimation error against the respective coordinate axis for the same model.
+Figure \ref{fig:BeamCNN_plot3d_errors} shows the distribution of absolute estimation errors across the five test folds for the CNN with beamforming. Figure \ref{fig:BeamCNN_plot2d_errors} shows the absolute estimation error versus the corresponding coordinate for each axis.
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=16cm, width=12cm]{../img/BeamCNN_abserror_x_y_z.png}
-        \caption{Scattered plot showing the absolute estimation error vs the respective coordinate axis for the CNN Model with Beamforming.}
+        \caption{Scatter plot of the CNN with beamforming's absolute estimation error versus the corresponding coordinate for each axis.}
         \label{fig:BeamCNN_plot2d_errors}
     \end{center}
 \end{figure}
@@ -466,17 +466,17 @@ The last model evaluated is the Multihead Echo State Network with Beamforming. T
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=14cm, width=17cm]{../img/BeamESN_Plot3D_errors.png}
-        \caption{3D scattered plot showing the absolute error value for all the points estimated in the five folds as test set for the ESN with Beamforming.}
+        \caption{3D scatter plot of the absolute estimation errors for all points predicted by the ESN with beamforming across the five test folds.}
         \label{fig:BeamESN_plot3d_errors}
     \end{center}
 \end{figure}
 
-In order to visualize the distribution and the magnitude of the estimation errors under this configuration model-preprocesing setup, the scattered plots in figures \ref{fig:BeamESN_plot3d_errors} and \ref{fig:BeamESN_plot2d_errors} are presented. These plots allow visual inspection of how the errors are distributed across the spatial coordinates and help identify any patterns or biases in the model's predictions.
+To visualize the distribution and magnitude of the estimation errors for this model and preprocessing setup, Figures \ref{fig:BeamESN_plot3d_errors} and \ref{fig:BeamESN_plot2d_errors} show scatter plots. These plots help identify patterns or biases in the model's predictions across the spatial coordinates.
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[height=19cm, width=12cm]{../img/BeamESN_abserror_x_y_z.png}
-        \caption{Scattered plot showing the absolute estimation error vs the respective coordinate axis for the ESN with Beamforming.}
+        \caption{Scatter plot of the ESN with beamforming's absolute estimation error versus the corresponding coordinate for each axis.}
         \label{fig:BeamESN_plot2d_errors}
     \end{center}
 \end{figure}
@@ -491,7 +491,7 @@ The Plackett--Luce likelihood was discounted by a factor $\alpha$ of $\left(1 + 
 
 For each coordinate, the respective MAE values and model comparison results are presented as follows:
 \\
-The estimation in the $X$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_x_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_x}. The Beam prefixed indicate the respective models incorporate beamforming into the input data processing pipeline.
+For the $X$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_x_models_comparison}. The probabilistic model comparison results are presented in Table \ref{tab:best_model_probability_x}. The "Beam" prefix indicates that the corresponding models incorporate beamforming into the input data-processing pipeline.
 
 \begin{table}[H]
   \centering
@@ -532,7 +532,7 @@ The estimation in the $X$ coordinate, the MAE values across the five folds for e
 \end{table}
 
 
-For estimation in the $Y$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_y_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_y}.
+For estimation in the $Y$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_y_models_comparison}. The probabilistic model comparison results are presented in Table \ref{tab:best_model_probability_y}.
 
 \begin{table}[H]
   \centering
@@ -574,7 +574,7 @@ For estimation in the $Y$ coordinate, the MAE values across the five folds for e
 \end{table}
 
 
-For estimation in the $Z$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_z_models_comparison}. The results from the probabilistic model comparison is presented in table \ref{tab:best_model_probability_z}.
+For estimation in the $Z$ coordinate, the MAE values across the five folds for each model are presented in Table \ref{tab:mae_z_models_comparison}. The probabilistic model comparison results are presented in Table \ref{tab:best_model_probability_z}.
 
 \begin{table}[H]
   \centering

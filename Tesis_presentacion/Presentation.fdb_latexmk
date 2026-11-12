@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Presentation"] 1794170337.64037 "Presentation.aux" "Presentation.bbl" "Presentation" 1794173470.35598 0
-  "./mendeley.bib" 1794105399 19565 b7463fcdb4118256ef9752f9f2457abc ""
+["bibtex Presentation"] 1794349463.39869 "Presentation.aux" "Presentation.bbl" "Presentation" 1794350707.54705 0
+  "./mendeley.bib" 1794349426 19901 7125b3d796e33e3118fc892fb36d8844 ""
   "C:/Users/Esteban/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "Presentation.aux" 1794173469 12144 c0f11d2768c0a023b01c290ed00cbecc "pdflatex"
+  "Presentation.aux" 1794350706 12177 dc1365e7936a7dd186f8d407856311b5 "pdflatex"
   (generated)
   "Presentation.bbl"
   "Presentation.blg"
   (rewritten before read)
-["pdflatex"] 1794173461.68739 "c:/Users/Esteban/TesisMLAcou/Tesis_presentacion/Presentation.tex" "Presentation.pdf" "Presentation" 1794173470.35853 0
+["pdflatex"] 1794350700.0272 "c:/Users/Esteban/TesisMLAcou/Tesis_presentacion/Presentation.tex" "Presentation.pdf" "Presentation" 1794350707.54765 0
   "4channelSpec.png" 1786832100 345552 6f22b35b399e5c4fb0c7b12b3665de84 ""
   "AcousticPipeline.jpeg" 1794157705 128221 1f88c9681471e99d68767041812ffbb7 ""
   "BeamCNN_abserror_x_y_z.png" 1794067096 266961 51f35bc07a6e405e18dcd2af4c36fc9f ""
@@ -301,18 +301,18 @@
   "Multi-Head_ESN_Estimator.jpg" 1790878586 206130 5f710ec52fb8eec55b4a976ab3bb5e9c ""
   "Picture-5_Lore-Thaler-min-1024x526.jpg" 1793833429 67298 d2ede1997b9792724f32f9d5df47b45f ""
   "Plot3D_errors.png" 1793999912 615078 c3605566aa92dd2ce6cb88c46de8185e ""
-  "Presentation.aux" 1794173469 12144 c0f11d2768c0a023b01c290ed00cbecc "pdflatex"
-  "Presentation.bbl" 1794170338 2035 fb8c9112554a522c8248c9a2456887b0 "bibtex Presentation"
-  "Presentation.nav" 1794173469 5713 bc57b19f069ba3fd20e9c7eea04e2e4e "pdflatex"
-  "Presentation.out" 1794173469 1104 f7b1fff4684d24fe1c5e574564c120d7 "pdflatex"
-  "Presentation.tex" 1794173460 38571 738f69d22aa3cba0603d7fd3630ba15c ""
-  "Presentation.toc" 1794173469 501 f22f821c94414080ceba368dcd1cc902 "pdflatex"
+  "Presentation.aux" 1794350706 12177 dc1365e7936a7dd186f8d407856311b5 "pdflatex"
+  "Presentation.bbl" 1794349463 1982 bf2e52775cee7b0d7c56c21ccdcdcb1a "bibtex Presentation"
+  "Presentation.nav" 1794350706 5713 bc57b19f069ba3fd20e9c7eea04e2e4e "pdflatex"
+  "Presentation.out" 1794350706 1104 f7b1fff4684d24fe1c5e574564c120d7 "pdflatex"
+  "Presentation.tex" 1794350699 38313 0efbc602c96a79bfa59db2a002afd9f2 ""
+  "Presentation.toc" 1794350706 501 f22f821c94414080ceba368dcd1cc902 "pdflatex"
   "RIR.png" 1793833429 211063 bdb2381667f1b1263f16b16c240825a5 ""
   "TEC.jpg" 1793833429 39898 36ff16c89a269804cfac9028ea8ab8e3 ""
   "Whisk_4529d9a66c.jpg" 1793833429 369670 3de9906e1c7947e4d1bc6566d53260a8 ""
   "abserror_x_y_z.png" 1794000790 306060 477bf6bdc4e7e5fb0a64b0f77f011c57 ""
   "allpoints.png" 1789019836 860806 cd11fedd5bdd38e40210494a86bd273f ""
-  "c:/Users/Esteban/TesisMLAcou/Tesis_presentacion/Presentation.tex" 1794173460 38571 738f69d22aa3cba0603d7fd3630ba15c ""
+  "c:/Users/Esteban/TesisMLAcou/Tesis_presentacion/Presentation.tex" 1794350699 38313 0efbc602c96a79bfa59db2a002afd9f2 ""
   "clasification_location_cnn.png" 1791041365 60815 eb67dffaa49e3d93c88cd834124442cf ""
   "clasification_orientation_cnn.png" 1791043707 58180 9a5c6c37d57dabc6b8e03b66b74a0fef ""
   "conf_matrix_3regions.png" 1791061141 152574 b2150f27e940d79de862262acea00f7c ""

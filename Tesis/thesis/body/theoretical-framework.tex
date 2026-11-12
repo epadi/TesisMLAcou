@@ -2,7 +2,7 @@
 \label{chapter:theoretical-framework}
 
 
-In this chapter is described the theoretical concepts needed to understand the work developed during the research's execution.
+This chapter describes the theoretical concepts needed to understand the work carried out during this research.
 
 
 \section{Room Impulse Response}
@@ -11,10 +11,10 @@ An acoustic impulse is a sharp, narrow pulse whose spectrum is composed of a uni
 
 The Room Impulse Response (RIR) is, by definition, the transfer function of a sound wave that travels through the space from its source to the microphone. A microphone records the convolution of the emitted sound with the corresponding RIR \cite{RIR02}, as shown mathematically in Equation \ref{eqn:sound} with \(g(t)\) representing the recorded signal, \(h(t)\) the RIR, and \(x(t)\) the emitted sound. Therefore, any sound generated at one point and received at another inside a room contains the effects of the RIR of the environment.    
 
-\begin{equation*}
+\begin{equation}
 \label{eqn:sound}
-g(t)=h(t)*x(t)= \int_{-\infty}^{\infty} h(t)x(t-s)ds \tag{1}
-\end{equation*}
+g(t)=h(t)*x(t)= \int_{-\infty}^{\infty} h(s)x(t-s)\,ds
+\end{equation}
 
 
 \begin{figure} [hbt!]
@@ -43,10 +43,10 @@ A microphone array combines the signals of multiple omnidirectional microphones 
 	\end{center}
 \end{figure}
 
-\begin{equation*}
+\begin{equation}
 \label{eqn:ddipole}
-D=\frac {1}{4} \frac {c}{f}\tag{2}
-\end{equation*}
+D=\frac {1}{4} \frac {c}{f}
+\end{equation}
 
 \subsection{Beamforming Pipe}
 
@@ -54,10 +54,10 @@ D=\frac {1}{4} \frac {c}{f}\tag{2}
 
 Beamforming is based on the physical principle that an acoustic wave originating at a particular location in space travels and arrives at each sensor at a different time, defined by the distance between the single source and each sensor. The result of adding all these signals depends on the phase relationship between them, so it is possible to control the delay of each signal to constructively add those from a particular location while, at the same time, destructively canceling those originating in other regions \cite{BEA01}. Mathematically, the beamforming formula is shown in Equation \ref{eqn:beamforming}, where \(L(t,S_0)\) is the beamforming output, $p_m(t + \tau_m(\mathbf{s}_0))$ is the acoustic pressure signal recorded by microphone $m$, advanced by the specific time-of-flight delay ($\tau_m$ or $t_0$) it takes for sound to travel from the coordinate $\mathbf{s}_0$ to that specific microphone, and $\Vert{}\mathbf{s}_m - \mathbf{s}_0\Vert{}$ is the spherical spreading compensation factor. Because acoustic energy decays proportionally to the distance traveled ($1/r$). All the signals are summed together and divided by the total number of microphones \(M\) in the array.
 
-\begin{equation*}
+\begin{equation}
 \label{eqn:beamforming}
-L(t, \mathbf{s}_0) = \frac{4\pi}{M} \sum_{m=1}^{M} p_m(t + \tau_m(\mathbf{s}_0)) \|\mathbf{s}_m - \mathbf{s}_0\| \tag{3}
-\end{equation*}
+L(t, \mathbf{s}_0) = \frac{4\pi}{M} \sum_{m=1}^{M} p_m(t + \tau_m(\mathbf{s}_0)) \|\mathbf{s}_m - \mathbf{s}_0\|
+\end{equation}
 
 %\subsubsection{Deconvolution}
 %In real applications, the beamforming output comprises the acoustic signal convolved with the microphone array response. The deconvolution principle assumes that %the recorded signal \(r(t)\) is the convolution of the sound \(g(t)\) (as shown in Equation \ref{eqn:sound}) and a transfer function for the array, which %represents the array response to a given source \cite{BEA01}. The Point-Spread Function (PSF) is the array response to a monopole placed in front of the array. %The PSF provides the information required to obtain the array transfer function needed for deconvolution, which extracts the sound free of the distortion created %by the array.
@@ -101,7 +101,7 @@ Convolution is a common operation used in image filtering to denoise or detect f
 
 \begin{equation}
 \label{eqn:conv}
-(w*x)_{i,j}=\sum_{k=-K/2}^{K/2}\sum_{l=-L/2}^{L/2} w_{k,l}x_{i+k,j+l} \tag{5}
+(w*x)_{i,j}=\sum_{k=-K/2}^{K/2}\sum_{l=-L/2}^{L/2} w_{k,l}x_{i+k,j+l}
 \end{equation}
 \\
 
@@ -168,7 +168,6 @@ A formal description of an ESN, given in \cite{RC2}, defines an ESN that receive
 
 \begin{equation}
 \label{eqn:RCform1}
-\tag{6}
 \begin{split}
 x(t)&=f(W_{in}U(t)+W_{res}x(t-1)) \\
 y(t)&=W_{out}x(t)
@@ -179,7 +178,7 @@ There is an important property that the reservoir should meet to ensure that its
 
 \begin{equation}
 \label{eqn:eqESP}
-||F(U,x)-F(U,x')|| \to 0 \: as \: N \to \infty  \tag{7}\\
+||F(U,x)-F(U,x')|| \to 0 \: as \: N \to \infty  \\
 \end{equation}
 \\
 
@@ -187,7 +186,6 @@ To ensure the existence of the ESP, \(W_{res}\) must meet a necessary condition 
 
 \begin{equation}
 \label{eqn:ESP2}
-\tag{8}
 \begin{split}
 ESP& \Rightarrow \rho(W_{res}) < 1\\
 \bar \sigma(W_{res})<1 & \Rightarrow ESP 
@@ -226,7 +224,7 @@ Artificial Intelligence, and especially its deep learning subfield, has powered 
 \subsubsection{Acoustic Object Recognition}
 
 Acoustic object recognition aims to recognize an object based on the sound it emits, whether the sound is self-generated, such as the sound produced by an air conditioner during normal operation, or external, produced in response to a stimulus, such as the characteristic sound of wood when someone knocks on a door. In the work presented by \citeauthor{AOR1} in \cite{AOR1}, a dataset was built using 30 different objects, each of which was hit with a marker pen to generate a characteristic sound that was recorded. A training set of 100 hits per object (at different locations on the object) was created, and an extra 20 hits per object were obtained for the test phase. With this dataset, a denoising autoencoder was trained to recognize the different sounds of the objects from which they originate. The recognition rate for the autoencoders was 91.50\%, a value superior to the baseline provided by a Support Vector Machine with a recognition rate of 82\%. \\
-Other dataset was created by \citeauthor{AOR2_LEGO} in \cite{AOR2_LEGO}, in this case the input were LEGO objects that fall from 30cm high. The sound  of the LEGO pieces hitting the ground was used to create spectrograms to training a CNN called LegoNet in order to recognize the LEGO pieces by the sound of its free-fall impact, LegoNet achieved an accuracy of 99.21\%, a value superior to the other networks used for comparison. For robotic perception in \cite{AOR3_ROBOT} was develop a framework in which a robot can recognize the object inside a container by shaking the container and analyzing the sound. An kernel K-nearest neighbor algorithm in a open environment is used to shows the feasibility of the method. A generative physical, audio-visual synthesis pipeline is presented in \cite{AOR4}, the model takes as input the shape of an object, its material and one scene configuration, a physical engine simulate motion and collision for that particular object. An audio engine takes the shape, material and the collision information to synthesize the sound. The database generated is used in the training a two-stream CNN, one ResNet-18 for the image data, together with a SoundNet-8 for the audio data. The net demonstrated that the knowledge learned in the synthetic audio-visual dataset was transferred to real world data once it was used to infer object materials from auditory data, and estimate shape attributes from audio-visual data.
+Another dataset was created by \citeauthor{AOR2_LEGO} in \cite{AOR2_LEGO} using LEGO pieces dropped from a height of 30 cm. The sounds of the pieces hitting the ground were used to create spectrograms for training a CNN called LegoNet to recognize the pieces from their impact sounds. LegoNet achieved an accuracy of 99.21\%, outperforming the other networks used for comparison. In \cite{AOR3_ROBOT}, a framework was developed for robotic perception in which a robot recognizes an object inside a container by shaking it and analyzing the sound. A k-nearest-neighbor algorithm was used in an open environment to demonstrate the feasibility of the method. A generative physical audio-visual synthesis pipeline is presented in \cite{AOR4}. The model takes an object's shape, material, and scene configuration as input, and a physics engine simulates the object's motion and collisions. An audio engine uses the shape, material, and collision information to synthesize the sound. The generated database is used to train a two-stream CNN consisting of a ResNet-18 for image data and a SoundNet-8 for audio data. The network demonstrated that knowledge learned from the synthetic audio-visual dataset transferred to real-world data, enabling it to infer object materials from audio and estimate shape attributes from audio-visual data.
 
 \subsection{Active Acoustic Sensing and Analysis}
 
