@@ -24,7 +24,7 @@ The CNN was trained to classify the sound source's acoustic location among 26 po
 
 \subsection{CNN Model for Acoustic to Orientation Classification}
 
-The second evaluation tested the CNN's ability to classify the cube's orientation among nine possible orientations. For each orientation, the cube was rotated by 10 degrees about one of its centroidal axes. The network was trained for 20 epochs and achieved an accuracy of 99.0\% on the training set and 29.06\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix_orientation}; each class represents a cube orientation that differs from the others by 10 degrees.
+The second experiment tested the CNN's ability to classify the cube's orientation among nine possible orientations. For each orientation, the cube was rotated by 10 degrees in one of its centroidal axes. The network was trained for 20 epochs and achieved an accuracy of 99.0\% on the training set and 29.06\% on the test set. The confusion matrix is shown in Figure \ref{fig:cnn_confusion_matrix_orientation}; each class represents a cube orientation that differs from the others by 10 degrees.
 
 
 \begin{figure}[H]
@@ -35,7 +35,7 @@ The second evaluation tested the CNN's ability to classify the cube's orientatio
     \end{center}
 \end{figure}
 
-Because the CNN performed poorly on the overall orientation classification task, its performance was further evaluated under more constrained conditions. As shown in Figure \ref{fig:session_points}, three regions were defined to limit variation in orientation about the other Euler axes. Accuracy results for each region are presented in Table \ref{tab:regional_accuracy}, and the corresponding confusion matrices are shown in Figure \ref{fig:conf_matrix_3regions}.
+Because the CNN performed poorly on the overall orientation classification task, its behavior was further evaluated under more constrained conditions. As shown in Figure \ref{fig:session_points}, three regions were defined to limit variation in orientation about the other orientation axes. Accuracy results for each region are presented in Table \ref{tab:regional_accuracy}, and the corresponding confusion matrices are shown in Figure \ref{fig:conf_matrix_3regions}.
 
 \begin{figure}[H]
     \begin{center}
@@ -69,7 +69,7 @@ Because the CNN performed poorly on the overall orientation classification task,
     \end{center}
 \end{figure}
 
-Given the even poorly performing test accuracies across the three regions, it is evident that the model struggles to generalize well beyond the training data. To investigate the similarity of the acoustic signal when the cube is rotated or moved, a cross-correlation analysis was performed for the center point of each session in each region, as illustrated in Figure \ref{fig:session_points}. The results are presented in Figure \ref{fig:cross_correlation_results}, showing the degree of similarity for different distances and orientations. This analysis helps explain the limitations of the model in capturing spatial variations in the acoustic signal.
+Given the even deficient performance across the three regions, it is evident that the model struggles to generalize well beyond the training data. To investigate the similarity of the acoustic signal when the cube is rotated or moved, a cross-correlation analysis was performed for the center point of each session in each region, as illustrated in Figure \ref{fig:session_points}. The results are presented in Figure \ref{fig:cross_correlation_results}, showing the degree of similarity for different distances and orientations. This analysis helps explain the limitations of the model in capturing spatial variations in the acoustic signal.
 
 \begin{figure}[H]
     \begin{center}
@@ -109,11 +109,11 @@ The CNN was evaluated as a regression model to estimate the cube's X, Y, and Z c
 \end{figure}
 
 
-The main figure of merit for a regression model is the Mean Absolute Error (MAE), which measures the average magnitude of the prediction errors regardless of their direction. The MAE values for the three coordinates across the five folds are presented in Table \ref{tab:mae_xyz_folds}.
+The main figure of merit for a regression model is the MAE, which measures the average magnitude of the prediction errors regardless of their direction. The MAE values for the three coordinates across the five folds are presented in Table \ref{tab:mae_xyz_folds}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Regression Model}
+  \caption{Mean Absolute Error Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Regression Model}
   \label{tab:mae_xyz_folds}
   \vspace{0.25cm}
     \footnotesize
@@ -133,7 +133,7 @@ The main figure of merit for a regression model is the Mean Absolute Error (MAE)
 \end{table}
 
 
-A second key metric is the Pearson correlation coefficient, which measures the strength and direction of the linear relationship between two continuous variables. It indicates how closely the data points cluster around a straight line. To understand how well the predictions of the regression model correlate with the ground truth, the Pearson correlation coefficients for each coordinate are shown in Table \ref{tab:pearson_corr_xyz}. In the evaluation of predictions against ground truth, a coefficient greater than 0.99 indicates that the model predictions are almost perfectly aligned with the actual targets.
+A second key metric is the Pearson correlation coefficient, which measures the strength and direction of the linear relationship between two continuous variables. It indicates how closely the data points cluster around a straight line. To understand how well the predictions of the regression model correlate with the ground truth, the Pearson correlation coefficients for each coordinate are shown in Table \ref{tab:pearson_corr_xyz}. In the evaluation of predictions against ground truth, a coefficient greater than 0.99 indicates that the model predictions are well aligned with the actual targets.
 
 \begin{table}[htbp]
   \centering
@@ -160,7 +160,7 @@ Another important metric for evaluating the regression model is the percentage o
 
 \begin{table}[htbp]
   \centering
-  \caption{Percentage of samples with estimation errors within specific ranges for X, Y, and Z Coordinates for the CNN Regression Model}
+  \caption{Percentage of Samples with Estimation Errors Within Specific Ranges for X, Y, and Z Coordinates for the CNN Regression Model}
   \label{tab:error_distribution_xyz}
   \vspace{0.20cm}
   \footnotesize
@@ -187,7 +187,7 @@ Another important metric for evaluating the regression model is the percentage o
 \end{table}
 
 
-Figure \ref{fig:plot3d_errors} shows the estimation error for each data point across the five cross-validation folds, with each fold serving once as the test set. For each coordinate, the error is the absolute difference between the predicted and true values, expressed in centimeters. Figure \ref{fig:plot2d_errors} shows the error for each coordinate as a function of its corresponding axis value: X error versus X, Y error versus Y, and Z error versus Z.
+Figure \ref{fig:plot3d_errors} shows the estimation error for each data point across the five cross-validation folds, with each fold serving once as the test set. For each coordinate, the error is the absolute difference between the predicted and true values, expressed in centimeters. Figure \ref{fig:plot2d_errors} shows the error for each coordinate as a function of its corresponding axis value: X error versus X coordinate, Y error versus Y coordinate, and Z error versus Z coordinate.
 
 
 \begin{figure}[H]
@@ -210,7 +210,7 @@ Figure \ref{fig:plot3d_errors} shows the estimation error for each data point ac
 
 \section{ESN for Acoustic Classification}
 
-The second architecture evaluated in this thesis was the multi-head Echo State Network (ESN), described in Section 5.2.2. The ESN was first evaluated as a classifier during architecture selection and hyperparameter tuning. Using the values listed in Table \ref{tab:esn_values}, the ESN was trained for 150 epochs and achieved an accuracy of 98.42\%. Figure \ref{fig:confusion_ESN} shows the resulting confusion matrix.
+The second architecture evaluated in this work was the multi-head Echo State Network (ESN), described in Section 5.2.2. The ESN was first evaluated as a classifier during architecture selection and hyperparameter tuning. Using the values listed in Table \ref{tab:esn_values}, the ESN was trained for 150 epochs and achieved an accuracy of 98.42\%. Figure \ref{fig:confusion_ESN} shows the resulting confusion matrix.
 
 \begin{figure}[H]
     \begin{center}
@@ -253,7 +253,7 @@ The MAE for each network is presented in table \ref{tab:ESN_mae_xyz_folds} and t
 
 \begin{table}[htbp]
   \centering
-  \caption{ESN Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates}
+  \caption{ESN Mean Absolute Error Across Folds for $X$, $Y$, and $Z$ Coordinates}
   \label{tab:ESN_mae_xyz_folds}
   \vspace{0.25cm}
   \footnotesize
@@ -345,7 +345,7 @@ The figure \ref{fig:esn_plot3d_errors} shows the 3D scatter plot of the absolute
 
 \section{Beamforming}
 
-This section presents the results for the CNN and ESN models when the input signals are preprocessed with beamforming. The network architectures remain the same as previously described; the only difference is that beamforming is applied to the input signals to emphasize specific reflections according to their directions of arrival. For both models using beamforming, this section reports the Mean Absolute Error (MAE), the Pearson correlation coefficient, and plots of the absolute error distributions. The detailed fold-wise histograms and the percentages of samples within the estimation error ranges are provided in the appendix.
+This section presents the results for the CNN and ESN models when the input signals are preprocessed with beamforming. The network architectures remain the same as previously described; the only difference is that beamforming is applied to the input signals to emphasize specific reflections according to their directions of arrival. For both models using beamforming, this section reports the MAE, the Pearson correlation coefficient, and plots of the absolute error distributions. The detailed fold-wise histograms and the percentages of samples within the estimation error ranges are not the main point of comparison and are provided in the appendix.
 
 \subsection{CNN and Beamforming for Acoustic to Spatial Location Regression}
 \label{subsec:cnn_beamforming_regression}
@@ -355,7 +355,7 @@ For the CNN model, the input signals are preprocessed with beamforming before be
 
 \begin{table}[htbp]
   \centering
-  \caption{Mean Absolute Error (MAE) Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Model with Beamforming}
+  \caption{Mean Absolute Error Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Model with Beamforming}
   \label{tab:BeamCNN_mae_xyz_folds}
   \vspace{0.25cm}
   \footnotesize

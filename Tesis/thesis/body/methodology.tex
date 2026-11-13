@@ -12,12 +12,12 @@ The following chapter details the methodology used in this research, including t
 
 \label{section:experiment-design}
 
-\section{Experimental measurement configuration}
+\section{Experimental Measurement Configuration}
 
 
-The experimental container is a cubic box with a side length of 1 m and a volume close to $1\,\mathrm{m}^3$. The concept is shown in Figure \ref{mesurementbox}(a). Three of its six walls are made of porcelain tiles with a thickness of 1 cm, one wall and the floor are made of solid concrete, and the remaining wall used for observation is made of acrylic with a thickness of 0.5 cm. The clear acrylic sheet allows direct observation of the movement mechanism inside the box. Unlike the other walls, which are permanently bonded, this acrylic wall can be removed to provide access to the interior of the measurement box.
+The experimental container is a cubic box with a side length of 1 m and a volume close to $1\,\mathrm{m}^3$. The concept is shown in Figure \ref{mesurementbox}(a) and the actual implementation is shown in Figure \ref{mesurementbox}(b) where can be observed the physical construction of the measurement box. Three of its six walls are made of porcelain tiles with a thickness of 1 cm, one wall and the floor are made of solid concrete, and the remaining wall used for observation is made of acrylic with a thickness of 0.5 cm. The clear acrylic sheet allows direct observation of the movement mechanism inside the box. Unlike the other walls, which are permanently bonded, this acrylic wall can be removed to provide access to the interior of the measurement box.
 
-The movement mechanism inside the box consists of a robotic arm mounted at the center of the floor. The arm has four Degrees of Freedom (DOF) and is used to control the position and orientation of a cube with a side length of 20 cm attached to its end. The cube is made of plastic, with walls 2 mm thick. For the measurements, a mono speaker is placed at the center of one wall to generate the acoustic stimulus inside the system. On the opposite wall, four capacitive microphones are positioned 15 cm away from each corner to capture the acoustic response of the measurement box. The measurement box was constructed inside a storage room and is shown in Fig. \ref{mesurementbox}(b).
+The movement mechanism inside the box consists of a robotic arm mounted at the center of the floor. The arm has four Degrees of Freedom (DOF) and is used to control the position and orientation of a cube with a side length of 20 cm attached to its end. The cube is made of plastic, with walls of 2 mm thickness. For the measurements, a mono speaker is placed at the center of one wall to generate the acoustic stimulus inside the system. On the opposite wall, four capacitive microphones are positioned 15 cm away from each corner to capture the acoustic response of the measurement box. The measurement box was constructed inside a storage room as can be seen in Fig. \ref{mesurementbox}(b).
 
 \begin{figure}[!htb]
         \begin{center}        
@@ -28,10 +28,9 @@ The movement mechanism inside the box consists of a robotic arm mounted at the c
 \end{figure}
 
 
-
 \section{The Audio-Location Dataset for Model Training and Testing}
 
-The dataset was collected over twenty-six recording sessions. In each session, the robotic arm maintained a fixed base angle and positioned the cube at specific coordinates and orientations. The initial orientation of the cube was set such that its sides were parallel to the measurement box walls. The variables modified during each measurement were the cube’s location and orientation. For each location, nine different orientations were recorded. After completing these nine measurements, the robotic arm lowered the cube by decreasing its position along the Z axis, and the recording process was repeated for the new location. This procedure continued until the cube reached the bottom of the measurement box.
+The dataset was collected over twenty-six recording sessions. In each session, the robotic arm maintained a fixed base angle and positioned the cube at specific coordinates and orientations. The variables modified during each measurement were the cube’s location and orientation. For each location, nine different orientations were recorded. After completing these nine measurements, the robotic arm lowered the cube by decreasing its position along the Z axis, and the recording process was repeated for the new location. This procedure continued until the cube reached the bottom of the measurement box after 30 different Z positions.
 
 Audio from four channels was recorded. The acoustic signal was emitted four times, and the response was captured one microphone at a time. Each recording session consisted of 270 recordings, each containing four channels. A movement of 10 degrees in the base of the arm define the beginning of a new recording session, with all the recording sessions producing a cylindrical envelope for the measurement area.
 
@@ -89,7 +88,7 @@ Figure \ref{fig:method} shows the processing pipeline for the acoustic signals. 
 %\end{table}
 
 
-\section{Response Variables and evaluation metrics}
+\section{Response Variables and Evaluation Metrics}
 
 The networks in this research are configured as regression models, the outputs are the predicted coordinates (X, Y, Z) and orientation of the cube in the room. The response variables are the error between the predicted and actual values of these outputs, which are calculated as mean of the absolute difference between the predicted \(\hat{y}_i\)  and actual values \(y_i\) as shows in equation \ref{eq:mae}. The Mean Absolute Error (MAE) is used as the performance metric for evaluating the models. The MAE is a widely used metric for regression tasks, as it provides a clear measure of the average magnitude of errors in predictions, without considering their direction. Lower MAE values indicate better model performance, as they reflect smaller discrepancies between predicted and actual values \cite{friedmanrecomendation}.
 
@@ -114,7 +113,7 @@ This metric provides additional insight into the model's performance, complement
 
 \section{Data Recording for Model Evaluation}
 
-To evaluate the performance of the models, a five-fold cross-validation approach is used. In this approach, the dataset is divided into five subsets, and the model is trained and tested five times, each time using a different subset as the test set and the remaining subsets as the training set. This process allows for a more robust evaluation of the model's performance and helps to mitigate any potential bias that may arise from using a single train-test split. The total 7020 samples are divided into five folds, with each fold containing near to 1,404 samples (A 80:20 ratio). The performance of the model is evaluated considering the Mean Absolute Error (MAE). The structure of the five-fold cross-validation and the corresponding performance metrics are summarized in Table \ref{tab:kfold_structure}. Due to the factor and levels we have 4 model variations to consider, and for each model variation the coordinates X, Y, Z, and orientation are evaluated, resulting in a total of 20 MAE obtained for evaluation.
+To evaluate the performance of the models, a five-fold cross-validation approach is used. In this approach, the dataset is divided into five subsets, and the model is trained and tested five times, each time using a different subset as the test set and the remaining subsets as the training set. This process allows for a more robust evaluation of the model's performance and helps to mitigate any potential bias that may arise from using a single train-test split. The total 7020 samples are divided into five folds, with each fold containing near to 1,404 samples (A 80:20 ratio). The performance of the model is evaluated considering the Mean Absolute Error (MAE). The structure of the five-fold cross-validation and the corresponding performance metrics to evaluate are summarized in Table \ref{tab:kfold_structure}. 
 
 \begin{table}[h]
 \centering
