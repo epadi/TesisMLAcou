@@ -1,6 +1,6 @@
 \beamer@slide {table:1}{7}
-\beamer@slide {tab:esn_values}{19}
-\beamer@slide {tab:metrics_xyz_folds_cnn}{26}
+\beamer@slide {tab:esn_values}{18}
+\beamer@slide {tab:pearson_correlation_combined}{26}
 \beamer@slide {tab:metrics_xyz_folds_esn}{30}
 \beamer@slide {tab:mae_x_models_comparison}{35}
 \beamer@slide {tab:best_model_probability_x}{35}

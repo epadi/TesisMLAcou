@@ -11,6 +11,7 @@
 \definecolor{myblue}{RGB}{0, 0, 80}
 \usepackage{array}
 \usepackage{booktabs}
+\usepackage{colortbl}
 \usepackage{multirow}
 \usepackage[spanish,es-tabla]{babel}
 \usetikzlibrary{shapes,arrows}
@@ -297,9 +298,22 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 \end{itemize}
 \end{frame}
 
-\section{Metodología}
 
-\begin{frame}{Metodología: caja de medición}
+\section{Diseño}  
+
+
+\begin{frame}{Procesamiento de los datos}
+
+\begin{figure}
+        \includegraphics[width=12cm, height=5cm]{AcousticPipeline.jpeg}
+        \caption{Diagrama con las etapas de procesamiento de datos de los estimadores.}
+\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}{Caja de medición}
 
  \begin{figure}
         \includegraphics[width=12cm, height=6cm]{Measuretogether.png}
@@ -309,7 +323,7 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 \end{frame}
 
 
-\begin{frame}{Metodología: recolección de datos}
+\begin{frame}{Construccion del conjunto de datos}
     \vspace*{-1cm}
     \begin{minipage}{0.5\textwidth}
         
@@ -327,41 +341,6 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
         \end{figure}
     \end{minipage}
 \end{frame}
-
-
-\begin{frame}{Metodología: procesamiento de los datos}
-
-\begin{figure}
-        \includegraphics[width=12cm, height=5cm]{AcousticPipeline.jpeg}
-        \caption{Diagrama con las etapas de procesamiento de datos de los estimadores.}
-\end{figure}
-
-\end{frame}
-
-\begin{frame}{Metodología: análisis de los datos}
-
-%    \begin{minipage}{0.5\textwidth}
-        \begin{itemize}%[<+-|alert@+>]
-        \item Se emplea validación cruzada de cinco particiones para el entrenamiento y evaluación de los modelos.
-        \item Se evalúan dos métricas:
-        \begin{itemize}
-            \item Error Absoluto Medio (MAE).
-            \item El coeficiente de correlación de Pearson.
-        \end{itemize}
-        \item Se presenta la distribución de los errores de estimación para cada coordenada.
-        \item Se comparan los resultados de los estimadores mediante un modelo Bayesiano \cite{calvo2018bayesian}:
-            \begin{itemize}
-                \item Se utiliza un modelo de Plackett-Luce.
-                \item Se aplica un factor de penalización según Nadeau y Bengio debido a la validación cruzada \cite{nadeau2003inference}: $\alpha = \left(1 + K\rho\right)^{-1}$, con $\rho = t_{\text{prueba}}/t_{\text{entrenamiento}} = 0.25$ y $K=5$, lo que resulta en un valor de 0.44.
-                \item La distribución posterior se muestrea mediante un algoritmo de Monte Carlo por cadenas de Markov (MCMC).
-            \end{itemize}
-   
-        \end{itemize}
-
-\end{frame}
-
-\section{Diseño}   
- %-----------------------------------------------------------------------
 
 \begin{frame}{CNN}
 
@@ -430,8 +409,6 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 
 \end{frame}
 
-
-
 \begin{frame}{ESN de múltiples cabezas}
 
 \begin{columns}[T,onlytextwidth]
@@ -460,9 +437,6 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 
 
 \end{frame}
-
-
-
 
 \begin{frame}{\textit{Beamforming}}
 
@@ -494,7 +468,29 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 
 \end{frame}
 
+\section{Metodología}
 
+\begin{frame}{Metodología: análisis de los datos}
+
+%    \begin{minipage}{0.5\textwidth}
+        \begin{itemize}%[<+-|alert@+>]
+        \item Se emplea validación cruzada de cinco particiones para el entrenamiento y evaluación de los modelos.
+        \item Se evalúan dos métricas:
+        \begin{itemize}
+            \item Error Absoluto Medio (MAE).
+            \item El coeficiente de correlación de Pearson.
+        \end{itemize}
+        \item Se presenta la distribución de los errores de estimación para cada coordenada.
+        \item Se comparan los resultados de los estimadores mediante un modelo Bayesiano \cite{calvo2018bayesian}:
+            \begin{itemize}
+                \item Se utiliza un modelo de Plackett-Luce.
+                \item Se aplica un factor de penalización según Nadeau y Bengio debido a la validación cruzada \cite{nadeau2003inference}: $\alpha = \left(1 + K\rho\right)^{-1}$, con $\rho = t_{\text{prueba}}/t_{\text{entrenamiento}} = 0.25$ y $K=5$, lo que resulta en un valor de 0.44.
+                \item La distribución posterior se muestrea mediante un algoritmo de Monte Carlo por cadenas de Markov (MCMC).
+            \end{itemize}
+   
+        \end{itemize}
+
+\end{frame}
 
 \section{Resultados y análisis}
 
@@ -606,20 +602,20 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 
 %################   CNN    #####################
 
-\begin{frame}{CNN como estimador: histogramas}
+\begin{frame}{Histogramas: Errores de estimación CNN y ESN}
 
 
     \small
 
         \begin{figure}
             \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{CNN_histograms.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con CNN para los 5 \textit{folds}.}
+            \includegraphics[width=15cm,height=15cm,keepaspectratio]{ButterflyHistogram.png}
+            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con CNN y ESN para las 5 particiones}
         \end{figure}
 
-        \begin{itemize}
-            \item Coordenada X posee 97.83\% de estimaciones con error por debajo de 2cm, Y posee 98.32\% y Z posee 91.98\%.
-        \end{itemize}
+        %\begin{itemize}
+        %    \item Coordenada X posee 97.83\% de estimaciones con error por debajo de 2cm, Y posee 98.32\% y Z posee 91.98\%.
+        %\end{itemize}
 
 
 \end{frame}
@@ -627,31 +623,88 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 
 
 
-\begin{frame}{CNN como estimador: MAE y correlación de Pearson}
+\begin{frame}{MAE y correlación de Pearson CNN y ESN}
+
+
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+
+
+        \small
+        \centering
+        \vspace*{0.0cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=7cm,height=5cm]{MAEs.png}
+            \caption{\scriptsize Error Absoluto Medio (MAE) para las coordenadas X, Y y Z con CNN y ESN.}
+        \end{figure}
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+
+        \small
+        \centering
+        \vspace*{-0.5cm}
 \begin{table}[htbp]
-  \centering
-  \caption{Error absoluto medio (MAE) y coeficientes de correlación de Pearson en las particiones para las coordenadas $X$, $Y$ y $Z$ del modelo de regresión CNN.}
-  \label{tab:metrics_xyz_folds_cnn}
-  \vspace{0.25cm}
-  \footnotesize
-  \resizebox{\textwidth}{!}{%
-    \begin{tabular}{lcccccc}
-      \toprule
-      \multirow{2}{*}{\textbf{Folds}} & \multicolumn{3}{c}{\textbf{MAE (cm)}} & \multicolumn{3}{c}{\textbf{Pearson Correlation}} \\
-      \cmidrule(lr){2-4} \cmidrule(lr){5-7}
-      & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
-      \midrule
-      Fold 1 & 0.6019 & 0.5029 & 1.3013 & 0.9970 & 0.9961 & 0.9979 \\
-      Fold 2 & 0.5231 & 0.4467 & 0.5549 & 0.9980 & 0.9985 & 0.9991 \\
-      Fold 3 & 0.5569 & 0.4069 & 0.8829 & 0.9969 & 0.9978 & 0.9982 \\
-      Fold 4 & 0.5764 & 0.3836 & 1.0473 & 0.9985 & 0.9977 & 0.9986 \\
-      Fold 5 & 0.5062 & 0.3144 & 0.7316 & 0.9978 & 0.9987 & 0.9987 \\
-      \midrule
-      \textbf{Mean $\pm$ SD} & \textbf{0.5529 $\pm$ 0.0384} & \textbf{0.4109 $\pm$ 0.0706} & \textbf{0.9036 $\pm$ 0.2847} & \textbf{0.9976 $\pm$ 0.0007} & \textbf{0.9978 $\pm$ 0.0010} & \textbf{0.9985 $\pm$ 0.0005} \\
-      \bottomrule
-    \end{tabular}%
-  }
+\centering
+\scriptsize
+\caption{Coeficientes de correlación de Pearson en las particiones para los modelos CNN y ESN}
+\label{tab:pearson_correlation_combined}
+% Note: Requires \usepackage{multirow} in your document preamble
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lcccccc}
+\hline
+\multirow{2}{*}{\textbf{Partición (Fold)}} & \multicolumn{3}{c}{\textbf{CNN}} & \multicolumn{3}{c}{\textbf{ESN}} \\
+\cline{2-4} \cline{5-7}
+& \textbf{X} & \textbf{Y} & \textbf{Z} & \textbf{X} & \textbf{Y} & \textbf{Z} \\
+\hline
+Fold 1 & 0.9970 & 0.9961 & 0.9979 & 0.9980 & 0.9954 & 0.9929 \\
+Fold 2 & 0.9980 & 0.9985 & 0.9991 & 0.9963 & 0.9966 & 0.9929 \\
+Fold 3 & 0.9969 & 0.9978 & 0.9982 & 0.9958 & 0.9968 & \cellcolor{yellow}0.9898 \\
+Fold 4 & 0.9985 & 0.9977 & 0.9986 & 0.9962 & 0.9967 & 0.9921 \\
+Fold 5 & 0.9978 & 0.9987 & 0.9987 & 0.9965 & 0.9953 & 0.9936 \\
+\hline
+\end{tabular}
+}
 \end{table}
+\scriptsize
+\begin{itemize}
+    \item CNN con MAE más bajo en comparación con ESN para todas las coordenadas.
+    \item Cordenadas X y Y con MAE similares para CNN y ESN, mientras que Z presenta mayor diferencia.
+    \item Correlación de Pearson alta para todas las coordenadas en ambos modelos.
+\end{itemize}
+   
+
+
+    \end{column}
+\end{columns}
+
+
+%\begin{table}[htbp]
+%  \centering
+%  \caption{Error absoluto medio (MAE) y coeficientes de correlación de Pearson en las particiones para las coordenadas $X$, $Y$ y $Z$ del modelo de regresión CNN.}
+%  \label{tab:metrics_xyz_folds_cnn}
+%  \vspace{0.25cm}
+%  \footnotesize
+%  \resizebox{\textwidth}{!}{%
+%    \begin{tabular}{lcccccc}
+%      \toprule
+%      \multirow{2}{*}{\textbf{Folds}} & \multicolumn{3}{c}{\textbf{MAE (cm)}} & \multicolumn{3}{c}{\textbf{Pearson Correlation}} \\
+%      \cmidrule(lr){2-4} \cmidrule(lr){5-7}
+%      & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
+%      \midrule
+%      Fold 1 & 0.6019 & 0.5029 & 1.3013 & 0.9970 & 0.9961 & 0.9979 \\
+%      Fold 2 & 0.5231 & 0.4467 & 0.5549 & 0.9980 & 0.9985 & 0.9991 \\
+%      Fold 3 & 0.5569 & 0.4069 & 0.8829 & 0.9969 & 0.9978 & 0.9982 \\
+%      Fold 4 & 0.5764 & 0.3836 & 1.0473 & 0.9985 & 0.9977 & 0.9986 \\
+%      Fold 5 & 0.5062 & 0.3144 & 0.7316 & 0.9978 & 0.9987 & 0.9987 \\
+%      \midrule
+%      \textbf{Mean $\pm$ SD} & \textbf{0.5529 $\pm$ 0.0384} & \textbf{0.4109 $\pm$ 0.0706} & \textbf{0.9036 $\pm$ 0.2847} & \textbf{0.9976 $\pm$ 0.0007} & \textbf{0.9978 $\pm$ 0.0010} & \textbf{0.9985 $\pm$ 0.0005} \\
+%      \bottomrule
+%    \end{tabular}%
+%  }
+%\end{table}
 
 \end{frame}
 
@@ -1011,6 +1064,14 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 
 
 
+
+\end{frame}
+
+
+
+\begin{frame}{Hipótesis}
+
+ ``Una secuencia de procesamiento que emplee \textit{beamforming} y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica de la \textit{\textbf{RIH}} contenida en un conjunto de señales acústicas para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro cubico \footnote{Basado en las limitaciones encontradas por Brunetto et al. en el sistema \textit{Batvision} \cite{bat1}.}. Esto con una resolución de desplazamiento de al menos 5 cm en alguna de sus coordenadas y cambios de orientación mayores a 10 grados, con un error absoluto medio de posición menor a 2 cm y de orientación menor a 6 grados \footnote{Basado en las dimensiones de deformación detectables por Rothstein et al. en su trabajo \textit{Echosense} \cite{echosense}.}.''
 
 \end{frame}
 

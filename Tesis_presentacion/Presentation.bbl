@@ -34,6 +34,11 @@ J.~Bitterman, D.~Levi, H.~H. Diamandi, S.~Gannot, and T.~Rosenwein, ``Revrir:
   Joint reverberant speech and room impulse response embedding using
   contrastive learning with application to room shape classification,'' 2024.
 
+\bibitem{vapnikstatistical}
+V.~N. Vapnik, {\em Statistical Learning Theory}.
+\newblock Adaptive and Learning Systems for Signal Processing, Communications,
+  and Control, New York, NY, USA: John Wiley \& Sons, 1998.
+
 \bibitem{calvo2018bayesian}
 B.~Calvo, G.~Santaf{\'e}, and J.~A. Lozano, ``Bayesian inference for algorithm
   ranking analysis,'' in {\em Proceedings of the Genetic and Evolutionary
@@ -42,10 +47,5 @@ B.~Calvo, G.~Santaf{\'e}, and J.~A. Lozano, ``Bayesian inference for algorithm
 \bibitem{nadeau2003inference}
 C.~Nadeau and Y.~Bengio, ``Inference for the generalization error,'' {\em
   Machine Learning}, vol.~52, no.~3, pp.~239--281, 2003.
-
-\bibitem{vapnikstatistical}
-V.~N. Vapnik, {\em Statistical Learning Theory}.
-\newblock Adaptive and Learning Systems for Signal Processing, Communications,
-  and Control, New York, NY, USA: John Wiley \& Sons, 1998.
 
 \end{thebibliography}
