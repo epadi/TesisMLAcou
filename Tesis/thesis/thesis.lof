@@ -25,11 +25,11 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Scatter plot of cube locations for each recording in the dataset, the blue columns represent the 26 sessions, and each point in the column represents the nine orientations captured at that location.}}{28}{figure.caption.13}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Acoustic to location processing pipeline}}{30}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Log-Mel spectrograms corresponding of the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}}{37}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Log-Mel spectrograms corresponding to the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}}{37}{figure.caption.16}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Network accuracy vs. reservoir size for 50 epochs runs.}}{41}{figure.caption.18}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Test MAE as a function of Intermediate Hidden Layer Size for different Sparsity values}}{43}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Multihead Network architecture for the ESN Estimator.}}{45}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Frequency response of the stimulus signal showing the top 10 spectral components with the highest magnitude.}}{47}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Multihead Network architecture for the ESN Estimator.}}{44}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Frequency response of the stimulus signal showing the top 10 spectral components with the highest magnitude.}}{46}{figure.caption.24}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Geometric layout of the measurement box illustrating the acoustic path from the speaker located at E to the microphones positioned at G and H.}}{48}{figure.caption.26}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Acoustic waveforms at 400\,Hz captured by the microphones located at points G and H.}}{49}{figure.caption.27}%
 \addvspace {10\p@ }

@@ -3,6 +3,11 @@
 \bibitem{humecho}
 L.~Thaler, ``Echolocation in people,'' 2022.
 
+\bibitem{norman2021human}
+L.~J. Norman and L.~Thaler, ``Human click-based echolocation: Effects of
+  blindness and age, and real-life implications in a 10-week training
+  program,'' {\em PLoS One}, vol.~16, no.~6, p.~e0252330, 2021.
+
 \bibitem{RIR03}
 F.~Samad, ``Using audio ray tracing to calculate room impulse response,'' 2009.
 
@@ -25,6 +30,16 @@ M.~Rothstein, Z.~Liu, and I.~Bashima, ``Echosense: Acoustic sensing for
   enclosed structure monitoring and recognition,'' in {\em 2023 IEEE MIT
   Undergraduate Research Technology Conference (URTC)}, pp.~1--6, 2023.
 
+\bibitem{calvo2018bayesian}
+B.~Calvo, G.~Santaf{\'e}, and J.~A. Lozano, ``Bayesian inference for algorithm
+  ranking analysis,'' in {\em Proceedings of the Genetic and Evolutionary
+  Computation Conference}, 2018.
+
+\bibitem{vapnikstatistical}
+V.~N. Vapnik, {\em Statistical Learning Theory}.
+\newblock Adaptive and Learning Systems for Signal Processing, Communications,
+  and Control, New York, NY, USA: John Wiley \& Sons, 1998.
+
 \bibitem{RIR09}
 M.~Wang, S.~Clarke, J.-H. Wang, R.~Gao, and J.~Wu, ``Soundcam: A dataset for
   finding humans using room acoustics,'' 2024.
@@ -33,19 +48,5 @@ M.~Wang, S.~Clarke, J.-H. Wang, R.~Gao, and J.~Wu, ``Soundcam: A dataset for
 J.~Bitterman, D.~Levi, H.~H. Diamandi, S.~Gannot, and T.~Rosenwein, ``Revrir:
   Joint reverberant speech and room impulse response embedding using
   contrastive learning with application to room shape classification,'' 2024.
-
-\bibitem{vapnikstatistical}
-V.~N. Vapnik, {\em Statistical Learning Theory}.
-\newblock Adaptive and Learning Systems for Signal Processing, Communications,
-  and Control, New York, NY, USA: John Wiley \& Sons, 1998.
-
-\bibitem{calvo2018bayesian}
-B.~Calvo, G.~Santaf{\'e}, and J.~A. Lozano, ``Bayesian inference for algorithm
-  ranking analysis,'' in {\em Proceedings of the Genetic and Evolutionary
-  Computation Conference}, 2018.
-
-\bibitem{nadeau2003inference}
-C.~Nadeau and Y.~Bengio, ``Inference for the generalization error,'' {\em
-  Machine Learning}, vol.~52, no.~3, pp.~239--281, 2003.
 
 \end{thebibliography}

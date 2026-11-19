@@ -20,7 +20,7 @@
 \contentsline {table}{\numberline {5.2}{\ignorespaces Performance Across Intermediate Steps}}{42}{table.caption.19}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Echo State Network (ESN) Hyperparameters}}{42}{table.caption.20}%
 \contentsline {table}{\numberline {5.4}{\ignorespaces Error Distribution Comparison Between Standard ESN and MultiHead ESN}}{43}{table.caption.22}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Top 10 frequency components of the stimulus signal with the highest magnitude.}}{46}{table.caption.25}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Top 10 frequency components of the stimulus signal with the highest magnitude.}}{47}{table.caption.25}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces Model Performance Across The Three Regions}}{55}{table.caption.31}%
 \contentsline {table}{\numberline {6.2}{\ignorespaces Mean Absolute Error Across Folds for $X$, $Y$, and $Z$ Coordinates for the CNN Regression Model}}{59}{table.caption.37}%

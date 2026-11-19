@@ -7,7 +7,7 @@ This chapter presents the models used to test the hypothesis. A CNN estimator is
 
 \section{CNN Estimator}
 
-The related work presented in seccion 2.6.2 provide insights respect the potential use of neural network to estimate the location of an object using acoustic echoes, and considering the especific findings in \cite{echosense} is that a metric is extrapolated for the magnitude of estimation error. Due the fact that the dataset was new and unexplored, the model chosen to establish a reference point was a CNN, this with the premise that a CNN has enough representational capacity to learn from an especific acoustic trasformation the function that maps the input features to espatial coordinates, providing valuable information if our original goals can be achieved with a more restricted network as is the case of an ESN.
+The related work presented in section 2.6.2 provide insights into the potential use of neural network to estimate the location of an object using acoustic echoes, and considering the especific findings in \cite{echosense} is that a metric is extrapolated for the magnitude of estimation error. Because the dataset was new and unexplored, the model chosen to establish a reference point was a CNN, this with the premise that a CNN has enough representational capacity to learn from an especific acoustic trasformation the function that maps the input features to espatial coordinates, providing valuable information if our original goals can be achieved with a more restricted network as is the case of an ESN.
 
 \subsection{Log-Mel Spectrogram as Images}
 
@@ -18,12 +18,12 @@ To train a CNN on the dataset, a Log-Mel transformation is applied to the audio 
 \text{Frequency frames} = \frac{signal\_length}{window\_step} 
 \end{equation}
 
-Finally to reduce feature variance in the Mel bands a logarithmic transformation is performed. The resulting Log-Mel matrix is transform to images of 570x370 pixels per location-orientation as the one shown in Figure \ref{spectogram4ch}.
+Finally to reduce feature variance in the Mel bands a logarithmic transformation is performed. The resulting Log-Mel matrix is transformed to images of 570x370 pixels per location-orientation as the one shown in Figure \ref{spectogram4ch}.
 
 \begin{figure}[!htb]
         \begin{center}        
             \includegraphics[height=10cm, width=15cm]{../img/4channelSpec.png}
-            \caption{Log-Mel spectrograms corresponding of the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}
+            \caption{Log-Mel spectrograms corresponding to the four channels of signals captured at session 1, location X=22.8cm, Y=-0.94cm, Z=-9.43cm and orientation 50 degrees.}
         \label{spectogram4ch}                         
         \end{center}
 \end{figure}
@@ -59,11 +59,11 @@ For the ESN, each audio channel is cropped to 20,000 samples to remove the low-e
 
 \subsection{ESN Architecture}
 
-The development of the ESN architecture begins with the vanilla flavor of the ESN all set to work as a classifier. for exploration and evaluation the network is first configured as a classifier due to the fact that this task is easier than regression \cite{vapnikstatistical}, so the earlier evaluations and changes on the ESN are conducted in its classification mode.
+The development of the ESN architecture begins with the vanilla flavor of the ESN all set to work as a classifier. For exploration and evaluation the network is first configured as a classifier due to the fact that this task is easier than regression \cite{vapnikstatistical}, so the earlier evaluations and changes on the ESN are conducted in its classification mode.
 
-The ESN had as input four Mel spectrogram sequences of 128 bands each, for a total of 512 inputs, the neurons use tanh activation function for reservoir and the feedforward network. The output softmax layer classifies into 26 classes based on the session in which the audio is recorded.
+The ESN had as input four Mel spectrogram sequences of 128 bands each, for a total of 512 inputs. The neurons use tanh activation function for reservoir. The output softmax layer classifies into 26 classes based on the session in which the audio is recorded.
 
-The description of the key hyperparameters for the networks are shown in the table \ref{tab:esn_parameters}:
+The description of the key hyperparameters for the networks are shown in the Table \ref{tab:esn_parameters}:
 
 \begin{table}[htbp]
 \centering
@@ -122,7 +122,7 @@ The results are presented in Table \ref{tab:intermediate_steps}. The four-captur
 \end{table}
 
 
-The table \ref{tab:esn_values} summarize the final values selected for the clasifier, with those values an acuracy of 98.42\% was achieved on 150 epoch training.
+The Table \ref{tab:esn_values} summarizes the final values selected for the clasifier, with those values an accuracy of 98.42\% was achieved on 150 epoch training.
 
 \begin{table}[htbp]
 \centering
@@ -280,7 +280,7 @@ The microphones are arranged in pairs in the plane X-Z, enabling binaural record
  \Delta t_{\text{arrival}} = \frac{0.4642\,\text{m}}{346\,\text{m/s}} = 1.34\,\text{ms}
 \end{equation}
 
-As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.34\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are added. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignment of the signals resulting in constructive interference for signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
+As an example, selecting the highest-magnitude components around 400\,Hz for beamforming, combined with the computed time difference of arrival, enables an analysis of how the signal's main spectral components behave over the travel time $\Delta t$. At 400\,Hz, the signal period is 2.5\,ms. For a propagation delay $\Delta t = 1.34\,\text{ms}$ (as illustrated in Figure \ref{fig:ondas400}), the acoustic wave arrives at point G in an inverted-phase condition relative to point H, causing destructive cancellation when the two signals are added. Consequently, introducing a delay equal 1.34\,\text{ms} to the signal at point G produces an alignment of the signals resulting in constructive interference for the signal when added to the signal from point H at 400\,Hz. Furthermore, as the reverberant source shifts away from this target location, destructive attenuation penalizes the gain at these frequencies, fulfilling the objective of the beamforming operation.
 
 \begin{figure}[H]
     \begin{center}

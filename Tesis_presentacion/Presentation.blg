@@ -13,43 +13,43 @@ Warning--entry type for "humecho" isn't style-file defined
 --line 525 of file mendeley.bib
 You've used 11 entries,
             1876 wiz_defined-function locations,
-            537 strings with 5126 characters,
-and the built_in function-call counts, 2326 in all, are:
-= -- 204
+            538 strings with 5233 characters,
+and the built_in function-call counts, 2327 in all, are:
+= -- 205
 > -- 102
 < -- 0
 + -- 39
 - -- 28
-* -- 143
-:= -- 334
+* -- 135
+:= -- 329
 add.period$ -- 12
 call.type$ -- 11
 change.case$ -- 10
 chr.to.int$ -- 0
 cite$ -- 11
-duplicate$ -- 116
-empty$ -- 256
+duplicate$ -- 124
+empty$ -- 252
 format.name$ -- 28
-if$ -- 577
+if$ -- 584
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 7
 newline$ -- 37
 num.names$ -- 11
-pop$ -- 63
+pop$ -- 64
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 79
+skip$ -- 90
 stack$ -- 0
-substring$ -- 82
-swap$ -- 36
+substring$ -- 66
+swap$ -- 44
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 19
+while$ -- 17
 width$ -- 13
 write$ -- 96
 (There were 3 warnings)

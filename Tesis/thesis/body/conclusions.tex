@@ -10,15 +10,15 @@ This chapter presents the final conclusions obtained through the research effort
 
 \begin{itemize}
 	
-	\item The CNN and ESN architectures are capable of learning from acoustic representations like Log-Mel spectograms the mapping function from audio features to the target coordinates that define the location of a cube of 20cm length inside an enclosed space of $1m^{3}$ with a MAE less than 2cm as clasification and regression tasks.
+	\item The CNN and ESN architectures can learn from acoustic representations like Log-Mel spectrograms and Mel bands the function that maps audio features to coordinates that define the location of an object in a small enclosed space.
 	
-	\item The orientation of the cube cannot be accurately determined from the acoustic representations used in this study.
+	\item The orientation of the cube cannot be accurately determined from the acoustic representations and models used in this study.
 	
 	\item The CNN had its largest errors near the edges of the measurement space for the X, Y, and Z coordinates, whereas the ESN had larger errors in the central region.
 	
-	\item Without beamforming CNN was the best overall model according to the Bayesian comparison, while the ESN remained a competitive and more parameter-efficient alternative, using approximately 3\% as many trainable parameters as ResNet-18 CNN.
+	\item Without taking beamforming into account, the CNN was the best overall model according to the Bayesian comparison, while the ESN remained a competitive and more parameter-efficient alternative, using approximately 3\% as many trainable parameters as the ResNet-18 CNN.
 	
-	\item Beamforming improved CNN performance and negatively affected the ESN.
+	\item Beamforming improved the CNN's performance but negatively affected the ESN's performance.
 	
 	\item The CNN with beamforming had the highest probability of being the best model according to the Bayesian comparison, followed by the CNN without beamforming, the ESN, and finally the ESN with beamforming.
 

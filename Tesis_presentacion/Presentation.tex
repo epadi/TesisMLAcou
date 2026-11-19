@@ -13,6 +13,7 @@
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{multirow}
+\usepackage{amssymb}
 \usepackage[spanish,es-tabla]{babel}
 \usetikzlibrary{shapes,arrows}
 \selectlanguage{spanish}
@@ -24,13 +25,14 @@
 \subtitle[]{Tesis de Maestría en Computación}
 \author[]{Autor: Esteban Padilla Padilla\\Supervisor: Ing. Kervin Sánchez Herrera M.Sc.}
 \institute[]{Escuela de Ingeniería en Computación\\Instituto Tecnológico de Costa Rica}
-\date[]{24 de Noviembre de 2026}
+\date[]{24 de noviembre de 2026}
 
 \setbeamerfont{title}{size=\fontsize{15}{10}\bfseries}
 \setbeamerfont{subtitle}{size=\fontsize{12}{10}\bfseries}
 \setbeamerfont{author}{size=\fontsize{10}{10}\bfseries}
 \setbeamerfont{institute}{size=\fontsize{10}{10}\bfseries}
 \setbeamerfont{date}{size=\fontsize{8}{10}\bfseries}
+\setbeamerfont{section in head/foot}{size=\footnotesize}
 
 %Formato Portada
 \setbeamertemplate{title page}{%
@@ -96,17 +98,31 @@
 
 \begin{frame}{}
 
+        \vspace*{-0.6cm}
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+        \small
+        \centering
+        \vspace*{0.6cm}
         \begin{figure}
-        \includegraphics[width=12cm, height=6cm]{Picture-5_Lore-Thaler-min-1024x526.jpg}
-        \caption{Imagen de resonancia magnética de la actividad cerebral durante la ecolocalización humana \cite{humecho}.}
+        \includegraphics[width=5.5cm, height=5.5cm]{Picture-5_Lore-Thaler-min-1024x526.jpg}
+        \caption{\scriptsize Imagen de resonancia magnética de la actividad cerebral durante la ecolocalización humana \cite{humecho}.}
         \end{figure}
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+    \vspace*{3cm}
+    \textcolor{gray}{``La ecolocalización \textbf{no es un talento innato} de las personas con discapacidad visual. Las personas videntes pueden \textbf{aprender} sus fundamentos y estimar el tamaño y la distancia de los objetos \cite{norman2021human}.''}
+    \end{column}
+\end{columns}
 
 \end{frame}
 
 
 
 \begin{frame}
-\frametitle{Tabla de contenidos}
+\frametitle{Índice}
 \begingroup
 \addtobeamertemplate{section in toc}{}{\vspace{\baselineskip}}
 \begin{columns}[T,onlytextwidth]
@@ -120,6 +136,12 @@
 
 
 \section{Introducción}
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Introducción};
+\end{tikzpicture}
+\end{frame}
 %-------------------------------------------------------------------------
 
 \begin{frame}{Respuesta al impulso de una habitación (\textbf{RIH})}
@@ -178,96 +200,94 @@
 
 \end{frame}
 
-\section{Trabajos relacionados}   
- %-----------------------------------------------------------------------
-\begin{frame}{Trabajos relacionados}
-
-\scriptsize
-%\tiny
-\begin{table}
-\begin{center}
-\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|c|>{\centering\arraybackslash}m{6cm}|m{1.4cm}|c|}
-    \hline
-    Autores & A\~no& Logro & Tipo & Método \\ 
-    \hline
-    Brunetto et al. & 2020 & Creación de imágenes de profundidad mediante ecos acústicos \cite{bat1}. & Generativo & Aprendizaje automático\\
-    \hline
-    Rothstein et al. & 2023 & Identificación estructuras cerradas desde su interior mediante ecos \cite{echosense}. & Clasificación & Aprendizaje automático\\
-    \hline 
-    Wang et al.	& 2024 & Detectar, localizar e identificar humanos dentro de habitaciones mediante sonidos \cite{RIR09}.	& Estimación & Aprendizaje automático\\
-    \hline
-    Bitterman et al. & 2024 & Clasificar habitaciones basado en tamaño y forma mediante RIH \cite{RIR06}. & Clasificación  & Aprendizaje automático\\
-    \hline
-
-\end{tabular}
-\end{center}
-\caption{Trabajos más significativos sobre percepción acústica de objetos y espacios.}
-\label{table:1}
-\end{table}
-
-\end{frame}
-
-
-
-
-
-\begin{frame}{Características comunes}
-    \begin{minipage}{0.45\textwidth}
-            
-        \small  
-        \begin{itemize}%[<+-|alert@+>]
-        \item La mayoría tiene como objetivo la identificación o la clasificación.
-        \item Emplean enfoques de aprendizaje de máquina basados en redes neuronales convolucionales (\textit{CNN}).
-        \item Se enfocan en habitaciones grandes.
-        \end{itemize}
-        
-    \end{minipage}
-    \begin{minipage}{0.5\textwidth}
-        %\uncover<3->{
-        \begin{figure}
-        \includegraphics[width=\textwidth, height=5cm]{semiconductor-manufacturing-facility.jpg}
-        \caption{Piso de manufactura automatizado para semiconductores.}
-        \end{figure}
-    \end{minipage}
-\end{frame}
-
-
-
 
 
 
 
 
 \section{Problema y propuesta de solución}
+
+
+
+
+
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Problema y propuesta de solución};
+\end{tikzpicture}
+\end{frame}
 %-------------------------------------------------------------------------
 
-\begin{frame}{Problema}
-Lo anterior nos lleva a formular el siguiente problema:
-\\~\\
-\begin{itemize}
 
-    \item En espacios pequeños (aproximadamente \(1\,m^3\)), donde los ecos llegan de diferentes direcciones al mismo tiempo y se superponen, se busca estimar la posición y la orientación de un objeto de interés mediante la respuesta a un impulso acústico.
+\begin{frame}{Trabajos relacionados}
+   \vspace*{-0.8cm}
+\scriptsize
+%\tiny
+\vspace*{-0.2cm}
+
+Características comunes de los trabajos relacionados:
+\vspace*{0.1cm}
+\begin{itemize}
+\item La mayoría de los trabajos se enfocan en la identificación o clasificación de objetos o espacios.
+\item Emplean técnicas de aprendizaje automático, principalmente redes neuronales convolucionales.
+\item Están enfocados en espacios grandes.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Problema}
+
+
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.55\textwidth}
+        %\scriptsize
+        Se busca:
+        \vspace*{0.8cm}
+        \begin{itemize}
+            \item Estimar la ubicación de un objeto.
+            \item Espacios reducidos (aproximadamente \(1\,m^3\)).
+            \item Utilizar una red neuronal eficiente en el uso de memoria.
+        \end{itemize}
+
+            
+
+
 
         
-\end{itemize}
+
+
+
+    \end{column}
+    \begin{column}{0.45\textwidth}
+    \vspace*{-0.6cm}
+        \begin{figure}
+        \includegraphics[width=\textwidth, height=5cm]{semiconductor-manufacturing-facility.jpg}
+        \caption{Piso de manufactura automatizado para semiconductores.}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+
 
 \end{frame}
 
 
 \begin{frame}{Propuesta de solución}
 
-    A partir de un conjunto de señales acusticas que contienen la informacion de RIH, utilizar aprendizaje de máquina para transformar estas series acústicas en coordenadas de ubicación y ángulos de orientación de un objeto de interés dentro del espacio.\\
-    Se emplean:
+    A partir de un conjunto de señales acústicas que contienen la información de la RIH, utilizar aprendizaje de máquina para transformar estas series acústicas en coordenadas de ubicación y ángulos de orientación de un objeto de interés dentro del espacio.\\
+    La propuesta emplea:
         \begin{itemize}%[<+-|alert@+>]
-        \item Beamforming para resolver la superposición de ecos.
-        \item Redes neuronales recurrentes de tipo ESN para procesar directamente las secuencias de caracteristicas acústicas.
+        \item \textit{Beamforming} para resolver la superposición de ecos.
+        \item Redes neuronales recurrentes de tipo ESN para procesar directamente las secuencias de características acústicas.
         \end{itemize}
         
 \end{frame}
 
 \begin{frame}{Hipótesis}
 
- ``Una secuencia de procesamiento que emplee \textit{beamforming} y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica de la \textit{\textbf{RIH}} contenida en un conjunto de señales acústicas para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro cubico \footnote{Basado en las limitaciones encontradas por Brunetto et al. en el sistema \textit{Batvision} \cite{bat1}.}. Esto con una resolución de desplazamiento de al menos 5 cm en alguna de sus coordenadas y cambios de orientación mayores a 10 grados, con un error absoluto medio de posición menor a 2 cm y de orientación menor a 6 grados \footnote{Basado en las dimensiones de deformación detectables por Rothstein et al. en su trabajo \textit{Echosense} \cite{echosense}.}.''
+ ``Una secuencia de procesamiento que emplee \textit{beamforming} y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica de la \textit{\textbf{RIH}} contenida en un conjunto de señales acústicas para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro cúbico \footnote{Basado en las limitaciones encontradas por Brunetto et al. en el sistema \textit{Batvision} \cite{bat1}.}. Esto con una resolución de desplazamiento de al menos 5 cm en alguna de sus coordenadas y cambios de orientación mayores a 10 grados, con un error absoluto medio de posición menor a 2 cm y de orientación menor a 6 grados \footnote{Basado en las dimensiones de deformación detectables por Rothstein et al. en su trabajo \textit{Echosense} \cite{echosense}.}.''
 
 \end{frame}
 
@@ -278,9 +298,17 @@ Lo anterior nos lleva a formular el siguiente problema:
 \section{Objetivos}
 %-------------------------------------------------------------------------
 
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Objetivos};
+\end{tikzpicture}
+\end{frame}
+
 \begin{frame}{Objetivo general}
 
-Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto con \textbf{\textit{CNN}} y \textbf{\textit{ESN}} para transformar una entrada multicanal de señales acústicas en coordenadas y ángulos que permitan estimar la ubicación de un objeto en un espacio cerrado.
+\begin{itemize}
+\item[$\checkmark$] Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto con \textit{CNN} y \textit{ESN} para transformar una entrada multicanal de señales acústicas en coordenadas y ángulos que permitan estimar la ubicación de un objeto en un espacio cerrado.
+\end{itemize}
 
 \end{frame}
 
@@ -288,18 +316,62 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 \begin{frame}{Objetivos específicos}
 
 \begin{itemize}%[<+-|alert@+>]
-\item Recopilar un conjunto de datos de la respuesta acústica de un espacio pequeño y cerrado para múltiples posiciones de un objeto en su interior.
-\item Desarrollar una etapa de aprendizaje basada en redes neuronales convolucionales (\textit{CNN}) que sirva como referencia para estimar las coordenadas y la orientación de un objeto dentro de un espacio cerrado.
-\item Desarrollar una etapa de aprendizaje que use \textit{ESN} para estimar coordenadas y orientación de un objeto dentro de un espacio cerrado.
-\item Implementar una etapa de \textit{beamforming} que permita dividir el espacio en cuatro regiones de audición.
-\item Evaluar experimentalmente la exactitud de los estimadores. 
+\item[$\checkmark$] Recopilar un conjunto de datos de la respuesta acústica de un espacio pequeño y cerrado para múltiples posiciones de un objeto en su interior.
+\item[$\checkmark$] Desarrollar una etapa de aprendizaje basada en redes neuronales convolucionales (\textit{CNN}) que sirva como referencia para estimar las coordenadas y la orientación de un objeto dentro de un espacio cerrado.
+\item[$\checkmark$] Desarrollar una etapa de aprendizaje que use \textit{ESN} para estimar coordenadas y orientación de un objeto dentro de un espacio cerrado.
+\item[$\checkmark$] Implementar una etapa de \textit{beamforming} que permita dividir el espacio en cuatro regiones de audición.
+\item[$\checkmark$] Evaluar experimentalmente la exactitud de los estimadores. 
 
 
 \end{itemize}
 \end{frame}
 
 
+
+\section{Metodología}
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Metodología};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Metodología y análisis de los datos}
+
+%    \begin{minipage}{0.5\textwidth}
+
+        \begin{itemize}%[<+-|alert@+>]
+        \item Se emplea validación cruzada con cinco particiones (80:20). 
+        \item Se evalúan dos métricas:
+        
+        \begin{itemize}
+            \small
+            \item Error absoluto medio (MAE).
+            \item Coeficiente de correlación de Pearson (PCC).
+        \end{itemize}
+        \item Análisis cualitativo y cuantitativo de las métricas.
+        \item Comparación formal de los estimadores.
+       
+            \begin{itemize}
+                 \small
+                \item Se utiliza un modelo bayesiano de Plackett-Luce \cite{calvo2018bayesian} debido a la validación cruzada.
+                \item Inferencia bayesiana: distribución \textit{a priori} $\rightarrow$ observaciones $\rightarrow$ distribución \textit{a posteriori}.
+                %\item Se aplica un factor de penalización según Nadeau y Bengio debido a la validación cruzada \cite{nadeau2003inference}.
+                \item La distribución posterior se muestrea mediante Monte Carlo por cadenas de Markov (MCMC) para obtener la probabilidad de que cada modelo sea el mejor.
+            \end{itemize}
+   
+        \end{itemize}
+
+\end{frame}
+
+
 \section{Diseño}  
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Diseño};
+\end{tikzpicture}
+\end{frame}
 
 
 \begin{frame}{Procesamiento de los datos}
@@ -316,25 +388,25 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
 \begin{frame}{Caja de medición}
 
  \begin{figure}
-        \includegraphics[width=12cm, height=6cm]{Measuretogether.png}
+        \includegraphics[width=12cm, height=5.5cm]{Measuretogether.png}
         \caption{Caja de medición: (a) esquema conceptual de la caja para mediciones acústicas y (b) implementación real para la adquisición de datos.}
 \end{figure}
 
 \end{frame}
 
 
-\begin{frame}{Construccion del conjunto de datos}
+\begin{frame}{Construcción del conjunto de datos}
     \vspace*{-1cm}
     \begin{minipage}{0.5\textwidth}
         
         \begin{itemize}%[<+-|alert@+>]
-        \item La señal estímulo utilizada fue un fragmento de 0,3 segundos de una melodía.
-        \item El conjunto de datos se recopiló en 26 sesiones $X$ 30 ubicaciones distintas del cubo en Z $X$ 9 orientaciones.
+        \item El conjunto de datos se recopiló en 26 sesiones, con 30 ubicaciones distintas del cubo en Z y 9 orientaciones.
         \item En total se obtuvieron 7020 muestras de cuatro canales, para un total de 28080 grabaciones.
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.45\textwidth}
         %\uncover<3->{
+            \vspace*{-0.5cm}
         \begin{figure}
         \includegraphics[width=7cm, height=7cm]{allpoints.png}
         \caption{Posiciones del cubo para cada grabación del conjunto de datos.}
@@ -342,42 +414,506 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
     \end{minipage}
 \end{frame}
 
-\begin{frame}{CNN}
+\begin{frame}{Arquitectura CNN}
 
     \vspace*{-0.6cm}
 
     \begin{minipage}{0.5\textwidth}
-        
+        \small
         \begin{itemize}%[<+-|alert@+>]
             \item Espectrogramas Log-Mel como entrada para la CNN.
-            \item Arquitectura ResNet-18: $\sim$ 11 millones de parámetros.
-            \item La entrada es una pila de 4 imágenes de espectrogramas RGB.
-            \item Única salida de regresión con función de activación sigmoidal.
-            \item Normalización mínimo-máximo y arcoseno.
-            \item Entrenamiento durante 40 épocas
+            \item Arquitectura ResNet-18 con 11 millones de parámetros.
+            \item La entrada es una pila de 4 imágenes RGB.
+            \item Normalización min-máx y arcoseno.
+            \item Única salida de regresión logística.
   
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.45\textwidth}
         %\uncover<3->{
         \begin{figure}
-        \includegraphics[width=6cm, height=5cm]{4channelSpec.png}
-        \caption{Espectrogramas Log-Mel de la sesión 1, en la ubicación X=22.8 cm, Y=-0.94 cm, Z=-9.43 cm y con una orientación de 50 grados.}
+        \includegraphics[width=6cm, height=4cm]{4channelSpec.png}
+        \caption{\scriptsize Espectrogramas Log-Mel de la sesión 1, en la ubicación X=22.8 cm, Y=-0.94 cm, Z=-9.43 cm y con una orientación de 50 grados.}
         \end{figure}
     \end{minipage}
 
 
 \end{frame}
 
-\begin{frame}{ESN}
-    \vspace*{-0.6cm}
+
+
+\begin{frame}{Arquitectura ESN}
+
 \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.55\textwidth}
-        \small
+    \begin{column}{0.50\textwidth}
+        \scriptsize
         \begin{itemize}
-            \item Espectograma como secuencia de 128 bandas Mel por 40 tramas.
-            \item Búsqueda en cuadrícula para la optimización de hiperparámetros del ESN.
-            \item Primero se resuelve el problema como clasificacion y luego como regresion siguendo el principo de vapnik \cite{vapnikstatistical}.
+            \item Entrada de audio convertida a secuencias de 128 bandas Mel por 40 tramas.
+            \item \textit{Grid search} para la optimización de hiperparámetros.
+            \item Divide y conquista: ESN de múltiples cabezas para mejorar la exactitud de las estimaciones.
+            \item Cuatro cabezas:
+            
+            \begin{itemize}
+                \scriptsize
+                \item Cabeza 1: estima coordenadas positivas.
+                \item Cabeza 2: estima coordenadas negativas.
+                \item Cabeza 3: determina el signo.
+                \item Cabeza 4: estima todas las coordenadas con baja exactitud.
+            \end{itemize}
+            \item Se emplea lógica de selección de salida.
+            \item Total de 360 mil parámetros, aproximadamente el 3\% de los parámetros de la CNN.
+        
+        \end{itemize}
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+             \vspace*{-1.3cm}
+                \begin{table}
+            \centering
+            \scriptsize
+            \setlength{\tabcolsep}{3pt}
+            \renewcommand{\arraystretch}{0.85}
+            \caption{Hiperparámetros de la red ESN}
+            \label{tab:esn_values}
+            \begin{tabular}{lr}
+                \hline
+                \textbf{Parameter} & \textbf{Value} \\
+                \hline
+                Reservoir Size   & 1500 \\
+                Spectral Radius  & 0.99 \\
+                Sparsity         & 0.7  \\
+                Leaky Rate       & 0.1  \\
+                Intermediate Captures & 4 \\
+                Intermediate layer size & 20 \\
+                \hline
+            \end{tabular}
+        \end{table}
+            \vspace*{-0.6cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=8cm,height=4cm]{Multi-Head_ESN_Estimator.jpg}
+            \caption{\scriptsize Arquitectura ESN de múltiples cabezas.}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+
+\end{frame}
+
+\begin{frame}{\textit{Beamforming}}
+
+\vspace*{-0.6cm}
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+        \small
+        \centering
+        \vspace*{1cm}
+        \begin{itemize}
+            \item Análisis geométrico de la trayectoria del sonido desde el altavoz hasta los micrófonos.
+            \item Diferencia de tiempo de llegada entre los micrófonos de 1.34 ms.
+            \item Cuatro pares diferenciales de audio obtenidos como resultado.
+        
+        \end{itemize}
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=6cm,height=6cm,keepaspectratio]{Beamforming.jpg}
+            \caption{\scriptsize Disposición geométrica de la caja de medición que ilustra la trayectoria acústica desde el altavoz ubicado en E hasta los micrófonos situados en G y H.}
+        \end{figure}
+    \end{column}
+\end{columns}
+
+
+\end{frame}
+
+
+\section{Resultados y análisis}
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Resultados y análisis};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{CNN como clasificador}
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+        \small
+        \centering
+        \vspace*{-0.6cm}
+        \begin{itemize}
+            \item Ubicación: exactitud de 98.59\%.
+        \end{itemize}
+        \vspace*{-0.2cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=6cm,height=6cm,keepaspectratio]{clasification_location_cnn.png}
+            \caption{\scriptsize Matriz de confusión para la evaluación de la CNN en la tarea de clasificación de la ubicación acústica.}
+        \end{figure}
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+              \small
+              \centering
+        \vspace*{-0.6cm}
+                \begin{itemize}
+            \item Orientación: exactitud de 29.06\%.
+        \end{itemize}
+        \vspace*{-0.2cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=5.8cm,height=5.8cm,keepaspectratio]{clasification_orientation_cnn.png}
+            \caption{\scriptsize Matriz de confusión para la evaluación de la CNN en la tarea de clasificación de la orientación acústica.}
+        \end{figure}
+
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Análisis de similitud}
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.40\textwidth}
+
+                     \small
+        \centering
+        \vspace*{0.0cm}
+        \begin{itemize}
+            \item Correlación cruzada para traslación y rotación.
+            \item Traslación: los gráficos muestran una tendencia general a la baja a medida que aumenta la distancia.
+            \item Rotación: los gráficos muestran que la similitud se mantiene relativamente constante ante cambios de orientación.
+            \item La similitud es más sensible a cambios de traslación que a cambios de rotación.
+        \end{itemize}   
+
+
+
+
+
+    \end{column}
+    \begin{column}{0.60\textwidth}
+
+                \small
+        \centering
+        \vspace*{-1.5cm}
+
+   
+        \begin{figure}
+            \centering
+            \includegraphics[width=8.5cm,height=7cm]{reduced_allarround_xcor.png}
+            \caption{\scriptsize Resultados de correlación cruzada para el análisis de similitud de la señal acústica ante cambios de distancia y orientación.}
+        \end{figure}
+
+
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+%################   CNN    #####################
+
+\begin{frame}{Histogramas: errores de estimación de CNN y ESN}
+
+
+    \small
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=15cm,height=15cm,keepaspectratio]{ButterflyHistogram.png}
+            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con CNN y ESN para las cinco particiones.}
+        \end{figure}
+
+        %\begin{itemize}
+        %    \item Coordenada X posee 97.83\% de estimaciones con error por debajo de 2cm, Y posee 98.32\% y Z posee 91.98\%.
+        %\end{itemize}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Error absoluto medio y coeficiente de correlación de Pearson para CNN y ESN}
+
+
+        \vspace*{-0.5cm}
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+
+
+        \small
+        \centering
+        \vspace*{0.0cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=7cm,height=5cm]{MAEs.png}
+            \caption{\scriptsize Error absoluto medio promedio de las cinco particiones para las coordenadas X, Y y Z con CNN y ESN.}
+        \end{figure}
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+
+        \small
+        \centering
+        \vspace*{1cm}
+
+\scriptsize
+\begin{itemize}
+    \item La CNN presenta valores de MAE más bajos que la ESN para todas las particiones y coordenadas.
+    \item Las estimaciones de X y Y presentan valores de MAE cercanos en ambas redes, mientras que Z muestra una mayor diferencia.
+    \item Los valores de MAE para la ESN tienden a ser aproximadamente el doble de los de la CNN.
+    \item Todos los valores de MAE son inferiores a 2 cm.
+\end{itemize}
+   
+
+
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Distribución del error para las tres coordenadas: CNN}
+      \vspace{-1.2cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=15.5cm,height=5.5cm]{Plot3D_errors.png}
+            \caption{\scriptsize Gráficos para las tres coordenadas de los errores de estimación con CNN para las cinco particiones.}
+        \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Distribución del error para las tres coordenadas: ESN}
+      \vspace{-1.2cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=15.5cm,height=5.5cm]{ESN_Plot3D_errors.png}
+            \caption{\scriptsize Gráficos para las tres coordenadas de los errores de estimación con ESN para las cinco particiones.}
+        \end{figure}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Distribución del error por coordenada: X, Y y Z}
+      \vspace{-0.4cm}
+        \begin{figure}
+            \centering
+            \includegraphics[width=14cm,height=13cm,keepaspectratio]{abserror_x_y_z_marcado.png}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con a) CNN y b) ESN para las cinco particiones.}
+        \end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}{\textit{Beamforming} CNN y ESN}
+
+    \vspace*{-1cm}
+
+    \begin{table}[htbp]
+\centering
+\caption{\tiny Error absoluto medio en las coordenadas X, Y y Z para CNN con y sin \textit{beamforming} (media $\pm$ desviación estándar)}
+\label{tab:CNNmae_summary_all_models}
+{\tiny
+\setlength{\tabcolsep}{4pt}
+\scalebox{1.0}{%
+\begin{tabular}{lccc}
+\hline
+\textbf{Modelo} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)} \\
+\hline
+CNN & 0.5529 $\pm$ 0.0384 & \cellcolor{yellow}0.4109 $\pm$ 0.0700 & 0.9036 $\pm$ 0.2862 \\
+Beam CNN & \cellcolor{yellow}0.4789 $\pm$ 0.0478 & 0.4616 $\pm$ 0.0383 & \cellcolor{yellow}0.8577 $\pm$ 0.0683 \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+    \vspace*{-0.5cm}
+
+    \begin{table}[htbp]
+\centering
+\caption{\tiny Error absoluto medio en las coordenadas X, Y y Z para ESN con y sin \textit{beamforming} (media $\pm$ desviación estándar)}
+\label{tab:ESNmae_summary_all_models}
+{\tiny
+\setlength{\tabcolsep}{4pt}
+\scalebox{1.0}{%
+\begin{tabular}{lccc}
+\hline
+\textbf{Modelo} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)} \\
+\hline
+ESN & \cellcolor{yellow}0.8282 $\pm$ 0.0687 & \cellcolor{yellow}0.9436 $\pm$ 0.0814 & \cellcolor{yellow}1.6902 $\pm$ 0.1534 \\
+Beam ESN & 1.0799 $\pm$ 0.0880 & 1.2454 $\pm$ 0.2177 & 1.8341 $\pm$ 0.3149 \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+\vspace*{0.3cm}
+\scriptsize
+De las tablas se observa:
+
+        \begin{itemize}
+            \item El \textit{beamforming} reduce el MAE para X y Z en la CNN.
+            \item Para la ESN, el \textit{beamforming} incrementa el MAE en todas las coordenadas.
+        \end{itemize}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Comparación de modelos mediante Plackett-Luce}
+
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+
+
+        \small
+        \centering
+        \vspace*{0.0cm}
+
+                \begin{figure}
+            \centering
+            \includegraphics[width=7cm,height=5cm]{graficobarrasComparacionmodelos.png}
+            \caption{\scriptsize Comparación del desempeño de los modelos mediante probabilidades para las coordenadas X, Y y Z.}
+        \end{figure}
+
+
+
+    \end{column}
+    \begin{column}{0.50\textwidth}
+
+        \small
+        \centering
+        \vspace*{1.5cm}
+\scriptsize
+        \begin{itemize}
+            \item Para las tres coordenadas, el modelo de CNN con \textit{beamforming} tiene una ventaja probabilística.
+            \item La ventaja del modelo CNN con \textit{beamforming} es más evidente en la coordenada X.
+            \item La ESN con y sin \textit{beamforming} tiene probabilidades bajas de ser el mejor modelo.
+        \end{itemize}
+
+
+    \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+
+\section{Conclusiones y trabajos futuros}
+
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Conclusiones y trabajos futuros};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Revisitando la hipótesis}
+\small
+ ``\underline{Una secuencia de procesamiento que emplee \textit{beamforming}} y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica de la \textit{\textbf{RIH}} contenida en un conjunto de señales acústicas para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro cúbico. Esto con una resolución de desplazamiento de al menos 5 cm en alguna de sus coordenadas y \underline{cambios de orientación mayores a 10 grados}, con un error absoluto medio de posición menor a 2 cm y de \underline{orientación menor a 6 grados}.''\\
+        \vspace*{0.5cm}
+ \textcolor{blue}{La hipótesis se cumple parcialmente.}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Conclusiones}
+\footnotesize
+\begin{itemize}
+	\setlength{\itemsep}{0.5em}
+	
+	\item Las arquitecturas CNN y ESN pueden aprender a partir de representaciones acústicas la función que relaciona las características del audio con las coordenadas de la ubicación de un objeto dentro de un espacio pequeño.
+	\item La orientación del cubo no se puede determinar con precisión mediante las representaciones acústicas y las arquitecturas utilizadas en este trabajo.
+	\item El modelo CNN presentó sus mayores errores en los extremos del espacio de medición para las coordenadas X, Y y Z, mientras que la ESN presentó errores de gran magnitud en la región central.	
+	\item El modelo ESN es una alternativa competitiva con un MAE inferior a 2 cm y mayor eficiencia en memoria, al utilizar solamente el 3\% de los parámetros entrenables del modelo CNN.
+	\item El \textit{beamforming} mejoró el rendimiento de la CNN y afectó negativamente a la ESN.
+	\item La CNN con \textit{beamforming} tuvo la mayor probabilidad de ser el mejor modelo según la comparación bayesiana, seguida por la CNN sin \textit{beamforming} y después por la ESN.
+
+
+	
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Recomendaciones y trabajo futuro}
+\footnotesize
+\begin{itemize}
+    \setlength{\itemsep}{0.5em}
+	\item Investigar el efecto de filtrar los ecos comunes de las representaciones acústicas.
+	\item Para la arquitectura ESN de múltiples cabezas, explorar el entrenamiento con solapamiento de las redes negativa y positiva.
+	\item Explorar el uso de una CNN de múltiples cabezas para determinar si mejora la estimación.
+	\item Analizar el audio de los valores atípicos con errores grandes para identificar el ruido que se debe eliminar de las señales.
+	\item Investigar técnicas de aumento de datos para equilibrar el conjunto de datos y mejorar la generalización de los modelos.
+	\item Para evitar la penalización por dependencia entre muestras, explorar otros métodos de partición del conjunto de datos.
+	\item Explorar otras técnicas de normalización para mejorar la distribución de los datos.
+
+
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{}
+        \begin{figure}
+        \includegraphics[width=6cm, height=5cm]{gracias}
+        \end{figure}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+        \frametitle{Referencias}
+        \bibliographystyle{ieeetr}
+        \bibliography{mendeley}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{tikzpicture}[remember picture,overlay]
+    \node at (current page.center) {\Huge Respaldo};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Arquitectura ESN}
+
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.45\textwidth}
+        \scriptsize
+            \vspace*{-0.5cm}
+        \begin{itemize}
+            \item Se resuelve el problema como clasificación y luego como regresión siguiendo el principio de complejidad de Vapnik \cite{vapnikstatistical}.
+            \item Espectrograma como secuencia de 128 bandas Mel por 40 tramas.
+            \item Búsqueda en cuadrícula para la optimización de hiperparámetros de la ESN.
+            \item ESN como clasificador con exactitud superior a 98\%.
         \end{itemize}
 
         \begin{table}
@@ -398,141 +934,159 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
             \end{tabular}
         \end{table}
     \end{column}
-    \begin{column}{0.43\textwidth}
+    \begin{column}{0.55\textwidth}
+                \vspace*{-1.2cm}
         \begin{figure}
             \centering
-            \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{sparcityhiddenlayer.png}
+            \includegraphics[width=8cm,height=5cm]{sparcityhiddenlayer.png}
             \caption{\scriptsize MAE en función del tamaño de la capa oculta para distintos valores de \textit{sparsity}.}
         \end{figure}
-    \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}{ESN de múltiples cabezas}
-
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
         \scriptsize
-        \begin{itemize}
-            \item ESN como clasificador para la ubicación acústica mostrando resultados superiores a 98\%.
-            \item ESN como estimador con MAE cercanos $2$ cm y un 38\% de las estimaciones con errores superiores a $\pm 2$ cm.
-            \item Divide y Conquista:ESN de múltiples cabezas para mejorar la exactitud de las estimaciones.
-            \item MAE $< 1$ cm para cada cabeza y 95\% de las estimaciones con errores inferiores a $\pm 2$ cm.
-            \item Cada cabeza se entrena de manera independiente. La lógica de selección determina la salida final.
-            \item Total de 4 cabezas: 360 mil parametros.
-        
+            \begin{itemize}
+            \item ESN como estimador con valores de MAE cercanos a $2$ cm.
         \end{itemize}
 
     \end{column}
-    \begin{column}{0.50\textwidth}
-            \vspace*{-0.6cm}
-        \begin{figure}
-            \centering
-            \includegraphics[width=\linewidth,height=4cm,keepaspectratio]{Multi-Head_ESN_Estimator.jpg}
-            \caption{\scriptsize Arquitectura de la red de múltiples cabezas para el estimador ESN.}
-        \end{figure}
-    \end{column}
 \end{columns}
-
 
 \end{frame}
 
-\begin{frame}{\textit{Beamforming}}
 
-\vspace*{-0.6cm}
-
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
-        \small
-        \centering
-        \vspace*{1cm}
-        \begin{itemize}
-            \item De la ecuación del dipolo acústico $D=\frac {1}{4} \frac {c}{f}$ se obtiene la frecuencia mínima de operación : 123 Hz.
-            \item Señal de audio con un ancho de banda de 10 kHz y componentes principales a 400 Hz.
-            \item Diferencia de tiempo de llegada entre los micrófonos de 1.34 ms, a una velocidad del sonido de 343 m/s.
-            \item Cuatro pares diferenciales de audio obtenidos como resultado.
-        
-        \end{itemize}
-
-    \end{column}
-    \begin{column}{0.50\textwidth}
-        \begin{figure}
-            \centering
-            \includegraphics[width=6cm,height=6cm,keepaspectratio]{Beamforming.jpg}
-            \caption{\scriptsize Disposición geométrica de la caja de medición que ilustra la trayectoria acústica desde el altavoz ubicado en E hasta los micrófonos situados en G y H.}
-        \end{figure}
-    \end{column}
-\end{columns}
-
-
-\end{frame}
-
-\section{Metodología}
-
-\begin{frame}{Metodología: análisis de los datos}
+\begin{frame}{Metodología y análisis de los datos}
 
 %    \begin{minipage}{0.5\textwidth}
-        \begin{itemize}%[<+-|alert@+>]
-        \item Se emplea validación cruzada de cinco particiones para el entrenamiento y evaluación de los modelos.
-        \item Se evalúan dos métricas:
-        \begin{itemize}
-            \item Error Absoluto Medio (MAE).
-            \item El coeficiente de correlación de Pearson.
-        \end{itemize}
-        \item Se presenta la distribución de los errores de estimación para cada coordenada.
-        \item Se comparan los resultados de los estimadores mediante un modelo Bayesiano \cite{calvo2018bayesian}:
-            \begin{itemize}
-                \item Se utiliza un modelo de Plackett-Luce.
-                \item Se aplica un factor de penalización según Nadeau y Bengio debido a la validación cruzada \cite{nadeau2003inference}: $\alpha = \left(1 + K\rho\right)^{-1}$, con $\rho = t_{\text{prueba}}/t_{\text{entrenamiento}} = 0.25$ y $K=5$, lo que resulta en un valor de 0.44.
-                \item La distribución posterior se muestrea mediante un algoritmo de Monte Carlo por cadenas de Markov (MCMC).
-            \end{itemize}
-   
-        \end{itemize}
+%        \begin{itemize}%[<+-|alert@+>]
+%        \item Se emplea validación cruzada de cinco particiones para el entrenamiento y evaluación de los modelos.
+%        \item Se evalúan dos métricas:
+%        \begin{itemize}
+%            \item Error Absoluto Medio (MAE).
+%            \item El Coeficiente de Correlación de Pearson (PCC).
+%        \end{itemize}
+%        \item Análisis cualitativo y cuantitativo de las métricas.
+%        \end{itemize}
+%        \item Comparación formal de los estimadores.
+%            \begin{itemize}
+%                \item Se utiliza un modelo Bayesiano de Plackett-Luce \cite{calvo2018bayesian} debido a la validación cruzada.
+%                \item Inferencia Bayesiana: distribucion \textit{priori} -> observaciones -> distribucion \textit{posteriori}.
+%                \item Se aplica un factor de penalización según Nadeau y Bengio debido a la validación cruzada \cite{nadeau2003inference}: $\alpha = \left(1 + K\rho\right)^{-1}$, con $\rho = t_{\text{prueba}}/t_{\text{entrenamiento}}$.
+%                \item La distribución posterior se muestrea mediante un algoritmo de Monte Carlo por cadenas de Markov (MCMC) para obtener las probabilidades de los modelos de ser el mejor.
+%            \end{itemize}
+%   
+%        \end{itemize}
 
 \end{frame}
 
-\section{Resultados y análisis}
 
-\begin{frame}{CNN como clasificador}
+\begin{frame}{Trabajos relacionados}
+   \vspace*{-0.8cm}
+\scriptsize
+%\tiny
+\begin{table}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|c|>{\centering\arraybackslash}m{6cm}|m{1.4cm}|c|}
+    \hline
+    Autores & A\~no& Logro \\ 
+    \hline
+    Brunetto et al. & 2020 & Creación de imágenes de profundidad de baja resolución mediante ecos acústicos \cite{bat1}.\\
+    \hline
+    Rothstein et al. & 2023 & Identificación de formas de estructuras cerradas desde su interior mediante ecos \cite{echosense}. \\
+    \hline 
+    Wang et al.	& 2024 & Detectar, localizar e identificar humanos dentro de habitaciones mediante sonidos \cite{RIR09}.\\
+    \hline
+    Bitterman et al. & 2024 & Clasificar habitaciones según su tamaño y forma mediante la RIH \cite{RIR06}.\\
+    \hline
 
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
-        \small
-        \centering
-        \vspace*{-0.6cm}
-        \begin{itemize}
-            \item Exactitud de 98.59\%.
-        \end{itemize}
-   
-        \begin{figure}
-            \centering
-            \includegraphics[width=6cm,height=6cm,keepaspectratio]{clasification_location_cnn.png}
-            \caption{\scriptsize Matriz de confusión para la evaluación de la CNN en la tarea de clasificación de la ubicación acústica.}
-        \end{figure}
+\end{tabular}
+\end{center}
+\caption{Trabajos más significativos sobre percepción acústica de objetos y espacios.}
+\label{table:1}
+\end{table}
 
-    \end{column}
-    \begin{column}{0.50\textwidth}
-              \small
-              \centering
-        \vspace*{-0.6cm}
-                \begin{itemize}
-            \item Exactitud de 29.06\%.
-        \end{itemize}
-        \begin{figure}
-            \centering
-            \includegraphics[width=5.4cm,height=5.4cm,keepaspectratio]{clasification_orientation_cnn.png}
-            \caption{\scriptsize Matriz de confusión para la evaluación de la CNN en la tarea de clasificación de la orientación acústica.}
-        \end{figure}
+   \vspace*{-0.2cm}
 
-    \end{column}
-\end{columns}
+Características comunes de los trabajos relacionados:
+\vspace*{0.1cm}
+\begin{itemize}
+\item La mayoría de los trabajos se enfocan en la identificación o clasificación de objetos o espacios.
+\item Emplean técnicas de aprendizaje automático, principalmente redes neuronales convolucionales.
+\item Están enfocados en espacios grandes.
+\end{itemize}
+
+
+
 \end{frame}
+
+
+
+
+\begin{frame}{\textit{Beamforming} CNN}
+
+
+    \begin{table}[htbp]
+\centering
+\caption{\scriptsize MAE en las coordenadas X, Y y Z para CNN con y sin \textit{beamforming} (media $\pm$ desviación estándar)}
+\label{tab:CNNmae_summary_all_models}
+{\tiny
+\setlength{\tabcolsep}{4pt}
+\scalebox{0.6}{%
+\begin{tabular}{lccc}
+\hline
+\textbf{Modelo} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)} \\
+\hline
+CNN & 0.5529 $\pm$ 0.0384 & \cellcolor{yellow}0.4109 $\pm$ 0.0700 & 0.9036 $\pm$ 0.2862 \\
+Beam CNN & \cellcolor{yellow}0.4789 $\pm$ 0.0478 & 0.4616 $\pm$ 0.0383 & \cellcolor{yellow}0.8577 $\pm$ 0.0683 \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=15cm,height=4cm]{BeamCNN_abserror_x_y_z.png}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la CNN y \textit{beamforming} en las cinco particiones.}
+        \end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}{\textit{Beamforming} ESN}
+
+
+    \begin{table}[htbp]
+\centering
+\caption{\scriptsize MAE en las coordenadas X, Y y Z para ESN con y sin \textit{beamforming} (media $\pm$ desviación estándar)}
+\label{tab:ESNmae_summary_all_models}
+{\tiny
+\setlength{\tabcolsep}{4pt}
+\scalebox{0.6}{%
+\begin{tabular}{lccc}
+\hline
+\textbf{Modelo} & \textbf{MAE X (cm)} & \textbf{MAE Y (cm)} & \textbf{MAE Z (cm)} \\
+\hline
+ESN & \cellcolor{yellow}0.8282 $\pm$ 0.0687 & \cellcolor{yellow}0.9436 $\pm$ 0.0814 & \cellcolor{yellow}1.6902 $\pm$ 0.1534 \\
+Beam ESN & 1.0799 $\pm$ 0.0880 & 1.2454 $\pm$ 0.2177 & 1.8341 $\pm$ 0.3149 \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=15cm,height=4cm]{BeamESN_abserror_x_y_z.png}
+            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la ESN y \textit{beamforming} en las cinco particiones.}
+        \end{figure}
+
+\end{frame}
+
 
 \begin{frame}{CNN como clasificador: orientación}
 
 \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
+    \begin{column}{0.60\textwidth}
         \small
         \centering
         \vspace*{-0.6cm}
@@ -541,601 +1095,25 @@ Modelar y evaluar un sistema por etapas que emplee \textit{beamforming} junto co
         \begin{figure}
             \centering
             \includegraphics[width=6cm,height=6cm,keepaspectratio]{cross-cor_points.png}
-            \caption{\scriptsize Sesiónes y regiones utilizadas para disminuir la variacion en los ejes de Euler}
+            \caption{\scriptsize Sesiones y regiones utilizadas para disminuir la variación en los ejes de Euler.}
         \end{figure}
 
     \end{column}
-    \begin{column}{0.50\textwidth}
-              \small
-              \centering
-        \vspace*{-0.6cm}
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=7cm,height=7cm,keepaspectratio]{conf_matrix_3regions.png}
-            \caption{\scriptsize Matriz de confusión de las tres regiones definidas para la clasificación de orientación.}
-        \end{figure}
-
-    \end{column}
-\end{columns}
-
-\end{frame}
-
-
-
-
-\begin{frame}{CNN como clasificador: orientación}
-
-\begin{columns}[T,onlytextwidth]
     \begin{column}{0.40\textwidth}
-
-
-        \small
-        \centering
-        \vspace*{0.5cm}
-        \begin{itemize}
-            \item La estimación de la orientación alcanza una exactitud de aproximadamente 29\%.
-            \item La exactitud no mejora al reducir el análisis a regiones con menor variación del cubo en sus otros ejes de Euler.
-            \item La correlación cruzada muestra que la similitud es mayor ante cambios de orientación que de distancia.
-        \end{itemize}
-
-    \end{column}
-    \begin{column}{0.60\textwidth}
-
-        \small
-        \centering
-        \vspace*{-1cm}
-
-   
-        \begin{figure}
-            \centering
-            \includegraphics[width=8cm,height=6.5cm]{reduced_allarround_xcor.png}
-            \caption{\scriptsize Resultados de correlación cruzada para el análisis de similitud de la señal acústica ante cambios de distancia y orientación.}
-        \end{figure}
-
-    \end{column}
-\end{columns}
-
-\end{frame}
-
-
-
-%################   CNN    #####################
-
-\begin{frame}{Histogramas: Errores de estimación CNN y ESN}
-
-
-    \small
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=15cm,keepaspectratio]{ButterflyHistogram.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con CNN y ESN para las 5 particiones}
-        \end{figure}
-
-        %\begin{itemize}
-        %    \item Coordenada X posee 97.83\% de estimaciones con error por debajo de 2cm, Y posee 98.32\% y Z posee 91.98\%.
-        %\end{itemize}
-
-
-\end{frame}
-
-
-
-
-\begin{frame}{MAE y correlación de Pearson CNN y ESN}
-
-
-
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
-
-
-        \small
-        \centering
-        \vspace*{0.0cm}
-        \begin{figure}
-            \centering
-            \includegraphics[width=7cm,height=5cm]{MAEs.png}
-            \caption{\scriptsize Error Absoluto Medio (MAE) para las coordenadas X, Y y Z con CNN y ESN.}
-        \end{figure}
-
-    \end{column}
-    \begin{column}{0.50\textwidth}
-
-        \small
-        \centering
-        \vspace*{-0.5cm}
-\begin{table}[htbp]
-\centering
-\scriptsize
-\caption{Coeficientes de correlación de Pearson en las particiones para los modelos CNN y ESN}
-\label{tab:pearson_correlation_combined}
-% Note: Requires \usepackage{multirow} in your document preamble
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lcccccc}
-\hline
-\multirow{2}{*}{\textbf{Partición (Fold)}} & \multicolumn{3}{c}{\textbf{CNN}} & \multicolumn{3}{c}{\textbf{ESN}} \\
-\cline{2-4} \cline{5-7}
-& \textbf{X} & \textbf{Y} & \textbf{Z} & \textbf{X} & \textbf{Y} & \textbf{Z} \\
-\hline
-Fold 1 & 0.9970 & 0.9961 & 0.9979 & 0.9980 & 0.9954 & 0.9929 \\
-Fold 2 & 0.9980 & 0.9985 & 0.9991 & 0.9963 & 0.9966 & 0.9929 \\
-Fold 3 & 0.9969 & 0.9978 & 0.9982 & 0.9958 & 0.9968 & \cellcolor{yellow}0.9898 \\
-Fold 4 & 0.9985 & 0.9977 & 0.9986 & 0.9962 & 0.9967 & 0.9921 \\
-Fold 5 & 0.9978 & 0.9987 & 0.9987 & 0.9965 & 0.9953 & 0.9936 \\
-\hline
-\end{tabular}
-}
-\end{table}
-\scriptsize
-\begin{itemize}
-    \item CNN con MAE más bajo en comparación con ESN para todas las coordenadas.
-    \item Cordenadas X y Y con MAE similares para CNN y ESN, mientras que Z presenta mayor diferencia.
-    \item Correlación de Pearson alta para todas las coordenadas en ambos modelos.
-\end{itemize}
-   
-
-
-    \end{column}
-\end{columns}
-
-
-%\begin{table}[htbp]
-%  \centering
-%  \caption{Error absoluto medio (MAE) y coeficientes de correlación de Pearson en las particiones para las coordenadas $X$, $Y$ y $Z$ del modelo de regresión CNN.}
-%  \label{tab:metrics_xyz_folds_cnn}
-%  \vspace{0.25cm}
-%  \footnotesize
-%  \resizebox{\textwidth}{!}{%
-%    \begin{tabular}{lcccccc}
-%      \toprule
-%      \multirow{2}{*}{\textbf{Folds}} & \multicolumn{3}{c}{\textbf{MAE (cm)}} & \multicolumn{3}{c}{\textbf{Pearson Correlation}} \\
-%      \cmidrule(lr){2-4} \cmidrule(lr){5-7}
-%      & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
-%      \midrule
-%      Fold 1 & 0.6019 & 0.5029 & 1.3013 & 0.9970 & 0.9961 & 0.9979 \\
-%      Fold 2 & 0.5231 & 0.4467 & 0.5549 & 0.9980 & 0.9985 & 0.9991 \\
-%      Fold 3 & 0.5569 & 0.4069 & 0.8829 & 0.9969 & 0.9978 & 0.9982 \\
-%      Fold 4 & 0.5764 & 0.3836 & 1.0473 & 0.9985 & 0.9977 & 0.9986 \\
-%      Fold 5 & 0.5062 & 0.3144 & 0.7316 & 0.9978 & 0.9987 & 0.9987 \\
-%      \midrule
-%      \textbf{Mean $\pm$ SD} & \textbf{0.5529 $\pm$ 0.0384} & \textbf{0.4109 $\pm$ 0.0706} & \textbf{0.9036 $\pm$ 0.2847} & \textbf{0.9976 $\pm$ 0.0007} & \textbf{0.9978 $\pm$ 0.0010} & \textbf{0.9985 $\pm$ 0.0005} \\
-%      \bottomrule
-%    \end{tabular}%
-%  }
-%\end{table}
-
-\end{frame}
-
-
-\begin{frame}{CNN como estimador: error 3D}
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{Plot3D_errors.png}
-            \caption{\scriptsize Gráficos para las tres coordenadas de los errores de estimación con CNN para las cinco particiones.}
-        \end{figure}
-
-\end{frame}
-
-
-
-\begin{frame}{CNN como estimador: error 2D}
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{abserror_x_y_z.png}
-            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con CNN para las cinco particiones.}
-        \end{figure}
-
-\end{frame}
-
-
-%################   ESN    #####################
-
-\begin{frame}{ESN como estimador: histogramas}
-
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{ESN_histograms.png}
-            \caption{\scriptsize Histogramas de los errores de estimación de las coordenadas X, Y y Z con la ESN en las cinco particiones}
-        \end{figure}
-
-        \begin{itemize}
-            \item Coordenada X posee 93.15\% de estimaciones con error por debajo de 2cm, Y posee 89.38\% y Z posee 67.94\%.
-        \end{itemize}
-
-
-\end{frame}
-
-
-\begin{frame}{ESN como estimador: MAE y correlación de Pearson}
-\begin{table}[htbp]
-  \centering
-  \caption{Error absoluto medio (MAE) y coeficientes de correlación de Pearson en las particiones para las coordenadas $X$, $Y$ y $Z$ del modelo de regresión ESN}
-  \label{tab:metrics_xyz_folds_esn}
-  \vspace{0.25cm}
-  \footnotesize
-  \resizebox{\textwidth}{!}{%
-    \begin{tabular}{lcccccc}
-      \toprule
-      \multirow{2}{*}{\textbf{Folds}} & \multicolumn{3}{c}{\textbf{MAE (cm)}} & \multicolumn{3}{c}{\textbf{Pearson Correlation}} \\
-      \cmidrule(lr){2-4} \cmidrule(lr){5-7}
-      & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} & \textbf{$X$} & \textbf{$Y$} & \textbf{$Z$} \\
-      \midrule
-      Fold 1 & 0.7231 & 1.0643 & 1.5111 & 0.9980 & 0.9954 & 0.9929 \\
-      Fold 2 & 0.8729 & 0.8977 & 1.6283 & 0.9963 & 0.9966 & 0.9929 \\
-      Fold 3 & 0.8955 & 0.8706 & 1.6953 & 0.9958 & 0.9968 & 0.9898 \\
-      Fold 4 & 0.7974 & 0.8918 & 1.9315 & 0.9962 & 0.9967 & 0.9921 \\
-      Fold 5 & 0.8521 & 0.9938 & 1.6847 & 0.9965 & 0.9953 & 0.9936 \\
-      \midrule
-      \textbf{Mean $\pm$ SD} & \textbf{0.8282 $\pm$ 0.0691} & \textbf{0.9436 $\pm$ 0.0825} & \textbf{1.6902 $\pm$ 0.1535} & \textbf{0.9966 $\pm$ 0.0008} & \textbf{0.9962 $\pm$ 0.0007} & \textbf{0.9923 $\pm$ 0.0015} \\
-      \bottomrule
-    \end{tabular}%
-  }
-\end{table}
-
-\end{frame}
-
-
-\begin{frame}{ESN como estimador: error 3D}
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{ESN_Plot3D_errors.png}
-            \caption{\scriptsize Gráficos para las tres coordenadas de los errores de estimación con la ESN en las cinco particiones.}
-        \end{figure}
-
-\end{frame}
-
-
-
-\begin{frame}{ESN como estimador: error 2D}
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{ESN_abserror_x_y_z.png}
-            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la ESN en las cinco particiones.}
-        \end{figure}
-
-\end{frame}
-
-
-\begin{frame}{CNN y \textit{beamforming}}
-
-         \begin{itemize}
-            \item El \textit{beamforming} reduce el MAE y mejora los coeficientes de correlación.
-            \item Reduce la frecuencia de los errores altos en los extremos del rango de medición.
-        \end{itemize}   
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{BeamCNN_abserror_x_y_z.png}
-            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la CNN y \textit{beamforming} en las cinco particiones.}
-        \end{figure}
-
-\end{frame}
-
-
-\begin{frame}{ESN y \textit{beamforming}}
-
-             \begin{itemize}
-            \item El \textit{beamforming} aumenta el MAE y deteriora los coeficientes de correlación.
-            \item Aumenta los errores en todo el rango del eje de medición.
-        \end{itemize}   
-
-        \begin{figure}
-            \centering
-            \includegraphics[width=15cm,height=13cm,keepaspectratio]{BeamESN_abserror_x_y_z.png}
-            \caption{\scriptsize Gráficos por coordenada de los errores de estimación con la ESN y \textit{beamforming} en las cinco particiones.}
-        \end{figure}
-
-\end{frame}
-
-
-
-
-\begin{frame}{Comparación de modelos: coordenada X}
-
-
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
-        \small
-        \centering
-        \vspace*{1cm}
-
-           \begin{itemize}
-            \item El modelo CNN con \textit{beamforming} tiene la probabilidad más alta de ser el mejor para estimar la coordenada X.
-            \item El resultado concuerda con los valores medios de MAE de cada modelo.
-        \end{itemize}
-
-
-    \end{column}
-    \begin{column}{0.50\textwidth}
               \small
               \centering
-        \vspace*{-0.6cm}
-        \setlength{\abovecaptionskip}{0pt}
-        \setlength{\belowcaptionskip}{0pt}
-\begin{table}[H]
-  \centering
-  \caption{\scriptsize Error absoluto medio en las particiones para la estimación de la coordenada $X$ de cada modelo}
-  \label{tab:mae_x_models_comparison}
-  \footnotesize
-  \resizebox{\linewidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    \textbf{Folds} & \textbf{CNN (cm)} & \textbf{ESN (cm)} & \textbf{Beam CNN (cm)} & \textbf{Beam ESN (cm)} \\
-    \midrule
-    Fold 1 & 0.6019 & 0.7231 & 0.4941 & 1.0824 \\
-    Fold 2 & 0.5231 & 0.8729 & 0.5467 & 1.0560 \\
-    Fold 3 & 0.5569 & 0.8955 & 0.4246 & 1.0589 \\
-    Fold 4 & 0.5764 & 0.7974 & 0.4426 & 1.2223 \\
-    Fold 5 & 0.5062 & 0.8521 & 0.4865 & 0.9797 \\
-    \midrule
-    \textbf{Mean $\pm$ SD} & \textbf{0.5529 $\pm$ 0.0384} & \textbf{0.8282 $\pm$ 0.0687} & \textbf{0.4789 $\pm$ 0.0478} & \textbf{1.0799 $\pm$ 0.0886} \\
-    \bottomrule
-  \end{tabular}
-  }
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \caption{\scriptsize Probabilidad de ser el verdadero mejor modelo (estimador de $X$)}
-  \label{tab:best_model_probability_x}
-  \scriptsize
-  \scalebox{0.8}{%
-  \begin{tabular}{lc}
-    \toprule
-    \textbf{Model} & \textbf{Probability (\%)} \\
-    \midrule
-    Beam CNN & 63.4 \\
-    CNN      & 32.3 \\
-    ESN      & 4.1  \\
-    Beam ESN & 0.2  \\
-    \bottomrule
-  \end{tabular}
-  }
-\end{table}
-
-    \end{column}
-\end{columns}
-
-
-\end{frame}
-
-
-\begin{frame}{Comparación de modelos: coordenada Y}
-
-
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
-        \small
-        \centering
         \vspace*{1cm}
-
-           \begin{itemize}
-            \item El modelo de CNN con \textit{beamforming} tiene la probabilidad más alta de ser el mejor modelo para la estimación de la coordenada Y.
-            \item La CNN sin \textit{beamforming} presenta el menor MAE promedio.
-            \item La ESN con \textit{beamforming} presenta el mayor MAE promedio.
-        \end{itemize}
-
-
-    \end{column}
-    \begin{column}{0.50\textwidth}
-              \small
-              \centering
-        \vspace*{-0.6cm}
-        \setlength{\abovecaptionskip}{0pt}
-        \setlength{\belowcaptionskip}{0pt}
-\begin{table}[H]
-  \centering
-  \caption{\scriptsize Error absoluto medio en las particiones para la estimación de la coordenada $Y$ de cada modelo}
-  \label{tab:mae_y_models_comparison}
-  \footnotesize
-  \resizebox{\linewidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    \textbf{Folds} & \textbf{CNN (cm)} & \textbf{ESN (cm)} & \textbf{Beam CNN (cm)} & \textbf{Beam ESN (cm)} \\
-    \midrule
-    Fold 1 & 0.5029 & 1.0643 & 0.4903 & 1.3697 \\
-    Fold 2 & 0.4467 & 0.8977 & 0.4418 & 1.0145 \\
-    Fold 3 & 0.4069 & 0.8706 & 0.4064 & 1.1298 \\
-    Fold 4 & 0.3836 & 0.8918 & 0.4684 & 1.1506 \\
-    Fold 5 & 0.3144 & 0.9938 & 0.5012 & 1.5625 \\
-    \midrule
-    \textbf{Mean $\pm$ SD} & \textbf{0.4109 $\pm$ 0.0700} & \textbf{0.9436 $\pm$ 0.0814} & \textbf{0.4616 $\pm$ 0.0383} & \textbf{1.2454 $\pm$ 0.2177} \\
-    \bottomrule
-  \end{tabular}
-  }
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \caption{\scriptsize Probabilidad de ser el verdadero mejor modelo (estimador de $Y$)}
-  \label{tab:best_model_probability_y}
-  \scriptsize
-  \scalebox{0.8}{%
-  \begin{tabular}{lc}
-    \toprule
-    \textbf{Model} & \textbf{Probability (\%)} \\
-    \midrule
-    Beam CNN & 52.1 \\
-    CNN      & 42.7 \\
-    ESN      & 5.0  \\
-    Beam ESN & 0.2  \\
-    \bottomrule
-  \end{tabular}
-  }
-\end{table}
+ \begin{itemize}
+    \setlength{\itemsep}{0.5em}
+    \item Región 1: exactitud 15.56\%.
+    \item Región 2: exactitud 21.48\%.
+    \item Región 3: exactitud 20.00\%.
+ \end{itemize}
 
     \end{column}
 \end{columns}
 
-
 \end{frame}
 
-
-
-\begin{frame}{Comparación de modelos: coordenada Z}
-
-
-\begin{columns}[T,onlytextwidth]
-    \begin{column}{0.50\textwidth}
-        \small
-        \centering
-        \vspace*{1cm}
-
-           \begin{itemize}
-            \item El modelo de CNN con \textit{beamforming} tiene la probabilidad más alta de ser el mejor modelo para la estimación de la coordenada Z.
-            \item La CNN con \textit{beamforming} presenta el menor MAE promedio.
-            \item La ESN con \textit{beamforming} presenta el mayor MAE promedio.
-        \end{itemize}
-
-
-    \end{column}
-    \begin{column}{0.50\textwidth}
-              \small
-              \centering
-        \vspace*{-0.6cm}
-        \setlength{\abovecaptionskip}{0pt}
-        \setlength{\belowcaptionskip}{0pt}
-\begin{table}[H]
-  \centering
-  \caption{\scriptsize Error absoluto medio en las particiones para la estimación de la coordenada $Z$ de cada modelo}
-  \label{tab:mae_z_models_comparison}
-  \footnotesize
-  \resizebox{\linewidth}{!}{%
-  \begin{tabular}{lcccc}
-    \toprule
-    \textbf{Folds} & \textbf{CNN (cm)} & \textbf{ESN (cm)} & \textbf{Beam CNN (cm)} & \textbf{Beam ESN (cm)} \\
-    \midrule
-    Fold 1 & 1.3013 & 1.5111 & 0.8064 & 1.7033 \\
-    Fold 2 & 0.5549 & 1.6283 & 0.7854 & 2.3761 \\
-    Fold 3 & 0.8829 & 1.6953 & 0.8489 & 1.7263 \\
-    Fold 4 & 1.0473 & 1.9315 & 0.8927 & 1.7914 \\
-    Fold 5 & 0.7316 & 1.6847 & 0.9552 & 1.5734 \\
-    \midrule
-    \textbf{Mean $\pm$ SD} & \textbf{0.9036 $\pm$ 0.2862} & \textbf{1.6902 $\pm$ 0.1534} & \textbf{0.8577 $\pm$ 0.0683} & \textbf{1.8341 $\pm$ 0.3149} \\
-    \bottomrule
-  \end{tabular}
-  }
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \caption{\scriptsize Probabilidad de ser el verdadero mejor modelo (estimador de $Z$)}
-  \label{tab:best_model_probability_z}
-  \scriptsize
-  \scalebox{0.8}{%
-  \begin{tabular}{lc}
-    \toprule
-    \textbf{Model} & \textbf{Probability (\%)} \\
-    \midrule
-    Beam CNN & 52.6 \\
-    CNN      & 43.6 \\
-    ESN      & 2.3  \\
-    Beam ESN & 1.4  \\
-    \bottomrule
-  \end{tabular}
-  }
-\end{table}
-
-    \end{column}
-\end{columns}
-
-
-\end{frame}
-
-
-\begin{frame}{Conclusiones}
-
-\begin{itemize}
-	
-	\item Las arquitecturas CNN y ESN pueden aprender, a partir de representaciones acústicas como los espectrogramas Log-Mel, la función que relaciona las características del audio con las coordenadas que definen la ubicación de un cubo de 20 cm de lado dentro de un espacio cerrado de $1\,m^{3}$, con un MAE inferior a 2 cm en tareas de clasificación y regresión.
-	
-	\item La orientación del cubo no se puede determinar con precisión mediante las representaciones acústicas y las arquitecturas de red actuales.
-	
-	\item El modelo CNN presentó sus mayores errores en los extremos del espacio de medición para las coordenadas X, Y y Z, mientras que la ESN presentó errores de gran magnitud en la región central.
-	
-\end{itemize}
-
-
-
-
-\end{frame}
-
-
-
-\begin{frame}{Hipótesis}
-
- ``Una secuencia de procesamiento que emplee \textit{beamforming} y aprendizaje de máquina mediante \textit{\textbf{ESN}} puede utilizar la información geométrica de la \textit{\textbf{RIH}} contenida en un conjunto de señales acústicas para estimar la posición y la orientación de un cubo de 20 cm de lado dentro de un espacio pequeño, cuyas dimensiones sean cercanas a un metro cubico \footnote{Basado en las limitaciones encontradas por Brunetto et al. en el sistema \textit{Batvision} \cite{bat1}.}. Esto con una resolución de desplazamiento de al menos 5 cm en alguna de sus coordenadas y cambios de orientación mayores a 10 grados, con un error absoluto medio de posición menor a 2 cm y de orientación menor a 6 grados \footnote{Basado en las dimensiones de deformación detectables por Rothstein et al. en su trabajo \textit{Echosense} \cite{echosense}.}.''
-
-\end{frame}
-
-
-\section{Conclusiones y trabajos futuros}
-
-
-\begin{frame}{Conclusiones}
-
-\begin{itemize}
-	
-	\item Sin \textit{beamforming}, la CNN fue el mejor modelo en general según la comparación bayesiana, mientras que la ESN fue una alternativa competitiva y más eficiente en parámetros, al utilizar aproximadamente el 3\% de los parámetros entrenables de la CNN ResNet-18.
-	
-	\item El \textit{beamforming} mejoró el rendimiento de la CNN y afectó negativamente a la ESN.
-	
-	\item La CNN con \textit{beamforming} tuvo la mayor probabilidad de ser el mejor modelo según la comparación bayesiana, seguida por la CNN sin \textit{beamforming} y después por la ESN.
-
-\end{itemize}
-
-\end{frame}
-
-
-
-\begin{frame}{Recomendaciones y trabajo futuro}
-
-\begin{itemize}
-
-	\item Investigar el efecto de filtrar los ecos comunes de las representaciones acústicas, presentes en todas las mediciones y sin información sobre la ubicación del cubo. Esta etapa de preprocesamiento podría acelerar el entrenamiento y mejorar la precisión de localización al reducir la información irrelevante.
-	\item Para la arquitectura ESN de múltiples cabezas, explorar el entrenamiento con solapamiento de las redes negativa y positiva para reducir los errores en la región de transición.
-	\item Explorar el uso de una CNN de múltiples cabezas para determinar si mejora la estimación.
-
-
-\end{itemize}
-
-\end{frame}
-
-
-\begin{frame}{Recomendaciones y trabajo futuro}
-
-\begin{itemize}
-
-
-	\item Analizar el audio de los valores atípicos con errores grandes para identificar patrones específicos en la señal y filtrar el ruido que afecta la estimación.
-	\item Investigar técnicas de aumento de datos para equilibrar el conjunto de datos y mejorar la generalización de los modelos.
-	\item Para evitar la corrección de Nadeau y Bengio, explorar otros métodos de partición del conjunto de datos para validación.
-
-\end{itemize}
-
-\end{frame}
-
-
-
-
-
-\begin{frame}{}
-        \begin{figure}
-        \includegraphics[width=6cm, height=5cm]{gracias}
-        \end{figure}
-\end{frame}
-
-\begin{frame}[allowframebreaks]
-        \frametitle{Referencias}
-        \bibliographystyle{ieeetr}
-        \bibliography{mendeley}
-\end{frame}
     
 \end{document}
